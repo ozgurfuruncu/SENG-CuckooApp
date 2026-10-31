@@ -1,0 +1,46 @@
+# Tek komutla başlatma:  docker compose up --build
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-cuckoo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cuckoo}
+      POSTGRES_DB: ${POSTGRES_DB:-cuckoo}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-cuckoo} -d ${POSTGRES_DB:-cuckoo}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-cuckoo}:${POSTGRES_PASSWORD:-cuckoo}@db:5432/${POSTGRES_DB:-cuckoo}
+      SECRET_KEY: ${SECRET_KEY:-dev-secret-sadece-gelistirme-icin-degistir}
+      UPLOAD_DIR: /data/uploads
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend/app:/code/app      # kod değişince otomatik yeniden yüklenir
+      - uploads:/data/uploads        # kanıt fotoğrafları kalıcı volume'da
+
+  frontend:
+    build: ./frontend
+    environment:
+      VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+volumes:
+  pgdata:
+  uploads:
