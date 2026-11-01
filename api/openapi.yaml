@@ -1,0 +1,537 @@
+openapi: 3.1.0
+info:
+  title: Cuckoo API
+  version: 0.2.0-draft
+  description: >
+    Sprint 1 contract for a bounded local-task workflow. For the first
+    release, only VEHICLE_PHOTO_CHECK is supported. Payments are simulated; no
+    real funds, escrow, vehicle custody, professional inspection or legal agency
+    are provided. This contract is the Sprint 1 API baseline; later changes require reviewed version control.
+servers:
+  - url: http://localhost:8000/api/v1
+    description: Local development API
+tags:
+  - name: Authentication
+  - name: Profiles
+  - name: Tasks
+  - name: Applications
+  - name: Evidence
+  - name: Task reviews
+security:
+  - BearerAuth: []
+paths:
+  /auth/register:
+    post:
+      tags: [Authentication]
+      security: []
+      operationId: registerUser
+      summary: Create an account with an initial role
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+      responses:
+        '201':
+          description: Account created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /auth/login:
+    post:
+      tags: [Authentication]
+      security: []
+      operationId: createSession
+      summary: Authenticate a user for the demo platform
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessToken'
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+  /me:
+    get:
+      tags: [Profiles]
+      operationId: getMyProfile
+      summary: Get authenticated user profile
+      responses:
+        '200':
+          description: Current profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+        '401': {$ref: '#/components/responses/Unauthorized'}
+    patch:
+      tags: [Profiles]
+      operationId: updateMyProfile
+      summary: Update operating city and optional self-declared attributes
+      description: Occupation and skill tags are self-declared and not verified credentials.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProfileUpdate'
+      responses:
+        '200':
+          description: Updated profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+  /tasks:
+    get:
+      tags: [Tasks]
+      operationId: listTasks
+      summary: Browse tasks by city and supported category
+      parameters:
+        - in: query
+          name: city
+          required: false
+          schema: {type: string}
+        - in: query
+          name: category
+          required: false
+          schema: {$ref: '#/components/schemas/TaskCategory'}
+        - in: query
+          name: status
+          required: false
+          schema: {$ref: '#/components/schemas/TaskStatus'}
+      responses:
+        '200':
+          description: Filtered task collection
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+    post:
+      tags: [Tasks]
+      operationId: createTask
+      summary: Create a bounded vehicle photo-check task
+      description: Only EMPLOYER accounts may create tasks.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/NewTask'}
+      responses:
+        '201':
+          description: Task created in OPEN state
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+  /tasks/{taskId}:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    get:
+      tags: [Tasks]
+      operationId: getTask
+      summary: Get a task with role-appropriate information
+      responses:
+        '200':
+          description: Task retrieved
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /tasks/{taskId}/applications:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    post:
+      tags: [Applications]
+      operationId: applyForTask
+      summary: Submit an application to an open task
+      description: >
+        Only TASK_TAKER accounts may apply; the same user cannot apply twice
+        to the same task. An employer cannot apply to their own task. The task
+        taker must have declared an operating city.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                note: {type: string, maxLength: 500}
+      responses:
+        '201':
+          description: Application created
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/TaskApplication'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+    get:
+      tags: [Applications]
+      operationId: listTaskApplications
+      summary: List applicants for a task (employer only)
+      responses:
+        '200':
+          description: Applications visible to the task employer
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/TaskApplication'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /tasks/{taskId}/assignment:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    post:
+      tags: [Applications]
+      operationId: assignTask
+      summary: Employer selects exactly one applicant
+      description: Must be atomic to prevent multiple assignments to one task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [applicationId]
+              properties:
+                applicationId: {type: string, example: APP-012}
+      responses:
+        '200':
+          description: Task becomes ASSIGNED
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /tasks/{taskId}/payment-simulation/hold:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    post:
+      tags: [Tasks]
+      operationId: simulatePaymentHold
+      summary: Employer records simulated payment hold for assigned task
+      description: >
+        Demo-only operation. No money moves and no payment details are processed.
+        Repeating a hold or holding a non-ASSIGNED task results in conflict.
+      responses:
+        '200':
+          description: Simulated hold recorded
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PaymentSimulation'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /tasks/{taskId}/evidence:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    post:
+      tags: [Evidence]
+      operationId: submitTaskEvidence
+      summary: Assigned task taker uploads permitted task evidence
+      description: >
+        A held simulated payment is required. The worker may resubmit after
+        REVISION_REQUESTED. Only the assigned task taker may upload. Uploaded
+        files require validation and protected storage.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [photos, notes]
+              properties:
+                photos:
+                  type: array
+                  minItems: 1
+                  maxItems: 5
+                  items: {type: string, format: binary}
+                notes: {type: string, minLength: 10, maxLength: 2000}
+      responses:
+        '201':
+          description: Evidence submission recorded
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/EvidenceSubmission'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+    get:
+      tags: [Evidence]
+      operationId: listTaskEvidence
+      summary: List evidence metadata for an authorized task participant
+      description: Photo content must be served using authorized, access-controlled file endpoints.
+      responses:
+        '200':
+          description: Authorized evidence metadata
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/EvidenceSubmission'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /tasks/{taskId}/review:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    post:
+      tags: [Task reviews]
+      operationId: reviewTaskEvidence
+      summary: Employer approves evidence or requests revised evidence
+      description: >
+        APPROVE is allowed only in EVIDENCE_SUBMITTED and with HELD_SIMULATED
+        payment. Approval atomically sets task COMPLETED and records
+        RELEASED_SIMULATED. REQUEST_REVISION records REVISION_REQUESTED.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ReviewRequest'}
+      responses:
+        '200':
+          description: Review recorded and task updated
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /tasks/{taskId}/cancel:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    post:
+      tags: [Tasks]
+      operationId: cancelTask
+      summary: Employer cancels an eligible task before evidence submission
+      description: >
+        Preliminary policy: cancellation allowed in OPEN or ASSIGNED only.
+        A simulated hold is marked VOIDED_SIMULATED. Other policies require
+        a team decision before implementation.
+      responses:
+        '200':
+          description: Task cancelled
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Task'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /tasks/{taskId}/history:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    get:
+      tags: [Tasks]
+      operationId: getTaskHistory
+      summary: Get task audit events for authorized participants
+      responses:
+        '200':
+          description: Task audit trail
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/TaskEvent'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    TaskId:
+      in: path
+      name: taskId
+      required: true
+      schema: {type: string, example: TASK-001}
+  schemas:
+    Role:
+      type: string
+      enum: [EMPLOYER, TASK_TAKER]
+    TaskCategory:
+      type: string
+      enum: [VEHICLE_PHOTO_CHECK]
+    TaskStatus:
+      type: string
+      enum: [OPEN, ASSIGNED, EVIDENCE_SUBMITTED, REVISION_REQUESTED, COMPLETED, CANCELLED]
+    PaymentSimulationStatus:
+      type: string
+      enum: [NOT_HELD, HELD_SIMULATED, RELEASED_SIMULATED, VOIDED_SIMULATED]
+    RegisterRequest:
+      type: object
+      required: [email, password, role]
+      properties:
+        email: {type: string, format: email}
+        password: {type: string, minLength: 8, writeOnly: true}
+        role: {$ref: '#/components/schemas/Role'}
+        operatingCity: {type: [string, 'null'], minLength: 2, maxLength: 100, description: Required before a worker applies; optional for an employer}
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: {type: string, format: email}
+        password: {type: string, writeOnly: true}
+    AccessToken:
+      type: object
+      required: [accessToken, tokenType]
+      properties:
+        accessToken: {type: string}
+        tokenType: {type: string, const: bearer}
+    Profile:
+      type: object
+      required: [id, role, selfDeclared]
+      properties:
+        id: {type: string, example: USER-101}
+        role: {$ref: '#/components/schemas/Role'}
+        operatingCity: {type: [string, 'null'], example: Ankara, description: Self-declared operating city for task takers}
+        occupation: {type: [string, 'null'], description: Optional self-declared occupation or activity}
+        skills:
+          type: array
+          items: {type: string}
+        selfDeclared: {type: boolean, const: true}
+    ProfileUpdate:
+      type: object
+      properties:
+        operatingCity: {type: [string, 'null'], minLength: 2, maxLength: 100}
+        occupation: {type: [string, 'null'], maxLength: 100}
+        skills:
+          type: array
+          maxItems: 10
+          items: {type: string, maxLength: 60}
+    NewTask:
+      type: object
+      required: [title, description, city, category, proposedCompensation, requiredEvidence, permissionConfirmed]
+      properties:
+        title: {type: string, minLength: 5, maxLength: 150}
+        description: {type: string, minLength: 20, maxLength: 2000}
+        city: {type: string, example: Ankara}
+        category: {$ref: '#/components/schemas/TaskCategory'}
+        proposedCompensation: {type: number, minimum: 0, description: 'Illustrative listing amount, not charged by platform'}
+        requiredEvidence: {type: string, maxLength: 1000, example: Four exterior photographs and visible-condition notes}
+        permissionConfirmed: {type: boolean, const: true, description: Employer confirms owner/location permission must be secured}
+        requestedBy: {type: [string, 'null'], format: date-time, description: Optional requested completion deadline}
+    Task:
+      allOf:
+        - {$ref: '#/components/schemas/NewTask'}
+        - type: object
+          required: [id, employerId, status, paymentSimulationStatus, createdAt]
+          properties:
+            id: {type: string, example: TASK-001}
+            employerId: {type: string, example: USER-101}
+            assignedWorkerId: {type: [string, 'null'], example: USER-202}
+            status: {$ref: '#/components/schemas/TaskStatus'}
+            paymentSimulationStatus: {$ref: '#/components/schemas/PaymentSimulationStatus'}
+            createdAt: {type: string, format: date-time}
+    TaskApplication:
+      type: object
+      required: [id, taskId, workerId, submittedAt]
+      properties:
+        id: {type: string, example: APP-012}
+        taskId: {type: string, example: TASK-001}
+        workerId: {type: string, example: USER-202}
+        note: {type: [string, 'null']}
+        submittedAt: {type: string, format: date-time}
+    PaymentSimulation:
+      type: object
+      required: [taskId, status]
+      properties:
+        taskId: {type: string, example: TASK-001}
+        status: {$ref: '#/components/schemas/PaymentSimulationStatus'}
+        disclaimer: {type: string, const: No real money is moved.}
+    EvidenceSubmission:
+      type: object
+      required: [id, taskId, workerId, photoCount, notes, submittedAt]
+      properties:
+        id: {type: string, example: EVD-101}
+        taskId: {type: string, example: TASK-001}
+        workerId: {type: string, example: USER-202}
+        photoCount: {type: integer, minimum: 1}
+        notes: {type: string}
+        submittedAt: {type: string, format: date-time}
+    ReviewRequest:
+      type: object
+      required: [decision]
+      properties:
+        decision: {type: string, enum: [APPROVE, REQUEST_REVISION]}
+        note: {type: string, maxLength: 500}
+    TaskEvent:
+      type: object
+      required: [id, taskId, actorId, action, occurredAt]
+      properties:
+        id: {type: string}
+        taskId: {type: string}
+        actorId: {type: string}
+        action: {type: string, example: EVIDENCE_SUBMITTED}
+        occurredAt: {type: string, format: date-time}
+        detail: {type: [string, 'null']}
+    Problem:
+      type: object
+      required: [title, status, code]
+      properties:
+        title: {type: string}
+        status: {type: integer}
+        code: {type: string, example: TASK_ALREADY_ASSIGNED}
+        detail: {type: string}
+  responses:
+    BadRequest:
+      description: Invalid request fields or input
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    Unauthorized:
+      description: Authentication required or invalid
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    Forbidden:
+      description: User is not permitted to perform this operation
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    NotFound:
+      description: Requested resource not found
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    Conflict:
+      description: Domain conflict or invalid lifecycle transition
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}

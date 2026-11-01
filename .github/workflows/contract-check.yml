@@ -1,0 +1,28 @@
+name: Contract check
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop, feature/sprint1-repo-bootstrap]
+permissions:
+  contents: read
+jobs:
+  openapi:
+    name: OpenAPI 3.1 validation
+    runs-on: ubuntu-latest
+    env:
+      REDOCLY_TELEMETRY: 'off'
+    defaults:
+      run:
+        working-directory: tools/contract
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: tools/contract/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run lint:legacy
+      - run: npm test
