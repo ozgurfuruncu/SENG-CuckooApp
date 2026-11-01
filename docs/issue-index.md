@@ -1,7 +1,8 @@
 # Issue index and Project import manifest
 
 Published from existing supplied stories; duplicate check includes all open/closed issues.
-No assignees inferred. Project import is blocked by missing Projects token scopes.
+Accounts were confirmed by the user and assignees were verified through GitHub.
+Project import/access remains unverified because the token lacks Projects scope.
 US-14/15 remain deferred. Original backlog IDs below indicate overlapping requirements,
 not additional implementation work. Contract gaps require PO/architect/QA resolution.
 
@@ -30,6 +31,14 @@ without recreating issues. The bootstrap T-05 is for human review, not marked Do
 
 Post-approval bootstrap: [T-06 / #18](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/18). Stack A accepted on 2026-11-02; business implementation still requires its reviewed acceptance/contract slice.
 
+Confirmed ownership: US-01..15 are assigned to Elif / `elfn0909` as initial backlog
+and acceptance owner, matching PO accountability in RACI. This is not a future
+implementation commitment; code-task delegation happens during actual sprint planning.
+US-14/15 remain deferred. Technical #16/#18 are assigned to Emmanuel / `anyx05`;
+closeout #20 is assigned to Aslı / `asliarikoglu` and Emir / `lilemiv` for process
+accountability and DevOps responsibility. See [confirmed accounts](team-accounts.json).
+
 Sprint 1 repository/release closeout: [T-02/T-03 / #20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
 The [Project manifest](release/project-items.json) covers the 18 existing issues;
-import and assignee planning remain actual owner/team actions, not completed Project setup.
+the manifest now includes verified assignees. Project import/access remains an
+owner-controlled operation; published issues and prepared JSON do not prove board setup.

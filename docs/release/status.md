@@ -8,7 +8,7 @@ As inspected on 2026-11-02 (Europe/Istanbul). Related issue:
   independent owner/reviewer. They remain unmerged and have no approving review.
 - Main/develop remain at original 8f701754a296dfd5aa9e464383ac4668d0f5e790; no tag.
 - Collaborator API returns anyx05, j7766n, ozgurfuruncu, lilemiv, elfn0909 and
-  asliarikoglu. Named roles/RACI are preserved; no identity mapping is guessed.
+  asliarikoglu. The user has confirmed the six RACI mappings in team-accounts.json.
 - Current account is anyx05, write-only. Branch controls and Projects admin defaults
   are prepared for all verified collaborators but not applied remotely.
 - Project read/create/import remains blocked by missing token scope. Admin branch
@@ -77,3 +77,19 @@ this separate candidate is not a final accepted submission while pending rows re
 The evidence follow-up changes only documentation. Read PR #21 for its later head's
 actual checks. Next executable steps require the real owner/reviewer, as detailed
 in [owner-actions.md](owner-actions.md); no approval or release completion is invented.
+
+## Final audit follow-up
+
+See [final-audit.md](final-audit.md) for the current requirement matrix. Confirmed
+accounts and all initial issue planning owners are now applied/verified. The
+candidate Word and Project manifest reflect those assignments. A read-only audit
+and nine negative/positive release-readiness tests prevent prepared payloads,
+stale/missing CI, self/stale/non-writer reviews or a misplaced/unpublished tag from
+being counted as completed release evidence. Seven original contract/YAML tests
+remain, for 16 tooling tests total.
+
+Effective main/develop protection is still absent and Project import/admin access
+is unverified with this token; these are setup blockers beyond human release/PR
+approval. The user's requested repository/Project Admin for anyx05 is recorded as
+pending owner approval and an appropriate ownership/access arrangement. No grant,
+policy bypass, merge or release is fabricated.

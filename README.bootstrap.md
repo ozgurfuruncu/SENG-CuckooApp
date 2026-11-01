@@ -59,3 +59,8 @@ isolated test database; CI provides one. SQLite tests do not substitute for it.
 See [bootstrap evidence](docs/stack-a-bootstrap-evidence.md),
 [submission/evidence ledger](docs/submissions/README.md) and the
 [contract reconciliation register](docs/contract-reconciliation.md).
+
+For the final submission audit, use [Sprint 1 readiness](docs/release/final-audit.md).
+`npm test` in tools/contract now runs seven contract/YAML checks and nine release
+readiness regressions. This distinguishes actual owner-applied settings and human
+review from prepared payloads and passing code checks.

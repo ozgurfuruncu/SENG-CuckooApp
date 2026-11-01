@@ -1,0 +1,16 @@
+{
+  "status": "REQUESTED_PENDING_OWNER_APPROVAL",
+  "requestedOn": "2026-11-02",
+  "account": "anyx05",
+  "person": "Emmanuel Alabi",
+  "requestedRoles": ["REPOSITORY_ADMIN", "PROJECT_ADMIN"],
+  "approvalAuthority": "ozgurfuruncu",
+  "ownerApprovalRecorded": false,
+  "repositoryAdminEffective": false,
+  "projectAdminEffective": null,
+  "projectAdminVerification": "UNVERIFIED_MISSING_PROJECT_SCOPE",
+  "currentRepositoryType": "personal",
+  "repositoryAdminDecision": "A personal repository has one owner. Multiple repository admins require an owner-approved organization-owned arrangement; no ownership transfer or organization creation is authorized or performed by this request.",
+  "projectAdminDecision": "The current Project owner/admin may grant anyx05 Admin through Project Manage access. Repository write access and token scopes do not themselves grant it.",
+  "reviewPolicy": "The prepared policy requires one independent review, including for administrators. Admin access does not count as self-approval; no approval bypass has been introduced. Any change requires an explicit owner/team policy decision."
+}

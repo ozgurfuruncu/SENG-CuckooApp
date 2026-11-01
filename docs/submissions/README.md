@@ -17,7 +17,7 @@ this ledger to transfer verified links into the final submitted copy after revie
 | Repository | [SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp) | Verified existing public repository |
 | Foundation integration PR | [#17](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/17) | Ready for review; green foundation CI; owner review requested, no approval at last inspection |
 | Bootstrap issue | [#18](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/18) | Separate bounded post-approval work; technical owner from supplied roles, no guessed account assignment |
-| Backlog | [Issue index](../issue-index.md) | US-01..15 published; US-14/15 deferred; individual GitHub assignees still pending |
+| Backlog | [Issue index](../issue-index.md), [confirmed accounts](../team-accounts.json) | US-01..15 published and assigned to user-confirmed PO for backlog/acceptance planning; US-14/15 remain deferred, future implementation delegation remains planning work |
 | Canonical contract | [api/openapi.yaml](../../api/openapi.yaml) | OpenAPI 3.1, version 0.2.1-draft; bootstrap health slice added |
 | Existing verified CI | [Foundation backend](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349590906), [foundation contract](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349590909) | Passed for foundation commit 5478308; bootstrap results recorded separately |
 | MIT and architecture | [LICENSE](../../LICENSE), [accepted ADR-001](../decisions/ADR-001-architecture.md) | Original MIT attribution retained; selection approved by user on 2026-11-02; peer review pending |
@@ -34,6 +34,11 @@ its successful candidate CI. The separate
 contains verified artifact/PR/CI URLs and keeps unperformed owner/review/tag actions
 pending. ZIP/XML and unchanged embedded assets were checked; no layout rendering
 was performed. The supplied original Word source remains unchanged.
+
+The [final audit](../release/final-audit.md) checks every source submission requirement
+and records the remaining owner-controlled setup. The source Word's statement
+that stories must be entered/assigned is now backed by actual issue assignments;
+its Project/rules/review/tag evidence still requires verified owner actions.
 
 ![Submitted system context](../diagrams/system-context.png)
 

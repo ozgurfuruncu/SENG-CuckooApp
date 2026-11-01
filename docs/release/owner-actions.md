@@ -73,6 +73,33 @@ explicitly deferred. Add verified issue assignees through actual team planning;
 do not infer a person's role from their login. Capture Project URL and access
 evidence. Project access does not itself change repository administration.
 
+Initial issue ownership has now been applied and verified: US-01..15 are assigned
+to PO `elfn0909` for backlog/acceptance accountability; #16/#18 to `anyx05`; #20 to
+`asliarikoglu` and `lilemiv`. The user confirmed all six accounts in
+[team-accounts.json](../team-accounts.json). Future implementation tasks can be
+delegated during sprint planning without pretending they are already completed.
+
+### Owner decision: anyx05 repository and Project Admin
+
+The user explicitly requests **both**, subject to current owner approval; see
+[admin-access-request.json](admin-access-request.json). This is a pending request,
+not a grant. `anyx05` is currently a repository writer; Project Admin is unverified.
+
+A personal repository has one owner and collaborators; there is no second
+repository-admin role to grant here. To retain multiple repository administrators,
+the owner must explicitly choose an organization-owned arrangement and grant the
+organization repository Admin role. No organization name, ownership transfer or
+repository move is inferred/authorized by the readiness audit. An owner decision
+and separately approved migration would be needed. Project Admin can instead be
+granted independently through the existing Project's Manage access.
+
+The prepared branch policy enforces one independent approval even for admins.
+Admin access does not make self-approval count. The user's desired faster PR
+workflow is recorded, but no review bypass or change to that release rule was
+introduced. Owner/team approval would be needed for an explicit policy change.
+[Personal repository permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository),
+[organization repository roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
+
 ## 3. Perform actual reviews and preserve integration history
 
 Review PR #17 as the independent collaborator, then approve it from the reviewing

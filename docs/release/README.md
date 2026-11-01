@@ -33,8 +33,9 @@ Authenticated REST inspection returned six accounts, including the owner:
 | elfn0909 | Write | Admin |
 | asliarikoglu | Write | Admin |
 
-These are verified accounts, not guessed mappings to the people in RACI. The user
-reported two collaborators; the live API returned the six accounts above. The
+The user has now confirmed the mapping to the named RACI owners in
+[team-accounts.json](../team-accounts.json). The user originally reported two
+collaborators; the live API returned the six accounts above. The
 prepared [access manifest](access-defaults.json) covers all of them. Project admin
 can later be changed manually. There is no public administration/default bypass.
 
@@ -82,6 +83,9 @@ overwrite prior commits. [GitHub review reference](https://docs.github.com/en/pu
 - [Submission ledger](../submissions/README.md). Original source DOCX remains
   unchanged; the [separate repository-evidence candidate](../submissions/Cuckoo_Sprint1_Repository_Evidence_Candidate.docx)
   contains verified release-PR/CI links. Pending reviews/settings/tag stay explicit.
+- [Final requirement audit](final-audit.md) and [requested anyx05 admin access](admin-access-request.json).
 
-Only known completed actions/checks are evidence. Account role defaults are not
+All initial issue planning owners are now assigned and verified; future implementation
+delegation remains sprint planning. Only known completed actions/checks are evidence.
+Account role defaults are not
 effective settings, and green CI is not a human review. No sprint-1 tag exists yet.
