@@ -23,7 +23,7 @@ this ledger to transfer verified links into the final submitted copy after revie
 | MIT and architecture | [LICENSE](../../LICENSE), [accepted ADR-001](../decisions/ADR-001-architecture.md) | Original MIT attribution retained; selection approved by user on 2026-11-02; peer review pending |
 | System context | [Diagram](../diagrams/system-context.png) | Exact image2.png extracted from supplied Word document; no generated replacement |
 | Roles/RACI and submission | [RACI](../team-raci.md), [DOCX](Cuckoo_Sprint1_Submission.docx) | Supplied six named roles and exactly one accountable owner per activity |
-| Bootstrap PR / final CI | [Bootstrap evidence](../stack-a-bootstrap-evidence.md) | Read actual execution and publication state there |
+| Bootstrap PR / CI | [Draft #19](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/19), [CI](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41352615487), [full evidence](../stack-a-bootstrap-evidence.md) | Implementation commit d1810c2 passed backend/PostgreSQL, frontend, Compose and contract checks; 16 pytest tests, 96.32% CI coverage; human review pending |
 | Branch rules / collaborators / Project | Pending administrator/account evidence | Current account has no repository admin/maintain; prior Projects scope rejection remains unresolved |
 | Sprint 1 tag/release | Pending reviewed integration | No tag or release created; do not insert a fabricated release URL |
 

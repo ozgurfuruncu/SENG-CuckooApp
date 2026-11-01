@@ -117,10 +117,38 @@ uses an injected OperationalError. The old six tests still execute against their
 SQLite fixture. Upstream Starlette/httpx and Alembic configuration deprecation
 warnings were visible; they did not fail the checks and are not suppressed.
 
-New CI adds a real PostgreSQL test URL so its pytest run should execute the local
-skip. Its actual result, PR URL and published commit are recorded after publication,
-not inferred from the workflow YAML. No coverage number is attributed to CI until
-its output has been inspected.
+## Published PR and inspected CI results
+
+`git commit -m 'feat: bootstrap approved Stack A with database health (refs #18)'`
+created `d1810c25a4d204a311e3460eb48b28a97218cfcc`. The staged diff check passed.
+`git push -u origin feature/stack-a-bootstrap` succeeded and
+`node .sprint1/github-actions.cjs bootstrap-pr` opened
+[draft PR #19](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/19), targeting
+the unmerged foundation branch. No reviews were present and `merged` was false.
+
+`node .sprint1/github-actions.cjs bootstrap-checks` confirmed **all eight** push/PR
+checks completed successfully for that implementation commit. PR-event evidence:
+
+- [Backend / PostgreSQL pytest](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41352615487/job/124985873114).
+- [TypeScript / frontend build](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41352615487/job/124985873280).
+- [Linux Compose smoke](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41352615487/job/124985873311).
+- [OpenAPI validation and validator tests](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41352615781/job/124985873646).
+
+`node .sprint1/github-actions.cjs bootstrap-logs` read the completed backend job's
+actual log summary: **16 passed**, no skipped tests, **96.32% coverage**, five
+deprecation warnings. Thus the PostgreSQL-specific pytest ran in CI in addition
+to the locally executed PostgreSQL Compose check. The CI number is observed from
+the log, not inferred from a passing job or from local coverage.
+
+`node .sprint1/github-actions.cjs bootstrap-review-state` verified main/develop
+still at `8f701754a296dfd5aa9e464383ac4668d0f5e790`, both unprotected, account
+admin/maintain false, and Projects still rejected with INSUFFICIENT_SCOPES
+(missing read:project; existing token scopes gist/repo/workflow). No branch-rule
+or Project mutation was attempted with those insufficient permissions.
+
+This evidence-only follow-up records the implementation commit's results. Read
+the PR for any later head's actual check state; passing CI does not create a
+human approval or release acceptance.
 
 ## Remaining human actions
 

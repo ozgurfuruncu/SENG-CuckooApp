@@ -22,6 +22,9 @@ is claimed. The repository administrator should protect main and develop with:
   conversations resolved; apply to administrators as appropriate for the course.
 - Required, current checks: existing `backend` job and `OpenAPI 3.1 validation` job.
   Confirm actual GitHub check names from the PR before selecting required contexts.
+  Approved Stack A bootstrap also supplies passing `Stack A backend`,
+  `Stack A frontend` and `Stack A Compose smoke` contexts (PR #19). Include these
+  for the integrated baseline after they exist on the target branch.
 - Branch up-to-date before merge; force pushes and deletion disabled; no routine
   bypass/direct pushes. Confirm the effective rules and capture evidence.
 

@@ -11,6 +11,7 @@
 - [ ] Confirm GitHub collaborator identities, issue assignees and reviewer accounts.
 - [ ] Resolve contract/backlog gaps with PO, architect and QA.
 - [x] Record user approval of Stack A on 2026-11-02, technical owner, rationale and source document in ADR-001.
+- [x] Publish bounded bootstrap in draft PR #19; real PostgreSQL/backend, frontend, contract and Compose checks pass on implementation commit d1810c2.
 - [ ] Administrator protects main and develop; verify required checks/approvals.
 - [ ] Authorized Project owner sets up board and imports issues (token lacks Projects scope).
 - [ ] Human reviews this PR and exact CI evidence.
