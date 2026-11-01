@@ -80,8 +80,8 @@ overwrite prior commits. [GitHub review reference](https://docs.github.com/en/pu
   18 existing issues; future stories stay Backlog and US-14/15 stay deferred.
 - [Prepared release notes](sprint-1-release-notes.md); [execution status](status.md).
 - [Submission ledger](../submissions/README.md). Original source DOCX remains
-  unchanged; a separate repository-evidence candidate is prepared after actual
-  release-PR/CI URLs exist. Pending reviews/settings/tag stay explicit.
+  unchanged; the [separate repository-evidence candidate](../submissions/Cuckoo_Sprint1_Repository_Evidence_Candidate.docx)
+  contains verified release-PR/CI links. Pending reviews/settings/tag stay explicit.
 
 Only known completed actions/checks are evidence. Account role defaults are not
 effective settings, and green CI is not a human review. No sprint-1 tag exists yet.

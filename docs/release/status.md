@@ -13,11 +13,11 @@ As inspected on 2026-11-02 (Europe/Istanbul). Related issue:
   are prepared for all verified collaborators but not applied remotely.
 - Project read/create/import remains blocked by missing token scope. Admin branch
   changes remain blocked by actual repository permission, regardless of policy defaults.
-- The source submission is preserved. A separate evidence candidate will include
+- The source submission is preserved. A separate evidence candidate now includes
   verified release-PR/CI links, retaining pending owner/review/tag records.
 
-The release PR and observed release-branch CI results are appended after execution.
-This file records actual state, not a completed release or a simulated approval.
+The candidate is [draft release PR #21](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21)
+to main. This file records actual state, not a completed release or a simulated approval.
 
 ## Executed preparation checks
 
@@ -39,3 +39,41 @@ backend/Compose tests were not repeated without a new code concern. The modified
 workflow triggers cause actual release-branch CI to rerun backend, PostgreSQL,
 frontend, contract and Compose validation; record those results after execution.
 Prepared protection rules are not claimed as tested effective authorization.
+
+## Published candidate and actual CI
+
+`git commit -m 'docs: prepare reviewed Sprint 1 release and collaborator defaults (refs #20)'`
+created candidate `c83f0de521f28bfc51bcbe30dfef93dec5737a14`.
+`git push -u origin release/sprint-1` succeeded.
+`node .sprint1/sprint1-release.cjs pr` opened draft #21 from release/sprint-1 to main.
+The complete current diff is proposed through a PR; original main was not rewritten.
+
+`node .sprint1/sprint1-release.cjs checks` verified **all ten push/PR checks succeeded**
+for that candidate. PR-event checks, using the exact configured context names:
+
+- [backend](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41355125674/job/124993434403).
+- [OpenAPI 3.1 validation](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41355125739/job/124993434741).
+- [Stack A backend / PostgreSQL](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41355125653/job/124993434942).
+- [Stack A frontend](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41355125653/job/124993434911).
+- [Stack A Compose smoke](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41355125653/job/124993434775).
+
+These verify pipeline triggers on the release candidate as well as application,
+PostgreSQL, schema, frontend and Compose checks. They do not demonstrate deployed
+branch policies, Project permissions, peer approval or final main checks.
+
+`git merge-base --is-ancestor origin/main HEAD` and the same check for bf48434
+both passed. `git merge-tree --write-tree origin/main HEAD` produced a clean merge
+preview without moving any branch. No original tracked path was deleted. Thus
+the proposed Git flow preserves history; it is not a force overwrite of main.
+
+The task-local `fill-submission-evidence.py` created
+[Cuckoo_Sprint1_Repository_Evidence_Candidate.docx](../submissions/Cuckoo_Sprint1_Repository_Evidence_Candidate.docx).
+It replaced eight pending artifact/evidence rows with verified branch/PR/CI URLs
+and explicit still-pending owner/review/tag information. ZIP CRC, XML parsing,
+identical embedded assets/styles and unchanged source SHA-256 were verified.
+No renderer/layout check was run. The original submitted DOCX remains unchanged;
+this separate candidate is not a final accepted submission while pending rows remain.
+
+The evidence follow-up changes only documentation. Read PR #21 for its later head's
+actual checks. Next executable steps require the real owner/reviewer, as detailed
+in [owner-actions.md](owner-actions.md); no approval or release completion is invented.

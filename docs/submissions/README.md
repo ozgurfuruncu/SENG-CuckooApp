@@ -27,9 +27,13 @@ this ledger to transfer verified links into the final submitted copy after revie
 | Branch rules / collaborators / Project | [Prepared defaults and owner actions](../release/README.md) | Six accounts verified; all-collaborator defaults prepared. Applying rules/Project access remains blocked by current account permissions/scopes |
 | Sprint 1 tag/release | Pending reviewed integration | No tag or release created; do not insert a fabricated release URL |
 
-The [release closeout status](../release/status.md) records the actual release PR
-and CI after execution. A separate evidence candidate preserves the original Word
-source and leaves unperformed owner/review/tag actions pending.
+The [release closeout status](../release/status.md) records
+[draft release PR #21](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21) and
+its successful candidate CI. The separate
+[repository-evidence Word candidate](Cuckoo_Sprint1_Repository_Evidence_Candidate.docx)
+contains verified artifact/PR/CI URLs and keeps unperformed owner/review/tag actions
+pending. ZIP/XML and unchanged embedded assets were checked; no layout rendering
+was performed. The supplied original Word source remains unchanged.
 
 ![Submitted system context](../diagrams/system-context.png)
 

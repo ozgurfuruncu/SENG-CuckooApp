@@ -18,6 +18,7 @@
 - [ ] Human reviews this PR and exact CI evidence.
 - [x] Preserve updated submission confirming MIT, Stack A and 05.11.2026 submission date.
 - [ ] PO transfers verified repository evidence into the final submitted copy.
+- [x] Prepare separate evidence-filled Word candidate with real PR #21 and green candidate CI links; original source preserved.
 - [x] Prepare all-collaborator Project defaults and staged branch-rule payloads in docs/release.
 - [ ] Finalize release/sprint-1 with integrated develop and an approved release PR to main.
 - [ ] Merge through reviewed PRs only; tag reviewed main as sprint-1 afterward.
