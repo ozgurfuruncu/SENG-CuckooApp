@@ -1,0 +1,138 @@
+{
+  "status": "PREPARED_NOT_IMPORTED",
+  "columns": [
+    "Backlog",
+    "Sprint",
+    "Doing",
+    "Review",
+    "Done"
+  ],
+  "items": [
+    {
+      "number": 1,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/1",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 2,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/2",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 3,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/3",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/4",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/5",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 6,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/6",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 7,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/7",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 8,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/8",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 9,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/9",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 10,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/10",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 11,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/11",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 12,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/12",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 13,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/13",
+      "status": "Backlog",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 14,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/14",
+      "status": "Backlog",
+      "deferred": true,
+      "assignees": []
+    },
+    {
+      "number": 15,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/15",
+      "status": "Backlog",
+      "deferred": true,
+      "assignees": []
+    },
+    {
+      "number": 16,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/16",
+      "status": "Review",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 18,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/18",
+      "status": "Review",
+      "deferred": false,
+      "assignees": []
+    },
+    {
+      "number": 20,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20",
+      "status": "Review",
+      "deferred": false,
+      "assignees": []
+    }
+  ]
+}

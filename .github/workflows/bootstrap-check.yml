@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main, develop, feature/sprint1-repo-bootstrap]
   push:
-    branches: [feature/stack-a-bootstrap]
+    branches: [main, develop, feature/stack-a-bootstrap, release/sprint-1]
 permissions:
   contents: read
 jobs:

@@ -1,0 +1,10 @@
+# Preserved original repository README
+
+[README.original.md](README.original.md) is the exact working-tree copy of the
+original root README at main `8f701754a296dfd5aa9e464383ac4668d0f5e790`.
+It includes the original encoding/NUL tail, so GitHub may show it as a binary
+download. No team-authored content was removed from history. The current root
+README explains the selected bootstrap and links all Sprint 1 artifacts.
+
+Old commands describe the preserved legacy app, which differs from canonical
+`api/openapi.yaml`; they are historical rather than the active deployment guide.

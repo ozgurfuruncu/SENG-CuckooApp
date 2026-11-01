@@ -29,3 +29,7 @@ of Sprint/Doing. A board owner with Projects authorization can import these URLs
 without recreating issues. The bootstrap T-05 is for human review, not marked Done.
 
 Post-approval bootstrap: [T-06 / #18](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/18). Stack A accepted on 2026-11-02; business implementation still requires its reviewed acceptance/contract slice.
+
+Sprint 1 repository/release closeout: [T-02/T-03 / #20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
+The [Project manifest](release/project-items.json) covers the 18 existing issues;
+import and assignee planning remain actual owner/team actions, not completed Project setup.

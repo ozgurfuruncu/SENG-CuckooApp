@@ -42,10 +42,10 @@ team reviews these differences and reconciles them in a linked issue/PR.
 | Evidence/review | Single file, optional note, approve only | 1–5 photos plus 10–2000 character notes; request revision/resubmit | Permission must exist; no public file paths; no app changes in this branch |
 | Errors/fields | Snake case/integer IDs; 422 and `{detail}` | Camel case/string IDs; 400/401/403/404/409 Problem responses | Breaking contract differences; do not silently retrofit code |
 | Messaging/ratings/recommender | Original includes messaging/ratings; starter US-14/15 | Deferred by current handoff; absent from canonical API | Preserve stories as deferred, not MVP work |
-| Cancel | Original OPEN-only close; starter US-11 says terminal idempotence | OPEN or ASSIGNED only; other states 409; held simulation voided | US-11 idempotence wording conflicts with contract; PO + QA must resolve before implementation; no policy invented |
+| Cancel | Original OPEN-only close; starter US-11 said terminal idempotence | OPEN or ASSIGNED only; other states 409; held simulation voided | Updated submission resolves duplicate-terminal wording; backlog/#11 synchronized. Later implementation needs negative tests |
 | Audit history | Absent from implementation | Authorized participant history | Later implementation issue; actor visibility must be reviewed |
-| License | Proposal calls MIT proposed; original LICENSE is full MIT | Starter also MIT, with different copyright attribution | Retain original repository LICENSE and attribution; no relicensing or copyright replacement; PO confirms submission wording |
-| Stack | Existing code and starter subfolder READMEs imply React/FastAPI | ADR-001 remains PROPOSED, choices unapproved | Prior work preserved; no new scaffolding; evaluate without fabricated skill scores |
+| License | Earlier proposal called MIT proposed; original LICENSE is full MIT | Updated submission selects MIT | Resolved; original repository LICENSE and attribution retained, no copyright replacement |
+| Stack | Earlier candidates and existing React/FastAPI code | ADR-001 accepted with Stack A on 2026-11-02 | Resolved; health-only bootstrap tested, business implementation remains separately scoped |
 
 ## Issues requiring human contract decisions before implementation
 
@@ -56,9 +56,13 @@ team reviews these differences and reconciles them in a linked issue/PR.
   the employer. Do not invent verification or permission-attestation endpoints.
 - Specify revision-request preconditions and whether a note is required; approval
   preconditions are explicit but revision rules need equally precise acceptance.
-- Resolve US-11 repeat-cancellation response against terminal-state conflicts.
 - Confirm discovery privacy/defaults, role-appropriate task fields and history visibility.
-- Reconcile original T-05's `docs/openapi.yaml` path with canonical `api/openapi.yaml`.
+
+Resolved draft-document points: US-11 duplicate terminal actions follow 409, and
+the updated submission confirms `api/openapi.yaml` as canonical despite original
+T-05's historical `docs/openapi.yaml` path. The remaining questions are Sprint 2
+feature-design work; keeping them explicit does not pretend the full MVP is a
+Sprint 1 requirement.
 
 These are questions on existing requirements, not additional MVP stories. Product
 Owner, architect and QA must record resolutions in the contract and linked acceptance

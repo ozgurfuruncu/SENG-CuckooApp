@@ -1,5 +1,9 @@
 # Sprint 1 review entry point
 
+For current closeout, start with [release/sprint-1 status](release/status.md),
+[owner actions](release/owner-actions.md) and the updated root README. Prior
+foundation/stack reports below retain their inspection-date facts.
+
 **Current, 2026-11-02:** ADR-001 is accepted with Stack A. Start with
 [active bootstrap instructions](../README.bootstrap.md),
 [updated submission/evidence ledger](submissions/README.md) and

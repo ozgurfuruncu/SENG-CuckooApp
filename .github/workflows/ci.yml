@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: [main, develop]
+    branches: [main, develop, release/sprint-1]
   pull_request:
     branches: [main, develop]
 
