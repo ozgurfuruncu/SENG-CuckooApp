@@ -1,9 +1,9 @@
 name: Contract check
 on:
   pull_request:
-    branches: [main, develop]
-  push:
     branches: [main, develop, feature/sprint1-repo-bootstrap]
+  push:
+    branches: [main, develop, feature/sprint1-repo-bootstrap, feature/stack-a-bootstrap]
 permissions:
   contents: read
 jobs:

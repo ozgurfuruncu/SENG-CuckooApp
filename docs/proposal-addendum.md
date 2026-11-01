@@ -1,5 +1,10 @@
 # Proposal reconciliation addendum
 
+**Superseded source, 2026-11-02:** the user supplied a revised submission confirming
+Stack A, MIT, bounded scope, named roles/RACI and submission date. See the
+[preserved current document and evidence ledger](submissions/README.md). The text
+below records the earlier proposal discrepancies, not current approval status.
+
 Status: prepared for human review, 2026-11-01 (Europe/Istanbul).
 
 Source read without modification: `SENG_PROJECT_SPRİNT1.docx`, supplied in Downloads.

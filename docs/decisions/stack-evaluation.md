@@ -2,6 +2,11 @@
 
 Status: **PROPOSED / NOT APPROVED**. Existing story: T-08 in `docs/backlog.md`.
 
+**2026-11-02 update:** this is the preselection evaluation record. The user has
+approved Stack A and the updated submission confirms the supporting tools.
+[ADR-001 is accepted](ADR-001-architecture.md); its approval supersedes the
+waiting-decision language below. No candidate scores have been added retroactively.
+
 ## Evidence and limits
 
 The repository at `8f701754a296dfd5aa9e464383ac4668d0f5e790` contains a React/JavaScript/Vite

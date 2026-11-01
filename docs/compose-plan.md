@@ -1,5 +1,10 @@
 # Technology-neutral Compose plan
 
+**2026-11-02:** Stack A is approved. The active bounded implementation is
+`compose.bootstrap.yml`; follow [bootstrap instructions](../README.bootstrap.md)
+and [executed evidence](stack-a-bootstrap-evidence.md). The planning text below is
+the pre-approval record. The legacy Compose/Dockerfiles remain unchanged.
+
 Existing root `docker-compose.yml`, Dockerfiles and environment examples are
 preserved team work. Their React/FastAPI/SQLAlchemy settings are candidates pending
 ADR-001, not a fresh selection. No new containers, app skeletons or infrastructure

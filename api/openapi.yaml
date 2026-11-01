@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Cuckoo API
-  version: 0.2.0-draft
+  version: 0.2.1-draft
   description: >
     Sprint 1 contract for a bounded local-task workflow. For the first
     release, only VEHICLE_PHOTO_CHECK is supported. Payments are simulated; no
@@ -11,6 +11,7 @@ servers:
   - url: http://localhost:8000/api/v1
     description: Local development API
 tags:
+  - name: System
   - name: Authentication
   - name: Profiles
   - name: Tasks
@@ -20,6 +21,24 @@ tags:
 security:
   - BearerAuth: []
 paths:
+  /health:
+    get:
+      tags: [System]
+      security: []
+      operationId: getHealth
+      summary: Check API and database readiness
+      description: Bootstrap readiness only. No credentials or database error details are returned.
+      responses:
+        '200':
+          description: API and database are ready
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/HealthResponse'}
+        '503':
+          description: Database unavailable
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/HealthUnavailable'}
   /auth/register:
     post:
       tags: [Authentication]
@@ -382,6 +401,20 @@ components:
       required: true
       schema: {type: string, example: TASK-001}
   schemas:
+    HealthResponse:
+      type: object
+      additionalProperties: false
+      required: [status, database]
+      properties:
+        status: {type: string, const: ok}
+        database: {type: string, const: up}
+    HealthUnavailable:
+      type: object
+      additionalProperties: false
+      required: [status, database]
+      properties:
+        status: {type: string, const: unavailable}
+        database: {type: string, const: down}
     Role:
       type: string
       enum: [EMPLOYER, TASK_TAKER]
