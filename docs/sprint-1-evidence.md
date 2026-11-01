@@ -60,7 +60,7 @@ suggestion or false connection claim was made. Remote work used Git/REST instead
 
 ## Changed files and preservation
 
-All feature changes add paths to the cloned repository; the existing 30 tracked
+All feature changes add 36 paths to the cloned repository; the existing 30 tracked
 files, app behavior, MIT attribution, original workflow and historical contract/
 backlog are retained. The supplied root starter and original Word file remain intact.
 
@@ -103,7 +103,27 @@ created `refs/heads/develop` at existing main
 was not attempted with insufficient admin permission. Project creation/import was
 not attempted after the scope rejection. No merge, release tag or remote provisioning.
 
-Feature push and draft PR evidence will be appended after execution.
+`git commit -m 'docs: reconcile Sprint 1 foundation and validate API contract (refs #16)'`
+created foundation commit `60d8a4a4e3d2bb4a142890a528491b47c2a471a5`.
+`git diff --cached --check` initially found trailing spaces in two supplied templates;
+those were trimmed in the new copies only. Final staged/committed diff checks passed;
+`git diff --name-status origin/main...HEAD` showed additions only.
+
+`git push -u origin feature/sprint1-repo-bootstrap` succeeded.
+`node .sprint1/github-actions.cjs pr` created the open **draft**
+[PR #17 to develop](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/17).
+`node .sprint1/github-actions.cjs checks` then confirmed the following completed
+checks for the foundation commit, with no human reviews at inspection:
+
+- [PR OpenAPI 3.1 validation: success](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349474867/job/124976337012).
+- [PR existing backend job: success](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349474892/job/124976337007).
+- [Feature-push OpenAPI 3.1 validation: success](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349461700/job/124976295470).
+
+The existing backend workflow executes pytest with coverage and a 50% threshold;
+its successful CI execution is remote evidence, not a locally executed backend test.
+This evidence-only follow-up commit records those results; any later head's check
+state must be read from the PR. The draft is available for peer review; it is not
+approved or merged, regardless of GitHub reporting it mechanically mergeable.
 
 ## Validation results
 

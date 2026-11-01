@@ -5,6 +5,8 @@
 - [x] Prepare canonical OpenAPI 3.1 and document contract conflicts.
 - [x] Keep ADR-001 PROPOSED; add evaluation without invented proficiency evidence.
 - [x] Prepare feature branch, issue/bug/PR templates and review process.
+- [x] Create develop at unchanged main; publish existing-story issues with deferred scope explicit.
+- [x] Open draft PR #17 to develop; foundation contract and existing backend CI pass.
 - [ ] Confirm all six collaborator identities and role/owner/reviewer mapping.
 - [ ] Resolve contract/backlog gaps with PO, architect and QA.
 - [ ] Accept ADR-001 with a named human, reason and date.
