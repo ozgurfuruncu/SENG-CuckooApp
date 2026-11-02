@@ -47,17 +47,15 @@ as deployed. [GitHub permission reference](https://docs.github.com/en/repositori
 
 ## Review and integration sequence
 
-1. Owner/independent collaborator reviews [PR #17](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/17)
-   into develop. It is ready for review; owner review was requested. Merge only
-   after actual approval and successful checks, preserving commits with a merge commit.
-2. Retarget [PR #19](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/19) to develop
-   after #17 integrates. It is ready for review; owner review was requested. Check
-   the changed-base diff and new CI, obtain approval and merge without squashing
-   away the original feature commits.
+1. [PR #17](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/17) is merged into
+   develop by owner review flow, preserving commit history.
+2. [PR #19](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/19) is merged and
+   included in develop through #17 integration without rewriting original commits.
 3. Merge current develop into release/sprint-1 without force pushing, so the
    release candidate contains the actual integration history. Rerun all release
    checks. Resolve any conflicts through review; do not reset main to this branch.
-4. Once content/head is final, take the release PR to main out of draft and obtain
+4. Once content/head is final, use the active release-closeout PR to main (currently
+   #23) and obtain
    independent approval on that head. GitHub forbids PR authors approving their own
    PRs; using the author account is not a simulated peer review.
 5. Merge the approved release PR into main, wait for main's checks, synchronize

@@ -3,10 +3,10 @@
 As inspected on 2026-11-02 (Europe/Istanbul). Related issue:
 [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
 
-- Active branch: release/sprint-1, prepared from tested bootstrap bf48434.
-- #17 and #19 are now ready for review, with ozgurfuruncu requested as the verified
-  independent owner/reviewer. They remain unmerged and have no approving review.
-- Main/develop remain at original 8f701754a296dfd5aa9e464383ac4668d0f5e790; no tag.
+- Release candidate branch: release/sprint-1, prepared from tested bootstrap bf48434.
+- #17 and #19 are merged by owner/reviewer ozgurfuruncu, preserving authored commit
+  history. Develop now points to merge commit 8726106.
+- Main remains at original 8f701754a296dfd5aa9e464383ac4668d0f5e790; no sprint-1 tag.
 - Collaborator API returns anyx05, j7766n, ozgurfuruncu, lilemiv, elfn0909 and
   asliarikoglu. The user has confirmed the six RACI mappings in team-accounts.json.
 - Current account is anyx05, write-only. Branch controls and Projects admin defaults
@@ -16,8 +16,9 @@ As inspected on 2026-11-02 (Europe/Istanbul). Related issue:
 - The source submission is preserved. A separate evidence candidate now includes
   verified release-PR/CI links, retaining pending owner/review/tag records.
 
-The candidate is [draft release PR #21](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21)
-to main. This file records actual state, not a completed release or a simulated approval.
+Historical draft release PR [#21](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21)
+was closed unmerged. Current closeout continuation is [PR #23](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23),
+which carries the release candidate contents to main for reviewed integration.
 
 ## Executed preparation checks
 
@@ -26,7 +27,7 @@ to main. This file records actual state, not a completed release or a simulated 
 | `git fetch origin --prune` and authenticated REST/GraphQL inspection | Existing branches preserved, no approvals/tags; current account write-only, Projects scope rejected |
 | `node .sprint1/sprint1-release.cjs audit` (workspace root) | Six actual accounts verified; all existing PRs/reviews/issues enumerated; snapshot saved locally without credentials |
 | `node .sprint1/sprint1-release.cjs issue` | Created existing T-02/T-03 closeout issue #20 after duplicate check |
-| `node .sprint1/sprint1-release.cjs ready` | #17/#19 marked ready via GraphQL; requested verified independent owner ozgurfuruncu; no approval submitted |
+| `node .sprint1/sprint1-release.cjs ready` | #17/#19 marked ready via GraphQL; requested verified independent owner ozgurfuruncu; later merged by owner review flow |
 | `git switch -c release/sprint-1` | Separate release candidate based on bf48434, no main/develop mutation |
 | `node .sprint1/prepare-release-artifacts.cjs` | Prepared staged protection JSON, Project Admin defaults for six actual collaborators, 18 existing-issue import URLs |
 | `npm.cmd test` in tools/contract | Seven tests pass, including canonical schema/reference and negative cases plus all repository YAML parsing |
@@ -74,9 +75,10 @@ identical embedded assets/styles and unchanged source SHA-256 were verified.
 No renderer/layout check was run. The original submitted DOCX remains unchanged;
 this separate candidate is not a final accepted submission while pending rows remain.
 
-The evidence follow-up changes only documentation. Read PR #21 for its later head's
-actual checks. Next executable steps require the real owner/reviewer, as detailed
-in [owner-actions.md](owner-actions.md); no approval or release completion is invented.
+The evidence follow-up changes only documentation. Read PR #21 for the archived release-branch
+candidate checks and PR #23 for the current closeout-to-main review state. Next executable steps
+require the real owner/reviewer, as detailed in [owner-actions.md](owner-actions.md); no approval
+or release completion is invented.
 
 ## Final audit follow-up
 

@@ -100,25 +100,19 @@ introduced. Owner/team approval would be needed for an explicit policy change.
 [Personal repository permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository),
 [organization repository roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization).
 
-## 3. Perform actual reviews and preserve integration history
+## 3. Preserve integration history and prepare final release head
 
-Review PR #17 as the independent collaborator, then approve it from the reviewing
-account and merge after its checks. The author cannot self-approve.
+PR #17 and #19 are already merged by owner review flow. Confirm merged state and
+commit preservation first:
 
 ```powershell
 gh pr view 17 --repo ozgurfuruncu/SENG-CuckooApp --web
+gh pr view 19 --repo ozgurfuruncu/SENG-CuckooApp --web
 gh pr checks 17 --repo ozgurfuruncu/SENG-CuckooApp
-# After genuine review in the web UI:
-gh pr merge 17 --repo ozgurfuruncu/SENG-CuckooApp --merge
-gh pr edit 19 --repo ozgurfuruncu/SENG-CuckooApp --base develop
-gh pr checks 19 --repo ozgurfuruncu/SENG-CuckooApp --watch
+gh pr checks 19 --repo ozgurfuruncu/SENG-CuckooApp
 ```
 
-Review the retargeted #19 diff, approve, then merge with `--merge` after checks.
-No `--admin` bypass, squash, force push, fabricated approval or automatic reviewer
-impersonation. Approved code still needs effective branch-rule/CI evidence.
-
-Once develop contains #17/#19, synchronize the release candidate normally:
+Then synchronize the release candidate with current develop normally:
 
 ```powershell
 git fetch origin
@@ -130,6 +124,8 @@ git push origin release/sprint-1
 If the branch is checked out elsewhere or has local changes, use a clean checkout
 instead. Resolve conflicts through review; a changed head requires fresh checks
 and approval. The merge commit preserves the feature and integration history.
+No `--admin` bypass, squash, force push, fabricated approval or reviewer
+impersonation is acceptable.
 
 ## 4. Approve release PR, merge main, verify, tag
 
