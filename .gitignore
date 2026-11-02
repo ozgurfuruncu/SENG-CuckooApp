@@ -8,3 +8,7 @@ node_modules/
 dist/
 .idea/
 .vscode/
+.venv/
+.env.*
+!.env.example
+coverage.xml

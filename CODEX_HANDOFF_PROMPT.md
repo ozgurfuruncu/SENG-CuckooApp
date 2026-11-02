@@ -1,5 +1,12 @@
 # Codex handoff — Sprint 1 foundation with a stack decision gate
 
+**Current update, 2026-11-02:** the user approved ADR-001 with Stack A, and the
+updated submission selects React/TypeScript/Vite, FastAPI/Pydantic,
+PostgreSQL/SQLAlchemy/Alembic and pytest. Follow the accepted ADR and issue #18
+for the separate bounded bootstrap. The original handoff below is preserved as
+historical instructions; its unapproved-stack gate is now satisfied. Business
+contract gaps, human PR review, no direct merges and no premature tags still apply.
+
 You are working on SENG 321 Team 5's Cuckoo project at https://github.com/ozgurfuruncu/SENG-CuckooApp.
 
 **First inspect the repository** (branch, files, git history, tags, PRs, issues and workflows). Do not delete, overwrite or rewrite existing team work. Do not force-push or merge directly to main/develop. Report unauthenticated or insufficient-permission actions accurately.

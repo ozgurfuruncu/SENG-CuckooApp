@@ -1,5 +1,9 @@
 # Cuckoo stack review — deliberately undecided
 
+**Historical evaluation, superseded 2026-11-02:** the user approved Stack A.
+See [accepted ADR-001](ADR-001-architecture.md) for the decision and rationale.
+The option analysis below is preserved; it does not reopen framework selection.
+
 ## First identify the system's engineering drivers
 - Six students, uneven unknown skills; 10-week deadline and individual contribution evidence.
 - Two roles with object-level authorization, private photo uploads, relational data, audit/status history.

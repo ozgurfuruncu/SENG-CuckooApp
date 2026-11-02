@@ -7,13 +7,16 @@
 - [x] Prepare feature branch, issue/bug/PR templates and review process.
 - [x] Create develop at unchanged main; publish existing-story issues with deferred scope explicit.
 - [x] Open draft PR #17 to develop; foundation contract and existing backend CI pass.
-- [ ] Confirm all six collaborator identities and role/owner/reviewer mapping.
+- [x] Record supplied six named roles and RACI from the updated submission.
+- [ ] Confirm GitHub collaborator identities, issue assignees and reviewer accounts.
 - [ ] Resolve contract/backlog gaps with PO, architect and QA.
-- [ ] Accept ADR-001 with a named human, reason and date.
+- [x] Record user approval of Stack A on 2026-11-02, technical owner, rationale and source document in ADR-001.
+- [x] Publish bounded bootstrap in draft PR #19; real PostgreSQL/backend, frontend, contract and Compose checks pass on implementation commit d1810c2.
 - [ ] Administrator protects main and develop; verify required checks/approvals.
 - [ ] Authorized Project owner sets up board and imports issues (token lacks Projects scope).
 - [ ] Human reviews this PR and exact CI evidence.
-- [ ] PO updates the original proposal and confirms submission date and license wording.
+- [x] Preserve updated submission confirming MIT, Stack A and 05.11.2026 submission date.
+- [ ] PO transfers verified repository evidence into the final submitted copy.
 - [ ] Merge through reviewed PRs only; tag reviewed main as sprint-1 afterward.
 
 See [executed evidence](sprint-1-evidence.md) for actual remote actions and check results.

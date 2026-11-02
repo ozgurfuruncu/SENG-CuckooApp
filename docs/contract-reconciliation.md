@@ -2,6 +2,26 @@
 
 Date: 2026-11-01 (Europe/Istanbul). Scope: documentation and validation only.
 
+## Scoped resolution — 2026-11-02, issue #18
+
+The user approved Stack A; SQLAlchemy, Alembic and pytest are confirmed by the new
+submission. Framework selection is resolved in accepted ADR-001. The bounded
+bootstrap adds canonical `GET /health` (external `/api/v1/health`) before deploying
+that slice: 200 only after a database query; 503 with a fixed non-sensitive body
+when the database is unavailable. Runtime generated-schema parity tests cover it.
+
+`app.bootstrap:app` mounts only that slice. Legacy `app.main`, business models,
+routers and tests remain preserved and are not the active bootstrap deployment.
+No business tables are adopted or altered; initial Alembic revision only records
+migration history. All existing business-contract discrepancies below remain open
+for their own issues. A partial runtime schema is explicitly a bootstrap, not a
+claim that the complete canonical API is implemented.
+
+The new submission also resolves the old US-11 wording to “no duplicate terminal
+actions”, consistent with 409 for terminal/repeated cancellation. The backlog and
+issue #11 are synchronized; negative tests remain required for later implementation.
+Permission/file/review gaps remain.
+
 `api/openapi.yaml` is the supplied OpenAPI **3.1.0** implementation contract. The
 repository's original `docs/openapi.yaml` (**3.0.3**) and `docs/backlog.md` remain
 unchanged historical artifacts. Their validity does not make their behavior the

@@ -10,3 +10,9 @@
 8. Do not merge code you cannot explain; summarize assumptions and trade-offs in the PR.
 9. Prefer boring, maintainable dependencies. Avoid microservices.
 10. When implementation and OpenAPI disagree, stop and reconcile the contract before proceeding.
+
+Stack A was approved by the user on 2026-11-02; see accepted ADR-001 and issue #18.
+Use React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic and pytest.
+The active bounded bootstrap is `app.bootstrap:app` and `compose.bootstrap.yml`;
+legacy `app.main` and JSX are preserved prior work and must not be deployed as
+canonical business API behavior. Implement only reviewed contract slices.
