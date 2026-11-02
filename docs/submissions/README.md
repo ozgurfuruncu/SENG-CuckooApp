@@ -20,6 +20,7 @@ evidence, local checks and unverified items. No instructor acceptance is claimed
 | Project evidence | BLOCKED; GraphQL read:project scope missing; no board URL/status independently verified |
 | Sprint tag/release | GAP; [tags](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/tags?per_page=100) and [releases](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/releases?per_page=100) empty |
 | Corrective tracking | Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20); distinct SDD [#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27) |
+| Documentation corrections / SDD proposal | Open [PR #28 into develop](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28); [current checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28/checks); independent human review pending |
 
 The current DOCX is updated to this assessment; its original supplied source
 remains unchanged. This documentation PR is proposed evidence until reviewed and

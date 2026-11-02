@@ -359,7 +359,9 @@
   "corrective_tracking": {
     "closeout_issue": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20",
     "reopened_comment": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6586853736",
-    "sdd_issue": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27"
+    "sdd_issue": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27",
+    "documentation_pr": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28",
+    "documentation_pr_state": "open; independent human review pending"
   },
   "remote_tree_ref": "08386a19afdaddee67c230790de50fb7b95b342a",
   "baseline_tree": "bc06a47dacb811a78c4dec095c80e8a63f4d628c",

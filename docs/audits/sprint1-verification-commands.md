@@ -182,6 +182,34 @@ No application or OpenAPI change was made to work around this validation-tool li
 
 ## Publication and final observed state
 
-Pending actual PR creation and CI observation. #20 remains open for owner controls,
-Project verification, independent release review and immutable tag/release
-publication. #27 completes only after human review and merge of the SDD artifacts.
+Published [PR #28](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28) into
+develop, non-draft and open for independent human review. First source commit:
+`01c338e0b385ddf7377e61c3d22ec9f2c19beeb4`. Its
+[PR CI run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41514792305)
+and [push run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41514779774)
+were observed in progress. This publication-record follow-up is documentation
+only; inspect the [current PR checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28/checks)
+for the final head. Final observed run results are also recorded in the PR
+description and task report, without creating a self-referential CI evidence commit.
+
+Exact publication/inspection commands:
+
+```powershell
+git add AGENTS.md README.md .github/ISSUE_TEMPLATE/user-story.yml .github/PULL_REQUEST_TEMPLATE.md docs
+git diff --cached --check
+git diff --cached --stat
+git commit -m "Verify Sprint 1 remote evidence and establish SDD workflow (refs #20, #27)"
+git push -u origin feature/27-sdd-sprint1-verification
+./.venv/Scripts/python.exe .sprint1/github_api.py POST /repos/ozgurfuruncu/SENG-CuckooApp/pulls created-pr.json .sprint1/pr-body.json
+./.venv/Scripts/python.exe .sprint1/github_api.py GET '/repos/ozgurfuruncu/SENG-CuckooApp/actions/runs?branch=feature%2F27-sdd-sprint1-verification&per_page=10' pr-runs.json
+./.venv/Scripts/python.exe .sprint1/github_api.py GET /repos/ozgurfuruncu/SENG-CuckooApp/pulls/28 pr-current.json
+git add docs/audits docs/submissions/README.md
+git diff --cached --check
+git commit -m "Record Sprint 1 audit and SDD review PR evidence (refs #20, #27)"
+git push origin feature/27-sdd-sprint1-verification
+```
+
+Git push succeeded and PR creation returned 201. #20 remains open for owner
+controls, Project verification, independent release review and immutable
+tag/release publication. #27 completes only after human review and merge of the
+SDD artifacts. No human approval, merge or release was performed by the agent.

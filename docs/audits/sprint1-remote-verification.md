@@ -70,7 +70,10 @@ Reuse reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
 for controls/release/evidence closeout, with [verified findings and checkboxes](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6586853736).
 Keep existing cleanup #24 and all contributor work intact. Distinct SDD setup is
 [#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27); this documentation
-PR uses `feature/27-sdd-sprint1-verification` from develop and references both.
+PR [#28](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28) uses
+`feature/27-sdd-sprint1-verification` from develop and references both. It is open
+for human review; its [checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28/checks)
+are separate from the successful baseline run above. No merge/approval is asserted.
 
 1. **Owner ozgurfuruncu:** enable protection for main and develop. Require PRs,
    at least one independent approval, stale-review dismissal, resolved
