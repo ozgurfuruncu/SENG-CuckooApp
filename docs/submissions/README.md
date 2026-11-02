@@ -28,6 +28,9 @@ is preserved separately from what the GitHub API exposed during cleanup:
 - #17 is merged into develop; #19 is merged into its parent feature branch.
 - #21 and #22 are closed unmerged; #23 is merged into main at c8c16b5.
 - Cleanup includes #23's full history and both actual #17/#19 merge commits.
+- #25 is merged into main at 42f18af. Develop was fast-forwarded to that same
+  approved cleanup commit. The user confirmed approval in the conversation;
+  no separate GitHub review object is asserted.
 - No sprint-1 tag/release was returned at inspection, and current API credentials
   could not read Project scope. The user report covers manual attestations;
   repository inspection records are kept distinct from it.
@@ -63,5 +66,6 @@ Database volumes are not deleted.
 Five obsolete feature/release/Copilot branches were removed only after their
 exact tips were verified as ancestors of the published cleanup branch. This
 includes the closed PR #22 proposal history, retained without replacing the
-accepted ADR or current contract. Remote main/develop remain stable branches;
-the cleanup branch carries PR #25 until its normal independent review/integration.
+accepted ADR or current contract. PR #25 is merged, and main/develop are
+synchronized to the approved submission. Merged housekeeping branches are removed
+after their commits are verified as retained in main.

@@ -10,6 +10,7 @@
 8. Do not merge code you cannot explain; summarize assumptions and trade-offs in the PR.
 9. Prefer boring, maintainable dependencies. Avoid microservices.
 10. When implementation and OpenAPI disagree, stop and reconcile the contract before proceeding.
+11. Reuse an existing issue for routine cleanup, documentation and closeout follow-ups. Create a new issue only for distinct work that needs separate tracking. Treat the user's approval in the conversation as authorization for the agreed work; do not ask for duplicate confirmation. Respect enforced GitHub rules and describe GitHub reviews only when they actually exist.
 
 Stack A was approved by the user on 2026-11-02; see accepted ADR-001 and issue #18.
 Use React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic and pytest.
