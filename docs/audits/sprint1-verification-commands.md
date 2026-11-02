@@ -1,5 +1,38 @@
 # Sprint 1 verification — commands and actual results
 
+## Markdown submission format — user request, 2026-11-03
+
+The primary artifact is now
+[Cuckoo_Sprint1_Submission.md](../submissions/Cuckoo_Sprint1_Submission.md).
+The user requested removal of the validation-actions section and a final-form
+draft assuming required Sprint 1 actions are complete. The Markdown explicitly
+labels that authoring assumption; it does not manufacture observed control,
+review, tag or instructor-acceptance records. The evidence index remains factual.
+The previous DOCX is preserved, but Word/PDF rendering is no longer a gate for
+this Markdown submission.
+
+The exact GitHub checkbox wording is not in the PDF; page 15 explicitly requires
+protecting main/develop with pull-request and status-check requirements. Page 17
+also requires an enforced workflow. The checkbox is the implementation of that
+stated requirement, not an extra standard invented for this task.
+
+Actual checks: local Markdown links resolve; the submission has the completion
+assumption, all major sections and 13 MVP story rows, with US-14/15 deferred and
+no validation-actions section or pending placeholder. Existing 27 schema-example
+checks, original-source hashes and preserved Word ZIP checks pass. No runtime,
+contract, dependency or deployment change is made. PR #32 records its final-head
+CI separately from the earlier passing result.
+
+```powershell
+./.venv/Scripts/python.exe .sprint1/validate_assignment_candidate.py
+./.venv/Scripts/python.exe .sprint1/check_markdown_submission.py
+git diff --check
+git add README.md docs
+git diff --cached --check
+git commit -m "Use Markdown Sprint 1 submission with explicit completion assumption (refs #20)"
+git push origin feature/20-assignment-closeout
+```
+
 ## Course-backed corrective candidate — 2026-11-03
 
 The actual 17-page course pack is now supplied; its pp.14–17 require teammate

@@ -46,7 +46,8 @@ local data is not deleted by this cleanup. Optional overrides are in `.env.examp
 Stack: React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic,
 Docker Compose, GitHub Actions and pytest. See [development/testing](docs/development.md).
 
-Submission: [Word document and evidence](docs/submissions/README.md),
+Submission: [Markdown document](docs/submissions/Cuckoo_Sprint1_Submission.md),
+[evidence index](docs/submissions/README.md),
 [roles/RACI](docs/team-raci.md), [system context](docs/diagrams/system-context.png),
 [accepted ADR-001](docs/decisions/ADR-001-architecture.md),
 [backlog](docs/product-backlog.md), [issues](docs/issue-index.md),

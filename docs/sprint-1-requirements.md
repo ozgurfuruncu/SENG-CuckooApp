@@ -15,7 +15,7 @@ Earlier conditional-policy discussions did not establish instruction completion.
 
 | Criterion | PDF pages | Cuckoo evidence / completion condition |
 | --- | --- | --- |
-| Proposal, problem, stakeholders, feasibility, scope, license decision | 2, 4–5, 9 | Current submission sections 1–9; full MIT LICENSE; identify assumptions without inventing stakeholder evidence |
+| Proposal, problem, stakeholders, feasibility, scope, license decision | 2, 4–5, 9 | [Markdown submission](submissions/Cuckoo_Sprint1_Submission.md) sections 1–9; full MIT LICENSE; identify assumptions without inventing stakeholder evidence |
 | Vision and boundary, labelled information exchanges | 2, 7–8 | Submission sections 5–7; [context diagram](diagrams/system-context.svg) and PNG |
 | Valid OpenAPI draft, representative success/input-error/conflict behavior | 2, 10–12, 17 | api/openapi.yaml; actual contract validation and CI. Business implementation is not a Sprint 1 deliverable |
 | Named roles and RACI | 2, 13 | [Team responsibilities](team-raci.md); one accountable owner per activity |

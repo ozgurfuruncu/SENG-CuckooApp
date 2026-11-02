@@ -28,7 +28,7 @@ preparation is not a substitute for the remaining owner/reviewer/tag gates.
 | Course-backed workflow | GAP | Owner enables actual main/develop PR/check protection |
 | Final teammate review | NEEDS EVIDENCE | A real teammate reviews the final corrective candidate |
 | Assessed sprint tag | GAP | Tag the reviewed/tested main commit after integration; never rewrite a tag |
-| Final document evidence | IN REVIEW | Fill actual links and preserve honest outstanding states; inspect rendered Word/PDF |
+| Final document evidence | IN REVIEW | Markdown submission uses an explicit requested completion assumption; actual evidence statuses remain separate. Inspect Markdown rendering/links |
 
 GitHub Release pages, separate release branches and Project boards remain optional
 under this pack. Missing read:project scope is not a Sprint 1 blocker. No ownership

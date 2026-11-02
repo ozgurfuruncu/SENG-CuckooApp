@@ -27,7 +27,7 @@ No inaccessible protection write was attempted by the automation.
 Open the corrective PR linked from
 [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20). Use your own account;
 if anyx05 authors the PR, another teammate should review it. Read the corrected
-Word/PDF, requirement mapping, backlog/owners, diagram, API evidence and remaining
+Markdown submission, requirement mapping, backlog/owners, diagram, API evidence and remaining
 manual statuses. Check correctness, clarity, test evidence and API impact.
 
 Record actual findings and an Approve or Request changes review. Resolve material
@@ -72,8 +72,9 @@ ledger/#20. Use the corrected current submission, not the supplied original that
 still has eight pending evidence placeholders. The candidate explicitly lists
 unfinished actions; update those states only from actual evidence.
 
-If a generated Word PDF is available, inspect it before approval. Otherwise open
-the DOCX in Word and check page breaks, table widths, diagram/labels and hyperlinks
-before exporting. No new project feature implementation is required to close
+Inspect the Markdown rendering, tables, diagram and hyperlinks before approval.
+The submission format is Markdown; Word layout and PDF export are not required
+steps. Its completion assumption is an authoring basis, not proof that controls,
+reviews or a tag exist. No new project feature implementation is required to close
 Sprint 1. Close #20 only after the explicit course gates are met. Instructor
 acceptance is not claimed by the repository or by an agent.

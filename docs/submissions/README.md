@@ -6,9 +6,14 @@ main/develop PR/status-check protections and a sprint tag. See
 [requirements and source pages](../sprint-1-requirements.md). A GitHub Release page,
 separate release branch and Project board remain optional.
 
-Current candidate: [Cuckoo_Sprint1_Submission.docx](Cuckoo_Sprint1_Submission.docx).
-The export/visual-check result is recorded in the verification log; a review PDF
-is linked below when actually produced. The supplied original remains unchanged
+Current submission: [Cuckoo_Sprint1_Submission.md](Cuckoo_Sprint1_Submission.md).
+As requested, it is a final-form narrative drafted on the explicit assumption
+that required Sprint 1 actions are complete. That assumption does not change the
+observed statuses in this evidence index. The validation-actions section is omitted.
+
+The [previous DOCX candidate](Cuckoo_Sprint1_Submission.docx) is retained as a
+superseded format; Word export/layout is no longer a Markdown-submission gate.
+The supplied original remains unchanged
 in [the archive](../archive/submissions/Cuckoo_Sprint1_Submission_Original.docx),
 SHA-256 04C3B14CFA8DA58B6A0C06BF98A01B5EADE8EF82BB6BDBC3A3ED2B931F012E86.
 It is the pre-evidence document and should not be submitted unchanged. Supplied
@@ -19,7 +24,7 @@ submission date: **5 November 2026**.
 | Item | Verified evidence / current state |
 | --- | --- |
 | Repository and assessed branch | [SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp); main inspection at [3e97515](https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/3e975153e6c87f96de1c4df30c8a7521a8fc2edd). The corrective PR will identify the next candidate |
-| Proposal, vision and scope | Current DOCX sections 1–9; one permitted vehicle-photo-check workflow, self-declared profile attributes, simulated payments only |
+| Proposal, vision and scope | Current Markdown sections 1–9; one permitted vehicle-photo-check workflow, self-declared profile attributes, simulated payments only |
 | MIT license | [Original license](../../LICENSE), preserved attribution |
 | Boundary | [Labelled vector source](../diagrams/system-context.svg), [PNG](../diagrams/system-context.png); physical permission/visit and excluded services remain outside software responsibility |
 | Architecture | [Accepted ADR-001](../decisions/ADR-001-architecture.md), [MVP boundary](../decisions/ADR-002-mvp-boundary.md) |
