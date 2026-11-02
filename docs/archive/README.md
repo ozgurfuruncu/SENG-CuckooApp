@@ -19,3 +19,8 @@ Relative links in relocated Markdown now point to the preserved pre-cleanup
 Original README/DOCX bytes are retained. Removed executable legacy source remains
 recoverable from that revision and the original commits; it is not copied into
 another runnable app inside this submission.
+
+The closed, unmerged PR #22 also has historical proposed ADR/process and contract
+work. Its [source revision 524d6ed](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/524d6edf9b2563a2bc3d8dd024e509b3b90d9ac5)
+is retained in cleanup ancestry without adopting those superseded proposals as
+current source. The accepted ADR and canonical health-aware contract take precedence.
