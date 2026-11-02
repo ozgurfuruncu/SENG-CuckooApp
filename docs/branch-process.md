@@ -1,5 +1,10 @@
 # Branch and review process
 
+This is the intended process. The [2026-11-02 remote audit](audits/sprint1-remote-verification.md)
+finds main/develop unprotected; enforcement is an owner action tracked in #20.
+Use [canonical SDD gates](templates/SDD_WORKFLOW.md) for new work. Existing genuine
+#23 approval is distinct from later cleanup PRs with no submitted review objects.
+
 Use short-lived `feature/<issue>-description` branches and link commits/PRs to the
 issue. Integrate through develop and publish reviewed sprint submissions through
 main. Do not force-push shared history or move a published tag to different code.

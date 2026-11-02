@@ -1,5 +1,16 @@
 # Sprint 1 submission checklist
 
+Current completion assessment is the [remote audit](audits/sprint1-remote-verification.md).
+The artifact checklist below records earlier preparation, not complete GitHub evidence.
+
+- [ ] Owner enables verified main/develop protections (currently absent).
+- [ ] Authorized reader verifies Project evidence (read:project access blocked).
+- [ ] Independent human reviews the final release candidate, including later cleanup changes.
+- [ ] Reviewed main commit has verified sprint-1 tag/release and final submission links.
+
+Tracked in reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
+Genuine human approval exists for merged #23; it does not cover later #25/#26.
+
 - [x] Proposal/problem/vision and bounded software context preserved.
 - [x] Full MIT license and original attribution retained.
 - [x] Canonical OpenAPI 3.1 baseline and schema/reference validation.

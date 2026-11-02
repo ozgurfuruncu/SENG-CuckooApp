@@ -14,3 +14,15 @@ What changed: [ ] · Why: [ ] · Deliberately not changed: [ ]
 - [ ] Follow-ups filed rather than hidden in comments.
 
 Approve/request changes: [ ] · Review link: [ ]
+
+## Integration and release evidence
+
+Cross-component versions/JSON names/error media types and API base path: [ ]
+Migration deployment order and rollback impact: [ ]
+Frontend/backend contract and positive/negative integration evidence: [ ]
+Final reviewed head SHA: [ ] · Required checks/run URLs at that SHA: [ ]
+Actual independent human reviewer/login, submitted review URL and date: [pending or real evidence].
+Merge SHA/target: [ ] · Tag/release URL at reviewed main SHA when releasing: [ ]
+Do not describe conversation approval or a bot comment as a GitHub peer approval.
+Apply [canonical Done gates](SDD_WORKFLOW.md) and update
+[traceability](10-requirements-traceability.md) after authorized merge.

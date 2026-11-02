@@ -1,5 +1,13 @@
 # Sprint 1 publication
 
+Fresh [remote verification](../audits/sprint1-remote-verification.md) on 2026-11-02
+finds both branches unprotected and no tag/release. Project verification is
+access-blocked. Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
+owns the remaining maintainer actions. Existing real #23 approval is recorded;
+later #25/#26 have no submitted reviews, so final release review remains needed.
+Do not publish the sprint until review and control gates are satisfied. Update
+the evidence ledger and current DOCX after verifying the actual tag/release SHA.
+
 The cleanup is [PR #25](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25),
 tracked by [issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24).
 The [submission index](../submissions/README.md) is the current source for artifacts

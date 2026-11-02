@@ -10,6 +10,8 @@ Start with [the submission and evidence index](submissions/README.md) or
 - [Contract reconciliation](contract-reconciliation.md): explicit later-feature questions.
 - [Branch process](branch-process.md), [publication](release/README.md), [Sprint 1 checklist](sprint-1-checklist.md).
 - [Historical records](archive/README.md): archived inspections and superseded starter material.
+- [Remote Sprint 1 audit](audits/sprint1-remote-verification.md), [evidence snapshot](audits/sprint1-remote-evidence.json) and [commands/results](audits/sprint1-verification-commands.md).
+- [Canonical SDD workflow and Ready/Done gates](templates/SDD_WORKFLOW.md), [traceability template](templates/10-requirements-traceability.md) and [completed US-03 documentation example](specs/US-03-create-task.md).
 
 Sprint 1 is the documented and tested foundation, not a completed business API.
 The user reports manual attestations handled; recorded GitHub facts are kept

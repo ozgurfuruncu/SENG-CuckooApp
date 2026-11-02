@@ -26,3 +26,14 @@ OpenAPI operations and schemas: [link to exact path/version]
 Allowed files: [ ] · Do not modify: [ ] · Existing patterns to follow: [ ]
 No new dependency or contract change without approval. Output should include a diff summary, commands run, proof and limitations.
 Approval: [PO] [QA] [TL]
+
+## Delivery mapping
+
+Story/AC IDs: [ ] · Baseline commit/version: [ ] · Dependencies: [ ]
+UI flow and loading/empty/error/uncertain-outcome states: [ ]
+Domain entities/module ownership and cross-module calls: [ ]
+Contract differences requiring resolution before implementation: [ ]
+Test design status: [planned / reviewed; never claim planned tests ran].
+Actual approval source/date per reviewer: [link or pending].
+Map AC IDs in [traceability](10-requirements-traceability.md) and use
+[canonical Ready/Done gates](SDD_WORKFLOW.md).

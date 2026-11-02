@@ -1,0 +1,371 @@
+{
+  "observed_at_utc": "2026-11-02T19:52:44.694894+00:00",
+  "repository": "https://github.com/ozgurfuruncu/SENG-CuckooApp",
+  "baseline_commit": "08386a19afdaddee67c230790de50fb7b95b342a",
+  "auth": {
+    "login": "anyx05",
+    "scopes": [
+      "gist",
+      "repo",
+      "workflow"
+    ],
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": true,
+      "triage": true,
+      "pull": true
+    }
+  },
+  "branches": [
+    {
+      "name": "develop",
+      "protected": false,
+      "sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+    },
+    {
+      "name": "main",
+      "protected": false,
+      "sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+    }
+  ],
+  "rulesets": [],
+  "effective_rules": {
+    "main": [],
+    "develop": []
+  },
+  "protection_http": {
+    "main": 404,
+    "develop": 404
+  },
+  "tags": [],
+  "releases": [],
+  "pulls": [
+    {
+      "number": 26,
+      "author": "anyx05",
+      "base": "main",
+      "head_sha": "a6c60dcf98b0f44c5a37f1fb92a31c87573bc87c",
+      "merged_at": "2026-11-02T14:42:50Z",
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/26",
+      "reviews": []
+    },
+    {
+      "number": 25,
+      "author": "anyx05",
+      "base": "main",
+      "head_sha": "3ce4818e9a968b9f07b07e3dbbb68a5ba3063940",
+      "merged_at": "2026-11-02T14:35:33Z",
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25",
+      "reviews": []
+    },
+    {
+      "number": 23,
+      "author": "Copilot",
+      "base": "main",
+      "head_sha": "f5f91a1a7377c4d52ab7dc657508a6938116f9c0",
+      "merged_at": "2026-11-02T13:31:39Z",
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23",
+      "reviews": [
+        {
+          "reviewer": "anyx05",
+          "state": "APPROVED",
+          "submitted_at": "2026-11-02T13:28:58Z",
+          "commit_id": "f5f91a1a7377c4d52ab7dc657508a6938116f9c0",
+          "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "author": "Copilot",
+      "base": "main",
+      "head_sha": "524d6edf9b2563a2bc3d8dd024e509b3b90d9ac5",
+      "merged_at": null,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/22",
+      "reviews": [
+        {
+          "reviewer": "anyx05",
+          "state": "APPROVED",
+          "submitted_at": "2026-11-02T13:15:41Z",
+          "commit_id": "524d6edf9b2563a2bc3d8dd024e509b3b90d9ac5",
+          "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/22#pullrequestreview-5737094704"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "author": "anyx05",
+      "base": "main",
+      "head_sha": "e1133c8477c73f7a9a622bd3a1283e110bce104d",
+      "merged_at": null,
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21",
+      "reviews": [
+        {
+          "reviewer": "copilot-pull-request-reviewer[bot]",
+          "state": "COMMENTED",
+          "submitted_at": "2026-11-02T13:15:14Z",
+          "commit_id": "e1133c8477c73f7a9a622bd3a1283e110bce104d",
+          "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21#pullrequestreview-5737089481"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "author": "anyx05",
+      "base": "feature/sprint1-repo-bootstrap",
+      "head_sha": "bf48434647fe5686a58270e423fac42e9a67d420",
+      "merged_at": "2026-11-02T13:14:29Z",
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/19",
+      "reviews": []
+    },
+    {
+      "number": 17,
+      "author": "anyx05",
+      "base": "develop",
+      "head_sha": "5478308c68db0332d6384287da2465a0cfa4035a",
+      "merged_at": "2026-11-02T13:13:14Z",
+      "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/17",
+      "reviews": []
+    }
+  ],
+  "latest_baseline_ci": {
+    "id": 41464572459,
+    "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459",
+    "jobs": [
+      {
+        "name": "Stack A Compose smoke",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459/job/125341968113",
+        "head_sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+      },
+      {
+        "name": "OpenAPI 3.1 validation",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459/job/125341968217",
+        "head_sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+      },
+      {
+        "name": "backend",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459/job/125341968452",
+        "head_sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+      },
+      {
+        "name": "Stack A frontend",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459/job/125341968496",
+        "head_sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+      },
+      {
+        "name": "Stack A backend",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459/job/125342182801",
+        "head_sha": "08386a19afdaddee67c230790de50fb7b95b342a"
+      }
+    ]
+  },
+  "contributors": [
+    {
+      "login": "anyx05",
+      "contributions": 18
+    },
+    {
+      "login": "Copilot",
+      "contributions": 5
+    },
+    {
+      "login": "ozgurfuruncu",
+      "contributions": 4
+    }
+  ],
+  "collaborators": [
+    "anyx05",
+    "j7766n",
+    "ozgurfuruncu",
+    "lilemiv",
+    "elfn0909",
+    "asliarikoglu"
+  ],
+  "project_verification": {
+    "status": "BLOCKED",
+    "reason": "GraphQL INSUFFICIENT_SCOPES; read:project missing"
+  },
+  "inventory": {
+    "issues_excluding_prs": 19,
+    "pulls": 7,
+    "commits_on_baseline_main": 27,
+    "workflow_runs": 59,
+    "tree_truncated": false
+  },
+  "issue_owners": [
+    {
+      "number": 24,
+      "title": "[Sprint 1 cleanup] Consolidate the submission into one active application and workspace",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "anyx05"
+      ]
+    },
+    {
+      "number": 20,
+      "title": "[T-02/T-03] Close out Sprint 1 repository controls and reviewed release evidence",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "anyx05",
+        "Copilot",
+        "lilemiv",
+        "asliarikoglu"
+      ]
+    },
+    {
+      "number": 18,
+      "title": "[T-06] Bootstrap approved Stack A with health, database and Compose smoke test",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "anyx05"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "[T-05] Validate and reconcile the Sprint 1 OpenAPI foundation",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "anyx05",
+        "Copilot"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "[US-15] [Deferred] Worker sees skill-tag-informed suggestions",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "[US-14] [Deferred] Participant rates other party after completion",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "[US-13] Private task data is access controlled",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "[US-12] Participant views task status history",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "[US-11] Employer cancels eligible unfinished task",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "[US-10] Approved task completes and simulates release",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "[US-09] Employer approves or requests revision",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "[US-08] Assigned worker submits private evidence",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "[US-07] Employer records simulated payment hold",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "[US-06] Employer selects exactly one applicant",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "[US-05] Worker applies to open task",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "[US-04] Worker filters open tasks by city/category",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "[US-03] Employer creates vehicle-photo-check task",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "[US-02] Worker sets city and optional occupation/skills",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    },
+    {
+      "number": 1,
+      "title": "[US-01] Register/sign in and enforce permitted roles",
+      "state_at_initial_inspection": "closed",
+      "assignees": [
+        "elfn0909"
+      ]
+    }
+  ],
+  "corrective_tracking": {
+    "closeout_issue": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20",
+    "reopened_comment": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6586853736",
+    "sdd_issue": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27"
+  },
+  "remote_tree_ref": "08386a19afdaddee67c230790de50fb7b95b342a",
+  "baseline_tree": "bc06a47dacb811a78c4dec095c80e8a63f4d628c",
+  "source_comparison": {
+    "remote_blob_count": 95,
+    "local_blob_count": 95,
+    "all_blob_ids_match": true
+  }
+}
