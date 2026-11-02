@@ -1,19 +1,26 @@
-# Sprint 1 publication
+# Sprint submission and optional publication
 
-The cleanup is [PR #25](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25),
-tracked by [issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24).
-The [submission index](../submissions/README.md) is the current source for artifacts
-and observed repository state. Earlier permission payloads/readiness reports are
-in [the historical archive](../archive/README.md), not active release automation.
+The user clarified on **2026-11-03** that branch controls, release branches, tags,
+GitHub Releases and similar administration should be added only when explicit
+course instructions or a current team-approved plan require them. The earlier
+assistant closeout checklist is superseded. Record an actual requirement source
+before treating publication as a sprint-completion gate. No separate instructor
+rubric has been supplied, and instructor acceptance is not asserted.
 
-Publish the tested submission through the normal reviewed PR flow to main, then
-tag the actual reviewed main commit `sprint-1` when the team publishes the sprint.
-Do not force-update an existing release tag. Closing an issue or PR does not by
-itself demonstrate implemented business behavior or a published release.
+The [submission index](../submissions/README.md) is the current artifact/evidence
+index. [PR #28](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28) delivered the
+remote audit and SDD setup into develop. Main remains the earlier Sprint 1
+foundation at the last inspection. Follow the team's agreed submission location;
+a separate release PR/tag is not automatically required to finish documentation.
 
-The user states manual attestations have been handled. GitHub confirms #17 merged
-into develop, #19 merged into its parent feature branch and #23 merged into main
-at c8c16b5. Cleanup PR #25 is merged at 42f18af and develop was fast-forwarded to
-the same approved submission. Their source and merge commits are retained.
-#21 and #22 are closed unmerged. The cleanup PR and its checks are linked in the
-submission index. A Git tag/release is a separate publication record.
+The [remote audit](../audits/sprint1-remote-verification.md) truthfully records
+unprotected branches, absent tags/releases and unavailable Project evidence.
+Those observations do not imply missing mandatory coursework under the revised
+policy. Existing GitHub rules must be respected. No access grant or ownership
+transfer is needed for routine contributor work.
+
+If an explicit publication requirement is later supplied, use the existing
+[#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20) for routine closeout,
+record the source, publish the agreed tested commit and add the actual tag/release
+URLs and SHA to the ledger. Preserve any published tag; never move it to new code.
+Preserve the original supplied Word document and update only the evidence copy.

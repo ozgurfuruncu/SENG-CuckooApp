@@ -7,9 +7,12 @@ Owner: [Product Owner] · Priority: [P0/P1/P2] · Estimate: [points] · Status: 
 **Stakeholder evidence:** [interview/example/assumption; never invent].
 
 ## Acceptance criteria (observable, testable)
-- Given [state], when [action], then [result].
-- Given unauthorized actor, when [action], then [401/403].
-- Given invalid or conflicting state, when [action], then [specific validation/conflict].
+- AC01: Given [state], when [action], then [result].
+- AC02: Given unauthorized actor, when [action], then [contracted 401/403 and no write].
+- AC03: Given invalid or conflicting state, when [action], then [contracted validation/conflict and no partial write].
+
+Use [canonical Ready/Done gates](SDD_WORKFLOW.md) and
+[traceability](10-requirements-traceability.md). Approval source/date: [real link or pending].
 
 ## Definition of Ready
 - [ ] Primary actor/value defined; dependencies clear; small enough for one sprint.
