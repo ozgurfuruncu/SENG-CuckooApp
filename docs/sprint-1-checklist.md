@@ -14,5 +14,6 @@
 
 Actual cleanup checks/PR and observed publication state are recorded in the
 [submission index](submissions/README.md). The checked items describe the prepared
-submission, not an assertion that a sprint-1 tag exists. Publish the cleaned PR
-and tag the reviewed main commit through the team's manual release process.
+submission, not an assertion that a sprint-1 tag exists. Cleanup PR #25 is merged
+and develop is synchronized with main. Tag the reviewed main commit through the
+team's manual release process when publishing the sprint.
