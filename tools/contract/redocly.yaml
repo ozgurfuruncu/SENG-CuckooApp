@@ -1,0 +1,7 @@
+extends:
+  - spec
+rules:
+  struct: error
+  no-unresolved-refs: error
+  operation-operationId-unique: error
+  no-invalid-schema-examples: error

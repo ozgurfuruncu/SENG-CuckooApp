@@ -1,0 +1,13 @@
+{
+  "confirmedOn": "2026-11-02",
+  "source": "User confirmed four remaining mappings in this session; full public-profile names matched Emmanuel and Ozgur. This maps team accounts, not platform identity verification.",
+  "roles": {
+    "PO": { "name": "Elif Nur Akbaş", "login": "elfn0909" },
+    "SM": { "name": "Aslı Arıkoğlu", "login": "asliarikoglu" },
+    "TL": { "name": "Emmanuel Alabi", "login": "anyx05" },
+    "QA": { "name": "Jumanah Almodaen", "login": "j7766n" },
+    "DO": { "name": "Emir Dizman", "login": "lilemiv" },
+    "FI": { "name": "Özgür Furuncuoğlu", "login": "ozgurfuruncu" }
+  },
+  "assignmentMeaning": "US-01..15: PO owns backlog and acceptance planning, not an implementation commitment. T-05/#16 and bounded T-06/#18: technical lead. T-02/T-03 closeout #20: Scrum accountable with DevOps responsible. Reassign implementation tasks during actual sprint planning."
+}
