@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<title>Cuckoo MVP software boundary and information exchanges</title>
+<desc>Employer and task taker exchange task, application, evidence and review information with the Cuckoo web application. Physical visits and permission are outside software responsibility. Real payments, identity verification, custody, professional inspection and legal representation are excluded.</desc>
+
+<rect width="1400" height="1000" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17354c">
+<text x="700" y="65" text-anchor="middle" font-size="42" font-weight="bold">CUCKOO · MVP SOFTWARE BOUNDARY</text>
+<text x="700" y="105" text-anchor="middle" font-size="25">Design scope · only health is implemented in Sprint 1</text>
+<rect x="40" y="180" width="300" height="200" rx="18" fill="#f0f5f9" stroke="#8ba7bb" stroke-width="3"/>
+<text x="190" y="235" text-anchor="middle" font-size="34" font-weight="bold">EMPLOYER</text>
+<text x="190" y="285" text-anchor="middle" font-size="27">Creates bounded tasks</text>
+<text x="190" y="330" text-anchor="middle" font-size="27">Selects and reviews</text>
+<rect x="40" y="470" width="300" height="200" rx="18" fill="#f0f5f9" stroke="#8ba7bb" stroke-width="3"/>
+<text x="190" y="525" text-anchor="middle" font-size="32" font-weight="bold">TASK TAKER</text>
+<text x="190" y="575" text-anchor="middle" font-size="27">Applies for a task</text>
+<text x="190" y="620" text-anchor="middle" font-size="27">Submits permitted work</text>
+<rect x="780" y="145" width="580" height="610" rx="20" fill="#eaf4f3" stroke="#338490" stroke-width="5"/>
+<text x="1070" y="205" text-anchor="middle" font-size="37" font-weight="bold">CUCKOO WEB + REST API</text>
+<text x="1070" y="270" text-anchor="middle" font-size="30">Identity and self-declared profiles</text>
+<text x="1070" y="330" text-anchor="middle" font-size="30">Tasks and applications/assignment</text>
+<text x="1070" y="390" text-anchor="middle" font-size="30">Private evidence and reviews</text>
+<text x="1070" y="450" text-anchor="middle" font-size="30">Simulated-payment records</text>
+<text x="1070" y="510" text-anchor="middle" font-size="30">Status history and access control</text>
+<line x1="820" y1="555" x2="1320" y2="555" stroke="#8ba7bb" stroke-width="2"/>
+<text x="1070" y="605" text-anchor="middle" font-size="27">Occupation, skills and operating city:</text>
+<text x="1070" y="650" text-anchor="middle" font-size="29" font-weight="bold">self-declared, not verified</text>
+<text x="1070" y="710" text-anchor="middle" font-size="27">No real money moves</text>
+<g stroke="#234b65" stroke-width="3">
+<line x1="340" y1="230" x2="775" y2="230"/>
+<line x1="780" y1="315" x2="345" y2="315"/>
+<line x1="340" y1="520" x2="775" y2="520"/>
+<line x1="780" y1="605" x2="345" y2="605"/>
+</g>
+<g fill="#234b65"><polygon points="775,230 755,220 755,240"/><polygon points="345,315 365,305 365,325"/><polygon points="775,520 755,510 755,530"/><polygon points="345,605 365,595 365,615"/></g>
+<g text-anchor="middle" font-size="26">
+<text x="560" y="175">Task requirements;</text><text x="560" y="210">selection and review</text>
+<text x="560" y="350">Applications, evidence</text><text x="560" y="385">and task status</text>
+<text x="560" y="465">Applications, photos</text><text x="560" y="500">and observation notes</text>
+<text x="560" y="645">Task details, assignment</text><text x="560" y="680">and revision feedback</text>
+</g>
+<rect x="40" y="805" width="1320" height="155" rx="16" fill="#f3f3f5" stroke="#b6bfcb" stroke-width="3"/>
+<text x="700" y="850" text-anchor="middle" font-size="29" font-weight="bold">OUTSIDE THE SOFTWARE / EXCLUDED SERVICES</text>
+<text x="700" y="895" text-anchor="middle" font-size="27">Physical visit and permission · no custody/driving or professional inspection</text>
+<text x="700" y="935" text-anchor="middle" font-size="27">No real payments/escrow, identity verification or legal representation</text>
+</g></svg>

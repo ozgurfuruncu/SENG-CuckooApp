@@ -1,5 +1,11 @@
 # Sprint 1 documentation
 
+Start with [the actual course criteria](sprint-1-requirements.md) and
+[manual closeout steps](submissions/manual-closeout.md). The corrected submission
+is a review candidate until required controls, teammate review and sprint tagging
+are verified. Earlier policy discussions are preserved as history, not proof of
+course completion.
+
 Start with [the submission and evidence index](submissions/README.md) or
 [development/testing](development.md). There is one current contract and deployment.
 

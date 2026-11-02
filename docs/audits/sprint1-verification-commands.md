@@ -1,5 +1,81 @@
 # Sprint 1 verification — commands and actual results
 
+## Course-backed corrective candidate — 2026-11-03
+
+The actual 17-page course pack is now supplied; its pp.14–17 require teammate
+review, protected main/develop with PR/status checks, and a sprint submission tag.
+See [requirement mapping](../sprint-1-requirements.md). This supersedes the earlier
+assumption that these items had no explicit course source. GitHub Releases,
+separate release branches and Project boards remain optional. Existing #20 is
+reopened; the candidate must not be merged/tagged without its genuine review.
+
+Automatic corrections: explicit existing-story epic/owner/dependency mapping,
+labelled code-native SVG/PNG context diagram, current Word evidence copy with
+clickable URLs, consistent SDD/course criteria and exact owner/reviewer steps.
+Application, OpenAPI, runtime dependencies, deployment, license, ADRs, archived
+source and contributor history are unchanged.
+
+Actual commands:
+
+```powershell
+git fetch origin
+git switch -c feature/20-assignment-closeout origin/main
+./.venv/Scripts/python.exe .sprint1/assignment_docs.py
+./.venv/Scripts/python.exe .sprint1/complete_backlog.py
+./.venv/Scripts/python.exe .sprint1/reconcile_assignment_evidence.py
+./.venv/Scripts/python.exe .sprint1/context_diagram.py
+./.venv/Scripts/python.exe .sprint1/assignment_docx.py
+./.venv/Scripts/python.exe .sprint1/link_docx_evidence.py
+./.venv/Scripts/python.exe .sprint1/reopen_assignment_closeout.py
+./.venv/Scripts/python.exe .sprint1/assignment_snapshot.py
+./.venv/Scripts/python.exe .sprint1/validate_assignment_candidate.py
+git diff --check
+git diff --stat
+```
+
+Results: **132 active local links across 31 Markdown documents, 27 schema-example
+checks, 15 existing story/owner/issue mappings, Word ZIP/XML/relationship integrity
+and 14 clickable evidence links passed**. The candidate has 415 paragraphs after
+adding four epic descriptions. Its embedded diagram matches the rendered PNG;
+four explicit arrowheads and labelled information exchanges are present. Both the
+supplied original and archived original retain the recorded source SHA-256.
+All other Word ZIP entries were preserved except the intended document XML,
+hyperlink relationships and updated diagram image. Source [PENDING] placeholders
+were replaced by verified evidence and clearly named real outstanding gates.
+
+The existing main CI [41530996698](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41530996698)
+is successful. Local contract lint and all seven validator tests were rerun during
+the preceding assignment review against the same unchanged API bytes. This
+candidate's own PR CI is recorded in its PR/#20; no older result is substituted
+for the final head. New backend/frontend/Compose tests were not run locally for
+this documentation-only change.
+
+Document tooling was installed only in ignored .sprint1/document-tools, leaving
+project requirements unchanged. An isolated hidden Word export was attempted.
+The .ps1 launcher was blocked by the machine's script execution policy; the same
+inline commands were allowed without changing that policy. Word then stalled and
+held the read-only candidate open. Only the identified task-created automation
+instance was stopped, then its waiting shell was interrupted. No review PDF was
+produced and **Word layout is not marked verified**. The hyperlink update first
+hit that file lock, then passed after the instance was stopped. The teammate must
+open the DOCX, check layout and export the final PDF if required for submission.
+
+No repository protection write, formal review, tag, GitHub Release or deployment
+was simulated. The account's admin=false/maintain=false prevents owner-only
+settings, while an actual teammate must provide peer review. Tag creation is
+authorized but depends on reviewed/tested main integration. Exact manual steps
+are in [manual closeout](../submissions/manual-closeout.md).
+
+Publication commands (issue-linked corrective branch; no merge/tag before review):
+
+```powershell
+git add AGENTS.md README.md .github/PULL_REQUEST_TEMPLATE.md docs
+git diff --cached --check
+git commit -m "Reconcile Sprint 1 submission with supplied course criteria (refs #20)"
+git push -u origin feature/20-assignment-closeout
+./.venv/Scripts/python.exe .sprint1/create_assignment_pr.py
+```
+
 ## Process clarification — 2026-11-03
 
 The user superseded the earlier mandatory controls/release checklist: follow

@@ -1,27 +1,42 @@
 # Sprint 1 remote repository verification
 
-## Current interpretation — user decision, 2026-11-03
+## Current assessment — course pack supplied 2026-11-03
 
-The user superseded the earlier mandatory GitHub-controls/release checklist:
-team members follow team-approved plans, and branch protections, formal GitHub
-approval counts, Project boards, release branches, tags and GitHub Releases are
-required only when explicit course instructions or a current team-approved plan
-call for them. No separate instructor rubric was supplied. Do not infer course
-requirements from the team's Word proposal or earlier assistant checklist.
+**Instruction completion remains open.** The actual Sprint 1 teaching/assignment
+pack is now available; [the requirement mapping](../sprint-1-requirements.md)
+records its filename, hash and pages. PDF p.15 explicitly requires teammate review
+and PR/status-check protection for main/develop; pp.14/17 require a sprint tag.
+The earlier condition to add administration only when explicitly required is now
+satisfied for these three items. The previous administrative closure under a
+revised team checklist did not establish completion against this course pack.
 
-The core artifact, contract, backlog/ownership and CI PASS evidence below remains
-valid for the inspected baseline. The former control/release GAP and optional
-Project BLOCKED rows are **non-blocking observations under the revised policy**;
-they do not assert that protections, a board or a release exist. Record a specific
-requirement source before making any of them mandatory again. Existing enforced
-GitHub rules still apply. No admin grant or ownership transfer is requested.
+Fresh inspection: main at 3e975153e6c87f96de1c4df30c8a7521a8fc2edd and develop at
+f77f905e575c9c3e1e697436077a0297940b15f3. Both report protected=false; rulesets and
+effective rule lists are empty, and protection GETs return 404. Tags are empty.
+No submitted reviews exist on #28/#30/#31; earlier genuine #23 approval remains
+real evidence for that earlier revision. A separate documented final teammate
+review can be evaluated if supplied; none is fabricated.
 
-[PR #28](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28) is now merged into
-develop at `330e0488d3db14524bd590206509b215e71e6947`; its final source CI passed.
-The original inspection and checklist below are retained as historical evidence.
-The [current submission index](../submissions/README.md) and
-[SDD workflow](../templates/SDD_WORKFLOW.md) use the revised criteria. Official
-instructor acceptance is not claimed.
+Core proposal/license/vision/contract/RACI and assigned-story evidence is present.
+The current main CI [41530996698](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41530996698)
+is successful. This corrective branch adds explicit epics/owner/dependency mapping,
+a labelled context diagram and a reconciled Word evidence candidate. Candidate
+preparation is not a substitute for the remaining owner/reviewer/tag gates.
+
+| Required completion item | State | Remaining action |
+| --- | --- | --- |
+| Course-backed workflow | GAP | Owner enables actual main/develop PR/check protection |
+| Final teammate review | NEEDS EVIDENCE | A real teammate reviews the final corrective candidate |
+| Assessed sprint tag | GAP | Tag the reviewed/tested main commit after integration; never rewrite a tag |
+| Final document evidence | IN REVIEW | Fill actual links and preserve honest outstanding states; inspect rendered Word/PDF |
+
+GitHub Release pages, separate release branches and Project boards remain optional
+under this pack. Missing read:project scope is not a Sprint 1 blocker. No ownership
+transfer/admin grant is requested. See [manual steps](../submissions/manual-closeout.md).
+Existing #20 tracks the corrections. Official instructor acceptance is not asserted.
+
+The earlier 2026-11-02 observations and subsequent conditional policy are retained
+below as dated history. Their statuses must not override the supplied course pack.
 
 ## Historical inspection — 2026-11-02
 
