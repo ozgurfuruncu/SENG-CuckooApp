@@ -1,0 +1,45 @@
+{
+  "status": "PREPARED_NOT_APPLIED",
+  "verifiedOn": "2026-11-02",
+  "repository": "ozgurfuruncu/SENG-CuckooApp",
+  "repositoryType": "personal",
+  "repositoryOwner": "ozgurfuruncu",
+  "branchRulesApplyTo": "all writers and the owner, with no review bypass",
+  "repositoryAdministration": "owner-only under GitHub personal-repository permissions",
+  "projectAccessDefault": "ADMIN for every verified repository collaborator; never public administration",
+  "verifiedAccounts": [
+    "anyx05",
+    "asliarikoglu",
+    "elfn0909",
+    "j7766n",
+    "lilemiv",
+    "ozgurfuruncu"
+  ],
+  "projectCollaborators": [
+    {
+      "login": "anyx05",
+      "role": "ADMIN"
+    },
+    {
+      "login": "asliarikoglu",
+      "role": "ADMIN"
+    },
+    {
+      "login": "elfn0909",
+      "role": "ADMIN"
+    },
+    {
+      "login": "j7766n",
+      "role": "ADMIN"
+    },
+    {
+      "login": "lilemiv",
+      "role": "ADMIN"
+    },
+    {
+      "login": "ozgurfuruncu",
+      "role": "ADMIN"
+    }
+  ],
+  "futureChanges": "Owner may manually revise Project roles later. Re-read repository membership before adding future collaborators."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "cuckoo-contract-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Documentation validation only; does not select the application stack.",
+  "engines": { "node": ">=22.12.0", "npm": ">=10" },
+  "scripts": {
+    "lint": "redocly lint ../../api/openapi.yaml --config redocly.yaml --max-problems 50",
+    "lint:legacy": "redocly lint ../../docs/openapi.yaml --config redocly.yaml --max-problems 50",
+    "test": "node --test validation.test.cjs release-readiness.test.cjs"
+  },
+  "devDependencies": { "@redocly/cli": "2.72.1", "yaml": "2.8.1" }
+}
