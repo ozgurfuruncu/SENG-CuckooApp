@@ -14,6 +14,7 @@ body:
     attributes:
       label: Acceptance criteria
       placeholder: Given / When / Then or testable bullets
+      description: Use stable AC01/AC02 IDs, include negative authorization/state cases. Follow docs/templates/SDD_WORKFLOW.md.
     validations:
       required: true
   - type: textarea
@@ -26,3 +27,10 @@ body:
     attributes:
       label: Expected evidence
       description: Tests, screenshots, docs, review evidence.
+  - type: textarea
+    id: readiness
+    attributes:
+      label: Ownership, specification and readiness
+      description: Name owner/reviewer, priority/estimate, spec URL, contract SHA/operations, dependencies, actual PO/TL/QA approval sources or pending decisions. Use existing issues for routine follow-ups.
+    validations:
+      required: true

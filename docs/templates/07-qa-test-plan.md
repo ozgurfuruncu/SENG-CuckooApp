@@ -16,3 +16,12 @@ Actual results (pass/fail/blocked): [ ]
 Coverage report (Sprint 3 target >=50% unit coverage): [ ]
 Defects and regression links: [ ]
 Sign-off: [ ]
+
+AC IDs for each test: [ ] · Contract SHA/operation: [ ]
+Security cases: [missing/invalid token, wrong role/owner, private data exposure, injection/file checks where applicable].
+Concurrency oracle: [which requests may succeed, expected conflicts, final persisted state].
+Failure/rollback oracle: [no unauthorized/partial writes, safe retry semantics].
+Integration prerequisites: [PostgreSQL URL, migrations, API/client versions, isolated fixtures].
+Frontend component/accessibility cases: [ ] · Regression scope: [ ]
+Status per test: [designed / executed-pass / executed-fail / blocked / not applicable with reason].
+Use [traceability](10-requirements-traceability.md) and [canonical gates](SDD_WORKFLOW.md).

@@ -1,5 +1,13 @@
 # Issue traceability
 
+Fresh verification on 2026-11-02: all US-01..15 remain administratively closed,
+not implemented. Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
+tracks verified protection/review/release gaps and Project access; separate
+[#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27) tracks SDD setup.
+See [remote audit](audits/sprint1-remote-verification.md) and
+[US-03 specification example](specs/US-03-create-task.md). Earlier inspection
+states below are historical; they do not supersede this update.
+
 Published from existing supplied stories; duplicate check includes all open/closed issues.
 Accounts were confirmed by the user and assignees were verified through GitHub.
 The user reports manual issue/PR/attestation administration handled. API inspection

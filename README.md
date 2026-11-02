@@ -52,6 +52,11 @@ Submission: [Word document and evidence](docs/submissions/README.md),
 [backlog](docs/product-backlog.md), [issues](docs/issue-index.md),
 [Sprint 1 checklist](docs/sprint-1-checklist.md).
 
+Current [remote verification](docs/audits/sprint1-remote-verification.md) records
+remaining protection/release gaps and Project access limits. Later sprint work
+uses the [canonical SDD workflow](docs/templates/SDD_WORKFLOW.md), shared Ready/Done
+gates and [US-03 documentation example](docs/specs/US-03-create-task.md).
+
 See [submission evidence](docs/submissions/README.md) for the validation results
 and publication records. Historical planning and preparation files are kept in
 `docs/archive`; the supported setup is documented here and in the development guide.

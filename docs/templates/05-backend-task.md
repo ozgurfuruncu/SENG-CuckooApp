@@ -18,3 +18,14 @@ Must add tests for happy, forbidden, invalid, repeated and conflict cases.
 - [ ] Tests and lint actually run, with commands/results recorded.
 - [ ] No secrets, insecure file exposure or uncontrolled downloads.
 - [ ] PR references story/ADR and includes trade-offs.
+
+## Stack A implementation detail
+
+FastAPI route/dependency and module: [ ] · Pydantic request/response models: [ ]
+Exact JSON casing, constraints, problem media type/status codes: [ ]
+SQLAlchemy entities, FK/check/unique constraints and transaction boundary: [ ]
+Alembic revision, upgrade/repeatability and safe rollback/data retention: [ ]
+pytest unit/API/isolated PostgreSQL fixtures: [ ]
+Negative tests assert response and unchanged DB; race tests assert final row counts/state.
+Stop and reconcile contract mismatches (including FastAPI validation defaults).
+Use [canonical Ready/Done gates](SDD_WORKFLOW.md); local SQLite is not PostgreSQL evidence.

@@ -1,5 +1,31 @@
 # Sprint 1 submission and evidence
 
+## Current remote assessment — 2026-11-02
+
+**Remaining gaps / access-blocked; repository evidence is not yet complete.**
+The [fresh remote audit](../audits/sprint1-remote-verification.md) supersedes earlier
+manual attestations for current GitHub state. Baseline main/develop are both
+[`08386a1`](https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/08386a19afdaddee67c230790de50fb7b95b342a).
+The [sanitized snapshot](../audits/sprint1-remote-evidence.json) and
+[commands/results](../audits/sprint1-verification-commands.md) separate remote
+evidence, local checks and unverified items. No instructor acceptance is claimed.
+
+| Evidence item | Verified status / direct link |
+| --- | --- |
+| Proposal, MIT, vision/boundary, RACI, prioritized assigned backlog | PASS; immutable artifact links in the remote audit |
+| Canonical OpenAPI and baseline CI | PASS; [run 41464572459](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459), all five jobs successful |
+| Genuine human review | PASS for [merged #23 approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346); [#22 approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/22#pullrequestreview-5737094704) exists but #22 was not merged |
+| Final release candidate review | GAP; later #25/#26 have no submitted reviews; final reviewed release PR remains required |
+| main/develop protections | GAP; [branches](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches?per_page=100) unprotected, effective rules/rulesets empty; owner must enable controls |
+| Project evidence | BLOCKED; GraphQL read:project scope missing; no board URL/status independently verified |
+| Sprint tag/release | GAP; [tags](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/tags?per_page=100) and [releases](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/releases?per_page=100) empty |
+| Corrective tracking | Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20); distinct SDD [#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27) |
+| Documentation corrections / SDD proposal | Open [PR #28 into develop](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28); [current checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28/checks); independent human review pending |
+
+The current DOCX is updated to this assessment; its original supplied source
+remains unchanged. This documentation PR is proposed evidence until reviewed and
+merged; its publication/check state is recorded in the command/result log.
+
 Current working submission: [Cuckoo_Sprint1_Submission.docx](Cuckoo_Sprint1_Submission.docx).
 Original supplied source: [unchanged archived DOCX](../archive/submissions/Cuckoo_Sprint1_Submission_Original.docx),
 SHA-256 `04C3B14CFA8DA58B6A0C06BF98A01B5EADE8EF82BB6BDBC3A3ED2B931F012E86`.
@@ -19,9 +45,9 @@ verified artifacts/results; it does not rewrite the source or invent publication
 | Cleanup | [PR #25](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25), [issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24) |
 | Historical records | [Archive](../archive/README.md); old claims apply only to their recorded revision/date |
 
-## Manual attestation and machine observations
+## Earlier cleanup attestations and observations (historical)
 
-The user explicitly reports PR/issue/manual attestations handled. No extra
+During the earlier cleanup the user reported PR/issue/manual attestations handled. No extra
 attestation bot or hard-coded PR-state gate runs in this submission. The report
 is preserved separately from what the GitHub API exposed during cleanup:
 
