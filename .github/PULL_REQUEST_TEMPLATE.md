@@ -21,5 +21,5 @@ CI run and final reviewed head SHA:
 
 ## Reviewer notes
 Assumptions, trade-offs, and follow-up work:
-Actual independent human review URL (pending until submitted):
-After merge: update requirements traceability with merge SHA; add immutable tag/release links when releasing.
+Actual human review/approval source (conversation or review link; formal independent GitHub approval only when explicitly required):
+After merge: update requirements traceability with merge SHA. Add immutable tag/release links only when explicitly required by course instructions or the current team plan.

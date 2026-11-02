@@ -6,6 +6,10 @@ Contract: [commit URL + version] · Specification: [path/URL]
 Use one row per observable acceptance criterion. Preserve IDs when requirements
 change; explain superseded rows. Distinguish designed tests from executed tests,
 and issue administration from product acceptance. Follow [the workflow](SDD_WORKFLOW.md).
+Record the explicit requirement source for any mandatory Project, formal GitHub
+approval or tag/release. Otherwise mark it not required; record human approval
+using its actual source, including the team conversation, without inventing a
+GitHub review object.
 
 | Requirement / AC | Owner | Story / spec section | Operation / schema | Test IDs / files | Actual result / environment | PR / human review | CI / merge SHA | Release / status / blocker |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

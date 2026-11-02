@@ -1,5 +1,51 @@
 # Sprint 1 verification — commands and actual results
 
+## Process clarification — 2026-11-03
+
+The user superseded the earlier mandatory controls/release checklist: follow
+team-approved plans and require protections, formal GitHub approval counts,
+Projects, release branches, tags or GitHub Releases only when explicit instructions
+or the current team plan call for them. Existing enforced rules still apply.
+No separate instructor rubric was found among the repository's documents.
+This changes the interpretation of optional missing items, not the original
+GitHub observations preserved below. Existing #20 tracks the follow-up.
+
+Actual follow-up commands:
+
+```powershell
+git fetch origin
+git switch -c feature/20-proportionate-workflow origin/develop
+$env:PYTHONIOENCODING='utf-8'
+./.venv/Scripts/python.exe .sprint1/inspect_docx.py
+./.venv/Scripts/python.exe .sprint1/simplify_docs.py
+./.venv/Scripts/python.exe .sprint1/policy_snapshot.py
+./.venv/Scripts/python.exe .sprint1/policy_docx.py
+./.venv/Scripts/python.exe .sprint1/verify_docs.py
+git diff --check
+git diff --stat
+./.venv/Scripts/python.exe .sprint1/update_policy_issue.py
+git add AGENTS.md README.md .github/PULL_REQUEST_TEMPLATE.md docs
+git diff --cached --check
+git commit -m "Make GitHub controls and publication conditional on explicit requirements (refs #20)"
+git push -u origin feature/20-proportionate-workflow
+```
+
+Results: **112 active local Markdown links resolved, 27 US-03 example/schema checks
+passed**, Word ZIP/XML validated, 26 evidence/policy paragraphs updated, all other
+ZIP entries identical and archived original SHA-256 unchanged. Application,
+contract, dependencies, deployment, license, diagram, ADRs and archives are
+unchanged. Word layout was not rendered. No new application tests were run for
+this documentation-only change. Existing CI will supply separate PR results.
+
+Remote requests used the existing credential-safe helper: GET issues/20,
+issues/27 and pulls?state=open&per_page=100 returned 200; no open PR existed.
+PATCH issues/20 returned 200 and records the user decision while retaining the
+old plan as superseded context. No admin permission, repository setting, tag,
+release, deployment or contributor history was changed.
+
+The sections below are the original 2026-11-02 command/result record and earlier
+publication observations; their optional-control gates are historical.
+
 Run date: **2026-11-02**, Europe/Istanbul. Workspace:
 `C:\Users\User\Downloads\Cuckoo`. Assessed remote baseline: `08386a19afdaddee67c230790de50fb7b95b342a`.
 Issue-linked branch: `feature/27-sdd-sprint1-verification`, from origin/develop.

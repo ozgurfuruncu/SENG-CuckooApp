@@ -2,7 +2,9 @@
 
 Fresh verification on 2026-11-02: all US-01..15 remain administratively closed,
 not implemented. Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
-tracks verified protection/review/release gaps and Project access; separate
+tracks routine closeout and the 2026-11-03 process simplification; protections,
+formal approvals, Projects and releases are conditional on explicit instructions
+or current team plans. Separate
 [#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27) tracks SDD setup.
 See [remote audit](audits/sprint1-remote-verification.md) and
 [US-03 specification example](specs/US-03-create-task.md). Earlier inspection

@@ -1,11 +1,20 @@
 # Sprint 1 submission and evidence
 
-## Current remote assessment — 2026-11-02
+## Current assessment — user decision, 2026-11-03
 
-**Remaining gaps / access-blocked; repository evidence is not yet complete.**
-The [fresh remote audit](../audits/sprint1-remote-verification.md) supersedes earlier
-manual attestations for current GitHub state. Baseline main/develop are both
-[`08386a1`](https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/08386a19afdaddee67c230790de50fb7b95b342a).
+**Sprint 1 core artifacts and the SDD setup are delivered.** The user superseded
+the earlier mandatory GitHub-controls/release checklist: team members follow
+approved plans; protections, formal approval counts, Projects, release branches,
+tags and GitHub Releases become requirements only when explicit course instructions
+or the current team plan call for them. No separate instructor rubric was supplied.
+The observations below remain truthful; optional missing controls/publication
+records are not default completion blockers. Existing enforced rules still apply.
+
+The [remote audit and updated interpretation](../audits/sprint1-remote-verification.md)
+preserve the original observations. Main remains at
+[`08386a1`](https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/08386a19afdaddee67c230790de50fb7b95b342a);
+develop includes merged PR #28 at
+[`330e048`](https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/330e0488d3db14524bd590206509b215e71e6947).
 The [sanitized snapshot](../audits/sprint1-remote-evidence.json) and
 [commands/results](../audits/sprint1-verification-commands.md) separate remote
 evidence, local checks and unverified items. No instructor acceptance is claimed.
@@ -15,16 +24,17 @@ evidence, local checks and unverified items. No instructor acceptance is claimed
 | Proposal, MIT, vision/boundary, RACI, prioritized assigned backlog | PASS; immutable artifact links in the remote audit |
 | Canonical OpenAPI and baseline CI | PASS; [run 41464572459](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41464572459), all five jobs successful |
 | Genuine human review | PASS for [merged #23 approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346); [#22 approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/22#pullrequestreview-5737094704) exists but #22 was not merged |
-| Final release candidate review | GAP; later #25/#26 have no submitted reviews; final reviewed release PR remains required |
-| main/develop protections | GAP; [branches](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches?per_page=100) unprotected, effective rules/rulesets empty; owner must enable controls |
-| Project evidence | BLOCKED; GraphQL read:project scope missing; no board URL/status independently verified |
-| Sprint tag/release | GAP; [tags](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/tags?per_page=100) and [releases](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/releases?per_page=100) empty |
+| Formal final release review | Conditional; no submitted reviews for #25/#26/#28. Record actual team approval sources; a formal release review is required only by explicit instructions/current plan |
+| main/develop protections | Optional unless explicitly required; [branches](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches?per_page=100) unprotected at inspection. No settings change or admin grant requested |
+| Project evidence | Optional unless explicitly required; GraphQL read:project scope missing; no board URL/status independently verified. The assigned issue backlog is verified |
+| Sprint tag/release | Optional unless explicitly required; [tags](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/tags?per_page=100) and [releases](https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/releases?per_page=100) empty at inspection |
 | Corrective tracking | Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20); distinct SDD [#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27) |
-| Documentation corrections / SDD proposal | Open [PR #28 into develop](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28); [current checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28/checks); independent human review pending |
+| Documentation corrections / SDD setup | [PR #28 merged into develop](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28); [all five final-source CI checks passed](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41515016989). No submitted GitHub approval is asserted |
 
-The current DOCX is updated to this assessment; its original supplied source
-remains unchanged. This documentation PR is proposed evidence until reviewed and
-merged; its publication/check state is recorded in the command/result log.
+The current DOCX is updated to the revised criteria; its original supplied source
+remains unchanged. This policy-alignment follow-up is tracked in #20; its own
+merge/check state is separate from the already-merged SDD setup. The user decision
+is the approval source for simplifying the process, not a GitHub review object.
 
 Current working submission: [Cuckoo_Sprint1_Submission.docx](Cuckoo_Sprint1_Submission.docx).
 Original supplied source: [unchanged archived DOCX](../archive/submissions/Cuckoo_Sprint1_Submission_Original.docx),
