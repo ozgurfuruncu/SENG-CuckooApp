@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function Bootstrap() {
+function App() {
   return (
     <main style={{ fontFamily: "sans-serif", maxWidth: 720, margin: "3rem auto", padding: "1rem" }}>
       <h1>Cuckoo</h1>
@@ -14,4 +14,4 @@ function Bootstrap() {
 
 const root = document.getElementById("root");
 if (!root) throw new Error("Application root is missing");
-ReactDOM.createRoot(root).render(<React.StrictMode><Bootstrap /></React.StrictMode>);
+ReactDOM.createRoot(root).render(<React.StrictMode><App /></React.StrictMode>);

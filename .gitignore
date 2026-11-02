@@ -12,3 +12,6 @@ dist/
 .env.*
 !.env.example
 coverage.xml
+.archive/
+.tools/
+.sprint1/

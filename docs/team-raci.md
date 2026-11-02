@@ -1,6 +1,6 @@
 # Team roles and RACI — submitted Sprint 1 baseline
 
-Source: [updated Sprint 1 submission](submissions/Cuckoo_Sprint1_Submission.docx),
+Source: [supplied Sprint 1 document](archive/submissions/Cuckoo_Sprint1_Submission_Original.docx),
 section 11, received 2026-11-02. These are supplied role assignments. The user
 subsequently confirmed the account mapping below; see [machine-readable accounts](team-accounts.json).
 Access and assignees were inspected separately; no peer review is inferred from assignment.
@@ -28,9 +28,8 @@ claim to the course's seven-person-only implementation role.
 | GitHub rules and issue board | I | A | C | C | R | R |
 | Sprint evidence / review | C | R | R | A | R | R |
 
-Next actions: TL reviews the bounded bootstrap; QA reviews health failures,
-contract parity and PostgreSQL/Compose evidence; DO coordinates administrator
-branch-rule and Project permissions; FI reviews the TypeScript shell; PO resolves
-the remaining business-contract gaps; SM obtains confirmed issue owners, peer
-review and final submission evidence. No role grants permission to fabricate
-reviews, interviews or release acceptance.
+Ongoing responsibility: TL coordinates integration; QA reviews health failures,
+contract parity and test evidence; DO owns CI/deployment coordination; FI owns
+frontend/API integration; PO owns backlog acceptance; SM maintains planning and
+evidence. The user reports manual attestations handled. No completed business
+implementation or individual contribution is inferred merely from issue ownership.

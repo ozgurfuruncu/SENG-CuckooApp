@@ -79,7 +79,7 @@ test('rejects duplicate YAML keys', () => {
 test('all checked-in YAML parses with unique keys using YAML 1.2', () => {
   function walk(directory) {
     for (const entry of readdirSync(directory, { withFileTypes: true })) {
-      if (['.git', 'node_modules', '.venv', '__pycache__', 'dist'].includes(entry.name)) continue;
+      if (['.git', 'node_modules', '.venv', '__pycache__', 'dist', '.archive', '.tools', '.sprint1'].includes(entry.name)) continue;
       const file = path.join(directory, entry.name);
       if (entry.isDirectory()) walk(file);
       else if (/\.ya?ml$/.test(entry.name)) {
@@ -89,6 +89,6 @@ test('all checked-in YAML parses with unique keys using YAML 1.2', () => {
     }
   }
   walk(repository);
-  const workflow = YAML.parse(readFileSync(path.join(repository, '.github/workflows/contract-check.yml'), 'utf8'));
+  const workflow = YAML.parse(readFileSync(path.join(repository, '.github/workflows/ci.yml'), 'utf8'));
   assert.ok(Object.hasOwn(workflow.on, 'pull_request'));
 });

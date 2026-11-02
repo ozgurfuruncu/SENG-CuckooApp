@@ -1,32 +1,18 @@
-# Sprint 1 evidence checklist
+# Sprint 1 submission checklist
 
-- [x] Inspect existing history, files, branches, tags, PRs, issues and workflows.
-- [x] Preserve existing app, CI, Compose, legacy contract/backlog and MIT attribution.
-- [x] Prepare canonical OpenAPI 3.1 and document contract conflicts.
-- [x] Evaluate candidate stacks without invented proficiency scores; record later user approval of A.
-- [x] Prepare feature branch, issue/bug/PR templates and review process.
-- [x] Create develop at unchanged main; publish existing-story issues with deferred scope explicit.
-- [x] Open and merge PR #17 to develop through owner review flow; foundation contract and existing backend CI pass.
-- [x] Record supplied six named roles and RACI from the updated submission.
-- [x] Verify live repository access for six accounts and request independent owner review on #17/#19.
-- [x] Confirm all six role-to-handle mappings with the user; assign/verify initial planning ownership for every story and technical closeout issue.
-- [x] Record remaining draft business-contract questions for later feature acceptance; Sprint 1 is the foundation, not the completed MVP.
-- [x] Record user approval of Stack A on 2026-11-02, technical owner, rationale and source document in ADR-001.
-- [x] Publish bounded bootstrap in PR #19; real PostgreSQL/backend, frontend, contract and Compose checks pass on implementation commit d1810c2, then preserve integration through #17 merge to develop.
-- [ ] Administrator protects main and develop; verify required checks/approvals.
-- [ ] Authorized Project owner sets up board and imports issues (token lacks Projects scope).
-- [ ] Human reviews this PR and exact CI evidence.
-- [x] Preserve updated submission confirming MIT, Stack A and 05.11.2026 submission date.
-- [ ] PO transfers verified repository evidence into the final submitted copy.
-- [x] Prepare separate evidence-filled Word candidate with verified release PR/CI links (source preserved unchanged).
-- [x] Prepare all-collaborator Project defaults and staged branch-rule payloads in docs/release.
-- [x] Record anyx05 repository/Project Admin request as owner-dependent, with no effective access or self-approval bypass claimed.
-- [x] Add a repeatable readiness audit with negative tests for stale/missing CI, unassigned stories, unknown Project access and invalid approvals/releases.
-- [ ] Finalize release/sprint-1 with integrated develop and an approved release PR to main (#23 currently draft).
-- [ ] Merge through reviewed PRs only; tag reviewed main as sprint-1 afterward.
+- [x] Proposal/problem/vision and bounded software context preserved.
+- [x] Full MIT license and original attribution retained.
+- [x] Canonical OpenAPI 3.1 baseline and schema/reference validation.
+- [x] Accepted Stack A ADR with user approval provenance and stated trade-offs.
+- [x] Six named responsibilities, exactly one accountable owner per RACI activity, confirmed GitHub accounts.
+- [x] Existing US-01..15 and technical issues linked; planning owners recorded. Administrative closure is not a feature-implementation claim.
+- [x] One TypeScript entry point, one FastAPI app, one deployment and one CI workflow.
+- [x] Active health/schema/database/route-negative tests, migration setup and isolated Compose smoke.
+- [x] Legacy executable paths removed; historical evidence separated into docs/archive; all source commits retained.
+- [x] Source Word unchanged in archive; current evidence-filled submission in docs/submissions.
+- [x] Manual attestations reported complete by the user on 2026-11-02.
 
-See [current release closeout](release/README.md), [execution status](release/status.md)
-and [final readiness audit](release/final-audit.md). Effective branch protection
-and Project import/access remain additional owner-controlled setup gaps, separate
-from the final human approval/release stage. Release/tagging awaits
-the unchecked owner/review/integration/evidence actions; none is simulated.
+Actual cleanup checks/PR and observed publication state are recorded in the
+[submission index](submissions/README.md). The checked items describe the prepared
+submission, not an assertion that a sprint-1 tag exists. Publish the cleaned PR
+and tag the reviewed main commit through the team's manual release process.

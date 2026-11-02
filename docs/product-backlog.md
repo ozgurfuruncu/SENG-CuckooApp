@@ -7,8 +7,12 @@ on 2026-11-02 replaces US-11 terminal idempotence with rejection of duplicate
 terminal actions, consistent with the canonical contract's terminal-state conflict.
 Stack A is approved; business acceptance/contract review still precedes implementation.
 See [reconciliation](contract-reconciliation.md) and [issue index](issue-index.md).
-The original repo's `docs/backlog.md` is preserved; its different IDs are mapped
+The original repo's [backlog](archive/initial-starter/backlog.md) is archived; its different IDs are mapped
 in the issue index rather than treated as additional MVP stories.
+
+The user administratively closed US-01..15 on GitHub. These stories remain the
+future product plan; closure is not a claim that their business endpoints were
+implemented in the health-only Sprint 1 application.
 
 | ID | Priority | Points | Story | Core acceptance evidence |
 |---|---|---:|---|---|

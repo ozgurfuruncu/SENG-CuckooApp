@@ -1,46 +1,57 @@
-# Cuckoo — SENG 321 Team 5
+# Cuckoo — Sprint 1 submission
 
-Cuckoo connects remote employers with local task takers for a bounded, permitted
-vehicle-photo-check journey. Workers apply; the employer selects one, reviews
-submitted photographs/notes and records a simulated payment release. City,
-occupation and skills are self-declared. No real money, vehicle custody/driving,
-professional verification or legal representation is provided.
+SENG 321 · Team 5 · MIT
 
-This is the **Sprint 1 release candidate**: product/architecture documentation,
-OpenAPI 3.1, named roles/RACI, MIT, reviewed-change workflow preparation and a tested
-Stack A foundation. The running bootstrap implements database readiness only;
-the task journey remains later implementation work.
+Cuckoo's first-release design is a bounded, permitted vehicle-photo-check journey:
+workers apply, the employer selects one, reviews photos/notes and records a
+**simulated** payment release. City, occupation and skills are self-declared.
+Real payments, custody/driving, professional verification and legal representation
+are outside the MVP. Ratings, full messaging and recommendations are deferred.
 
-## Run the approved foundation
+Sprint 1 delivers the proposal, system boundary, roles/RACI, approved architecture,
+draft API contract, backlog and a tested application foundation. The application
+currently implements database readiness and a TypeScript web shell; business
+endpoints are later reviewed stories.
 
-With Docker Desktop's Linux engine running:
+## Run
+
+With Docker Desktop's Linux engine running, from the repository root:
 
 ```sh
-docker compose -p cuckoo-bootstrap -f compose.bootstrap.yml up --build --wait
+docker compose up --build --wait
 ```
 
-Web shell: http://localhost:5173 · API health: http://localhost:8000/api/v1/health
-· API docs: http://localhost:8000/api/v1/docs.
+- Web: http://localhost:5173
+- Health: http://localhost:8000/api/v1/health
+- API docs: http://localhost:8000/api/v1/docs
+
+Stop with `docker compose down`. PostgreSQL data remains in its named volume.
+The project/volume identifiers are retained from the working foundation so existing
+local data is not deleted by this cleanup. Optional overrides are in `.env.example`.
+
+## Repository
+
+| Path | Purpose |
+| --- | --- |
+| `api/openapi.yaml` | The single current OpenAPI 3.1 contract |
+| `backend/app/main.py` | The single API entry point |
+| `backend/app/{identity,tasks,applications,evidence,simulated_payment}` | Agreed monolith boundaries for later stories |
+| `backend/migrations`, `backend/tests` | Alembic foundation and active API tests |
+| `frontend/src/main.tsx` | The single React/TypeScript entry point |
+| `docker-compose.yml`, backend/frontend `Dockerfile` | The single supported deployment |
+| `.github/workflows/ci.yml` | Backend/PostgreSQL, contract, frontend and Compose checks |
+| `docs/submissions` | Current submission and evidence index |
+| `docs/archive` | Clearly dated historical records; not current setup |
 
 Stack: React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic,
-Docker Compose, GitHub Actions and pytest. Read [bootstrap instructions](README.bootstrap.md)
-for local tests, migration behavior, ports and volume-preserving cleanup.
+Docker Compose, GitHub Actions and pytest. See [development/testing](docs/development.md).
 
-## Sprint 1 artifacts and review
+Submission: [Word document and evidence](docs/submissions/README.md),
+[roles/RACI](docs/team-raci.md), [system context](docs/diagrams/system-context.png),
+[accepted ADR-001](docs/decisions/ADR-001-architecture.md),
+[backlog](docs/product-backlog.md), [issues](docs/issue-index.md),
+[Sprint 1 checklist](docs/sprint-1-checklist.md).
 
-- [Submission and evidence ledger](docs/submissions/README.md), [roles/RACI](docs/team-raci.md), [system context](docs/diagrams/system-context.png).
-- [Canonical API](api/openapi.yaml), [accepted ADR-001](docs/decisions/ADR-001-architecture.md), [MIT license](LICENSE).
-- [Backlog/issues](docs/issue-index.md), [contract decisions for later features](docs/contract-reconciliation.md).
-- [Release candidate, owner actions and remaining gates](docs/release/README.md).
-- [Executed bootstrap tests and CI](docs/stack-a-bootstrap-evidence.md).
-
-Release flow: feature PRs → develop → release/sprint-1 → reviewed main → sprint-1
-tag. Approval must come from a different collaborator. Branch rules apply equally
-to writers and the owner; Project admin defaults cover all verified collaborators
-and can be revised manually. The prepared defaults are not yet applied settings.
-
-No release/tag or human approval is claimed by this candidate. Ratings, messaging,
-recommendations and additional task categories remain deferred. Original JSX,
-business source and Compose are preserved prior work; use the approved bootstrap
-entry point above. The original README is [archived unchanged](docs/legacy/README.original.md)
-and remains available in Git history.
+See [submission evidence](docs/submissions/README.md) for the validation results
+and publication records. Historical planning and preparation files are kept in
+`docs/archive`; the supported setup is documented here and in the development guide.

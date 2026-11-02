@@ -13,6 +13,7 @@
 
 Stack A was approved by the user on 2026-11-02; see accepted ADR-001 and issue #18.
 Use React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic and pytest.
-The active bounded bootstrap is `app.bootstrap:app` and `compose.bootstrap.yml`;
-legacy `app.main` and JSX are preserved prior work and must not be deployed as
-canonical business API behavior. Implement only reviewed contract slices.
+The Sprint 1 application is `app.main:app`, deployed by `docker-compose.yml`.
+Only the canonical health slice is implemented; business endpoints require their
+own reviewed stories. Historical code is recoverable in Git; docs/archive is dated
+evidence and must not be treated as current setup instructions.
