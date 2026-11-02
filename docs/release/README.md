@@ -1,6 +1,7 @@
 # Sprint 1 publication
 
-The cleanup issue is [#24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24).
+The cleanup is [PR #25](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25),
+tracked by [issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24).
 The [submission index](../submissions/README.md) is the current source for artifacts
 and observed repository state. Earlier permission payloads/readiness reports are
 in [the historical archive](../archive/README.md), not active release automation.

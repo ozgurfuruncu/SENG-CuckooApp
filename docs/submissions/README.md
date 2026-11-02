@@ -16,7 +16,7 @@ verified artifacts/results; it does not rewrite the source or invent publication
 | Boundary | [Supplied system context](../diagrams/system-context.png) |
 | Backlog | [Stories](../product-backlog.md), [GitHub index](../issue-index.md) |
 | Application/testing | [Development guide](../development.md), [CI](../../.github/workflows/ci.yml) |
-| Cleanup | [Issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24); validated cleanup PR/check links are added after execution |
+| Cleanup | [PR #25](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25), [issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24) |
 | Historical records | [Archive](../archive/README.md); old claims apply only to their recorded revision/date |
 
 ## Manual attestation and machine observations
@@ -36,13 +36,32 @@ is preserved separately from what the GitHub API exposed during cleanup:
 
 ## Cleanup validation
 
-The cleanup must pass active backend tests (including real PostgreSQL in CI),
-canonical OpenAPI checks, frontend type-check/build and actual default Compose
-startup/migration/persistence smoke. Results are recorded after execution. Source
-DOCX ZIP/XML/assets and all active Markdown links are also checked. Historical
-links target the preserved original Git revision rather than removed live paths.
+Verified 2026-11-02 at application revision
+`99ae828182714746e5c97be09750ba62fe4ea207`:
+
+| Check | Result |
+| --- | --- |
+| [Backend/PostgreSQL](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41458410871/job/125320920234) | 14 passed, 100% active-app coverage; one upstream TestClient deprecation warning |
+| [OpenAPI validation](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41458410871/job/125320920235) | Canonical lint and all 7 validation/negative tests passed |
+| [Frontend](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41458410871/job/125320920111) | TypeScript check and production build passed |
+| [Compose smoke](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41458410871/job/125320921020) | Image build, PostgreSQL, migrations, health, built client and volume persistence passed |
+| [Required backend compatibility status](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41458410871/job/125321138209) | Passed; mirrors the single backend suite |
+| Native workspace checks | Backend 13 passed / 1 PostgreSQL-only test skipped; 97.87% coverage. Contract, frontend and actual Docker smoke also passed locally |
+| Source and document checks | Original source SHA-256 unchanged; all 8 evidence placeholders filled; Word ZIP/XML and embedded assets verified. Word layout was not rendered |
+| Active documentation | All 48 local Markdown links resolve. Historical links target preserved Git revisions |
+
+Evidence-only updates follow that tested application revision. The
+[PR checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/25/checks) show the
+current head's results. The API contract, MIT license and context diagram are
+unchanged by cleanup.
 
 The local checkout is consolidated at the Cuckoo workspace root. The old unpacked
 starter and session scratch files are backed up outside the tracked source in
 .archive; the pre-cleanup Git bundle preserves all original local/remote refs.
 Database volumes are not deleted.
+
+Five obsolete feature/release/Copilot branches were removed only after their
+exact tips were verified as ancestors of the published cleanup branch. This
+includes the closed PR #22 proposal history, retained without replacing the
+accepted ADR or current contract. Remote main/develop remain stable branches;
+the cleanup branch carries PR #25 until its normal independent review/integration.
