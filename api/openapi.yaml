@@ -1,0 +1,531 @@
+openapi: 3.1.0
+info:
+  title: Cuckoo API
+  version: 1.0.0-canonical
+  description: |
+    Cuckoo, başka şehirdeki işleri yerel kişilere yaptıran iki taraflı bir platformdur.
+    Bu belge Sprint 1 taslak sözleşmesidir; SRS (Sprint 2) ile birlikte kesinleşir.
+
+    **İş durumu akışı:** OPEN -> ACCEPTED -> PROOF_UPLOADED -> COMPLETED -> RATED
+    (işveren ilanı OPEN iken CLOSED yapabilir).
+
+    **Temel kural:** Kanıt fotoğrafı yüklenmeden ödeme serbest bırakılamaz.
+    Ödeme akışı MVP'de simüle edilir.
+servers:
+  - url: http://localhost:8000
+    description: Yerel geliştirme (docker compose up)
+tags:
+  - name: system
+  - name: auth
+  - name: jobs
+  - name: proof
+  - name: payment
+  - name: messages
+  - name: ratings
+security:
+  - bearerAuth: []
+
+paths:
+  /health:
+    get:
+      tags: [system]
+      summary: Sağlık kontrolü
+      security: []
+      responses:
+        "200":
+          description: Servis ayakta
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: ok }
+
+  /auth/register:
+    post:
+      tags: [auth]
+      summary: Kullanıcı kaydı (rol seçimiyle)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/RegisterRequest" }
+      responses:
+        "201":
+          description: Kullanıcı oluşturuldu
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/User" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "409":
+          description: E-posta zaten kayıtlı
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "422": { $ref: "#/components/responses/ValidationError" }
+
+  /auth/login:
+    post:
+      tags: [auth]
+      summary: Giriş yap, JWT al
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/LoginRequest" }
+      responses:
+        "200":
+          description: Giriş başarılı
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Token" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /users/me:
+    get:
+      tags: [auth]
+      summary: Giriş yapmış kullanıcının bilgisi
+      responses:
+        "200":
+          description: Kullanıcı
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/User" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+  /jobs:
+    get:
+      tags: [jobs]
+      summary: İlanları listele ve filtrele
+      description: Varsayılan olarak sadece OPEN ilanları döner. Hedef yanıt süresi < 2 sn.
+      security: []
+      parameters:
+        - { name: city, in: query, schema: { type: string }, description: Şehir adı }
+        - { name: category, in: query, schema: { $ref: "#/components/schemas/Category" } }
+        - { name: status, in: query, schema: { $ref: "#/components/schemas/JobStatus" } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 20 } }
+        - { name: offset, in: query, schema: { type: integer, minimum: 0, default: 0 } }
+      responses:
+        "200":
+          description: İlan listesi
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Job" }
+    post:
+      tags: [jobs]
+      summary: İlan oluştur (sadece işveren)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/JobCreate" }
+      responses:
+        "201":
+          description: İlan oluşturuldu
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Job" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "422": { $ref: "#/components/responses/ValidationError" }
+
+  /jobs/{jobId}:
+    parameters:
+      - { $ref: "#/components/parameters/JobId" }
+    get:
+      tags: [jobs]
+      summary: İlan detayı
+      security: []
+      responses:
+        "200":
+          description: İlan
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Job" }
+        "404": { $ref: "#/components/responses/NotFound" }
+    patch:
+      tags: [jobs]
+      summary: İlanı düzenle (sadece sahibi, sadece OPEN iken)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/JobUpdate" }
+      responses:
+        "200":
+          description: Güncellendi
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Job" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409": { $ref: "#/components/responses/Conflict" }
+
+  /jobs/{jobId}/close:
+    post:
+      tags: [jobs]
+      summary: İlanı kapat (sadece sahibi, sadece OPEN iken)
+      parameters:
+        - { $ref: "#/components/parameters/JobId" }
+      responses:
+        "200":
+          description: Kapatıldı
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Job" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409": { $ref: "#/components/responses/Conflict" }
+
+  /jobs/{jobId}/accept:
+    post:
+      tags: [jobs]
+      summary: İşi kabul et (sadece işi kabul eden rolü)
+      description: OPEN -> ACCEPTED. Ücret emanete alınır (simüle).
+      parameters:
+        - { $ref: "#/components/parameters/JobId" }
+      responses:
+        "200":
+          description: İş kabul edildi
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Job" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409": { $ref: "#/components/responses/Conflict" }
+
+  /jobs/{jobId}/proof:
+    parameters:
+      - { $ref: "#/components/parameters/JobId" }
+    post:
+      tags: [proof]
+      summary: Kanıt fotoğrafı yükle (sadece işi kabul eden)
+      description: ACCEPTED -> PROOF_UPLOADED. En az bir fotoğraf zorunludur.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file: { type: string, format: binary }
+                note: { type: string, maxLength: 500 }
+      responses:
+        "201":
+          description: Fotoğraf yüklendi
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ProofPhoto" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409": { $ref: "#/components/responses/Conflict" }
+        "415":
+          description: Desteklenmeyen dosya türü (jpg/png/webp beklenir)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+    get:
+      tags: [proof]
+      summary: Kanıt fotoğraflarını listele (sadece işin tarafları)
+      responses:
+        "200":
+          description: Fotoğraf listesi
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/ProofPhoto" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+
+  /jobs/{jobId}/approve:
+    post:
+      tags: [payment]
+      summary: İşi onayla ve ödemeyi serbest bırak (sadece işveren)
+      description: |
+        PROOF_UPLOADED -> COMPLETED. Kanıt fotoğrafı yoksa 409 döner;
+        bu kural otomatik testle doğrulanır.
+      parameters:
+        - { $ref: "#/components/parameters/JobId" }
+      responses:
+        "200":
+          description: Onaylandı, ödeme serbest bırakıldı
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Job" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409": { $ref: "#/components/responses/Conflict" }
+
+  /jobs/{jobId}/payment:
+    get:
+      tags: [payment]
+      summary: Emanet ödeme durumu (simüle)
+      parameters:
+        - { $ref: "#/components/parameters/JobId" }
+      responses:
+        "200":
+          description: Ödeme kaydı
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/EscrowPayment" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /jobs/{jobId}/messages:
+    parameters:
+      - { $ref: "#/components/parameters/JobId" }
+    get:
+      tags: [messages]
+      summary: İşe ait mesajları listele (sadece işin tarafları)
+      responses:
+        "200":
+          description: Mesajlar
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Message" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+    post:
+      tags: [messages]
+      summary: Mesaj gönder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [body]
+              properties:
+                body: { type: string, minLength: 1, maxLength: 2000 }
+      responses:
+        "201":
+          description: Mesaj gönderildi
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Message" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+
+  /jobs/{jobId}/ratings:
+    post:
+      tags: [ratings]
+      summary: Karşı tarafı puanla (iş COMPLETED olduktan sonra)
+      parameters:
+        - { $ref: "#/components/parameters/JobId" }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/RatingCreate" }
+      responses:
+        "201":
+          description: Puan kaydedildi
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Rating" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "409": { $ref: "#/components/responses/Conflict" }
+
+  /users/{userId}/ratings:
+    get:
+      tags: [ratings]
+      summary: Kullanıcının aldığı puanlar ve ortalaması
+      security: []
+      parameters:
+        - { name: userId, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          description: Puan özeti
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  average: { type: number, format: float, example: 4.6 }
+                  count: { type: integer, example: 12 }
+                  items:
+                    type: array
+                    items: { $ref: "#/components/schemas/Rating" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    JobId:
+      name: jobId
+      in: path
+      required: true
+      schema: { type: integer }
+
+  responses:
+    Unauthorized:
+      description: Token eksik/geçersiz veya kimlik bilgisi hatalı
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    Forbidden:
+      description: Bu işlem için yetkiniz yok
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    NotFound:
+      description: Kayıt bulunamadı
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    Conflict:
+      description: İşin mevcut durumu bu işleme izin vermiyor
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    ValidationError:
+      description: Geçersiz istek gövdesi
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ValidationError" }
+
+  schemas:
+    Role:
+      type: string
+      enum: [EMPLOYER, WORKER, ADMIN]
+    Category:
+      type: string
+      enum: [CAR_INSPECTION, DOG_WALKING, GARDEN_CARE]
+    JobStatus:
+      type: string
+      enum: [OPEN, ACCEPTED, PROOF_UPLOADED, COMPLETED, RATED, CLOSED]
+    PaymentStatus:
+      type: string
+      enum: [HELD, RELEASED]
+
+    RegisterRequest:
+      type: object
+      required: [email, password, full_name, role, city]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string, minLength: 8, maxLength: 128 }
+        full_name: { type: string, minLength: 2, maxLength: 120 }
+        role: { $ref: "#/components/schemas/Role" }
+        city: { type: string, minLength: 2, maxLength: 80 }
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string }
+    Token:
+      type: object
+      required: [access_token, token_type]
+      properties:
+        access_token: { type: string }
+        token_type: { type: string, example: bearer }
+    User:
+      type: object
+      properties:
+        id: { type: integer }
+        email: { type: string, format: email }
+        full_name: { type: string }
+        role: { $ref: "#/components/schemas/Role" }
+        city: { type: string }
+
+    JobCreate:
+      type: object
+      required: [title, description, city, category, price]
+      properties:
+        title: { type: string, minLength: 3, maxLength: 200 }
+        description: { type: string, minLength: 1 }
+        city: { type: string, minLength: 2, maxLength: 80 }
+        category: { $ref: "#/components/schemas/Category" }
+        price: { type: number, format: decimal, exclusiveMinimum: 0, example: 1500.00 }
+    JobUpdate:
+      type: object
+      properties:
+        title: { type: string, minLength: 3, maxLength: 200 }
+        description: { type: string }
+        price: { type: number, exclusiveMinimum: 0 }
+    Job:
+      type: object
+      properties:
+        id: { type: integer }
+        title: { type: string }
+        description: { type: string }
+        city: { type: string }
+        category: { $ref: "#/components/schemas/Category" }
+        price: { type: number }
+        status: { $ref: "#/components/schemas/JobStatus" }
+        employer_id: { type: integer }
+        worker_id:
+          type: [integer, "null"]
+        created_at: { type: string, format: date-time }
+
+    ProofPhoto:
+      type: object
+      properties:
+        id: { type: integer }
+        job_id: { type: integer }
+        url: { type: string, description: Fotoğrafa erişim yolu }
+        note:
+          type: [string, "null"]
+        uploaded_at: { type: string, format: date-time }
+    EscrowPayment:
+      type: object
+      properties:
+        job_id: { type: integer }
+        amount: { type: number }
+        status: { $ref: "#/components/schemas/PaymentStatus" }
+        held_at: { type: string, format: date-time }
+        released_at:
+          type: [string, "null"]
+          format: date-time
+    Message:
+      type: object
+      properties:
+        id: { type: integer }
+        job_id: { type: integer }
+        sender_id: { type: integer }
+        body: { type: string }
+        sent_at: { type: string, format: date-time }
+    RatingCreate:
+      type: object
+      required: [score]
+      properties:
+        score: { type: integer, minimum: 1, maximum: 5 }
+        comment: { type: string, maxLength: 1000 }
+    Rating:
+      type: object
+      properties:
+        id: { type: integer }
+        job_id: { type: integer }
+        from_user_id: { type: integer }
+        to_user_id: { type: integer }
+        score: { type: integer, minimum: 1, maximum: 5 }
+        comment:
+          type: [string, "null"]
+        created_at: { type: string, format: date-time }
+
+    Error:
+      type: object
+      properties:
+        detail: { type: string }
+    ValidationError:
+      type: object
+      properties:
+        detail:
+          type: array
+          items:
+            type: object
+            properties:
+              loc: { type: array, items: {} }
+              msg: { type: string }
+              type: { type: string }
