@@ -1,5 +1,30 @@
 # Sprint 1 remote repository verification
 
+## Current interpretation — user decision, 2026-11-03
+
+The user superseded the earlier mandatory GitHub-controls/release checklist:
+team members follow team-approved plans, and branch protections, formal GitHub
+approval counts, Project boards, release branches, tags and GitHub Releases are
+required only when explicit course instructions or a current team-approved plan
+call for them. No separate instructor rubric was supplied. Do not infer course
+requirements from the team's Word proposal or earlier assistant checklist.
+
+The core artifact, contract, backlog/ownership and CI PASS evidence below remains
+valid for the inspected baseline. The former control/release GAP and optional
+Project BLOCKED rows are **non-blocking observations under the revised policy**;
+they do not assert that protections, a board or a release exist. Record a specific
+requirement source before making any of them mandatory again. Existing enforced
+GitHub rules still apply. No admin grant or ownership transfer is requested.
+
+[PR #28](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28) is now merged into
+develop at `330e0488d3db14524bd590206509b215e71e6947`; its final source CI passed.
+The original inspection and checklist below are retained as historical evidence.
+The [current submission index](../submissions/README.md) and
+[SDD workflow](../templates/SDD_WORKFLOW.md) use the revised criteria. Official
+instructor acceptance is not claimed.
+
+## Historical inspection — 2026-11-02
+
 Inspected **2026-11-02**, Europe/Istanbul; evidence snapshot collected
 19:52 UTC / 22:52 Istanbul. Repository:
 [ozgurfuruncu/SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp).
@@ -8,14 +33,14 @@ Assessed published baseline:
 This report assesses the requested Sprint 1 criteria and the supplied submission;
 no separate instructor rubric or official acceptance was available.
 
-**Assessment: remaining gaps and access-blocked evidence.** Repository evidence
-cannot yet be declared complete. PASS means observed remote evidence satisfies
+**Historical assessment under the original checklist: remaining gaps and access-blocked evidence.**
+This original assessment is superseded by the interpretation above. PASS means observed remote evidence satisfies
 that row; GAP means a required artifact/control is absent; BLOCKED means access
 prevents verification. Local intentions and user attestations are not substituted
 for GitHub records. Corrections and new workflow documents in this PR are proposals
 until reviewed and merged.
 
-## Criterion assessment
+## Original criterion assessment
 
 | Criterion | Result | Direct evidence and finding |
 | --- | --- | --- |
@@ -64,7 +89,11 @@ PR history: #17 merged into develop; #19 merged into its parent feature branch;
 submitted review objects; #21 has only a bot COMMENTED quota message. That message
 is not a review approval. Source and merge history is preserved.
 
-## Smallest corrective work and maintainer actions
+## Historical corrective checklist — now conditional
+
+The actions below were proposed under the earlier checklist. They are not current
+completion blockers without an explicit requirement source. Reuse #20 for any
+required follow-up; do not create administration work merely to satisfy this list.
 
 Reuse reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
 for controls/release/evidence closeout, with [verified findings and checkboxes](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6586853736).

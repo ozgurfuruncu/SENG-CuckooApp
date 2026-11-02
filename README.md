@@ -52,8 +52,10 @@ Submission: [Word document and evidence](docs/submissions/README.md),
 [backlog](docs/product-backlog.md), [issues](docs/issue-index.md),
 [Sprint 1 checklist](docs/sprint-1-checklist.md).
 
-Current [remote verification](docs/audits/sprint1-remote-verification.md) records
-remaining protection/release gaps and Project access limits. Later sprint work
+The [remote verification](docs/audits/sprint1-remote-verification.md) preserves
+observed GitHub state and the user's 2026-11-03 decision: protections, Projects
+and release publication are conditional on explicit instructions/current team
+plans, rather than default completion blockers. Later sprint work
 uses the [canonical SDD workflow](docs/templates/SDD_WORKFLOW.md), shared Ready/Done
 gates and [US-03 documentation example](docs/specs/US-03-create-task.md).
 
