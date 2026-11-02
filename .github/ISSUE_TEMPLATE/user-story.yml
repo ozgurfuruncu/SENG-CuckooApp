@@ -1,0 +1,28 @@
+name: User story
+description: Sprint backlog story or implementation slice
+title: "[US-XX] "
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      placeholder: As a ..., I want ..., so that ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: Given / When / Then or testable bullets
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: API / dependency impact
+      description: OpenAPI operations, dependencies, migrations, security/state impacts.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Expected evidence
+      description: Tests, screenshots, docs, review evidence.

@@ -1,0 +1,23 @@
+name: Bug report
+description: A reproducible deviation from an accepted story or API contract
+title: "[Bug] "
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and actual result
+      description: Include steps and relevant role/task state. Exclude tokens and private photos.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and contract reference
+      description: Link the issue acceptance criteria and api/openapi.yaml operation.
+    validations:
+      required: true
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression evidence
+      description: Required positive and negative tests; environment and commit.
