@@ -1,8 +1,10 @@
-# Issue index and Project import manifest
+# Issue traceability
 
 Published from existing supplied stories; duplicate check includes all open/closed issues.
 Accounts were confirmed by the user and assignees were verified through GitHub.
-Project import/access remains unverified because the token lacks Projects scope.
+The user reports manual issue/PR/attestation administration handled. API inspection
+shows US-01..15 and technical #16/#18 closed, with #20 still open during cleanup.
+The planning status below is the product baseline, not the GitHub open/closed state.
 US-14/15 remain deferred. Original backlog IDs below indicate overlapping requirements,
 not additional implementation work. Contract gaps require PO/architect/QA resolution.
 
@@ -25,9 +27,9 @@ not additional implementation work. Contract gaps require PO/architect/QA resolu
 | US-15 | [#15](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/15) | Deferred (outside MVP) | No original equivalent | No feature operation |
 | T-05 | [#16](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/16) | Review | T-05 | No feature operation |
 
-Board columns: Backlog / Sprint / Doing / Review / Done. Keep deferred stories out
-of Sprint/Doing. A board owner with Projects authorization can import these URLs
-without recreating issues. The bootstrap T-05 is for human review, not marked Done.
+Issue closure is not feature acceptance: the current API implements only health.
+US-14/15 remain deferred. Preserve existing issue IDs and recorded owner history;
+later implementation work requires reviewed acceptance criteria and tests.
 
 Post-approval bootstrap: [T-06 / #18](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/18). Stack A accepted on 2026-11-02; business implementation still requires its reviewed acceptance/contract slice.
 
@@ -39,6 +41,6 @@ closeout #20 is assigned to Aslı / `asliarikoglu` and Emir / `lilemiv` for proc
 accountability and DevOps responsibility. See [confirmed accounts](team-accounts.json).
 
 Sprint 1 repository/release closeout: [T-02/T-03 / #20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
-The [Project manifest](release/project-items.json) covers the 18 existing issues;
-the manifest now includes verified assignees. Project import/access remains an
-owner-controlled operation; published issues and prepared JSON do not prove board setup.
+The [historical Project manifest](archive/release-preparation/project-items.json)
+records the original issue import preparation. Current cleanup is
+[#24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24).

@@ -1,41 +1,23 @@
 # Branch and review process
 
-`main` contains reviewed releases; `develop` integrates reviewed work. Feature
-branches use `feature/<story-or-issue>-short-name`; fixes use `fix/<issue>-short-name`.
-This foundation uses the explicitly requested `feature/sprint1-repo-bootstrap`.
-Never force-push shared branches or merge directly to main/develop.
+Use short-lived `feature/<issue>-description` branches and link commits/PRs to the
+issue. Integrate through develop and publish reviewed sprint submissions through
+main. Do not force-push shared history or move a published tag to different code.
 
-Start from current develop, link the existing story/issue and its acceptance
-criteria, review `api/openapi.yaml`, then make a bounded change. Each behavior change
-requires tests; authorization/state changes require negative tests. A PR targets
-develop and records assumptions, trade-offs and exact executed checks. A second
-human must review the diff and explain the change before approval. Unresolved
-contract differences and proposed ADRs are gates, not implicitly accepted decisions.
+The cleanup branch preserves the original commits, latest closeout candidate and
+actual #17/#19 merge commits. Changes removing dead code are delivered as a tested
+PR. The user reports manual attestations handled; the submission index records
+machine-observed merge/tag state without manufacturing peer reviews.
 
-## Administrator action required
+Every behavior change requires tests; authorization/state changes require negative
+cases. Reconcile api/openapi.yaml and issue acceptance before a business feature.
+Document assumptions and trade-offs in its PR. Do not implement the whole MVP from
+the mere presence of draft endpoints.
 
-The authenticated account can push but has no admin/maintain permission. Main was
-reported `protected: false`; no rulesets existed at inspection. No protection change
-is claimed. The repository administrator should protect main and develop with:
+Current CI contexts retain backend, Stack A backend, OpenAPI 3.1 validation,
+Stack A frontend and Stack A Compose smoke. Stack A backend is a status-compatible
+dependency on the single backend workload. Owner-managed rules should reference
+the actual check names. Repository/Project privileges are not granted by code.
 
-- PR required, at least one approving human review, stale approvals dismissed and
-  conversations resolved; apply to administrators as appropriate for the course.
-- Required, current checks: existing `backend` job and `OpenAPI 3.1 validation` job.
-  Confirm actual GitHub check names from the PR before selecting required contexts.
-  Approved Stack A bootstrap also supplies passing `Stack A backend`,
-  `Stack A frontend` and `Stack A Compose smoke` contexts (PR #19). Include these
-  for the integrated baseline after they exist on the target branch.
-- Branch up-to-date before merge; force pushes and deletion disabled; no routine
-  bypass/direct pushes. Confirm the effective rules and capture evidence.
-
-Protect both branches only after the new context has executed so rules do not
-require a nonexistent check. Never relax existing coverage or review requirements
-to obtain a green result. Add collaborators only from confirmed GitHub identities;
-local Git author information does not establish team ownership or account mappings.
-
-Project columns: Backlog / Sprint / Doing / Review / Done. US-14 and US-15 remain
-deferred; an issue is not a Sprint commitment. Move to Done only with acceptance,
-tests, CI and human-review evidence. A human selects the reviewed main commit and
-creates `sprint-1` only after all required evidence is ready.
-
-Reference: [GitHub branch-rule permissions](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule).
+Historical setup payloads, account requests and early inspection checklists are
+in docs/archive/release-preparation. They are dated records, not active automation.

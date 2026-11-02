@@ -9,7 +9,7 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = os.environ.get("BOOTSTRAP_COMPOSE_PROJECT", "cuckoo-bootstrap-smoke")
-COMPOSE = ["docker", "compose", "-p", PROJECT, "-f", str(ROOT / "compose.bootstrap.yml")]
+COMPOSE = ["docker", "compose", "-p", PROJECT, "-f", str(ROOT / "docker-compose.yml")]
 
 
 def run(*arguments, capture=False):

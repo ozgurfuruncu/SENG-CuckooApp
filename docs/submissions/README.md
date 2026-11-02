@@ -1,48 +1,48 @@
-# Sprint 1 submission and repository evidence ledger
+# Sprint 1 submission and evidence
 
-The [supplied Word document](Cuckoo_Sprint1_Submission.docx) is preserved without
-modification. SHA-256:
-`04C3B14CFA8DA58B6A0C06BF98A01B5EADE8EF82BB6BDBC3A3ED2B931F012E86`.
-Its supplied submission date is **5 November 2026**. It confirms Stack A,
-SQLAlchemy/Alembic/pytest, six named roles, RACI, MIT and the bounded MVP. General
-team experience remains self-reported intermediate; no measured proficiency,
-stakeholder interviews or peer approvals are inferred.
+Current working submission: [Cuckoo_Sprint1_Submission.docx](Cuckoo_Sprint1_Submission.docx).
+Original supplied source: [unchanged archived DOCX](../archive/submissions/Cuckoo_Sprint1_Submission_Original.docx),
+SHA-256 `04C3B14CFA8DA58B6A0C06BF98A01B5EADE8EF82BB6BDBC3A3ED2B931F012E86`.
+Supplied submission date: **5 November 2026**. The evidence copy is updated from
+verified artifacts/results; it does not rewrite the source or invent publication.
 
-This source supersedes the old proposal/addendum's placeholders and unselected-stack
-language. The original document's pending evidence cells remain untouched; use
-this ledger to transfer verified links into the final submitted copy after review.
+| Artifact | Evidence |
+| --- | --- |
+| Repository | [SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp) |
+| Contract | [api/openapi.yaml](../../api/openapi.yaml), OpenAPI 3.1 / 0.2.1-draft |
+| License | [Original MIT](../../LICENSE) |
+| Architecture | [Accepted ADR-001](../decisions/ADR-001-architecture.md) |
+| Roles/accounts | [RACI](../team-raci.md), [confirmed accounts](../team-accounts.json) |
+| Boundary | [Supplied system context](../diagrams/system-context.png) |
+| Backlog | [Stories](../product-backlog.md), [GitHub index](../issue-index.md) |
+| Application/testing | [Development guide](../development.md), [CI](../../.github/workflows/ci.yml) |
+| Cleanup | [Issue #24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24); validated cleanup PR/check links are added after execution |
+| Historical records | [Archive](../archive/README.md); old claims apply only to their recorded revision/date |
 
-| Evidence | Link/location | Current interpretation |
-| --- | --- | --- |
-| Repository | [SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp) | Verified existing public repository |
-| Foundation integration PR | [#17](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/17) | Ready for review; green foundation CI; owner review requested, no approval at last inspection |
-| Bootstrap issue | [#18](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/18) | Separate bounded post-approval work; technical owner from supplied roles, no guessed account assignment |
-| Backlog | [Issue index](../issue-index.md), [confirmed accounts](../team-accounts.json) | US-01..15 published and assigned to user-confirmed PO for backlog/acceptance planning; US-14/15 remain deferred, future implementation delegation remains planning work |
-| Canonical contract | [api/openapi.yaml](../../api/openapi.yaml) | OpenAPI 3.1, version 0.2.1-draft; bootstrap health slice added |
-| Existing verified CI | [Foundation backend](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349590906), [foundation contract](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41349590909) | Passed for foundation commit 5478308; bootstrap results recorded separately |
-| MIT and architecture | [LICENSE](../../LICENSE), [accepted ADR-001](../decisions/ADR-001-architecture.md) | Original MIT attribution retained; selection approved by user on 2026-11-02; peer review pending |
-| System context | [Diagram](../diagrams/system-context.png) | Exact image2.png extracted from supplied Word document; no generated replacement |
-| Roles/RACI and submission | [RACI](../team-raci.md), [DOCX](Cuckoo_Sprint1_Submission.docx) | Supplied six named roles and exactly one accountable owner per activity |
-| Bootstrap PR / CI | [#19](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/19), [CI](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41352615487), [full evidence](../stack-a-bootstrap-evidence.md) | Ready for review; implementation commit d1810c2 passed all checks, 16 pytest tests, 96.32% CI coverage; owner review requested, approval pending |
-| Branch rules / collaborators / Project | [Prepared defaults and owner actions](../release/README.md) | Six accounts verified; all-collaborator defaults prepared. Applying rules/Project access remains blocked by current account permissions/scopes |
-| Sprint 1 tag/release | Pending reviewed integration | No tag or release created; do not insert a fabricated release URL |
+## Manual attestation and machine observations
 
-The [release closeout status](../release/status.md) records
-[draft release PR #21](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/21) and
-its successful candidate CI. The separate
-[repository-evidence Word candidate](Cuckoo_Sprint1_Repository_Evidence_Candidate.docx)
-contains verified artifact/PR/CI URLs and keeps unperformed owner/review/tag actions
-pending. ZIP/XML and unchanged embedded assets were checked; no layout rendering
-was performed. The supplied original Word source remains unchanged.
+The user explicitly reports PR/issue/manual attestations handled. No extra
+attestation bot or hard-coded PR-state gate runs in this submission. The report
+is preserved separately from what the GitHub API exposed during cleanup:
 
-The [final audit](../release/final-audit.md) checks every source submission requirement
-and records the remaining owner-controlled setup. The source Word's statement
-that stories must be entered/assigned is now backed by actual issue assignments;
-its Project/rules/review/tag evidence still requires verified owner actions.
+- #17 is merged into develop; #19 is merged into its parent feature branch.
+- #21 and #22 are closed unmerged; #23 is merged into main at c8c16b5.
+- Cleanup includes #23's full history and both actual #17/#19 merge commits.
+- No sprint-1 tag/release was returned at inspection, and current API credentials
+  could not read Project scope. The user report covers manual attestations;
+  repository inspection records are kept distinct from it.
+- The user's administrative issue closures are retained. They do not imply that
+  draft auth/task/evidence/payment business endpoints have been implemented.
 
-![Submitted system context](../diagrams/system-context.png)
+## Cleanup validation
 
-The diagram describes product responsibility, not implementation completeness or
-identity, payment or physical-task guarantees. Business routes are not implemented
-by the health-only bootstrap. Peer review, repository rules, confirmed owners and
-reviewed integration still precede Sprint 1 tagging.
+The cleanup must pass active backend tests (including real PostgreSQL in CI),
+canonical OpenAPI checks, frontend type-check/build and actual default Compose
+startup/migration/persistence smoke. Results are recorded after execution. Source
+DOCX ZIP/XML/assets and all active Markdown links are also checked. Historical
+links target the preserved original Git revision rather than removed live paths.
+
+The local checkout is consolidated at the Cuckoo workspace root. The old unpacked
+starter and session scratch files are backed up outside the tracked source in
+.archive; the pre-cleanup Git bundle preserves all original local/remote refs.
+Database volumes are not deleted.
