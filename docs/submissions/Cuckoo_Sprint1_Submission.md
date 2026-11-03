@@ -8,13 +8,14 @@
 | Submission date | 5 November 2026 |
 | Repository | [ozgurfuruncu/SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp) |
 | License | [MIT](../../LICENSE) |
-| Assessed sprint tag | `sprint-1` |
+| Assessed sprint tag | `sprint-1` — not yet published; see verified evidence below |
 
-> **Completion basis:** This final-form submission is drafted on the requested
-> assumption that all required Sprint 1 actions, including teammate review,
-> integration-branch protections and sprint tagging, have been completed. Those
-> administrative actions are assumed here, not independently verified by this
-> document. The [evidence index](README.md) records observed repository status.
+> **Verified status, 3 November 2026:** The foundation is delivered and both
+> integration branches are protected. Emir's independent submission review and
+> PR #33's formal approval are recorded separately in the [evidence index](README.md).
+> This final correction still needs an independent PR approval, passing checks
+> and protected integration before the assessed tag can be published. Problem
+> evidence is qualitative and author-reported; no measured baseline is claimed.
 
 ## 1. Project proposal and problem definition
 
@@ -40,7 +41,11 @@ Current alternatives can involve personal travel, acquaintances, social groups
 and fragmented messages. These arrangements can make responsibilities,
 deliverables and decisions difficult to follow. These are the proposal's problem
 hypotheses; no interview findings, measured frequency or market-size figures are
-claimed.
+claimed. On 3 November 2026, the author confirmed that informal observations
+support this problem statement. This is qualitative motivation reported by the
+author; no structured observation log or measured frequency/consequences was
+supplied for independent verification. The precise process and impact remain
+subject to the validation actions in section 7.
 
 ### Intended value
 
@@ -140,6 +145,17 @@ person can obtain permission for the visit, and photographs/notes can satisfy
 the agreed deliverable. Self-declaration and submitted evidence remain subject to
 the stated trust limits.
 
+Feasibility is bounded by the course schedule: Sprint 1 delivers design and a
+tested health foundation; the 13 business stories are a later prioritized product
+backlog, not a commitment to implement the whole marketplace in one sprint.
+Data begins as user-entered task/profile information; no proprietary dataset or
+external provider integration is required. The local identity design and simulated
+payments avoid relying on unavailable institutional or financial services. The
+team's selected stack and named roles support delivery, but no comparative skill
+measurement or stakeholder demand estimate has been supplied. Real-world access,
+photographic consent and private evidence handling remain operational and ethical
+constraints.
+
 | Risk | Response in the project design |
 | --- | --- |
 | Scope growth | One supported category, explicit deferred items and story-level scope |
@@ -149,6 +165,23 @@ the stated trust limits.
 | Unexplained agent-generated work | Human-owned specifications, teammate review and explainable PRs |
 | Uneven or invisible contributions | Named responsibilities and issue/commit/PR/review traceability |
 
+### Planned proposal validation
+
+The course asks for validation actions (PDF p.4). These are proposed actions,
+not completed interviews or test results. No reliable frequency, cost baseline or
+market-size measurement has been collected in the available evidence.
+
+| Assumption to validate | Action and recorded outcome | Responsible role |
+| --- | --- | --- |
+| Remote requesters encounter a material coordination problem | Interview a prospective requester and local task taker about a recent case; record consented source, current process, frequency, consequences and contradictory findings | PO, with SM |
+| The permitted photographic task is understandable and useful | Walk both actors through one example task and expected evidence; record unclear instructions, permission constraints and whether the outcome would meet the requester’s need | PO and frontend/integration |
+| The planned journey is coherent and testable | QA and TL review a request → application → assignment → evidence → revision/approval scenario against the draft API; record gaps before business implementation | QA and TL |
+| Private evidence and repeatable startup can be delivered within scope | Agree file/access/retention rules before US-08; maintain actual health, migration, contract and isolated Compose test results | TL, QA and DevOps |
+
+The PO owns follow-up validation of these informal observations. Validation can
+revise the proposal; it must not be reported as already successful. The
+[audit matrix](../audits/sprint1-final-audit.md) keeps this evidence limitation visible.
+
 ## 8. License decision
 
 Cuckoo uses the **MIT License** for original project code. The team selected a
@@ -156,6 +189,12 @@ concise permissive license that allows reuse, modification and redistribution
 subject to its notice requirements. The complete [LICENSE](../../LICENSE) and
 original attribution are retained in the repository. Third-party licenses remain
 separate from the license applied to the team's own work.
+
+MIT permits commercial use and does not require derivatives to retain the same
+license; it does require preservation of its notice. It has no express patent
+grant comparable to Apache-2.0. Existing third-party notices must be retained;
+the project license does not relicense dependencies. No comprehensive legal
+compatibility opinion is asserted by this academic proposal.
 
 ## 9. Architecture and approved technology
 
@@ -206,7 +245,7 @@ contribution. Actual issue, commit, PR and review records provide that evidence.
 
 ## 11. Repository and lightweight Git-Flow policy
 
-- `main` holds assessed versions; the Sprint 1 submission is identified by `sprint-1` under this document's completion assumption.
+- `main` holds assessed versions; `sprint-1` will identify the reviewed and tested Sprint 1 submission after the remaining gates pass.
 - `develop` integrates work for the next delivery.
 - `feature/<issue>-<description>` is a short-lived branch linked to an existing story or technical issue.
 - PRs identify the issue, scope, assumptions and relevant test/review evidence.
@@ -294,6 +333,11 @@ and specifies 201/400/401/403 responses. Assignment and other lifecycle operatio
 include conflict responses where their contract requires them. Contract changes
 are versioned and reviewed before implementation.
 
+[Representative API examples](../api-examples.md) show a complete task-creation
+request, success response, input-error body and assignment-conflict body, checked
+against the draft schemas. They support mock clients and do not claim deployed
+business endpoints or introduce new response guarantees.
+
 ## 15. Sprint 1 deliverables and evidence
 
 | Deliverable | Submission artifact |
@@ -303,16 +347,19 @@ are versioned and reviewed before implementation.
 | System vision and boundary | Sections 3/6 and [labelled diagram](../diagrams/system-context.svg) |
 | Architecture and API-first design | Section 9, [ADR-001](../decisions/ADR-001-architecture.md) and [OpenAPI](../../api/openapi.yaml) |
 | Named responsibilities and RACI | Section 10 and [team role record](../team-raci.md) |
-| Repository workflow and assessed tag | Section 11; administrative completion follows the stated drafting assumption |
+| Repository workflow and assessed tag | Section 11 and [actual evidence](README.md); tag remains pending the final review/integration gates |
 | Initial prioritized backlog | Section 13 and [issue mapping](../issue-index.md) |
 | SDD process and example | Section 12 and [US-03 specification](../specs/US-03-create-task.md) |
 
 Published evidence includes the [repository](https://github.com/ozgurfuruncu/SENG-CuckooApp),
-[main foundation CI](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41530996698),
+[main CI #46](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331),
 [submission PR #32](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/32),
+[Emir's independent review](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6600227590),
+[PR #33 formal approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/33#pullrequestreview-5750118359),
 [earlier genuine review](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346)
-and the [separate evidence index](README.md). An earlier review is evidence of its
-own revision; the completion assumption does not manufacture a later review record.
+and the [separate evidence index](README.md). PR #32 had no pre-merge formal
+approval. Subsequent review does not change that historical gap, and existing
+reviews do not approve the new correction. No assessed tag exists yet.
 
 This submission describes the Sprint 1 project foundation and planned MVP. It
 does not claim official instructor acceptance or implementation of future
