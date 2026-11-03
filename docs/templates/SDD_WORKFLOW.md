@@ -6,23 +6,16 @@ This is the canonical workflow for later sprints. Stack A is accepted in
 criteria. Sprint 1 implements health only; draft business operations do not
 authorize implementation. See [agent rules](../../AGENTS.md).
 
-Process decision, approved by the user on **2026-11-03**: team members follow
-team-approved plans. Keep work, checks and review proportionate to the change.
-Branch protections, formal GitHub approval counts, Project boards, release
-branches, tags and GitHub Releases are required only when explicit course
-instructions or a current team-approved plan call for them. Record the source
-before treating one as a completion gate. Earlier assistant/team checklists alone
-do not establish a course requirement. A separate instructor rubric has not been
-provided. Existing enforced GitHub rules still apply; this decision changes no
-repository setting or permission.
-
-The course PDF subsequently supplied on 2026-11-03 explicitly requires teammate
-review, protected main/develop branches with PR/status checks, and a sprint tag
-(pp. 14–17). These are now required completion criteria: follow
-[the course criteria](../sprint-1-requirements.md). A separate release branch,
-GitHub Release page and Project board remain optional. The earlier statement
-that no course pack had been supplied is historical, not the current basis for
-declaring completion.
+Follow team-approved plans and keep work, checks and review proportionate to
+the change. The [supplied course criteria](../sprint-1-requirements.md), PDF
+pp. 14–17, explicitly require teammate review, protected main/develop branches
+with PR/status checks, and an assessed sprint tag. Separate release branches,
+GitHub Release pages and Project boards are optional unless later explicit
+instructions or a current team plan require them. Record the requirement source
+before adding a completion gate; respect all existing enforced GitHub rules.
+Task authorization permits the agreed work and does not substitute for a real
+teammate review. Human understanding, contract alignment, relevant tests and
+truthful evidence remain required.
 
 **Approved story → Feature specification → OpenAPI review → Test design →
 Agent-assisted implementation → Human review → CI → Merge → Traceability update.**
@@ -73,7 +66,7 @@ If permission blocks an explicitly required action, record the requirement
 source, response and responsible person. Optional controls or unavailable optional
 board/release evidence do not keep a sprint open. Preserve factual observations
 without claiming that absent controls or release objects exist. See the
-[Sprint 1 remote audit and updated interpretation](../audits/sprint1-remote-verification.md).
+[Sprint 1 requirements and completed closeout](../sprint-1-requirements.md).
 
 ## Role coverage and reuse
 

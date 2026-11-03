@@ -46,6 +46,8 @@ Its then-pending gates are completed by the receipt above. Earlier
 [remote audit](../audits/sprint1-remote-verification.md) and
 [command log](../audits/sprint1-verification-commands.md) are dated historical
 observations, not current branch/protection/tag state.
+Their JSON inspection snapshots are preserved unchanged; the publication receipt
+above supersedes their then-pending actions without rewriting the original data.
 
 The [previous DOCX](Cuckoo_Sprint1_Submission.docx) is a superseded format.
 The [supplied original](../archive/submissions/Cuckoo_Sprint1_Submission_Original.docx)
@@ -67,3 +69,7 @@ pending-review/tag state. This is a post-closeout narrative update; the original
 assessed snapshot remains [sprint-1](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1)
 at 39dccc7 and is not moved or rewritten. Historical review exceptions remain in
 the evidence records; later reviews are not presented as retroactive approval.
+The same documentation follow-up reconciles the checklist, requirements, issue
+mapping, navigation and closeout guidance. It adds no business implementation or
+new Sprint 1 gate. Its final-head checks and teammate review belong in the PR
+record, without a further commit solely to record that commit's own evidence.

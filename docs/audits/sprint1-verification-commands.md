@@ -1,8 +1,10 @@
 # Sprint 1 verification — commands and actual results
 
-> Historical command log. Current final-audit commands, results and limitations
-> are recorded in [sprint1-final-audit.md](sprint1-final-audit.md). Earlier results
-> and remote observations below apply to their stated revisions only.
+> Historical command log. This log and the
+> [pre-publication audit](sprint1-final-audit.md) retain commands, results and
+> limitations for their stated revisions. Completed publication evidence is in
+> the [current evidence index](../submissions/README.md) and
+> [closeout record](../submissions/manual-closeout.md).
 
 ## Markdown submission format — user request, 2026-11-03
 

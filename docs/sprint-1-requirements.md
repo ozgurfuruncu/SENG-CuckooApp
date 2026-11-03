@@ -5,17 +5,15 @@ Source supplied by the user on **2026-11-03**:
 SHA-256 `E666BF0A09B8DE8648DFFF7722A1E3C6DDEDBAB91662C87D93C3149CCA2AD36F`.
 The accompanying `SENG_321_Revised_Assignment_Sprint_1_Examples.md` illustrates
 the structure; its fictional system and technology/license choices are not
-Cuckoo requirements. This audit located and read all 17 original PDF pages in
-the supplied `Desktop/SENG/SENG-321` course folder, verified the recorded hash,
-and visually checked pages 14–17. No authoritative source is missing.
-The full teaching files remain in that location rather than being republished.
-The [full compliance matrix](audits/sprint1-final-audit.md) expands every course
-deliverable and records actual verification and outstanding evidence.
+Cuckoo requirements. The [pre-publication audit](audits/sprint1-final-audit.md)
+records reading all 17 original PDF pages, verifying the hash and visually
+checking pages 14–17. The full teaching files are not republished here.
+That historical compliance matrix records the inspected candidate and its
+then-outstanding evidence; current completion is recorded below.
 
-The user's direction remains to keep process proportionate and require additional
-administration only when instructions explicitly call for it. This PDF now
-supplies that source for branch controls, teammate review and a sprint tag.
-Earlier conditional-policy discussions did not establish instruction completion.
+Keep process proportionate and require additional administration only when
+instructions explicitly call for it. This PDF supplies that source for branch
+controls, teammate review and a sprint tag.
 
 | Criterion | PDF pages | Cuckoo evidence / completion condition |
 | --- | --- | --- |
@@ -41,18 +39,24 @@ contributors; escalate only a concrete instructor clarification.
 
 ## Current closure state
 
-**PARTIAL — final correction awaiting review/integration/tag.** Live inspection
-on 3 November 2026 found main/develop protected with PRs, one approval and all
-five CI checks; admins included and force pushes/deletions disabled. Main
-`72a522d7e90cfb574e7841880b06e54c81db3903` passed CI #46. Emir's Issue #20 review
-and the genuine PR #33 approval are verified; PR #32 still has zero submitted
-reviews. No sprint tag exists. The new correction needs its own real teammate
-approval and CI; informal problem observations are attributed to the author,
-without claiming independently verified findings or measured frequency.
-Configuration is verified, not comprehensive enforcement behavior.
+**Sprint 1 repository evidence verified complete — 3 November 2026.**
+[PR #34](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34) received
+[a genuine teammate approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34#pullrequestreview-5751704339)
+before merging to assessed commit `39dccc709d518a2124f4b5a52d36138a84f3856b`.
+[Main CI](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41630981575)
+passed all five jobs, the annotated
+[sprint-1 tag](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1)
+was verified at that commit, and
+[#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20) is closed with
+the publication receipt. The owner-authenticated configuration record verifies
+the required protection settings; subsequent inspection confirmed both branches
+protected without claiming comprehensive enforcement testing or new admin access.
 
-See [manual completion steps](submissions/manual-closeout.md),
-[current submission/evidence](submissions/README.md) and
-[remote verification](audits/sprint1-remote-verification.md).
-Use existing [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20) for
-routine closeout. Official instructor acceptance is not asserted.
+The [closeout record](submissions/manual-closeout.md) and
+[submission evidence index](submissions/README.md) link these results. Historical
+audits remain snapshots, including PR #32's missing pre-merge review; the later
+reviewed correction does not invent an earlier approval. Informal problem
+observations remain attributed to the author, without independently verified
+findings or measured frequency. Post-publication documentation follows normal
+review and CI without changing the assessed tag. Official instructor acceptance
+is not asserted.

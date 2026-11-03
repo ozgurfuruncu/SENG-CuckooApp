@@ -1,5 +1,12 @@
 # Sprint 1 final submission audit — 3 November 2026
 
+> Historical pre-publication snapshot. The pending review, integration, CI and tag
+> actions below were subsequently completed through PR #34 and publication at
+> commit `39dccc7`. Use the [current evidence index](../submissions/README.md)
+> and [closeout record](../submissions/manual-closeout.md) for completion links.
+> The original findings, test results and PR #32 review exception remain intact;
+> this snapshot is not a current unfinished-task list.
+
 **Overall: PARTIAL.** Foundation artifacts and executable checks pass. The final
 evidence correction still requires genuine teammate approval, its own CI and
 protected integration. The assessed `sprint-1` tag is absent and ineligible until
