@@ -46,16 +46,19 @@ local data is not deleted by this cleanup. Optional overrides are in `.env.examp
 Stack: React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic,
 Docker Compose, GitHub Actions and pytest. See [development/testing](docs/development.md).
 
-Submission: [Word document and evidence](docs/submissions/README.md),
+Submission: [Markdown document](docs/submissions/Cuckoo_Sprint1_Submission.md),
+[evidence index](docs/submissions/README.md),
 [roles/RACI](docs/team-raci.md), [system context](docs/diagrams/system-context.png),
 [accepted ADR-001](docs/decisions/ADR-001-architecture.md),
 [backlog](docs/product-backlog.md), [issues](docs/issue-index.md),
 [Sprint 1 checklist](docs/sprint-1-checklist.md).
 
-The [remote verification](docs/audits/sprint1-remote-verification.md) preserves
-observed GitHub state and the user's 2026-11-03 decision: protections, Projects
-and release publication are conditional on explicit instructions/current team
-plans, rather than default completion blockers. Later sprint work
+The [supplied course criteria](docs/sprint-1-requirements.md) now explicitly require
+teammate review, main/develop PR/check protections and a sprint submission tag.
+The [remote verification](docs/audits/sprint1-remote-verification.md) and
+[remaining manual steps](docs/submissions/manual-closeout.md) distinguish those
+gates from prepared artifacts. GitHub Releases, separate release branches and
+Project boards remain optional. Later sprint work
 uses the [canonical SDD workflow](docs/templates/SDD_WORKFLOW.md), shared Ready/Done
 gates and [US-03 documentation example](docs/specs/US-03-create-task.md).
 

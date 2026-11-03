@@ -16,6 +16,14 @@ do not establish a course requirement. A separate instructor rubric has not been
 provided. Existing enforced GitHub rules still apply; this decision changes no
 repository setting or permission.
 
+The course PDF subsequently supplied on 2026-11-03 explicitly requires teammate
+review, protected main/develop branches with PR/status checks, and a sprint tag
+(pp. 14–17). These are now required completion criteria: follow
+[the course criteria](../sprint-1-requirements.md). A separate release branch,
+GitHub Release page and Project board remain optional. The earlier statement
+that no course pack had been supplied is historical, not the current basis for
+declaring completion.
+
 **Approved story → Feature specification → OpenAPI review → Test design →
 Agent-assisted implementation → Human review → CI → Merge → Traceability update.**
 
@@ -26,7 +34,7 @@ Agent-assisted implementation → Human review → CI → Merge → Traceability
 | OpenAPI review | TL with frontend/QA: [03 ADR](03-architecture-decision.md) when needed | Exact operations/schemas/status codes at a commit SHA; reviewed delta or explicit no-change decision. Resolve contradictions before coding |
 | Test design | QA: [07 test plan](07-qa-test-plan.md) | AC-to-test mapping, happy/negative/security/state/concurrency cases, integration environment and expected results |
 | Agent-assisted implementation | Assigned developer: [05 backend](05-backend-task.md), [06 frontend](06-frontend-task.md), [08 DevOps](08-devops-change.md) | Definition of Ready met; bounded issue branch, permitted files, stop conditions; actual diff and test results |
-| Human review | Responsible team member: [09 review](09-pr-review.md) and [PR template](../../.github/PULL_REQUEST_TEMPLATE.md) | Explainable diff, contract parity, acceptance evidence and assumptions/trade-offs; record the actual review/approval source. A separate reviewer or submitted GitHub approval is needed only when explicitly required |
+| Human review | Teammate: [09 review](09-pr-review.md) and [PR template](../../.github/PULL_REQUEST_TEMPLATE.md) | Explainable diff, contract parity, acceptance evidence and assumptions/trade-offs; record an actual teammate review. Course p.15 requires a teammate; agent output/task authorization is not that review |
 | CI | DevOps/QA | All required checks succeed for the final reviewed head. CI can run earlier, but reruns after changes; review/checks must apply to the final diff |
 | Merge | Authorized contributor | Team-approved branch/PR flow and any enforced GitHub rules satisfied; preserve history. Use a release PR only when the submission/delivery plan requires it |
 | Traceability update | SM with PO/QA | [10 traceability](10-requirements-traceability.md): issue → AC → spec → operation → test → PR → review/approval source → CI → merge. Add release evidence only when required; record genuine blockers |
@@ -58,7 +66,7 @@ this distinction.
 - [ ] UI flow, API integration and component tests pass when UI changes; accessibility, loading, error and uncertain-outcome states are reviewed.
 - [ ] Applicable migration, rollback, Compose readiness/persistence and environment checks pass; credentials remain outside Git.
 - [ ] Exact commands, environment, actual results/skips and limitations are recorded. No unrun check is marked passing.
-- [ ] A responsible human understands the change and records review/approval through the agreed team process; applicable CI passes, feedback is resolved and enforced rules are satisfied. Submit a GitHub approval only when explicitly required; describe only review objects that actually exist.
+- [ ] A responsible human understands the change; a teammate reviews it as course p.15 requires. Applicable CI passes, feedback is resolved and enforced rules are satisfied. Record actual review evidence; a GitHub approval is a straightforward option, and another documented teammate review can be evaluated without inventing a review object.
 - [ ] Authorized merge is recorded, documentation updated and traceability links resolve. If a tag/release is explicitly required, record its exact commit and actual URLs; otherwise it is not a completion blocker.
 
 If permission blocks an explicitly required action, record the requirement

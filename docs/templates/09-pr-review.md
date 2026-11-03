@@ -1,4 +1,8 @@
 # Pull request / human review checklist
+
+The supplied course pack p.15 requires at least one teammate review; see
+[the criteria](../sprint-1-requirements.md). Conversation authorization permits
+the work but does not establish a separate teammate reviewed the final diff.
 Linked story/spec: [ ] · Reviewers: [ ] · Risk level: [low/medium/high]
 
 ## Implementation

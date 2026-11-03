@@ -1,5 +1,12 @@
 # Issue traceability
 
+Course-source update, 2026-11-03: [PDF pp.14–17](sprint-1-requirements.md) now
+explicitly require teammate review, main/develop protections and a sprint tag.
+Existing #20 tracks their real completion and the corrected evidence candidate.
+Earlier conditional-policy discussions below are historical; a closed issue did
+not establish instruction compliance. Project boards/GitHub Release pages remain
+optional. Existing story IDs and administrative history are preserved.
+
 Fresh verification on 2026-11-02: all US-01..15 remain administratively closed,
 not implemented. Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
 tracks routine closeout and the 2026-11-03 process simplification; protections,

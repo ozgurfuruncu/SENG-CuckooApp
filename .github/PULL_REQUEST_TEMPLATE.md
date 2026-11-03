@@ -22,4 +22,5 @@ CI run and final reviewed head SHA:
 ## Reviewer notes
 Assumptions, trade-offs, and follow-up work:
 Actual human review/approval source (conversation or review link; formal independent GitHub approval only when explicitly required):
+Course p.15 requires an actual teammate review. Record that evidence separately from task authorization; see docs/sprint-1-requirements.md.
 After merge: update requirements traceability with merge SHA. Add immutable tag/release links only when explicitly required by course instructions or the current team plan.

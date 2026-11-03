@@ -1,26 +1,24 @@
-# Sprint submission and optional publication
+# Sprint submission and tag
 
-The user clarified on **2026-11-03** that branch controls, release branches, tags,
-GitHub Releases and similar administration should be added only when explicit
-course instructions or a current team-approved plan require them. The earlier
-assistant closeout checklist is superseded. Record an actual requirement source
-before treating publication as a sprint-completion gate. No separate instructor
-rubric has been supplied, and instructor acceptance is not asserted.
+[Course PDF pages 14 and 17](../sprint-1-requirements.md) require a tag for each
+assessed sprint submission. Pages 15 and 17 require teammate review and protected
+integration workflow. The earlier conditional policy remains proportionate, but
+these conditions now have an explicit course source and are required.
 
-The [submission index](../submissions/README.md) is the current artifact/evidence
-index. [PR #28](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/28) delivered the
-remote audit and SDD setup into develop. Main remains the earlier Sprint 1
-foundation at the last inspection. Follow the team's agreed submission location;
-a separate release PR/tag is not automatically required to finish documentation.
+Use sprint-1 for the final assessed main commit after genuine teammate review and
+passing required checks. Verify that the tag resolves to the intended commit and
+record its actual URL. Never move or rewrite an existing tag. If it already
+exists at another commit, stop and reconcile with the team rather than force it.
 
-The [remote audit](../audits/sprint1-remote-verification.md) truthfully records
-unprotected branches, absent tags/releases and unavailable Project evidence.
-Those observations do not imply missing mandatory coursework under the revised
-policy. Existing GitHub rules must be respected. No access grant or ownership
-transfer is needed for routine contributor work.
+A GitHub Release page, dedicated release/hotfix branch and Project board are not
+required by the supplied Sprint 1 pack. The existing write account can handle
+ordinary PR integration and tag creation after the review/owner gates; repository
+ownership remains unchanged.
 
-If an explicit publication requirement is later supplied, use the existing
-[#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20) for routine closeout,
-record the source, publish the agreed tested commit and add the actual tag/release
-URLs and SHA to the ledger. Preserve any published tag; never move it to new code.
-Preserve the original supplied Word document and update only the evidence copy.
+The current [submission index](../submissions/README.md) distinguishes prepared
+artifacts from remaining actions. [Manual closeout](../submissions/manual-closeout.md)
+provides exact owner/reviewer steps and safe final tag commands. Current work
+reuses [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
+
+Do not declare Sprint 1 instruction completion until the real control, review and
+tag evidence is recorded. Official instructor acceptance is a separate decision.

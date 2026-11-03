@@ -13,6 +13,13 @@
 11. Reuse an existing issue for routine cleanup, documentation and closeout follow-ups. Create a new issue only for distinct work that needs separate tracking. Treat the user's approval in the conversation as authorization for the agreed work; do not ask for duplicate confirmation. Respect enforced GitHub rules and describe GitHub reviews only when they actually exist.
 12. Follow team-approved plans with proportionate process. Require branch protections, formal GitHub approval counts, Project boards, release branches, tags or GitHub Releases only when explicit course instructions or a current team-approved plan require them. Record that source; old checklists do not override later user decisions. Human understanding, contract alignment, relevant tests and truthful evidence remain required. Existing enforced GitHub rules must always be respected.
 
+The course pack supplied on 2026-11-03 explicitly requires teammate review,
+PR/status-check protection for main and develop, and a sprint submission tag;
+see `docs/sprint-1-requirements.md` (PDF pp. 14–17). These conditions are now
+applicable. Separate release branches, GitHub Releases and Project boards remain
+optional. Never substitute agent output or task authorization for a real teammate
+review, and never tag an unreviewed candidate as the assessed sprint.
+
 Stack A was approved by the user on 2026-11-02; see accepted ADR-001 and issue #18.
 Use React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic and pytest.
 The Sprint 1 application is `app.main:app`, deployed by `docker-compose.yml`.
