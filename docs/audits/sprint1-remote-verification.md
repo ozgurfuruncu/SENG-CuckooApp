@@ -1,10 +1,11 @@
 # Sprint 1 remote repository verification
 
-> Historical audit: the observations below precede PRs #32/#33. For current
-> protection, review, CI and tag status, use the
-> [3 November final audit](sprint1-final-audit.md) and
-> [Evidence Index](../submissions/README.md). Earlier absence of protection or
-> teammate findings must not be read as current state. Historical text is retained.
+> Historical audit: the observations below precede PRs #32/#33. For completed
+> protection, review, CI and tag evidence, use the
+> [current evidence index](../submissions/README.md) and
+> [closeout record](../submissions/manual-closeout.md). The
+> [later pre-publication audit](sprint1-final-audit.md) is also historical.
+> Original findings below remain intact and are not current unfinished tasks.
 
 ## Current assessment — course pack supplied 2026-11-03
 

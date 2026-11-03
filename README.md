@@ -53,12 +53,14 @@ Submission: [Markdown document](docs/submissions/Cuckoo_Sprint1_Submission.md),
 [backlog](docs/product-backlog.md), [issues](docs/issue-index.md),
 [Sprint 1 checklist](docs/sprint-1-checklist.md).
 
-The [supplied course criteria](docs/sprint-1-requirements.md) now explicitly require
-teammate review, main/develop PR/check protections and a sprint submission tag.
-The [remote verification](docs/audits/sprint1-remote-verification.md) and
-[remaining manual steps](docs/submissions/manual-closeout.md) distinguish those
-gates from prepared artifacts. GitHub Releases, separate release branches and
-Project boards remain optional. Later sprint work
+Sprint 1 repository closeout is complete. The
+[published sprint-1 baseline](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1)
+is the reviewed and tested commit `39dccc7`; the
+[closeout record](docs/submissions/manual-closeout.md) links the actual approval,
+CI, tag verification and issue closure. Post-publication documentation updates
+preserve that tag. GitHub Releases, separate release branches and Project boards
+are not additional gates under the [supplied criteria](docs/sprint-1-requirements.md).
+Later sprint work
 uses the [canonical SDD workflow](docs/templates/SDD_WORKFLOW.md), shared Ready/Done
 gates and [US-03 documentation example](docs/specs/US-03-create-task.md).
 

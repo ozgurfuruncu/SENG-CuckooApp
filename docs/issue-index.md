@@ -1,29 +1,22 @@
 # Issue traceability
 
-Course-source update, 2026-11-03: [PDF pp.14–17](sprint-1-requirements.md) now
-explicitly require teammate review, main/develop protections and a sprint tag.
-Existing #20 tracks their real completion and the corrected evidence candidate.
-Earlier conditional-policy discussions below are historical; a closed issue did
-not establish instruction compliance. Project boards/GitHub Release pages remain
-optional. Existing story IDs and administrative history are preserved.
+Sprint 1 repository closeout is complete at the reviewed and tested
+[sprint-1 baseline](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1),
+commit `39dccc7`. Existing
+[#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20) is closed with
+the publication receipt; [#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27)
+records the completed SDD setup. See the
+[current evidence index](submissions/README.md) and
+[course criteria](sprint-1-requirements.md).
 
-Fresh verification on 2026-11-02: all US-01..15 remain administratively closed,
-not implemented. Reopened [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
-tracks routine closeout and the 2026-11-03 process simplification; protections,
-formal approvals, Projects and releases are conditional on explicit instructions
-or current team plans. Separate
-[#27](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/27) tracks SDD setup.
-See [remote audit](audits/sprint1-remote-verification.md) and
-[US-03 specification example](specs/US-03-create-task.md). Earlier inspection
-states below are historical; they do not supersede this update.
-
-Published from existing supplied stories; duplicate check includes all open/closed issues.
-Accounts were confirmed by the user and assignees were verified through GitHub.
-The user reports manual issue/PR/attestation administration handled. API inspection
-shows US-01..15 and technical #16/#18 closed, with #20 still open during cleanup.
-The planning status below is the product baseline, not the GitHub open/closed state.
-US-14/15 remain deferred. Original backlog IDs below indicate overlapping requirements,
-not additional implementation work. Contract gaps require PO/architect/QA resolution.
+All US-01..15 are administratively closed, not implemented. The planning status
+below is the product baseline, not the GitHub open/closed state: US-01..13 remain
+business backlog; US-14/15 remain deferred. Accounts and original assignees were
+confirmed and verified separately. Original backlog IDs indicate overlapping
+requirements, not additional implementation work. Resolve contract gaps through
+PO/architect/QA review before implementation; the
+[US-03 specification example](specs/US-03-create-task.md) is not implementation
+approval. Historical manifests and audit snapshots are not live task status.
 
 | Story | Issue | Planning status | Legacy correspondence | Canonical operation IDs |
 | --- | --- | --- | --- | --- |
@@ -42,7 +35,7 @@ not additional implementation work. Contract gaps require PO/architect/QA resolu
 | US-13 | [#13](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/13) | Backlog; business contract review | C-07 | listTaskEvidence |
 | US-14 | [#14](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/14) | Deferred (outside MVP) | D-02, D-03 | No feature operation |
 | US-15 | [#15](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/15) | Deferred (outside MVP) | No original equivalent | No feature operation |
-| T-05 | [#16](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/16) | Review | T-05 | No feature operation |
+| T-05 | [#16](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/16) | Sprint 1 contract foundation complete | T-05 | No feature operation |
 
 Issue closure is not feature acceptance: the current API implements only health.
 US-14/15 remain deferred. Preserve existing issue IDs and recorded owner history;
@@ -59,5 +52,7 @@ accountability and DevOps responsibility. See [confirmed accounts](team-accounts
 
 Sprint 1 repository/release closeout: [T-02/T-03 / #20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
 The [historical Project manifest](archive/release-preparation/project-items.json)
-records the original issue import preparation. Current cleanup is
-[#24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24).
+records the original issue import preparation. Original consolidation is recorded
+in [#24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24), final closeout
+in #20 and the reusable SDD workflow in #27. Routine documentation follow-ups
+reuse those references rather than duplicating issues or reopening the sprint.

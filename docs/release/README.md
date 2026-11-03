@@ -1,24 +1,30 @@
-# Sprint submission and tag
+# Sprint publication
 
-[Course PDF pages 14 and 17](../sprint-1-requirements.md) require a tag for each
-assessed sprint submission. Pages 15 and 17 require teammate review and protected
-integration workflow. The earlier conditional policy remains proportionate, but
-these conditions now have an explicit course source and are required.
+## Published Sprint 1 baseline
 
-Use sprint-1 for the final assessed main commit after genuine teammate review and
-passing required checks. Verify that the tag resolves to the intended commit and
-record its actual URL. Never move or rewrite an existing tag. If it already
-exists at another commit, stop and reconcile with the team rather than force it.
+The assessed [sprint-1 snapshot](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1)
+is an annotated tag at 39dccc709d518a2124f4b5a52d36138a84f3856b. Actual approval,
+merge, main CI, tag verification and closure are in the
+[closeout record](../submissions/manual-closeout.md) and
+[evidence index](../submissions/README.md). No Sprint 1 publication action remains.
 
-A GitHub Release page, dedicated release/hotfix branch and Project board are not
-required by the supplied Sprint 1 pack. The existing write account can handle
-ordinary PR integration and tag creation after the review/owner gates; repository
-ownership remains unchanged.
+The [supplied course pack](../sprint-1-requirements.md), pp.14–17, requires a sprint
+tag, teammate review and protected integration. A GitHub Release page, dedicated
+release/hotfix branch, Project board, ownership transfer and additional admin
+grant are not required by that pack.
 
-The current [submission index](../submissions/README.md) distinguishes prepared
-artifacts from remaining actions. [Manual closeout](../submissions/manual-closeout.md)
-provides exact owner/reviewer steps and safe final tag commands. Current work
-reuses [#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
+## Later publication
 
-Do not declare Sprint 1 instruction completion until the real control, review and
-tag evidence is recorded. Official instructor acceptance is a separate decision.
+Follow the [canonical SDD workflow](../templates/SDD_WORKFLOW.md) and current team
+plan. Review the final candidate, resolve material feedback, pass the actual
+required checks, merge through protection and verify the resulting assessed
+commit. Publish a new named sprint tag only when required by the course/current
+plan; verify its remote tag object and target commit. Stop if the chosen name
+already identifies a different revision. Never move or force-update an existing
+tag or use a permission bypass.
+
+Post-publication documentation changes use their own reviewed PR and record
+final run/merge evidence in its metadata. They do not change the assessed
+sprint-1 tag. Preserve contributor history and actual observations; do not create
+another documentation commit solely to record that same commit's own SHA.
+Official instructor acceptance is not inferred from a repository publication.

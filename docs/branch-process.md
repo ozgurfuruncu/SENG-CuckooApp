@@ -7,9 +7,9 @@ Feature implementation normally integrates through develop; final submission
 and documentation corrections may target main through their reviewed PR. Both
 integration branches must be protected with PR and status-check requirements.
 
-The newly supplied course pack satisfies the condition in the user's 2026-11-03
-instruction to add administrative steps only when explicitly required. Teammate
-review, main/develop protections and the sprint submission tag are required.
+The course pack explicitly requires teammate review, main/develop protections
+and the sprint submission tag. Keep other administration proportionate to the
+current course instructions and team-approved plan.
 Separate release/hotfix branches, a GitHub Release page and Project board remain
 optional. No administrator grant or ownership transfer to anyx05 is needed.
 
@@ -27,9 +27,11 @@ is implemented; the business API draft does not authorize its implementation.
 Existing CI contexts: backend, Stack A backend, OpenAPI 3.1 validation, Stack A
 frontend and Stack A Compose smoke. Owner configuration must use the actual
 contexts. Respect all enforced rules; do not bypass a missing review or failed
-check. See [manual steps](submissions/manual-closeout.md).
+check. See the completed [Sprint 1 closeout record](submissions/manual-closeout.md).
 
-Tag the actual assessed, reviewed and tested main commit sprint-1 after the gates
-pass; preserve any existing tag. Do not create extra release machinery merely to
-close a sprint. Historical audit/policy discussions remain dated evidence rather
-than substitutes for the now-supplied course criteria.
+Tag assessed sprint versions only after their review and check gates pass.
+Sprint 1 is already published at the immutable sprint-1 tag; subsequent
+documentation PRs do not move it or reopen the sprint.
+[Publication guidance](release/README.md) covers later delivery. Historical
+audits retain their dated observations rather than serving as current setup
+instructions or unfinished-task lists.
