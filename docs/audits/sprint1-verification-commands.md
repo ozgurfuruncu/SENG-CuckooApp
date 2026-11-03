@@ -1,5 +1,9 @@
 # Sprint 1 verification — commands and actual results
 
+> Historical command log. Current final-audit commands, results and limitations
+> are recorded in [sprint1-final-audit.md](sprint1-final-audit.md). Earlier results
+> and remote observations below apply to their stated revisions only.
+
 ## Markdown submission format — user request, 2026-11-03
 
 The primary artifact is now
