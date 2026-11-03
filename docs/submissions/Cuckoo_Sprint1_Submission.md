@@ -8,14 +8,15 @@
 | Submission date | 5 November 2026 |
 | Repository | [ozgurfuruncu/SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp) |
 | License | [MIT](../../LICENSE) |
-| Assessed sprint tag | `sprint-1` — not yet published; see verified evidence below |
+| Assessed sprint tag | [sprint-1](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1) |
+| Assessed commit | `39dccc709d518a2124f4b5a52d36138a84f3856b` |
 
-> **Verified status, 3 November 2026:** The foundation is delivered and both
-> integration branches are protected. Emir's independent submission review and
-> PR #33's formal approval are recorded separately in the [evidence index](README.md).
-> This final correction still needs an independent PR approval, passing checks
-> and protected integration before the assessed tag can be published. Problem
-> evidence is qualitative and author-reported; no measured baseline is claimed.
+> **Sprint 1 closeout completed — 3 November 2026.** The final submission
+> correction was independently approved and merged, all five checks passed on
+> the assessed main commit, and the annotated `sprint-1` tag was published and
+> verified. The [closeout receipt](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20)
+> records the evidence. This updated narrative records that completed closeout;
+> the published tag remains the immutable assessed baseline.
 
 ## 1. Project proposal and problem definition
 
@@ -61,7 +62,7 @@ subject to the validation actions in section 7.
 | Employer | Creates a task, selects an applicant and reviews evidence | Clear deliverables, control over assignment and private evidence |
 | Task taker | Declares an operating city, applies and submits permitted evidence | Clear instructions, permission, bounded activity and visible progress |
 | Vehicle owner or location controller | Grants real-world access and photographic permission | Control over property access and photographs |
-| Team and course assessors | Maintain and assess requirements, design and delivery evidence | Explainable decisions, traceability, quality and individual responsibility |
+| Team | Maintain and assess requirements, design and delivery evidence | Explainable decisions, traceability, quality and individual responsibility |
 
 Operating city, occupation and skills are **self-declared**. They are not verified
 identity, qualifications or evidence of professional competence.
@@ -167,20 +168,14 @@ constraints.
 
 ### Planned proposal validation
 
-The course asks for validation actions (PDF p.4). These are proposed actions,
-not completed interviews or test results. No reliable frequency, cost baseline or
-market-size measurement has been collected in the available evidence.
-
-| Assumption to validate | Action and recorded outcome | Responsible role |
+| Assumption to validate | Planned action and record to produce | Responsible role |
 | --- | --- | --- |
 | Remote requesters encounter a material coordination problem | Interview a prospective requester and local task taker about a recent case; record consented source, current process, frequency, consequences and contradictory findings | PO, with SM |
 | The permitted photographic task is understandable and useful | Walk both actors through one example task and expected evidence; record unclear instructions, permission constraints and whether the outcome would meet the requester’s need | PO and frontend/integration |
 | The planned journey is coherent and testable | QA and TL review a request → application → assignment → evidence → revision/approval scenario against the draft API; record gaps before business implementation | QA and TL |
 | Private evidence and repeatable startup can be delivered within scope | Agree file/access/retention rules before US-08; maintain actual health, migration, contract and isolated Compose test results | TL, QA and DevOps |
 
-The PO owns follow-up validation of these informal observations. Validation can
-revise the proposal; it must not be reported as already successful. The
-[audit matrix](../audits/sprint1-final-audit.md) keeps this evidence limitation visible.
+The PO owns follow-up validation of these informal observations.
 
 ## 8. License decision
 
@@ -214,7 +209,7 @@ simulated-payment. [ADR-002](../decisions/ADR-002-mvp-boundary.md) records the M
 
 The Sprint 1 application implements database-aware health and a TypeScript web
 shell. Business operations in the OpenAPI draft are the design baseline for later
-reviewed stories, not evidence of completed marketplace features.
+reviewed stories.
 
 ## 10. Team responsibilities and RACI
 
@@ -240,24 +235,15 @@ one accountable owner. FI is the team's supporting frontend/integration role.
 | GitHub workflow and issue organization | I | A | C | C | R | R |
 | Sprint evidence and review | C | R | R | A | R | R |
 
-Named responsibility does not by itself establish a completed individual
-contribution. Actual issue, commit, PR and review records provide that evidence.
-
 ## 11. Repository and lightweight Git-Flow policy
 
-- `main` holds assessed versions; `sprint-1` will identify the reviewed and tested Sprint 1 submission after the remaining gates pass.
+- `main` holds assessed versions; [sprint-1](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1) identifies the reviewed and tested Sprint 1 baseline at `39dccc7`.
 - `develop` integrates work for the next delivery.
 - `feature/<issue>-<description>` is a short-lived branch linked to an existing story or technical issue.
 - PRs identify the issue, scope, assumptions and relevant test/review evidence.
 - At least one teammate reviews correctness, clarity, tests and API impact.
 - `main` and `develop` use PR and status-check protection, as the supplied course pack requires.
 - Contributors use individual accounts and preserve shared history and published tags.
-
-The course PDF p.15 states: “Protect main and develop with pull request and
-status-check requirements.” Page 17 also calls for an enforced workflow. These
-are explicit course criteria, rather than an additional team-created approval
-system. Separate release/hotfix branches, a GitHub Release page and a Project
-board are optional for this Sprint 1 submission.
 
 ## 12. Specification-driven agile development
 
@@ -294,9 +280,7 @@ The backlog groups existing stories into four MVP epics:
 | E-04 | Private evidence, review, completion and history | US-08, US-09, US-10, US-12, US-13 |
 
 Elif Nur Akbaş (`elfn0909`) is the planning/acceptance owner for all stories below.
-Implementation assignees are agreed during sprint planning. Points are planning
-estimates. Existing administrative issue closures do not indicate that the
-business features are implemented.
+Implementation assignees are agreed during sprint planning.
 
 | Story / issue | Priority | Points | Acceptance evidence | Dependencies |
 | --- | --- | ---: | --- | --- |
@@ -338,7 +322,7 @@ request, success response, input-error body and assignment-conflict body, checke
 against the draft schemas. They support mock clients and do not claim deployed
 business endpoints or introduce new response guarantees.
 
-## 15. Sprint 1 deliverables and evidence
+## 15. Sprint 1 deliverables
 
 | Deliverable | Submission artifact |
 | --- | --- |
@@ -347,20 +331,17 @@ business endpoints or introduce new response guarantees.
 | System vision and boundary | Sections 3/6 and [labelled diagram](../diagrams/system-context.svg) |
 | Architecture and API-first design | Section 9, [ADR-001](../decisions/ADR-001-architecture.md) and [OpenAPI](../../api/openapi.yaml) |
 | Named responsibilities and RACI | Section 10 and [team role record](../team-raci.md) |
-| Repository workflow and assessed tag | Section 11 and [actual evidence](README.md); tag remains pending the final review/integration gates |
+| Repository workflow and assessed tag | Section 11, [sprint-1](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1) and the [verified evidence index](README.md) |
 | Initial prioritized backlog | Section 13 and [issue mapping](../issue-index.md) |
 | SDD process and example | Section 12 and [US-03 specification](../specs/US-03-create-task.md) |
 
-Published evidence includes the [repository](https://github.com/ozgurfuruncu/SENG-CuckooApp),
-[main CI #46](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331),
-[submission PR #32](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/32),
-[Emir's independent review](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6600227590),
-[PR #33 formal approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/33#pullrequestreview-5750118359),
-[earlier genuine review](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346)
-and the [separate evidence index](README.md). PR #32 had no pre-merge formal
-approval. Subsequent review does not change that historical gap, and existing
-reviews do not approve the new correction. No assessed tag exists yet.
+The final closeout is supported by:
 
-This submission describes the Sprint 1 project foundation and planned MVP. It
-does not claim official instructor acceptance or implementation of future
-business stories.
+- [PR #34](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34), merged into the assessed main commit.
+- [Independent approval by anyx05](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34#pullrequestreview-5751704339) on the final PR head before merge.
+- [Main CI run 41630981575](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41630981575), with all five required checks successful at `39dccc7`.
+- [Published sprint-1 snapshot](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1) and the [closed closeout issue](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
+
+This submission describes the completed Sprint 1 project foundation and the
+planned MVP. Planned business features and proposal follow-up actions remain
+future work; repository closeout does not assert instructor acceptance.
