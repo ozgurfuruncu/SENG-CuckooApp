@@ -117,7 +117,7 @@ Audit scripts/environment live under untracked `.audit`, not app dependencies.
 | `docker compose config --quiet` | Passed, including authorized rerun with normal Docker configuration access |
 | `BOOTSTRAP_COMPOSE_PROJECT=cuckoo-sprint1-final-audit`, ports 18041/15041: `python scripts/compose_smoke.py` | **Passed**: built images, PostgreSQL connection, migration rerun, API/client readiness, container recreation and persisted marker; stopped test containers/network, retained only audit volume |
 | PDF extraction/hash and rendered pp.14–17 | All 17 pages read; recorded SHA matches original |
-| `python .audit/validate_docs.py` with audit venv | **34 active Markdown files**, **217 local link occurrences**, **42 tables**, zero broken local paths/anchors; four JSON examples validate; all 15 story owners and seven RACI rows verified; original DOCX hash and ZIP/XML integrity pass |
+| `python .audit/validate_docs.py` with audit venv | Before publication links: **34 active Markdown files**, **217 local link occurrences**, **42 tables**, zero broken local paths/anchors; four JSON examples validate; all 15 story owners and seven RACI rows verified; original DOCX hash and ZIP/XML integrity pass |
 | `python .audit/check_external.py` with authenticated read access | **75/75 external URLs verified**, including GitHub blob paths, commits, issue-comment/review IDs and CI job records. GitHub pages were checked through their API records; no browser authentication-page claim is substituted. Archived document contents are not presented as current submission links |
 | `python .audit/render_docs.py` using headless Edge | Submission’s **13 tables**, index table and PNG render; no page overflow at 1600px; SVG also renders. Screenshots visually inspected. Initial direct-SVG screenshot timed out; HTML image wrapper rerun passed. This is local Markdown rendering, not a claim of opening GitHub’s authenticated UI |
 | `git ls-remote --tags origin refs/tags/sprint-1 'refs/tags/sprint-1^{}'` with authorized network access | Passed with empty output: tag and peeled ref absent |
@@ -180,3 +180,15 @@ admin grant, release page, Project board, extra branch or deployment is required
 The [published baseline submission](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/72a522d7e90cfb574e7841880b06e54c81db3903/docs/submissions/Cuckoo_Sprint1_Submission.md)
 is accessible; the corrected submission is in this branch/PR until reviewed
 integration. Do not describe a branch URL as the final assessed tag.
+
+## Published correction
+
+[PR #34](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34) targets main from
+`docs/sprint-1-final-evidence`, authored by `ozgurfuruncu`. Initial audit commit:
+`07b27ce` (refs #20); this publication-record follow-up adds the actual PR links.
+Its [current checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34/checks)
+and submitted review records must be evaluated at the final head. No approval
+was created by the agent. Final observed head/CI/review status is recorded in
+the PR description, #20 and task report after CI completes; a previous green
+run is never reused for a changed head. This avoids chasing a self-referential
+CI-result commit. All pre-merge checks and final main/tag gates remain explicit.

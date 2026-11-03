@@ -1,7 +1,8 @@
 # Sprint 1 submission and verified evidence
 
 **Status: PARTIAL — final evidence correction awaits independent PR review,
-passing CI, protected integration and the assessed tag.** Verified 3 November
+protected integration and the assessed tag; candidate CI is verified separately
+at the PR below.** Verified 3 November
 2026 (Europe/Istanbul). No instructor acceptance is claimed.
 
 Current submission: [Cuckoo_Sprint1_Submission.md](Cuckoo_Sprint1_Submission.md).
@@ -24,6 +25,7 @@ PDF export requirement. Supplied submission date: **5 November 2026**.
 | Backlog | [Epics, priorities, estimates, dependencies and planning owners](../product-backlog.md), [issue mapping](../issue-index.md). US-01..15 are administratively closed; US-01..13 remain future implementation and US-14/15 deferred |
 | OpenAPI draft | [Canonical OpenAPI 3.1](../../api/openapi.yaml), 17 operations; [schema-compatible request/success/error examples](../api-examples.md). Business endpoints are not deployed |
 | Current main CI | [CI #46 / run 41615024331](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331): all five required jobs completed successfully at **72a522d7**. Correction-PR checks must be verified separately |
+| Final evidence correction | [PR #34](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34), authored by **ozgurfuruncu**, targets main from docs/sprint-1-final-evidence; [current checks](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34/checks). Published with zero submitted reviews; needs an independent teammate approval. Final CI/head observations are recorded in the PR and #20 without a self-referential evidence commit |
 | Earlier genuine review | [PR #23 approval by anyx05](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346), for f5f91a1a7377c4d52ab7dc657508a6938116f9c0 only |
 | PR #32 history | [#32](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/32), merged at [e323091](https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/e323091cd7efbbe8d114acff46ba4d85e44a0440), **zero submitted reviews**. Subsequent reviews do not retroactively supply its missing pre-merge approval |
 | Independent submission review | [Emir / lilemiv’s Issue #20 comment](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6600227590), 3 November 2026 09:40 UTC: he reviewed the requested document/topics and reported no missing, incorrect or outdated information. This is a documented independent review, not a PR #32 approval object |
