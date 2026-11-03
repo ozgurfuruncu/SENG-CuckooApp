@@ -54,3 +54,39 @@ archived original are preserved. Current artifact preparation can be automated;
 owner configuration and an independent teammate's review cannot be supplied by
 this agent. Tagging is authorized but waits for those gates. No optional Release
 page or Project is required. Official instructor acceptance is not asserted.
+
+## Sprint 1 closeout evidence update — 2026-11-03
+
+### Branch protection
+- `main`: Branch protection rule created by repository owner `ozgurfuruncu`.
+- `develop`: Branch protection rule created by repository owner `ozgurfuruncu`.
+- Both rules are configured to require a pull request, one approval, and five status checks.
+- Force pushes and branch deletions are disabled.
+- Bypassing the protection settings is disabled.
+- Enforcement during the next pull request is still to be verified.
+
+### Pull request and CI evidence
+- PR #32: https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/32
+- PR #32 status: Merged.
+- Merge commit: `e323091cd7efbbe8d114acff46ba4d85e44a0440`
+- The five required CI checks were observed as successful on the merge workflow (CI #43).
+- Earlier successful CI run: https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41530996698
+
+### Independent teammate review
+- Reviewer: `lilemiv` (Emir).
+- Review requested in Issue #20.
+- Independent review findings and approval: not yet recorded.
+- Closing an issue does not constitute a formal pull request approval.
+- PR #32 was merged before the required final independent review was recorded.
+
+### Sprint 1 tag
+- `sprint-1`: Not yet created.
+- Tag creation is deferred until the required review and CI conditions are satisfied.
+
+### Remaining closeout actions
+1. Obtain and document Emir's genuine review findings.
+2. Submit actual evidence corrections through a new pull request.
+3. Obtain the required independent PR approval and passing CI checks before merging.
+4. Verify the resulting `main` commit.
+5. Create and verify the annotated `sprint-1` tag.
+6. Update the evidence record and close Issue #20 only after the requirements are met.
