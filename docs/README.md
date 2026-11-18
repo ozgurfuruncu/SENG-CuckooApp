@@ -9,6 +9,7 @@ the [completed checklist](sprint-1-checklist.md) points to actual final evidence
 
 ## Development and later sprints
 
+- [Sprint 2 planning brief](sprint-2-plan.md) for deliverables, proposed RACI and the Lovable-to-Figma workflow.
 - [Development/testing](development.md): the one supported application and deployment.
 - [Canonical SDD workflow, Ready/Done gates](templates/SDD_WORKFLOW.md), [traceability template](templates/10-requirements-traceability.md) and [US-03 documentation example](specs/US-03-create-task.md).
 - [Product backlog](product-backlog.md) and [existing issue mapping](issue-index.md).
