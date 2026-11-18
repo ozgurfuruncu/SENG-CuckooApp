@@ -31,5 +31,6 @@ claim to the course's seven-person-only implementation role.
 Ongoing responsibility: TL coordinates integration; QA reviews health failures,
 contract parity and test evidence; DO owns CI/deployment coordination; FI owns
 frontend/API integration; PO owns backlog acceptance; SM maintains planning and
-evidence. The user reports manual attestations handled. No completed business
-implementation or individual contribution is inferred merely from issue ownership.
+evidence. Actual Sprint 1 reviews and closeout are linked in the
+[evidence index](submissions/README.md). No completed business implementation or
+individual contribution is inferred merely from issue ownership.

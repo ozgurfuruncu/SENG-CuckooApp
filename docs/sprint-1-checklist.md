@@ -1,31 +1,30 @@
-# Sprint 1 submission checklist
+# Sprint 1 completed submission checklist
 
-On **2026-11-03**, the user superseded the earlier mandatory controls/release
-checklist. Completion follows the team's approved deliverables and explicit
-course instructions. Branch protections, formal GitHub approvals, Projects,
-release branches, tags and GitHub Releases are conditional; record a requirement
-source before adding one as a blocker. A separate instructor rubric is not
-available. Existing enforced GitHub rules still apply.
+**Repository closeout completed on 3 November 2026.** Source:
+[course requirements](sprint-1-requirements.md), supplied 2026-11-03.
+Assessed baseline: [sprint-1](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-1)
+at 39dccc709d518a2124f4b5a52d36138a84f3856b.
 
-The [remote audit](audits/sprint1-remote-verification.md) preserves actual GitHub
-observations and distinguishes them from the revised completion criteria.
-Routine documentation alignment is tracked in existing
-[#20](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20).
+- [x] Proposal/problem, stakeholders, feasibility, vision and bounded MVP scope.
+- [x] Complete MIT license with original attribution.
+- [x] Valid canonical OpenAPI 3.1 with success/input-error/conflict behavior and schema-compatible examples.
+- [x] Accepted Stack A and modular-monolith boundaries; business implementation remains future work.
+- [x] Six named responsibilities and one accountable owner per RACI activity.
+- [x] Existing backlog epics/stories, priorities, estimates, dependencies, planning owners and issue links; US-14/15 deferred.
+- [x] Labelled context diagram and preserved original source document.
+- [x] Markdown submission and verified artifact/evidence links.
+- [x] main/develop PR/review/five-check protections, recorded in the reviewed owner-authenticated snapshot; no bypass used for publication.
+- [x] Author-reported qualitative observations attributed; unavailable measurements not invented; proposed validation remains future work.
+- [x] Genuine [anyx05 approval on PR #34](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34#pullrequestreview-5751704339) covers its final head before merge.
+- [x] [PR #34](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/34) merged through protection to assessed main; [run 41630981575](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41630981575) passed all five jobs at 39dccc7.
+- [x] Annotated sprint-1 tag published and remotely verified at the assessed commit; existing tag is not moved.
+- [x] [#20 final receipt](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20) records publication and closure.
 
-- [x] Proposal/problem/vision and bounded software context preserved.
-- [x] Full MIT license and original attribution retained.
-- [x] Canonical OpenAPI 3.1 baseline and schema/reference validation.
-- [x] Accepted Stack A ADR with user approval provenance and stated trade-offs.
-- [x] Six named responsibilities, exactly one accountable owner per RACI activity, confirmed GitHub accounts.
-- [x] Existing US-01..15 and technical issues linked; planning owners recorded. Administrative closure is not a feature-implementation claim.
-- [x] One TypeScript entry point, one FastAPI app, one deployment and one CI workflow.
-- [x] Active health/schema/database/route-negative tests, migration setup and isolated Compose smoke.
-- [x] Legacy executable paths removed; historical evidence separated into docs/archive; all source commits retained.
-- [x] Source Word unchanged in archive; current evidence-filled submission in docs/submissions.
-- [x] Manual attestations reported complete by the user on 2026-11-02.
-
-Actual checks/PRs and observed branch state are recorded in the
-[submission index](submissions/README.md). PR #28 is merged into develop; main
-retains the earlier foundation. A tag/release or further main integration is
-needed only when the explicit submission/delivery plan requires it. This checklist
-does not claim a release exists or official instructor acceptance.
+The [historical course matrix](audits/sprint1-final-audit.md) retains the earlier
+PR #32 review exception and pre-publication findings. Completion of final gates
+does not retroactively change that history. The
+[current evidence index](submissions/README.md) is the status authority.
+Post-closeout documentation follows normal PR review without reopening the
+sprint or changing its tag. GitHub Releases, separate release branches, Project
+boards and Word/PDF export are not additional Sprint 1 gates. Instructor
+acceptance is a separate decision.

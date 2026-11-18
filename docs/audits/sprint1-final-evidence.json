@@ -1,0 +1,416 @@
+{
+  "verified_at_utc": "2026-11-03T10:36:34.623198+00:00",
+  "source": "Authenticated GitHub REST reads; no credentials included",
+  "repository": "https://github.com/ozgurfuruncu/SENG-CuckooApp",
+  "baseline_main": "72a522d7e90cfb574e7841880b06e54c81db3903",
+  "authenticated_login": "ozgurfuruncu",
+  "permissions": {
+    "admin": true,
+    "maintain": true,
+    "push": true,
+    "triage": true,
+    "pull": true
+  },
+  "branches": [
+    {
+      "name": "copilot/sdd-establish-reusable-specification-workflow",
+      "commit": {
+        "sha": "5389b5396c4e8c422d3efacbca543bb3d1b22b57",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/5389b5396c4e8c422d3efacbca543bb3d1b22b57"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/copilot/sdd-establish-reusable-specification-workflow/protection"
+    },
+    {
+      "name": "develop",
+      "commit": {
+        "sha": "f77f905e575c9c3e1e697436077a0297940b15f3",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/f77f905e575c9c3e1e697436077a0297940b15f3"
+      },
+      "protected": true,
+      "protection": {
+        "enabled": true,
+        "required_status_checks": {
+          "enforcement_level": "everyone",
+          "contexts": [
+            "backend",
+            "Stack A backend",
+            "Stack A frontend",
+            "Stack A Compose smoke",
+            "OpenAPI 3.1 validation"
+          ],
+          "checks": [
+            {
+              "context": "backend",
+              "app_id": 15368
+            },
+            {
+              "context": "Stack A backend",
+              "app_id": 15368
+            },
+            {
+              "context": "Stack A frontend",
+              "app_id": 15368
+            },
+            {
+              "context": "Stack A Compose smoke",
+              "app_id": 15368
+            },
+            {
+              "context": "OpenAPI 3.1 validation",
+              "app_id": 15368
+            }
+          ]
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/develop/protection"
+    },
+    {
+      "name": "docs/sprint-1-evidence-update",
+      "commit": {
+        "sha": "5bc869348f8d723c6c32fc39f61d74fb9900864b",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/5bc869348f8d723c6c32fc39f61d74fb9900864b"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/docs/sprint-1-evidence-update/protection"
+    },
+    {
+      "name": "docs/sprint-1-final-evidence",
+      "commit": {
+        "sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/72a522d7e90cfb574e7841880b06e54c81db3903"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/docs/sprint-1-final-evidence/protection"
+    },
+    {
+      "name": "feature/20-assignment-closeout",
+      "commit": {
+        "sha": "c59fa30fc9b11afd2b4e4ac64ce288c08c290f8c",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/c59fa30fc9b11afd2b4e4ac64ce288c08c290f8c"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/feature/20-assignment-closeout/protection"
+    },
+    {
+      "name": "feature/20-proportionate-workflow",
+      "commit": {
+        "sha": "72ac002227ea375bb94f351c91c110c48b015d0a",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/72ac002227ea375bb94f351c91c110c48b015d0a"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/feature/20-proportionate-workflow/protection"
+    },
+    {
+      "name": "feature/27-sdd-sprint1-verification",
+      "commit": {
+        "sha": "fad2712faa0f5832c2a10e2daaa1fb1514f7a0b9",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/fad2712faa0f5832c2a10e2daaa1fb1514f7a0b9"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/feature/27-sdd-sprint1-verification/protection"
+    },
+    {
+      "name": "main",
+      "commit": {
+        "sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/commits/72a522d7e90cfb574e7841880b06e54c81db3903"
+      },
+      "protected": true,
+      "protection": {
+        "enabled": true,
+        "required_status_checks": {
+          "enforcement_level": "everyone",
+          "contexts": [
+            "OpenAPI 3.1 validation",
+            "Stack A Compose smoke",
+            "Stack A backend",
+            "Stack A frontend",
+            "backend"
+          ],
+          "checks": [
+            {
+              "context": "OpenAPI 3.1 validation",
+              "app_id": 15368
+            },
+            {
+              "context": "Stack A Compose smoke",
+              "app_id": 15368
+            },
+            {
+              "context": "Stack A backend",
+              "app_id": 15368
+            },
+            {
+              "context": "Stack A frontend",
+              "app_id": 15368
+            },
+            {
+              "context": "backend",
+              "app_id": 15368
+            }
+          ]
+        }
+      },
+      "protection_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/main/protection"
+    }
+  ],
+  "tags": [],
+  "protection": {
+    "main": {
+      "http_status": 200,
+      "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/main/protection",
+      "required_status_checks": {
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/main/protection/required_status_checks",
+        "strict": false,
+        "contexts": [
+          "OpenAPI 3.1 validation",
+          "Stack A Compose smoke",
+          "Stack A backend",
+          "Stack A frontend",
+          "backend"
+        ],
+        "contexts_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/main/protection/required_status_checks/contexts",
+        "checks": [
+          {
+            "context": "OpenAPI 3.1 validation",
+            "app_id": 15368
+          },
+          {
+            "context": "Stack A Compose smoke",
+            "app_id": 15368
+          },
+          {
+            "context": "Stack A backend",
+            "app_id": 15368
+          },
+          {
+            "context": "Stack A frontend",
+            "app_id": 15368
+          },
+          {
+            "context": "backend",
+            "app_id": 15368
+          }
+        ]
+      },
+      "required_pull_request_reviews": {
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/main/protection/required_pull_request_reviews",
+        "dismiss_stale_reviews": false,
+        "require_code_owner_reviews": false,
+        "require_last_push_approval": false,
+        "required_approving_review_count": 1
+      },
+      "enforce_admins": {
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/main/protection/enforce_admins",
+        "enabled": true
+      },
+      "allow_force_pushes": {
+        "enabled": false
+      },
+      "allow_deletions": {
+        "enabled": false
+      },
+      "limitation": "Configuration verified; prohibited write/merge behavior not probed"
+    },
+    "develop": {
+      "http_status": 200,
+      "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/develop/protection",
+      "required_status_checks": {
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/develop/protection/required_status_checks",
+        "strict": false,
+        "contexts": [
+          "backend",
+          "Stack A backend",
+          "Stack A frontend",
+          "Stack A Compose smoke",
+          "OpenAPI 3.1 validation"
+        ],
+        "contexts_url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/develop/protection/required_status_checks/contexts",
+        "checks": [
+          {
+            "context": "backend",
+            "app_id": 15368
+          },
+          {
+            "context": "Stack A backend",
+            "app_id": 15368
+          },
+          {
+            "context": "Stack A frontend",
+            "app_id": 15368
+          },
+          {
+            "context": "Stack A Compose smoke",
+            "app_id": 15368
+          },
+          {
+            "context": "OpenAPI 3.1 validation",
+            "app_id": 15368
+          }
+        ]
+      },
+      "required_pull_request_reviews": {
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/develop/protection/required_pull_request_reviews",
+        "dismiss_stale_reviews": false,
+        "require_code_owner_reviews": false,
+        "require_last_push_approval": false,
+        "required_approving_review_count": 1
+      },
+      "enforce_admins": {
+        "url": "https://api.github.com/repos/ozgurfuruncu/SENG-CuckooApp/branches/develop/protection/enforce_admins",
+        "enabled": true
+      },
+      "allow_force_pushes": {
+        "enabled": false
+      },
+      "allow_deletions": {
+        "enabled": false
+      },
+      "limitation": "Configuration verified; prohibited write/merge behavior not probed"
+    }
+  },
+  "pull_requests": {
+    "23": {
+      "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-11-02T13:31:39Z",
+      "merge_commit_sha": "c8c16b5ae81549de5c0640906654b88d19281731",
+      "author": "Copilot",
+      "head_sha": "f5f91a1a7377c4d52ab7dc657508a6938116f9c0",
+      "reviews": [
+        {
+          "user": "anyx05",
+          "state": "APPROVED",
+          "submitted_at": "2026-11-02T13:28:58Z",
+          "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/23#pullrequestreview-5737268346",
+          "commit_id": "f5f91a1a7377c4d52ab7dc657508a6938116f9c0",
+          "body": ""
+        }
+      ]
+    },
+    "32": {
+      "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/32",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-11-03T07:06:56Z",
+      "merge_commit_sha": "e323091cd7efbbe8d114acff46ba4d85e44a0440",
+      "author": "anyx05",
+      "head_sha": "c59fa30fc9b11afd2b4e4ac64ce288c08c290f8c",
+      "reviews": []
+    },
+    "33": {
+      "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/33",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-11-03T09:55:59Z",
+      "merge_commit_sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+      "author": "lilemiv",
+      "head_sha": "5bc869348f8d723c6c32fc39f61d74fb9900864b",
+      "reviews": [
+        {
+          "user": "ozgurfuruncu",
+          "state": "APPROVED",
+          "submitted_at": "2026-11-03T09:54:21Z",
+          "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/33#pullrequestreview-5750118359",
+          "commit_id": "5bc869348f8d723c6c32fc39f61d74fb9900864b",
+          "body": "I reviewed the Sprint 1 Evidence Index changes, including branch protection, CI evidence, PR history, and independent review documentation.\n\nThe evidence accurately distinguishes completed work from pending closeout requirements. I found no issues requiring changes and approve this pull request."
+        }
+      ]
+    }
+  },
+  "issue20_review": [
+    {
+      "author": "lilemiv",
+      "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/20#issuecomment-6600227590",
+      "created_at": "2026-11-03T09:40:18Z",
+      "body": "Bana söylediğin dosyayı ve altındaki 5 ana başlığı inceledim, eksik ve hatalı bir şey yok, şuanda güncellenmesi gereken de bir şey yok. Sorun u kapatıyorum."
+    }
+  ],
+  "issue20_reopened": true,
+  "main_ci": {
+    "run_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331",
+    "run_number": 46,
+    "jobs": [
+      {
+        "name": "Stack A frontend",
+        "head_sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "conclusion": "success",
+        "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331/job/125846208242"
+      },
+      {
+        "name": "Stack A Compose smoke",
+        "head_sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "conclusion": "success",
+        "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331/job/125846208408"
+      },
+      {
+        "name": "backend",
+        "head_sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "conclusion": "success",
+        "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331/job/125846208451"
+      },
+      {
+        "name": "OpenAPI 3.1 validation",
+        "head_sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "conclusion": "success",
+        "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331/job/125846208525"
+      },
+      {
+        "name": "Stack A backend",
+        "head_sha": "72a522d7e90cfb574e7841880b06e54c81db3903",
+        "conclusion": "success",
+        "html_url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41615024331/job/125846409914"
+      }
+    ]
+  }
+}

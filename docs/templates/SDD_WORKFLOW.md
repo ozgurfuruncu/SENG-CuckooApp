@@ -6,15 +6,16 @@ This is the canonical workflow for later sprints. Stack A is accepted in
 criteria. Sprint 1 implements health only; draft business operations do not
 authorize implementation. See [agent rules](../../AGENTS.md).
 
-Process decision, approved by the user on **2026-11-03**: team members follow
-team-approved plans. Keep work, checks and review proportionate to the change.
-Branch protections, formal GitHub approval counts, Project boards, release
-branches, tags and GitHub Releases are required only when explicit course
-instructions or a current team-approved plan call for them. Record the source
-before treating one as a completion gate. Earlier assistant/team checklists alone
-do not establish a course requirement. A separate instructor rubric has not been
-provided. Existing enforced GitHub rules still apply; this decision changes no
-repository setting or permission.
+Follow team-approved plans and keep work, checks and review proportionate to
+the change. The [supplied course criteria](../sprint-1-requirements.md), PDF
+pp. 14–17, explicitly require teammate review, protected main/develop branches
+with PR/status checks, and an assessed sprint tag. Separate release branches,
+GitHub Release pages and Project boards are optional unless later explicit
+instructions or a current team plan require them. Record the requirement source
+before adding a completion gate; respect all existing enforced GitHub rules.
+Task authorization permits the agreed work and does not substitute for a real
+teammate review. Human understanding, contract alignment, relevant tests and
+truthful evidence remain required.
 
 **Approved story → Feature specification → OpenAPI review → Test design →
 Agent-assisted implementation → Human review → CI → Merge → Traceability update.**
@@ -26,7 +27,7 @@ Agent-assisted implementation → Human review → CI → Merge → Traceability
 | OpenAPI review | TL with frontend/QA: [03 ADR](03-architecture-decision.md) when needed | Exact operations/schemas/status codes at a commit SHA; reviewed delta or explicit no-change decision. Resolve contradictions before coding |
 | Test design | QA: [07 test plan](07-qa-test-plan.md) | AC-to-test mapping, happy/negative/security/state/concurrency cases, integration environment and expected results |
 | Agent-assisted implementation | Assigned developer: [05 backend](05-backend-task.md), [06 frontend](06-frontend-task.md), [08 DevOps](08-devops-change.md) | Definition of Ready met; bounded issue branch, permitted files, stop conditions; actual diff and test results |
-| Human review | Responsible team member: [09 review](09-pr-review.md) and [PR template](../../.github/PULL_REQUEST_TEMPLATE.md) | Explainable diff, contract parity, acceptance evidence and assumptions/trade-offs; record the actual review/approval source. A separate reviewer or submitted GitHub approval is needed only when explicitly required |
+| Human review | Teammate: [09 review](09-pr-review.md) and [PR template](../../.github/PULL_REQUEST_TEMPLATE.md) | Explainable diff, contract parity, acceptance evidence and assumptions/trade-offs; record an actual teammate review. Course p.15 requires a teammate; agent output/task authorization is not that review |
 | CI | DevOps/QA | All required checks succeed for the final reviewed head. CI can run earlier, but reruns after changes; review/checks must apply to the final diff |
 | Merge | Authorized contributor | Team-approved branch/PR flow and any enforced GitHub rules satisfied; preserve history. Use a release PR only when the submission/delivery plan requires it |
 | Traceability update | SM with PO/QA | [10 traceability](10-requirements-traceability.md): issue → AC → spec → operation → test → PR → review/approval source → CI → merge. Add release evidence only when required; record genuine blockers |
@@ -58,14 +59,14 @@ this distinction.
 - [ ] UI flow, API integration and component tests pass when UI changes; accessibility, loading, error and uncertain-outcome states are reviewed.
 - [ ] Applicable migration, rollback, Compose readiness/persistence and environment checks pass; credentials remain outside Git.
 - [ ] Exact commands, environment, actual results/skips and limitations are recorded. No unrun check is marked passing.
-- [ ] A responsible human understands the change and records review/approval through the agreed team process; applicable CI passes, feedback is resolved and enforced rules are satisfied. Submit a GitHub approval only when explicitly required; describe only review objects that actually exist.
+- [ ] A responsible human understands the change; a teammate reviews it as course p.15 requires. Applicable CI passes, feedback is resolved and enforced rules are satisfied. Record actual review evidence; a GitHub approval is a straightforward option, and another documented teammate review can be evaluated without inventing a review object.
 - [ ] Authorized merge is recorded, documentation updated and traceability links resolve. If a tag/release is explicitly required, record its exact commit and actual URLs; otherwise it is not a completion blocker.
 
 If permission blocks an explicitly required action, record the requirement
 source, response and responsible person. Optional controls or unavailable optional
 board/release evidence do not keep a sprint open. Preserve factual observations
 without claiming that absent controls or release objects exist. See the
-[Sprint 1 remote audit and updated interpretation](../audits/sprint1-remote-verification.md).
+[Sprint 1 requirements and completed closeout](../sprint-1-requirements.md).
 
 ## Role coverage and reuse
 

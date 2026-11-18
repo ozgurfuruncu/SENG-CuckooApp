@@ -1,33 +1,37 @@
 # Branch and review process
 
-Work from a small, issue-linked feature branch, integrate through develop and use
-main for the team's submission baseline. The team-approved plan determines when
-integration to main is needed; main and develop need not be identical throughout
-development. Use PRs to keep changes explainable and traceable. Preserve shared
-history and existing contributor work.
+Follow [the supplied course criteria](sprint-1-requirements.md), especially PDF
+pages 14–17. Keep the process lightweight: an issue, a short-lived feature
+branch, a teammate-reviewed PR, applicable passing CI and traceable integration.
+Feature implementation normally integrates through develop; final submission
+and documentation corrections may target main through their reviewed PR. Both
+integration branches must be protected with PR and status-check requirements.
 
-On **2026-11-03**, the user approved a proportionate process: team members follow
-team-approved plans. GitHub branch protection and formal approval counts are
-optional unless explicit course instructions or the current team plan require
-them. Record the requirement source before adding them as completion blockers.
-No separate instructor rubric is available in the repository. Existing enforced
-GitHub rules must always be followed. No admin grant or ownership transfer is
-requested for anyx05; existing write access supports ordinary branch/PR work.
+The course pack explicitly requires teammate review, main/develop protections
+and the sprint submission tag. Keep other administration proportionate to the
+current course instructions and team-approved plan.
+Separate release/hotfix branches, a GitHub Release page and Project board remain
+optional. No administrator grant or ownership transfer to anyx05 is needed.
 
-A responsible human must understand the change. Record actual review/approval
-sources, including existing conversation approval; do not describe them as GitHub
-review objects. Obtain separate/formal approval when the applicable instructions
-require it. See [the canonical SDD workflow](templates/SDD_WORKFLOW.md).
+Use individual contributor accounts. Every change links to its existing issue;
+record the actual teammate review and relevant test evidence. Conversation
+approval authorizes the work but does not prove a separate teammate reviewed it.
+A GitHub approving review is an easy verifiable record; another real documented
+teammate review can be evaluated. Never manufacture either form of evidence.
 
-Every behavior change requires tests; authorization/state changes require negative
+Every behavior change requires tests; authorization/state changes need negative
 cases. Reconcile api/openapi.yaml and issue acceptance before business work.
-Document assumptions and trade-offs. Only the health slice is implemented.
+Document assumptions/trade-offs and preserve contributor history. Only health
+is implemented; the business API draft does not authorize its implementation.
 
-The existing CI checks are backend, Stack A backend, OpenAPI 3.1 validation,
-Stack A frontend and Stack A Compose smoke. Use the actual results relevant to
-the change; do not rerun unrelated workloads solely to create more evidence.
+Existing CI contexts: backend, Stack A backend, OpenAPI 3.1 validation, Stack A
+frontend and Stack A Compose smoke. Owner configuration must use the actual
+contexts. Respect all enforced rules; do not bypass a missing review or failed
+check. See the completed [Sprint 1 closeout record](submissions/manual-closeout.md).
 
-The [2026-11-02 audit](audits/sprint1-remote-verification.md) preserves observed
-GitHub facts. Its former mandatory control/release gates are superseded by the
-2026-11-03 decision. Historical setup payloads and access requests in docs/archive
-are dated records, not active requirements.
+Tag assessed sprint versions only after their review and check gates pass.
+Sprint 1 is already published at the immutable sprint-1 tag; subsequent
+documentation PRs do not move it or reopen the sprint.
+[Publication guidance](release/README.md) covers later delivery. Historical
+audits retain their dated observations rather than serving as current setup
+instructions or unfinished-task lists.

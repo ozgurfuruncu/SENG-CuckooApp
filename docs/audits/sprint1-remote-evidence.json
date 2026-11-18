@@ -376,5 +376,32 @@
     "classification": "Protections, formal approval counts, Projects and tags/releases are conditional on explicit course instructions or current team-approved plans. No separate instructor rubric supplied.",
     "access": "No admin grant or ownership transfer requested; respect any existing enforced rules.",
     "pr28": "Merged into develop at 330e0488d3db14524bd590206509b215e71e6947; no submitted review object asserted."
+  },
+  "assignment_source_2026_11_03": {
+    "file": "SENG_321_Revised_Assignment_Sprint_1_Project_Foundation.pdf",
+    "sha256": "E666BF0A09B8DE8648DFFF7722A1E3C6DDEDBAB91662C87D93C3149CCA2AD36F",
+    "pages": 17,
+    "requirements": {
+      "14": "Tag each assessed sprint submission; release/hotfix branches optional",
+      "15": "At least one teammate review; protect main/develop with PR and status-check requirements",
+      "17": "Verify enforced workflow and actual tag/owner/issue/PR/artifact evidence"
+    },
+    "current_conclusion": "Instruction completion open; previous conditional policy now has explicit sources for controls/review/tag.",
+    "not_required": [
+      "GitHub Release page",
+      "Separate release branch",
+      "GitHub Project board",
+      "Ownership transfer",
+      "Additional admin access for anyx05"
+    ],
+    "current_main": "3e975153e6c87f96de1c4df30c8a7521a8fc2edd",
+    "current_develop": "f77f905e575c9c3e1e697436077a0297940b15f3",
+    "current_main_ci": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/41530996698",
+    "manual_gates": [
+      "owner configures protections",
+      "real teammate reviews final candidate and layout",
+      "after gates: merge and create/verify sprint-1 (writer/agent can perform)"
+    ],
+    "word_export": "Attempted hidden Word export stalled; instance stopped. No review PDF or rendered-layout success claimed."
   }
 }
