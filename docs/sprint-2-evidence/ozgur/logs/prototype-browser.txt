@@ -1,0 +1,28 @@
+cwd: prototypes\sprint-2
+command: ..\..\..\..\Program Files\nodejs\node.exe scripts/run-browser.mjs
+exit: 0
+
+
+Running 10 tests using 1 worker
+
+  ok  1 [masaustu] › tests\browser\journeys.spec.ts:44:1 › İki rol: oluştur, başvur, ata, beklet, kanıt, düzelt, onayla ve geçmiş (4.7s)
+  ok  2 [masaustu] › tests\browser\journeys.spec.ts:221:1 › İptal, simüle bekletme iptali ve onay penceresinin klavye davranışı (1.3s)
+  ok  3 [masaustu] › tests\browser\journeys.spec.ts:246:1 › Giriş hatası, kayıt, filtreler, boş sonuç ve mahrem geçmiş (1.4s)
+  ok  4 [masaustu] › tests\browser\journeys.spec.ts:302:1 › Hazır ekranlar, özel kanıt, gezinme, fotoğraf yükleme ve yatay taşma (6.5s)
+  ok  5 [masaustu] › tests\browser\journeys.spec.ts:326:1 › 320 px, tablet ve masaüstünde formlar ve inceleme taşmaz; çıkış erişilebilir (2.2s)
+  ok  6 [mobil] › tests\browser\journeys.spec.ts:44:1 › İki rol: oluştur, başvur, ata, beklet, kanıt, düzelt, onayla ve geçmiş (4.5s)
+  ok  7 [mobil] › tests\browser\journeys.spec.ts:221:1 › İptal, simüle bekletme iptali ve onay penceresinin klavye davranışı (1.3s)
+  ok  8 [mobil] › tests\browser\journeys.spec.ts:246:1 › Giriş hatası, kayıt, filtreler, boş sonuç ve mahrem geçmiş (1.4s)
+  ok  9 [mobil] › tests\browser\journeys.spec.ts:302:1 › Hazır ekranlar, özel kanıt, gezinme, fotoğraf yükleme ve yatay taşma (6.3s)
+  ok 10 [mobil] › tests\browser\journeys.spec.ts:326:1 › 320 px, tablet ve masaüstünde formlar ve inceleme taşmaz; çıkış erişilebilir (2.3s)
+
+  10 passed (38.0s)
+
+(node:19044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

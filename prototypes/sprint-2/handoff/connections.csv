@@ -1,0 +1,41 @@
+from,control,to,note
+O01-I,Giriş yap,E01,İşveren başlangıç noktası
+O01-G,Giriş yap,G02,Görev alan başlangıç noktası
+O01-I,Kayıt ol,O02,Ortak kayıt
+O01-G,Kayıt ol,O02,Ortak kayıt
+O01-I,Hatalı örnek bilgiler,O04,Hata ve tekrar deneme
+O04,Giriş yap,E01,Doğru örnek bilgilerle
+O02,Örnek hesap oluştur,G02,Görev alan rolü seçili örnek
+E01,Yeni görev oluştur,E03,US-03
+E01,Görevlerim,E02,Genel gezinme
+E03,Geçersiz yayımla,E04,Veri değişmez
+E04,Alanları düzelt ve yayımla,E05,Geçerli ve izin onaylı
+E03,Görevi yayımla,E05,Geçerli ve izin onaylı
+E05,Başvuruları incele,E06,US-06
+E05,Başvuru yok,E07,Boş durum alternatifi
+E06,Görevli olarak seç,E08,Onay penceresi sonrası tek seçim
+E08,Simüle bekletmeyi kaydet,E09,Onay penceresi
+E09,İşlemi onayla,E08,HELD_SIMULATED varyantı; gerçek para yok
+E09,Vazgeç,E08,Durum değişmez
+E08,Kanıtları incele,E10,Görevli örnek kanıtı gönderdikten sonra
+E10,Düzeltme iste,E11,İsteğe bağlı not
+E11,Görevli örnek rolüne geç,G09,Sunumda rol geçişi; ürün özelliği değil
+E10,Onayla ve tamamla,E12,Onay penceresi sonrası tek atomik demo işlemi
+E05,Görevi iptal et,E13,OPEN; onay penceresi
+E08,Görevi iptal et,E13,ASSIGNED; varsa simüle bekletmeyi iptal et
+E12,Görev geçmişini gör,O03,US-12; katılımcı görünümü
+G02,Profili kaydet,G02,Kaydedildi bildirimi varyantı
+G02,Görevleri keşfet,G03,Şehir seçimi tamamlanmış varyant
+G03,Ayrıntıları gör,G04,US-04
+G03,Eşleşmeyen filtre,G10,Boş sonuç
+G10,Filtreleri temizle,G03,Arama kurtarma
+G04,Çalışma şehrini seç,G02,Şehir eksikse başvuru kapalı
+G04,Başvuru gönder,G05,Şehir seçili; tek başvuru
+G05,İşveren ataması,G06,Örnek rol geçişi veya senaryo durumu
+G06,Bekletme kaydı oluştu,G07,İşverenin ayrı işlemi
+G07,Geçersiz kanıt gönder,G08,Sayı ve not doğrulaması
+G08,Alanları düzelt,G07,1–5 örnek ve 10–2000 karakter not
+G07,Kanıtları gönder,E10,Örnek işveren rolüne geçilen inceleme
+G09,Düzeltilmiş kanıtı gönder,E10,Yeni gönderim; geçmiş korunur
+G11,Kanıt alanını aç,G07,Atanmış kişi ve simüle bekletme
+O05,Görevlere dön,G03,Fotoğraf veya not gösterilmez

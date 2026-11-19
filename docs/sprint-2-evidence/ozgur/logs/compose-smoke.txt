@@ -1,0 +1,55 @@
+cwd: .
+command: .tools\sprint2-python\Scripts\python.exe scripts/compose_smoke.py
+exit: 1
+
+
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+failed to connect to the docker API at npipe:////./pipe/docker_engine; check if the path is correct and if the daemon is running: open //./pipe/docker_engine: Sistem belirtilen dosyayı bulamıyor.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+failed to connect to the docker API at npipe:////./pipe/docker_engine; check if the path is correct and if the daemon is running: open //./pipe/docker_engine: Sistem belirtilen dosyayı bulamıyor.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+WARNING: Error loading config file: open C:\Users\Özgür\.docker\config.json: Erişim engellendi.
+failed to connect to the docker API at npipe:////./pipe/docker_engine; check if the path is correct and if the daemon is running: open //./pipe/docker_engine: Sistem belirtilen dosyayı bulamıyor.
+Traceback (most recent call last):
+  File "C:\Users\�zg�r\Desktop\cuckoo\scripts\compose_smoke.py", line 39, in <module>
+    run("up", "--build", "--wait", "--wait-timeout", "180")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\�zg�r\Desktop\cuckoo\scripts\compose_smoke.py", line 16, in run
+    result = subprocess.run(COMPOSE + list(arguments), cwd=ROOT, check=True, text=True,
+                            stdout=subprocess.PIPE if capture else None)
+  File "C:\Users\�zg�r\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'cuckoo-bootstrap-smoke', '-f', 'C:\\Users\\�zg�r\\Desktop\\cuckoo\\docker-compose.yml', 'up', '--build', '--wait', '--wait-timeout', '180']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\�zg�r\Desktop\cuckoo\scripts\compose_smoke.py", line 54, in <module>
+    run("logs", "--no-color", "--tail", "80")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\�zg�r\Desktop\cuckoo\scripts\compose_smoke.py", line 16, in run
+    result = subprocess.run(COMPOSE + list(arguments), cwd=ROOT, check=True, text=True,
+                            stdout=subprocess.PIPE if capture else None)
+  File "C:\Users\�zg�r\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'cuckoo-bootstrap-smoke', '-f', 'C:\\Users\\�zg�r\\Desktop\\cuckoo\\docker-compose.yml', 'logs', '--no-color', '--tail', '80']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\�zg�r\Desktop\cuckoo\scripts\compose_smoke.py", line 57, in <module>
+    run("down")
+    ~~~^^^^^^^^
+  File "C:\Users\�zg�r\Desktop\cuckoo\scripts\compose_smoke.py", line 16, in run
+    result = subprocess.run(COMPOSE + list(arguments), cwd=ROOT, check=True, text=True,
+                            stdout=subprocess.PIPE if capture else None)
+  File "C:\Users\�zg�r\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'cuckoo-bootstrap-smoke', '-f', 'C:\\Users\\�zg�r\\Desktop\\cuckoo\\docker-compose.yml', 'down']' returned non-zero exit status 1.

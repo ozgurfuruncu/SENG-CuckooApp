@@ -1,0 +1,218 @@
+{
+  "date": "2026-11-19",
+  "platform": "win32",
+  "node": "v24.19.0",
+  "sourceBaseline": "d0abe1745f685333ff3073ecd112ea829cdcccfe",
+  "prototypeSourceSha256": "8a67d4a9f2476dbf09aea5207ebc23b96317b34e783251db9bbdd6af98cf0b44",
+  "results": [
+    {
+      "name": "prototype-lint",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "node_modules/eslint/bin/eslint.js",
+        "."
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:30:25.023Z",
+      "finished": "2026-11-19T17:30:28.891Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/prototype-lint.txt"
+    },
+    {
+      "name": "prototype-typecheck",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:30:28.892Z",
+      "finished": "2026-11-19T17:30:32.188Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/prototype-typecheck.txt"
+    },
+    {
+      "name": "prototype-build",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:30:32.188Z",
+      "finished": "2026-11-19T17:30:33.078Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/prototype-build.txt"
+    },
+    {
+      "name": "prototype-browser",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "scripts/run-browser.mjs"
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:30:33.078Z",
+      "finished": "2026-11-19T17:31:13.684Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/prototype-browser.txt"
+    },
+    {
+      "name": "mermaid",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "scripts/validate-diagrams.mjs"
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:31:13.689Z",
+      "finished": "2026-11-19T17:31:18.214Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/mermaid.txt"
+    },
+    {
+      "name": "screens",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "scripts/capture.mjs"
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:31:18.214Z",
+      "finished": "2026-11-19T17:31:48.325Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/screens.txt"
+    },
+    {
+      "name": "prototype-unit-docs",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "tests/model.test.ts",
+        "tests/docs.test.ts"
+      ],
+      "cwd": "prototypes\\sprint-2",
+      "started": "2026-11-19T17:31:48.325Z",
+      "finished": "2026-11-19T17:31:48.930Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/prototype-unit-docs.txt"
+    },
+    {
+      "name": "production-typecheck",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "cwd": "frontend",
+      "started": "2026-11-19T17:31:48.930Z",
+      "finished": "2026-11-19T17:31:49.951Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/production-typecheck.txt"
+    },
+    {
+      "name": "production-build",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "cwd": "frontend",
+      "started": "2026-11-19T17:31:49.951Z",
+      "finished": "2026-11-19T17:31:50.579Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/production-build.txt"
+    },
+    {
+      "name": "contract-lint",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "node_modules/@redocly/cli/bin/cli.js",
+        "lint",
+        "../../api/openapi.yaml",
+        "--config",
+        "redocly.yaml",
+        "--max-problems",
+        "50"
+      ],
+      "cwd": "tools\\contract",
+      "started": "2026-11-19T17:31:50.579Z",
+      "finished": "2026-11-19T17:31:51.002Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/contract-lint.txt"
+    },
+    {
+      "name": "contract-tests",
+      "command": [
+        "..\\..\\..\\..\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "validation.test.cjs"
+      ],
+      "cwd": "tools\\contract",
+      "started": "2026-11-19T17:31:51.002Z",
+      "finished": "2026-11-19T17:31:54.039Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/contract-tests.txt"
+    },
+    {
+      "name": "backend-tests",
+      "command": [
+        ".tools\\sprint2-python\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--cov=app",
+        "--cov-report=term-missing",
+        "--cov-fail-under=50",
+        "--basetemp=../.audit/sprint2-pytest-final"
+      ],
+      "cwd": "backend",
+      "started": "2026-11-19T17:31:54.040Z",
+      "finished": "2026-11-19T17:31:58.387Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/backend-tests.txt"
+    },
+    {
+      "name": "compose-smoke",
+      "command": [
+        ".tools\\sprint2-python\\Scripts\\python.exe",
+        "scripts/compose_smoke.py"
+      ],
+      "cwd": ".",
+      "started": "2026-11-19T17:31:58.388Z",
+      "finished": "2026-11-19T17:32:00.846Z",
+      "exitCode": 1,
+      "status": "BLOCKED",
+      "log": "logs/compose-smoke.txt"
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "prototypes\\sprint-2\\git",
+        "diff",
+        "--check"
+      ],
+      "cwd": ".",
+      "started": "2026-11-19T17:32:00.846Z",
+      "finished": "2026-11-19T17:32:01.258Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "logs/diff-check.txt"
+    }
+  ],
+  "limitations": [
+    "PostgreSQL integration skipped: isolated BOOTSTRAP_TEST_DATABASE_URL not supplied.",
+    "Docker daemon unavailable; Compose smoke blocked locally.",
+    "Figma/Lovable not connected; no external artifact/import/reviewer-access verification.",
+    "Local automated checks are not teammate acceptance or GitHub CI."
+  ],
+  "completedWithoutFailure": true
+}

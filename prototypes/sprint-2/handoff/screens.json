@@ -1,0 +1,234 @@
+{
+  "widths": [
+    { "name": "masaustu", "width": 1440, "height": 1000 },
+    { "name": "mobil", "width": 390, "height": 844 }
+  ],
+  "frames": [
+    {
+      "id": "O01-I",
+      "name": "İşveren giriş",
+      "role": "employer",
+      "route": "/giris",
+      "state": "login",
+      "stories": ["US-01"]
+    },
+    {
+      "id": "O01-G",
+      "name": "Görev alan giriş",
+      "role": "worker",
+      "route": "/giris",
+      "state": "login",
+      "stories": ["US-01"]
+    },
+    {
+      "id": "O02",
+      "name": "Örnek hesap oluştur",
+      "role": "employer",
+      "route": "/kayit",
+      "state": "register",
+      "stories": ["US-01"]
+    },
+    {
+      "id": "O04",
+      "name": "Giriş hatası",
+      "role": "employer",
+      "route": "/giris",
+      "state": "login-error",
+      "stories": ["US-01"]
+    },
+    {
+      "id": "E01",
+      "name": "İşveren paneli",
+      "role": "employer",
+      "route": "/panel",
+      "stories": ["US-03", "US-09", "US-12"]
+    },
+    {
+      "id": "E02",
+      "name": "Görevlerim",
+      "role": "employer",
+      "route": "/gorevler",
+      "stories": ["US-03", "US-12"]
+    },
+    {
+      "id": "E03",
+      "name": "Görev oluştur",
+      "role": "employer",
+      "route": "/yeni",
+      "stories": ["US-03"]
+    },
+    {
+      "id": "E04",
+      "name": "Görev doğrulama hatası",
+      "role": "employer",
+      "route": "/yeni",
+      "state": "create-error",
+      "stories": ["US-03"]
+    },
+    {
+      "id": "E05",
+      "name": "Görev ayrıntısı",
+      "role": "employer",
+      "route": "/gorev/TASK-101",
+      "stories": ["US-03", "US-06"]
+    },
+    {
+      "id": "E06",
+      "name": "Başvuruları incele",
+      "role": "employer",
+      "route": "/gorev/TASK-101/basvurular",
+      "stories": ["US-06", "US-13"]
+    },
+    {
+      "id": "E07",
+      "name": "Başvuru bekleniyor",
+      "role": "employer",
+      "route": "/yeni",
+      "state": "empty-applicants",
+      "stories": ["US-06"]
+    },
+    {
+      "id": "E08",
+      "name": "Görevli atandı",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "stories": ["US-06", "US-07"]
+    },
+    {
+      "id": "E09",
+      "name": "Simüle bekletme onayı",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "state": "hold-dialog",
+      "stories": ["US-07"]
+    },
+    {
+      "id": "E10",
+      "name": "Kanıtları incele",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "stories": ["US-08", "US-09", "US-13"]
+    },
+    {
+      "id": "E11",
+      "name": "Düzeltme istendi",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "revision",
+      "stories": ["US-09"]
+    },
+    {
+      "id": "E12",
+      "name": "Tamamlandı ve simüle serbest bırakıldı",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "complete",
+      "stories": ["US-09", "US-10"]
+    },
+    {
+      "id": "E13",
+      "name": "Görev iptal edildi",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "state": "cancel",
+      "stories": ["US-11"]
+    },
+    {
+      "id": "G01",
+      "name": "Görev alan paneli",
+      "role": "worker",
+      "route": "/panel",
+      "stories": ["US-02", "US-06", "US-07"]
+    },
+    {
+      "id": "G02",
+      "name": "Çalışma şehri ve profil",
+      "role": "worker",
+      "route": "/profil",
+      "stories": ["US-02"]
+    },
+    {
+      "id": "G03",
+      "name": "Görevleri keşfet",
+      "role": "worker",
+      "route": "/gorevler",
+      "stories": ["US-04"]
+    },
+    {
+      "id": "G04",
+      "name": "Şehir gerekli ve başvuru",
+      "role": "worker",
+      "route": "/gorev/TASK-101",
+      "stories": ["US-02", "US-04", "US-05"]
+    },
+    {
+      "id": "G05",
+      "name": "Başvurularım ve seçim bekleme",
+      "role": "worker",
+      "route": "/gorev/TASK-101",
+      "state": "applied",
+      "stories": ["US-05", "US-06"]
+    },
+    {
+      "id": "G06",
+      "name": "Simüle bekletme bekleniyor",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "stories": ["US-07", "US-08"]
+    },
+    {
+      "id": "G07",
+      "name": "Örnek kanıt gönder",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "state": "held",
+      "stories": ["US-08", "US-13"]
+    },
+    {
+      "id": "G08",
+      "name": "Kanıt doğrulama hatası",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "state": "evidence-error",
+      "stories": ["US-08"]
+    },
+    {
+      "id": "G09",
+      "name": "Kanıt düzeltme",
+      "role": "worker",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "revision",
+      "stories": ["US-08", "US-09"]
+    },
+    {
+      "id": "G10",
+      "name": "Boş arama sonucu",
+      "role": "worker",
+      "route": "/gorevler",
+      "state": "empty-search",
+      "stories": ["US-04"]
+    },
+    {
+      "id": "G11",
+      "name": "Atanmış görev ve simüle bekletme",
+      "role": "worker",
+      "route": "/gorev/TASK-103",
+      "state": "held",
+      "stories": ["US-06", "US-07"]
+    },
+    {
+      "id": "O03",
+      "name": "Katılımcı görev geçmişi",
+      "role": "worker",
+      "route": "/gorev/TASK-102/gecmis",
+      "stories": ["US-12", "US-13"]
+    },
+    {
+      "id": "O05",
+      "name": "Yetkisiz kanıt erişimi",
+      "role": "other",
+      "route": "/gorev/TASK-102/kanitlar",
+      "stories": ["US-13"]
+    }
+  ]
+}

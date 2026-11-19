@@ -1,0 +1,5 @@
+cwd: prototypes\sprint-2
+command: ..\..\..\..\Program Files\nodejs\node.exe scripts/validate-diagrams.mjs
+exit: 0
+
+8 Mermaid diyagramı ayrıştırıldı ve SVG olarak çizildi.

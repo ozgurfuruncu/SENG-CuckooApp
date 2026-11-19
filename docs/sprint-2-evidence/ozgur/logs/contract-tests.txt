@@ -1,0 +1,19 @@
+cwd: tools\contract
+command: ..\..\..\..\Program Files\nodejs\node.exe --test validation.test.cjs
+exit: 0
+
+✔ canonical OpenAPI 3.1 document and references validate (475.8337ms)
+✔ rejects invalid OpenAPI schema type (377.0765ms)
+✔ rejects unresolved schema reference (381.6512ms)
+✔ rejects OpenAPI 3.0 boolean exclusiveMinimum in a 3.1 schema (385.4193ms)
+✔ rejects duplicate operation IDs (394.7252ms)
+✔ rejects duplicate YAML keys (399.2932ms)
+✔ all checked-in YAML parses with unique keys using YAML 1.2 (267.996ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2943.051

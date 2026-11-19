@@ -67,3 +67,11 @@ gates and [US-03 documentation example](docs/specs/US-03-create-task.md).
 See [submission evidence](docs/submissions/README.md) for the validation results
 and publication records. Historical planning and preparation files are kept in
 `docs/archive`; the supported setup is documented here and in the development guide.
+
+## Sprint 2 design prototype
+
+[Özgür's local Turkish prototype](prototypes/sprint-2/README.md) runs separately
+with fictional in-memory data. [Design evidence](docs/submissions/sprint-2-ozgur.md)
+links the user flows, frontend/API boundary, C4/UML contributions, screenshots,
+checks and outstanding Figma/Lovable handoff. The production application remains
+the health slice and web shell described above.

@@ -1,0 +1,14 @@
+cwd: prototypes\sprint-2
+command: ..\..\..\..\Program Files\nodejs\node.exe node_modules/vite/bin/vite.js build
+exit: 0
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 15 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.83 kB │ gzip:  0.51 kB
+dist/assets/index-PHWoMbpJ.css   23.19 kB │ gzip:  5.84 kB
+dist/assets/index-g9OTu6ua.js   195.56 kB │ gzip: 61.23 kB
+
+✓ built in 379ms

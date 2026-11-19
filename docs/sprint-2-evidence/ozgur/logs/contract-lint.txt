@@ -1,0 +1,9 @@
+cwd: tools\contract
+command: ..\..\..\..\Program Files\nodejs\node.exe node_modules/@redocly/cli/bin/cli.js lint ../../api/openapi.yaml --config redocly.yaml --max-problems 50
+exit: 0
+
+
+validating ..\..\api\openapi.yaml...
+..\..\api\openapi.yaml: validated in 65ms
+
+Woohoo! Your API description is valid. 🎉

@@ -1,0 +1,53 @@
+cwd: prototypes\sprint-2
+command: ..\..\..\..\Program Files\nodejs\node.exe --test tests/model.test.ts tests/docs.test.ts
+exit: 0
+
+✔ all new Markdown links resolve to repository files; external sources use https (26.8589ms)
+✔ prototype source has no business network, uploads or persistent data APIs (6.0214ms)
+✔ all draft business operation IDs have local equivalents; task/payment enums are stable (61.6373ms)
+✔ all captured screens have valid matching source fingerprint and both widths (95.8905ms)
+✔ US-01: protected operations require a local demo session (3.3835ms)
+✔ US-01: failed login preserves session; demo register rejects real passwords and duplicate addresses (1.1329ms)
+✔ US-02/05: city is required to apply, optional occupation/skills remain optional and self-declared (3.211ms)
+✔ US-02: profile rejects invalid bounds {"operatingCity":"A","occupation":null,"skills":[]} (0.4209ms)
+✔ US-02: profile rejects invalid bounds {"operatingCity":"Ankara","occupation":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (0.2728ms)
+✔ US-02: profile rejects invalid bounds {"operatingCity":"Ankara","occupation":null,"skills":["a","a","a","a","a","a","a (0.2898ms)
+✔ US-02: profile rejects invalid bounds {"operatingCity":"Ankara","occupation":null,"skills":["xxxxxxxxxxxxxxxxxxxxxxxxx (0.2525ms)
+✔ US-03: task ownership derives from session; starts open without hold (0.4127ms)
+✔ US-03: invalid create does not create a task: title abcd (0.4981ms)
+✔ US-03: invalid create does not create a task: title xxxxxxxxxxxxxxx (0.4658ms)
+✔ US-03: invalid create does not create a task: description short (0.2642ms)
+✔ US-03: invalid create does not create a task: description xxxxxxxxxxxxxxx (0.268ms)
+✔ US-03: invalid create does not create a task: city  (0.2036ms)
+✔ US-03: invalid create does not create a task: requiredEvidence  (0.2736ms)
+✔ US-03: invalid create does not create a task: requiredEvidence xxxxxxxxxxxxxxx (0.2648ms)
+✔ US-03: invalid create does not create a task: proposedCompensation -1 (0.1851ms)
+✔ US-03: invalid create does not create a task: proposedCompensation NaN (0.1789ms)
+✔ US-03: invalid create does not create a task: permissionConfirmed false (0.1777ms)
+✔ US-03: invalid create does not create a task: requestedBy bad date (0.1956ms)
+✔ US-03: invalid create does not create a task: category INSPECTION (0.1821ms)
+✔ US-03: zero amount is allowed; task takers cannot create (0.2606ms)
+✔ US-04: city/status/search filters and empty results (0.394ms)
+✔ US-05: duplicate applications, closed tasks, wrong role, long notes rejected without task changes (0.4203ms)
+✔ US-06: applicant must belong to task; only owner can list/assign; repeated assignment conflicts (0.5173ms)
+✔ US-07: only owner can hold assigned task once; no bank/card fields (0.6177ms)
+✔ US-08: only assigned worker after hold may submit (0.5478ms)
+✔ US-08: evidence rejects invalid photos/notes  / 21 (0.3425ms)
+✔ US-08: evidence rejects invalid photos/notes on,arka,sol,sag,detay,on / 21 (0.2194ms)
+✔ US-08: evidence rejects invalid photos/notes on,on / 21 (0.2017ms)
+✔ US-08: evidence rejects invalid photos/notes https://external.test/private.jpg / 21 (0.2338ms)
+✔ US-08: evidence rejects invalid photos/notes on / 8 (0.2472ms)
+✔ US-08: evidence rejects invalid photos/notes on / 2001 (0.2816ms)
+✔ US-08/09/10/12: shared journey revises, resubmits, atomically completes/releases with audit events (0.7446ms)
+✔ US-09: only owner reviews; invalid review and oversized notes leave task/evidence intact (0.3649ms)
+✔ US-11: cancel open or assigned; void held simulation; reject repeated terminal changes (0.5071ms)
+✔ US-13: owner and assignee only; applicant/other users denied metadata, previews and history (0.6463ms)
+✔ returned data is detached and role changes retain progress; reset clears it (0.2984ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 41
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 506.3051

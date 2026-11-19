@@ -10,6 +10,8 @@ the [completed checklist](sprint-1-checklist.md) points to actual final evidence
 ## Development and later sprints
 
 - [Sprint 2 planning brief](sprint-2-plan.md) for deliverables, proposed RACI and the Lovable-to-Figma workflow.
+- [Özgür's Sprint 2 contribution](submissions/sprint-2-ozgur.md): separate Turkish prototype, user flows, architecture drafts and actual local verification.
+- [Figma/Lovable handoff](sprint-2-figma-handoff.md) and [requirements audit](sprint-2-ozgur-audit.md): prepared sources versus outstanding external artifacts.
 - [Development/testing](development.md): the one supported application and deployment.
 - [Canonical SDD workflow, Ready/Done gates](templates/SDD_WORKFLOW.md), [traceability template](templates/10-requirements-traceability.md) and [US-03 documentation example](specs/US-03-create-task.md).
 - [Product backlog](product-backlog.md) and [existing issue mapping](issue-index.md).
