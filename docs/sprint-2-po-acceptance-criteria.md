@@ -83,7 +83,7 @@ verification is proposed, not reported as run.
 - **US-09-AC01 (positive):** Given submitted evidence in a reviewable state, when the authorized employer requests revision, then the operation records `REVISION_REQUESTED` with the reviewed success response.
 - **US-09-AC02 (positive/atomic):** Given submitted evidence and `HELD_SIMULATED`, when the authorized employer approves, then task completion and simulated release are recorded together as specified by the contract.
 - **US-09-AC03 (negative/state/no-partial-write):** Given approval without evidence or without a simulated hold, when approval is attempted, then the contract-defined conflict is returned and neither completion nor release is recorded.
-- **US-09-AC04 (authorization/no-write):** Given a wrong-role or non-owning reviewer, when review is attempted, then it is denied under the approved policy and task/payment state is unchanged.
+- **US-09-AC04 (authorization/no-write):** Given a reviewer who is not the task owner, when review is attempted, then the operation returns the OpenAPI-defined `403` and task/payment state is unchanged. This preserves the existing issue #9 “owner only” criterion; TL review must reconcile the owner rule explicitly into the OpenAPI description before implementation. A wrong-role actor is also denied under the reviewed role matrix.
 - **US-09-AC05 (negative):** Given an invalid review decision or disallowed transition, when submitted, then the reviewed contract response is returned without partial state changes. **Exact response mapping for each case: confirm.**
 - **Unresolved:** Revision precondition, resubmission state, note requirement, owner rule, and repeated approval behavior.
 
@@ -98,11 +98,11 @@ verification is proposed, not reported as run.
 
 ## US-11 — Cancel eligible unfinished task
 
-- **US-11-AC01 (positive/state):** Given a task in a team-approved cancellable state, when its authorized employer cancels it, then task status becomes `CANCELLED`.
+- **US-11-AC01 (positive/state):** Given an employer's task in `OPEN` or `ASSIGNED`, when the employer cancels it, then the operation returns the OpenAPI-defined `200` and task status becomes `CANCELLED`. This matches the canonical backlog and issue #11; the OpenAPI currently labels the same state policy preliminary, so reconcile that wording before implementation.
 - **US-11-AC02 (payment state):** Given a cancellable assigned task with `HELD_SIMULATED`, when cancellation succeeds, then simulated payment status changes as approved by the contract decision. The current draft proposes `VOIDED_SIMULATED`; confirm before making normative.
-- **US-11-AC03 (negative/terminal):** Given a disallowed state or already terminal task, when cancellation is attempted, then duplicate terminal cancellation returns the canonical conflict and no further state change occurs.
+- **US-11-AC03 (negative/terminal):** Given a task in a state other than `OPEN` or `ASSIGNED`, including a terminal state, when cancellation is attempted, then the canonical issue #11 conflict (`409`) is returned and no task/payment state changes. Confirm the OpenAPI's preliminary-policy wording against this accepted issue criterion during contract review.
 - **US-11-AC04 (authorization/no-write):** Given no token, a wrong role, or a non-owning employer, when cancellation is attempted, then access is denied according to the reviewed contract and task/payment state is unchanged.
-- **Unresolved:** Eligible states, owner rule, held-payment voiding, and precise denial mapping.
+- **Unresolved:** OpenAPI reconciliation for the issue/backlog's `OPEN`/`ASSIGNED` and duplicate-terminal `409` rules; whether a simulated hold is voided on cancellation (present in preliminary OpenAPI); task-owner enforcement and exact authorization mapping.
 
 ## US-12 — View task history
 

@@ -23,9 +23,9 @@ story is approved or Ready for implementation.
 | US-06 | P0 / 5 / US-05 | FR-009–010, 017; FLOW-04; `listTaskApplications`, `assignTask` | Draft criteria ready for review | Ownership, eligibility, unselected application disposition, conflict/concurrency contract |
 | US-07 | P0 / 3 / US-06 | FR-011, 017; FLOW-04; `simulatePaymentHold` | Draft criteria ready for review | Ownership, transaction/no-partial-write rule, disclaimer policy |
 | US-08 | P0 / 5 / US-06, US-07 | FR-012–013, 017; FLOW-05; `submitTaskEvidence`, `listTaskEvidence` | Draft criteria ready for review | Media/storage/retention, access matrix, download route, permission record, resubmission transition |
-| US-09 | P0 / 5 / US-08 | FR-012, 014, 017; FLOW-05; `reviewTaskEvidence`, `submitTaskEvidence` | Draft criteria ready for review | Revision precondition, note policy, owner authorization, resubmission state |
+| US-09 | P0 / 5 / US-08 | FR-012, 014, 017; FLOW-05; `reviewTaskEvidence`, `submitTaskEvidence` | Draft criteria ready for review | Reconcile issue #9's owner-only rule with OpenAPI wording; revision precondition, note policy, resubmission state |
 | US-10 | P0 / 3 / US-07, US-09 | FR-014, 017; FLOW-05; `reviewTaskEvidence` | Draft criteria ready for review | Confirm owner rule, atomic failure behavior, repeated approval mapping |
-| US-11 | P1 / 3 / US-03 | FR-015, 017; FLOW-06; `cancelTask` | Draft criteria ready for review | Confirm eligible states, held-payment voiding, owner rule; duplicate terminal conflict retained |
+| US-11 | P1 / 3 / US-03 | FR-015, 017; FLOW-06; `cancelTask` | Draft criteria ready for review | Reconcile canonical OPEN/ASSIGNED plus duplicate-terminal conflict rule with preliminary OpenAPI text; confirm hold voiding and ownership |
 | US-12 | P1 / 3 / US-06 | FR-016–017; FLOW-06; `getTaskHistory` | Draft criteria ready for review | Participant visibility, event set/ordering/detail privacy |
 | US-13 | P1 / 5 / US-01, US-08 | FR-013, 017; FLOW-05; `listTaskEvidence` | Draft criteria ready for review | Participant matrix, file route, storage/media/retention, field-level privacy |
 | US-14 | P2 / 3 / US-10 | Deferred; no FR/API operation | Out of MVP; no Sprint 2 refinement proposed | Remains deferred; do not implement |
