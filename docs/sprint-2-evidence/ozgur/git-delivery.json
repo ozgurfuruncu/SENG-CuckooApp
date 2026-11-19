@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-19",
+  "branch": "feature/ozgur-sprint-2",
+  "baseCommit": "d0abe1745f685333ff3073ecd112ea829cdcccfe",
+  "sourceCommit": "466e81c9023209f0a381ab716b243294e06393ca",
+  "sourceCommitUrl": "https://github.com/ozgurfuruncu/SENG-CuckooApp/commit/466e81c9023209f0a381ab716b243294e06393ca",
+  "push": {
+    "command": "git push --set-upstream origin feature/ozgur-sprint-2",
+    "exitCode": 0,
+    "remoteRef": "refs/heads/feature/ozgur-sprint-2",
+    "verifiedRemoteSha": "466e81c9023209f0a381ab716b243294e06393ca",
+    "verification": "GitHub connector GET ref after successful ordinary Git push"
+  },
+  "ci": {
+    "runId": 44579229818,
+    "sourceCommit": "466e81c9023209f0a381ab716b243294e06393ca",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818",
+    "completedAt": "2026-11-19T17:38:48Z",
+    "jobs": [
+      {
+        "name": "Stack A Compose smoke",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818/job/135754999242"
+      },
+      {
+        "name": "backend",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818/job/135754999769"
+      },
+      {
+        "name": "Stack A frontend",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818/job/135754999780"
+      },
+      {
+        "name": "OpenAPI 3.1 validation",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818/job/135754999888"
+      },
+      {
+        "name": "Stack A backend",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818/job/135755303545"
+      }
+    ],
+    "scope": "Existing production CI: backend/PostgreSQL, frontend, OpenAPI and Compose. Standalone prototype checks are the recorded local runs."
+  },
+  "preserved": {
+    "productionSource": true,
+    "teammateDocuments": true,
+    "sprint1TagObject": "fc145f7c79d43e861d14b5d721fef5c7a0e57e23",
+    "originalStash": "pre-pull frontend backup 2026-11-19"
+  },
+  "actions": {
+    "forcePush": false,
+    "pullRequestCreated": false,
+    "mergePerformed": false,
+    "sprint2TagCreated": false
+  },
+  "note": "This receipt records the implementation commit's actual push. The following documentation-only commit records this receipt; its final HEAD is reported in the execution report."
+}

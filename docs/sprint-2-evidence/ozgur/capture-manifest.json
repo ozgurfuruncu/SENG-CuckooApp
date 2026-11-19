@@ -1,0 +1,1097 @@
+{
+  "date": "2026-11-19",
+  "sourceSha256": "76da8edbfb97e2ee10858adc4f433c561d804274471bde1b77de0caf7645b7be",
+  "note": "Gerçek yerel Edge ekran yakalamaları. HTML donmuş aktarım kaynağıdır; Figma dosyası veya doğrulanmış import değildir.",
+  "results": [
+    {
+      "id": "O01-I",
+      "name": "İşveren giriş",
+      "role": "employer",
+      "route": "/giris",
+      "state": "login",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "",
+      "png": "O01-I-masaustu.png",
+      "html": "O01-I-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O01-G",
+      "name": "Görev alan giriş",
+      "role": "worker",
+      "route": "/giris",
+      "state": "login",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "",
+      "png": "O01-G-masaustu.png",
+      "html": "O01-G-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O02",
+      "name": "Örnek hesap oluştur",
+      "role": "employer",
+      "route": "/kayit",
+      "state": "register",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/kayit",
+      "png": "O02-masaustu.png",
+      "html": "O02-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O04",
+      "name": "Giriş hatası",
+      "role": "employer",
+      "route": "/giris",
+      "state": "login-error",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "",
+      "png": "O04-masaustu.png",
+      "html": "O04-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E01",
+      "name": "İşveren paneli",
+      "role": "employer",
+      "route": "/panel",
+      "stories": [
+        "US-03",
+        "US-09",
+        "US-12"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/panel",
+      "png": "E01-masaustu.png",
+      "html": "E01-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E02",
+      "name": "Görevlerim",
+      "role": "employer",
+      "route": "/gorevler",
+      "stories": [
+        "US-03",
+        "US-12"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorevler",
+      "png": "E02-masaustu.png",
+      "html": "E02-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E03",
+      "name": "Görev oluştur",
+      "role": "employer",
+      "route": "/yeni",
+      "stories": [
+        "US-03"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/yeni",
+      "png": "E03-masaustu.png",
+      "html": "E03-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E04",
+      "name": "Görev doğrulama hatası",
+      "role": "employer",
+      "route": "/yeni",
+      "state": "create-error",
+      "stories": [
+        "US-03"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/yeni",
+      "png": "E04-masaustu.png",
+      "html": "E04-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E05",
+      "name": "Görev ayrıntısı",
+      "role": "employer",
+      "route": "/gorev/TASK-101",
+      "stories": [
+        "US-03",
+        "US-06"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-101",
+      "png": "E05-masaustu.png",
+      "html": "E05-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E06",
+      "name": "Başvuruları incele",
+      "role": "employer",
+      "route": "/gorev/TASK-101/basvurular",
+      "stories": [
+        "US-06",
+        "US-13"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-101/basvurular",
+      "png": "E06-masaustu.png",
+      "html": "E06-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E07",
+      "name": "Başvuru bekleniyor",
+      "role": "employer",
+      "route": "/yeni",
+      "state": "empty-applicants",
+      "stories": [
+        "US-06"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-201/basvurular",
+      "png": "E07-masaustu.png",
+      "html": "E07-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E08",
+      "name": "Görevli atandı",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "stories": [
+        "US-06",
+        "US-07"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "E08-masaustu.png",
+      "html": "E08-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E09",
+      "name": "Simüle bekletme onayı",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "state": "hold-dialog",
+      "stories": [
+        "US-07"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "E09-masaustu.png",
+      "html": "E09-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E10",
+      "name": "Kanıtları incele",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "stories": [
+        "US-08",
+        "US-09",
+        "US-13"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "E10-masaustu.png",
+      "html": "E10-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E11",
+      "name": "Düzeltme istendi",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "revision",
+      "stories": [
+        "US-09"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "E11-masaustu.png",
+      "html": "E11-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E12",
+      "name": "Tamamlandı ve simüle serbest bırakıldı",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "complete",
+      "stories": [
+        "US-09",
+        "US-10"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "E12-masaustu.png",
+      "html": "E12-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E13",
+      "name": "Görev iptal edildi",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "state": "cancel",
+      "stories": [
+        "US-11"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "E13-masaustu.png",
+      "html": "E13-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G01",
+      "name": "Görev alan paneli",
+      "role": "worker",
+      "route": "/panel",
+      "stories": [
+        "US-02",
+        "US-06",
+        "US-07"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/panel",
+      "png": "G01-masaustu.png",
+      "html": "G01-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G02",
+      "name": "Çalışma şehri ve profil",
+      "role": "worker",
+      "route": "/profil",
+      "stories": [
+        "US-02"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/profil",
+      "png": "G02-masaustu.png",
+      "html": "G02-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G03",
+      "name": "Görevleri keşfet",
+      "role": "worker",
+      "route": "/gorevler",
+      "stories": [
+        "US-04"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorevler",
+      "png": "G03-masaustu.png",
+      "html": "G03-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G04",
+      "name": "Şehir gerekli ve başvuru",
+      "role": "worker",
+      "route": "/gorev/TASK-101",
+      "stories": [
+        "US-02",
+        "US-04",
+        "US-05"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-101",
+      "png": "G04-masaustu.png",
+      "html": "G04-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G05",
+      "name": "Başvurularım ve seçim bekleme",
+      "role": "worker",
+      "route": "/gorev/TASK-101",
+      "state": "applied",
+      "stories": [
+        "US-05",
+        "US-06"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/basvurular",
+      "png": "G05-masaustu.png",
+      "html": "G05-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G06",
+      "name": "Simüle bekletme bekleniyor",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "stories": [
+        "US-07",
+        "US-08"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103/kanitlar",
+      "png": "G06-masaustu.png",
+      "html": "G06-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G07",
+      "name": "Örnek kanıt gönder",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "state": "held",
+      "stories": [
+        "US-08",
+        "US-13"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103/kanitlar",
+      "png": "G07-masaustu.png",
+      "html": "G07-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G08",
+      "name": "Kanıt doğrulama hatası",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "state": "evidence-error",
+      "stories": [
+        "US-08"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103/kanitlar",
+      "png": "G08-masaustu.png",
+      "html": "G08-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G09",
+      "name": "Kanıt düzeltme",
+      "role": "worker",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "revision",
+      "stories": [
+        "US-08",
+        "US-09"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "G09-masaustu.png",
+      "html": "G09-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G10",
+      "name": "Boş arama sonucu",
+      "role": "worker",
+      "route": "/gorevler",
+      "state": "empty-search",
+      "stories": [
+        "US-04"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorevler",
+      "png": "G10-masaustu.png",
+      "html": "G10-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G11",
+      "name": "Atanmış görev ve simüle bekletme",
+      "role": "worker",
+      "route": "/gorev/TASK-103",
+      "state": "held",
+      "stories": [
+        "US-06",
+        "US-07"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "G11-masaustu.png",
+      "html": "G11-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O03",
+      "name": "Katılımcı görev geçmişi",
+      "role": "worker",
+      "route": "/gorev/TASK-102/gecmis",
+      "stories": [
+        "US-12",
+        "US-13"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-102/gecmis",
+      "png": "O03-masaustu.png",
+      "html": "O03-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O05",
+      "name": "Yetkisiz kanıt erişimi",
+      "role": "other",
+      "route": "/gorev/TASK-102/kanitlar",
+      "stories": [
+        "US-13"
+      ],
+      "viewport": "masaustu",
+      "width": 1440,
+      "height": 1000,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "O05-masaustu.png",
+      "html": "O05-masaustu.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O01-I",
+      "name": "İşveren giriş",
+      "role": "employer",
+      "route": "/giris",
+      "state": "login",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "",
+      "png": "O01-I-mobil.png",
+      "html": "O01-I-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O01-G",
+      "name": "Görev alan giriş",
+      "role": "worker",
+      "route": "/giris",
+      "state": "login",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "",
+      "png": "O01-G-mobil.png",
+      "html": "O01-G-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O02",
+      "name": "Örnek hesap oluştur",
+      "role": "employer",
+      "route": "/kayit",
+      "state": "register",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/kayit",
+      "png": "O02-mobil.png",
+      "html": "O02-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O04",
+      "name": "Giriş hatası",
+      "role": "employer",
+      "route": "/giris",
+      "state": "login-error",
+      "stories": [
+        "US-01"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "",
+      "png": "O04-mobil.png",
+      "html": "O04-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E01",
+      "name": "İşveren paneli",
+      "role": "employer",
+      "route": "/panel",
+      "stories": [
+        "US-03",
+        "US-09",
+        "US-12"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/panel",
+      "png": "E01-mobil.png",
+      "html": "E01-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E02",
+      "name": "Görevlerim",
+      "role": "employer",
+      "route": "/gorevler",
+      "stories": [
+        "US-03",
+        "US-12"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorevler",
+      "png": "E02-mobil.png",
+      "html": "E02-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E03",
+      "name": "Görev oluştur",
+      "role": "employer",
+      "route": "/yeni",
+      "stories": [
+        "US-03"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/yeni",
+      "png": "E03-mobil.png",
+      "html": "E03-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E04",
+      "name": "Görev doğrulama hatası",
+      "role": "employer",
+      "route": "/yeni",
+      "state": "create-error",
+      "stories": [
+        "US-03"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/yeni",
+      "png": "E04-mobil.png",
+      "html": "E04-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E05",
+      "name": "Görev ayrıntısı",
+      "role": "employer",
+      "route": "/gorev/TASK-101",
+      "stories": [
+        "US-03",
+        "US-06"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-101",
+      "png": "E05-mobil.png",
+      "html": "E05-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E06",
+      "name": "Başvuruları incele",
+      "role": "employer",
+      "route": "/gorev/TASK-101/basvurular",
+      "stories": [
+        "US-06",
+        "US-13"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-101/basvurular",
+      "png": "E06-mobil.png",
+      "html": "E06-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E07",
+      "name": "Başvuru bekleniyor",
+      "role": "employer",
+      "route": "/yeni",
+      "state": "empty-applicants",
+      "stories": [
+        "US-06"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-201/basvurular",
+      "png": "E07-mobil.png",
+      "html": "E07-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E08",
+      "name": "Görevli atandı",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "stories": [
+        "US-06",
+        "US-07"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "E08-mobil.png",
+      "html": "E08-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E09",
+      "name": "Simüle bekletme onayı",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "state": "hold-dialog",
+      "stories": [
+        "US-07"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "E09-mobil.png",
+      "html": "E09-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E10",
+      "name": "Kanıtları incele",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "stories": [
+        "US-08",
+        "US-09",
+        "US-13"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "E10-mobil.png",
+      "html": "E10-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E11",
+      "name": "Düzeltme istendi",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "revision",
+      "stories": [
+        "US-09"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "E11-mobil.png",
+      "html": "E11-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E12",
+      "name": "Tamamlandı ve simüle serbest bırakıldı",
+      "role": "employer",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "complete",
+      "stories": [
+        "US-09",
+        "US-10"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "E12-mobil.png",
+      "html": "E12-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "E13",
+      "name": "Görev iptal edildi",
+      "role": "employer",
+      "route": "/gorev/TASK-103",
+      "state": "cancel",
+      "stories": [
+        "US-11"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "E13-mobil.png",
+      "html": "E13-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G01",
+      "name": "Görev alan paneli",
+      "role": "worker",
+      "route": "/panel",
+      "stories": [
+        "US-02",
+        "US-06",
+        "US-07"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/panel",
+      "png": "G01-mobil.png",
+      "html": "G01-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G02",
+      "name": "Çalışma şehri ve profil",
+      "role": "worker",
+      "route": "/profil",
+      "stories": [
+        "US-02"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/profil",
+      "png": "G02-mobil.png",
+      "html": "G02-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G03",
+      "name": "Görevleri keşfet",
+      "role": "worker",
+      "route": "/gorevler",
+      "stories": [
+        "US-04"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorevler",
+      "png": "G03-mobil.png",
+      "html": "G03-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G04",
+      "name": "Şehir gerekli ve başvuru",
+      "role": "worker",
+      "route": "/gorev/TASK-101",
+      "stories": [
+        "US-02",
+        "US-04",
+        "US-05"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-101",
+      "png": "G04-mobil.png",
+      "html": "G04-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G05",
+      "name": "Başvurularım ve seçim bekleme",
+      "role": "worker",
+      "route": "/gorev/TASK-101",
+      "state": "applied",
+      "stories": [
+        "US-05",
+        "US-06"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/basvurular",
+      "png": "G05-mobil.png",
+      "html": "G05-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G06",
+      "name": "Simüle bekletme bekleniyor",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "stories": [
+        "US-07",
+        "US-08"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103/kanitlar",
+      "png": "G06-mobil.png",
+      "html": "G06-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G07",
+      "name": "Örnek kanıt gönder",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "state": "held",
+      "stories": [
+        "US-08",
+        "US-13"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103/kanitlar",
+      "png": "G07-mobil.png",
+      "html": "G07-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G08",
+      "name": "Kanıt doğrulama hatası",
+      "role": "worker",
+      "route": "/gorev/TASK-103/kanitlar",
+      "state": "evidence-error",
+      "stories": [
+        "US-08"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103/kanitlar",
+      "png": "G08-mobil.png",
+      "html": "G08-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G09",
+      "name": "Kanıt düzeltme",
+      "role": "worker",
+      "route": "/gorev/TASK-102/kanitlar",
+      "state": "revision",
+      "stories": [
+        "US-08",
+        "US-09"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "G09-mobil.png",
+      "html": "G09-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G10",
+      "name": "Boş arama sonucu",
+      "role": "worker",
+      "route": "/gorevler",
+      "state": "empty-search",
+      "stories": [
+        "US-04"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorevler",
+      "png": "G10-mobil.png",
+      "html": "G10-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "G11",
+      "name": "Atanmış görev ve simüle bekletme",
+      "role": "worker",
+      "route": "/gorev/TASK-103",
+      "state": "held",
+      "stories": [
+        "US-06",
+        "US-07"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-103",
+      "png": "G11-mobil.png",
+      "html": "G11-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O03",
+      "name": "Katılımcı görev geçmişi",
+      "role": "worker",
+      "route": "/gorev/TASK-102/gecmis",
+      "stories": [
+        "US-12",
+        "US-13"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-102/gecmis",
+      "png": "O03-mobil.png",
+      "html": "O03-mobil.html",
+      "fits": true,
+      "images": true
+    },
+    {
+      "id": "O05",
+      "name": "Yetkisiz kanıt erişimi",
+      "role": "other",
+      "route": "/gorev/TASK-102/kanitlar",
+      "stories": [
+        "US-13"
+      ],
+      "viewport": "mobil",
+      "width": 390,
+      "height": 844,
+      "observedRoute": "#/gorev/TASK-102/kanitlar",
+      "png": "O05-mobil.png",
+      "html": "O05-mobil.html",
+      "fits": true,
+      "images": true
+    }
+  ]
+}
