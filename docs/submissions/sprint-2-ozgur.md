@@ -32,6 +32,8 @@ Jumanah'nın kabul/kanıt incelemesini tamamlanmış göstermez.
 | Hikâye ve test eşlemesi | [US-01–13 izlenebilirlik](../sprint-2-ozgur-traceability.md); US-14/15 ertelendi |
 | Gerçek yerel doğrulama | [Komutlar ve sonuçlar](../sprint-2-ozgur-verification.md), [makine raporu](../sprint-2-evidence/ozgur/verification.json) |
 | Lovable / Figma | [Aktarım adımları ve gerçek erişim durumu](../sprint-2-figma-handoff.md); gerçek proje/dosya/flow URL'si yok |
+| Tüm değişen/eklenen dosyalar | [Eksiksiz dosya manifesti](../sprint-2-evidence/ozgur/files.txt) |
+| Git teslimi | [Gerçek push/uzak ref/CI kaydı](../sprint-2-evidence/ozgur/git-delivery.json); kaynak `466e81c9023209f0a381ab716b243294e06393ca` |
 
 ## Mevcut takım kaynakları
 
@@ -53,13 +55,17 @@ spesifikasyonu bu çalışma dalında yoktur; hedef veya ölçüm sonuçları uy
 ## İnceleme ve Git teslim durumu
 
 Bu değişiklik için gerçek insan PO/TL/QA kabulü veya teammate review henüz yok.
-Yerel test sonucu GitHub CI olarak sunulmaz. Bu indeks yerel doğrulama kanıtını
-içerir; gerçek otomatik CI sonucu ancak ilgili commit'in run URL'si okunduktan
-sonra raporlanabilir. Önceki Sprint 1 başarıları bu değişikliğin testi sayılmaz.
+Yerel test sonucu GitHub CI olarak sunulmaz. Kaynak commit `466e81c` için
+[gerçek CI çalışması](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818)
+tamamlandı; beş mevcut production job'u `success` olarak okundu. Bu workflow
+ayrı prototip testlerini çalıştırmaz; onların sonuçları yerel loglardadır.
+Önceki Sprint 1 başarıları bu değişikliğin testi sayılmaz.
 
 Kullanıcı bu oturumda yeni `feature/ozgur-sprint-2` dalının `develop` üzerinden
-oluşturulmasını açıkça seçti ve commit/push istedi. Bu belgenin bulunduğu Git
-commit'i kaynak teslim referansıdır; tam hash ve push sonucu son raporda verilir.
+oluşturulmasını açıkça seçti ve commit/push istedi. Kaynak commit
+`466e81c9023209f0a381ab716b243294e06393ca` normal push ile gönderildi; GitHub
+üzerinden uzak ref'in aynı SHA olduğu okundu. Bu sonucu kaydeden son doküman
+commit'inin tam hash'i ve push sonucu son yürütme raporunda verilir.
 `git log -1 --format=fuller` ve `git status --short --branch` ile okunabilir.
 PR oluşturma, merge veya Sprint 2 tag'i bu görevin kapsamında yapılmaz.
 Sprint 1 etiketi değiştirilmez. Ekip teslimindeki final tag ve gerçek reviewer

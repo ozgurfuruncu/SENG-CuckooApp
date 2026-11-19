@@ -26,7 +26,8 @@ Figma zorunluluğu açık kalır. [Teslim indeksi](submissions/sprint-2-ozgur.md
 | Özgür teslim indeksine teknik kanıt eklenmesi · ZORUNLU katkı | COMPLETE | [İndeks](submissions/sprint-2-ozgur.md), [gerçek loglar](sprint-2-evidence/ozgur/verification.json) | Aslı ekip indeksine birleştirir; Jumanah inceler; eksik URL/review eklenir |
 | Feasible build/lint/type/unit/UI/diagram/link ve mevcut proje kontrolleri | COMPLETE | [Doğrulama](sprint-2-ozgur-verification.md) | Çevre engelleri aşağıda ayrı |
 | Yerel PostgreSQL ve Compose smoke | BLOCKED | Backend 1 SKIP; Compose daemon yok | Emir/yerel kullanıcı Docker Linux engine veya izole test DB sağlar, kayıtlı komutları çalıştırır |
-| Feature dalına commit ve push · kullanıcı talebi | PARTIAL | Dal `feature/ozgur-sprint-2`, temel `d0abe17` | Son hash ve push sonucu yürütme sonunda raporlanır |
+| Kaynak commit için mevcut production CI · PostgreSQL/Compose dahil | COMPLETE | [CI 44579229818](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818), beş job success, tam SHA `466e81c9023209f0a381ab716b243294e06393ca` | Prototipin ayrı testleri yerelde çalıştırıldı; insan kabulü/PR değildir |
+| Feature dalına commit ve push · kullanıcı talebi | COMPLETE | [Gerçek push ve uzak ref kanıtı](sprint-2-evidence/ozgur/git-delivery.json); kaynak commit `466e81c` | Sonuç kanıtı aynı feature dalında ayrı doküman commit'iyle kaydedilir; PR/merge/tag yok |
 
 Genel tamamlanma **tahminen %75**: bağımsız yerel işler tamamlanmıştır; zorunlu
 düzenlenebilir Figma/iki flow/reviewer doğrulaması ve Lovable yolu açık kalır.

@@ -18,6 +18,7 @@ docs/sprint-2-evidence/ozgur/diagrams/lifecycle-2.svg
 docs/sprint-2-evidence/ozgur/diagrams/task-taker-flow-1.svg
 docs/sprint-2-evidence/ozgur/diagram-validation.json
 docs/sprint-2-evidence/ozgur/files.txt
+docs/sprint-2-evidence/ozgur/git-delivery.json
 docs/sprint-2-evidence/ozgur/index.html
 docs/sprint-2-evidence/ozgur/logs/backend-tests.txt
 docs/sprint-2-evidence/ozgur/logs/compose-smoke.txt

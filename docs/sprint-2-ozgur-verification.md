@@ -78,6 +78,15 @@ gezinmede korunur ve yeni ekranın başlığına odak taşınır. Kontroller yen
 
 ## Çevre ve doğrulama sınırları
 
+Kaynak commit `466e81c9023209f0a381ab716b243294e06393ca` push edildikten sonra
+[GitHub CI 44579229818](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579229818)
+gerçekten tamamlandı: beş job'un tamamı `success` olarak okundu (backend,
+Stack A backend, Stack A frontend, OpenAPI 3.1 validation, Stack A Compose smoke).
+PostgreSQL ve Compose doğrulaması bu CI ortamında başarılıdır; yerel çevre
+engelleri aşağıdaki gibi korunur. Bu mevcut workflow bağımsız prototip paketinin
+testlerini çalıştırmaz; o paketin 41 + 10 test sonucu yerel loglardadır.
+[Commit ve job URL'leri](sprint-2-evidence/ozgur/git-delivery.json).
+
 PostgreSQL testi izole `BOOTSTRAP_TEST_DATABASE_URL` sağlanmadığı için atlandı;
 SQLite tabanlı 13 test gerçek PostgreSQL veya yarışan atama kanıtı değildir.
 Docker daemon yok; veri birimi silinmedi veya başka servise müdahale edilmedi.
