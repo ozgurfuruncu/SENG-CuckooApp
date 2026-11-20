@@ -9,6 +9,8 @@ the [completed checklist](sprint-1-checklist.md) points to actual final evidence
 
 ## Development and later sprints
 
+- [Sprint 2 submission candidate](submissions/sprint-2.md) for the team's artifacts, verification and open handoffs.
+- [Lovable frontend integration](sprint-2-lovable-integration.md), [quality specification](sprint-2-quality.md) and [pending evidence decisions](sprint-2-evidence-decisions.md).
 - [Sprint 2 planning brief](sprint-2-plan.md) for deliverables, proposed RACI and the Lovable-to-Figma workflow.
 - [Özgür's Sprint 2 contribution](submissions/sprint-2-ozgur.md): separate Turkish prototype, user flows, architecture drafts and actual local verification.
 - [Figma/Lovable handoff](sprint-2-figma-handoff.md) and [requirements audit](sprint-2-ozgur-audit.md): prepared sources versus outstanding external artifacts.
@@ -20,9 +22,9 @@ the [completed checklist](sprint-1-checklist.md) points to actual final evidence
 - [Contract reconciliation](contract-reconciliation.md) and [draft API examples](api-examples.md).
 - [Branch process](branch-process.md) and [publication guidance](release/README.md).
 
-Only health/database readiness and a typed frontend shell are implemented.
-Business-story approvals, component-test tooling and proposal validation remain
-later work; a completed specification example is not an implemented feature.
+The running API implements health and database readiness. The integrated
+frontend demonstrates the proposed business journeys with a browser-local mock.
+Business implementation follows reviewed requirements and contract decisions.
 
 ## Historical evidence
 

@@ -5,7 +5,13 @@
 Türkçe akışları ve gerçek erişim kontrolünü zorunlu tutar. Yerel prototip isteğe
 bağlı devam geliştirme çıktısıdır; tek başına bu Figma gereksinimini tamamlamaz.
 
-## Doğrulanan erişim durumu
+20 Kasım güncellemesi · Lovable kaynak kodu `frontend/` içindeki Türkçe demoya
+aktarıldı. Güncel ekranları bu önizlemeden veya Lovable projesinden aktarın.
+Aşağıdaki 19 Kasım ekranları ilk prototipin tarihli kanıtıdır. Düzenlenebilir
+Figma dosyası ve iki akış bağlantısı ekip teslimine eklenecek.
+[Güncel entegrasyon ve ekranlar](sprint-2-lovable-integration.md)
+
+## 19 Kasım erişim kaydı
 
 Entegrasyon aramasında Figma ve Lovable bulundu ancak bu oturumda bağlı değiller.
 Bağlantı seçenekleri kullanıcıya sunuldu. Bu nedenle hiçbir Lovable projesi,

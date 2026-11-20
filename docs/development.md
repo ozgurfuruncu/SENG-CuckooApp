@@ -1,6 +1,8 @@
 # Development and verification
 
-The repository root is the project root. There is no nested checkout or alternate app.
+The repository root is the project root. `frontend/` is the active web demo.
+The [19 November design snapshot](../prototypes/sprint-2/README.md) runs separately
+for reference.
 Use Docker Desktop's Linux engine, or Python 3.12 and Node 24 for native development.
 
 ## Docker
@@ -13,6 +15,7 @@ Open http://localhost:5173, http://localhost:8000/api/v1/health or
 http://localhost:8000/api/v1/docs. The public health operation returns 200 with
 `{"status":"ok","database":"up"}` after SELECT 1, or a fixed 503 body with
 status unavailable/database down. Connection errors and credentials are not exposed.
+The web demo uses fictional state in memory. See the [frontend integration record](sprint-2-lovable-integration.md).
 
 Stop with `docker compose down`; do not add `-v` when preserving data. The Compose
 project/volume names remain compatible with the previously tested foundation.
@@ -29,6 +32,7 @@ cd backend
 python -m pytest --cov=app --cov-report=term-missing --cov-fail-under=50
 cd ../frontend
 npm ci
+npm test
 npm run build
 cd ../tools/contract
 npm ci
