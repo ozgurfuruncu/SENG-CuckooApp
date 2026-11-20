@@ -9,7 +9,8 @@ bağlı devam geliştirme çıktısıdır; tek başına bu Figma gereksinimini t
 aktarıldı. Güncel ekranları bu önizlemeden veya Lovable projesinden aktarın.
 Aşağıdaki 19 Kasım ekranları ilk prototipin tarihli kanıtıdır. Düzenlenebilir
 Figma dosyası ve iki akış bağlantısı ekip teslimine eklenecek.
-[Güncel entegrasyon ve ekranlar](sprint-2-lovable-integration.md)
+[Güncel entegrasyon ve ekranlar](sprint-2-lovable-integration.md) ·
+[Güncel rota ve durum listesi](sprint-2-frontend-paths.md)
 
 ## 19 Kasım erişim kaydı
 
@@ -45,6 +46,9 @@ dosyası değildir. PNG referansıdır, düzenlenebilirlik kanıtı değildir. S
 diyagramları vektördür; Figma'da düğümleri ortak bileşenlere dönüştürmek gerekir.
 
 ## Temsili ekranla gerçek import denemesi
+
+Güncel Lovable arayüzü için yukarıdaki rota ve durum listesini kullan.
+19 Kasım prototipi için önceki deneme adımları aşağıdadır.
 
 Önce `E10-Kanıtları incele` ekranını dene. Yerel demoda Deniz ile giriş yapıp
 `#/gorev/TASK-102/kanitlar` aç. Masaüstü ve mobil boyutta kontrol et. Bağlı bir

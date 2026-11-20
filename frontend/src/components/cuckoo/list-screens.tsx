@@ -117,7 +117,7 @@ export function TakerDashboard() {
         </Button>
       </PageHeader>
       <div
-        role="tablist"
+        role="group"
         aria-label="Görev filtreleri"
         className="mb-5 flex flex-wrap gap-2"
       >
@@ -131,8 +131,7 @@ export function TakerDashboard() {
         ).map(([value, label]) => (
           <Button
             key={value}
-            role="tab"
-            aria-selected={tab === value}
+            aria-pressed={tab === value}
             variant={tab === value ? "primary" : "soft"}
             size="sm"
             onClick={() => setTab(value)}
@@ -149,9 +148,13 @@ export function TakerDashboard() {
             role="TASK_TAKER"
             extra={
               <span className="text-xs">
-                {task.assignedTaskTakerId === actor?.id
-                  ? "Size atandı"
-                  : "Başvuru gönderildi"}
+                {task.status === "CANCELLED"
+                  ? "Görev iptal edildi"
+                  : task.assignedTaskTakerId === actor?.id
+                    ? "Size atandı"
+                    : task.assignedTaskTakerId
+                      ? "Başka bir kişiye atandı"
+                      : "Başvuru gönderildi"}
               </span>
             }
           />

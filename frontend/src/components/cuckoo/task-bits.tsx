@@ -124,9 +124,9 @@ export function TaskSummary({ task }: { task: Task }) {
         </div>
       </dl>
       <p className="rounded-xl bg-muted p-3 text-xs text-muted-foreground">
-        Fotoğraf çekmeden önce araç sahibinden ve çekim yapılacak yerin
-        yetkilisinden izin alın. Görev, aracın dış görünümünü fotoğraflamakla
-        sınırlıdır.
+        İşveren, gerekli izinlerin alınması gerektiğini beyan etti. Fotoğraf
+        çekmeden önce araç sahibinden ve çekim yapılacak yerin yetkilisinden
+        izin alın. Görev, aracın dış görünümünü fotoğraflamakla sınırlıdır.
       </p>
     </Card>
   );

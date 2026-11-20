@@ -269,6 +269,22 @@ function TaskContent({ taskId, role }: { taskId: string; role: Role }) {
               </Button>
             </form>
           )}
+          {!assigned && task.status !== "OPEN" && (
+            <Notice
+              title={
+                applied &&
+                task.assignedTaskTakerId &&
+                task.status !== "CANCELLED"
+                  ? "Görev başka bir kişiye atandı"
+                  : "Bu görev başvuruya kapalı"
+              }
+              action={
+                <Button asChild variant="outline">
+                  <Link to="/taker/find">Açık görevleri gör</Link>
+                </Button>
+              }
+            />
+          )}
           {assigned &&
             task.status === "ASSIGNED" &&
             task.paymentSimulationStatus === "NOT_HELD" && (

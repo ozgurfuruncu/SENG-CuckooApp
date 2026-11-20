@@ -132,7 +132,12 @@ function ReviewContent({ taskId }: { taskId: string }) {
               {task.lastReviewNote ?? "İnceleme notu eklenmedi."}
             </Notice>
           )}
-          {owner && (
+          {task.status === "COMPLETED" && (
+            <Notice tone="success" title="İnceleme tamamlandı">
+              Onaylanan kanıtları ve görev geçmişini görüntüleyebilirsiniz.
+            </Notice>
+          )}
+          {owner && task.status === "EVIDENCE_SUBMITTED" && (
             <>
               <Field id="review-note" label="İnceleme notu" optional>
                 <textarea
@@ -198,6 +203,14 @@ function SubmitContent({ taskId }: { taskId: string }) {
   if (!result.ok) return <TaskNotFound />;
   const task = result.data;
   if (actor?.id !== task.assignedTaskTakerId) return <UnavailablePrivate />;
+  if (task.status !== "ASSIGNED" && task.status !== "REVISION_REQUESTED") {
+    return (
+      <Notice title="Bu aşamada kanıt gönderilemez">
+        Son durumu ve varsa önceki gönderimi görmek için görev ayrıntılarına
+        dönün.
+      </Notice>
+    );
+  }
   const fields = feedback.error?.fields;
   return (
     <form

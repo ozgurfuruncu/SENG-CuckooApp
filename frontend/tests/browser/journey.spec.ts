@@ -58,6 +58,9 @@ test("both demo roles complete a private evidence revision without business netw
   await page.getByRole("button", { name: "Göreve başvur" }).click();
   await page.getByRole("button", { name: "Yeniden başvur" }).click();
   await expect(page.getByRole("alert")).toBeVisible();
+  await switchAccount(page, "u-mert");
+  await page.getByRole("button", { name: "Göreve başvur" }).click();
+  await expect(page.getByText("Başvuru gönderildi.")).toBeVisible();
   await switchAccount(page, "u-deniz");
   await page.getByRole("button", { name: "Sarah Ahmed ata" }).click();
   await switchAccount(page, "u-sarah");
@@ -87,12 +90,20 @@ test("both demo roles complete a private evidence revision without business netw
   });
 
   await switchAccount(page, "u-mert");
+  await expect(page.getByText("Görev başka bir kişiye atandı")).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Açık görevleri gör" }),
+  ).toBeVisible();
   await expect(page.getByText(evidence)).toHaveCount(0);
   await expect(page.getByLabel("Görev geçmişi")).toHaveCount(0);
   await switchAccount(page, "u-deniz");
   await openReview(page);
   await page.getByLabel("İnceleme notu").fill(revision);
   await page.getByRole("button", { name: "Düzeltme iste" }).click();
+  await expect(page.getByText("Düzeltilmiş kanıt bekleniyor")).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Onayla ve tamamla" }),
+  ).toHaveCount(0);
   await switchAccount(page, "u-sarah");
   await expect(page.getByText(revision, { exact: true })).toBeVisible();
   await page.getByRole("link", { name: "Kanıtı düzelt" }).click();
@@ -111,5 +122,12 @@ test("both demo roles complete a private evidence revision without business netw
   await expect(
     page.getByText(/simüle ödeme serbest bırakıldı/i).first(),
   ).toBeVisible();
+  await page.getByRole("link", { name: "Kanıt incelemesini gör" }).click();
+  await expect(page.getByText("İnceleme tamamlandı")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Düzeltme iste" })).toHaveCount(
+    0,
+  );
+  await switchAccount(page, "u-sarah");
+  await expect(page.getByRole("link", { name: "Kanıt gönder" })).toHaveCount(0);
   expect(unexpectedRequests).toEqual([]);
 });

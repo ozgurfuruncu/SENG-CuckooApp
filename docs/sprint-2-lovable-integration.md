@@ -52,7 +52,7 @@ set `CUCKOO_CHROME_PATH` to its executable before running the browser tests.
 | Check | Result |
 | --- | --- |
 | `npm ci`, `npm test`, `npm run build` in `frontend/` with Node 24.18.0 | Clean lockfile install, 11 mock tests passed, TypeScript and Vite build passed. |
-| `npm run test:browser` against the built preview with local Chrome | Both 1280×900 desktop and 390×844 mobile passed. The walkthrough posts, applies, assigns, blocks submission before the hold, restricts unrelated evidence access, requests a revision, resubmits and completes with simulated release. The test observed zero business API or external requests during the journey. |
+| `npm run test:browser` against the built preview with local Chrome | Six paths passed at both 1280×900 desktop and 390×844 mobile for 12 checks total. They cover the shared task journey, account access, role gates, profile recovery and discovery, cancellation, and evidence validation. The main journey observed zero business API or external requests. [Path checklist](sprint-2-frontend-paths.md) |
 | `npm run lint` and `npm test` in `tools/contract` | Draft lint passed and all 7 contract tests passed. |
 | `python -m pytest -q --basetemp ../.tools/lovable-backend-pytest` in `backend/` | 13 passed, 1 PostgreSQL integration test skipped without the test database URL. |
 | `docker compose config --quiet` and `python scripts/compose_smoke.py` | Compose configuration parsed. The smoke run was blocked by the unavailable local Docker engine. Hosted CI can exercise the runtime deployment after publication. |
