@@ -99,11 +99,11 @@ bekleyen ürün kararlarını onaylanmış yapmaz. Bu katkı o dosyayı değişt
 
 ## Mimari katkılar
 
-Yeni, ayrı FI katkı dosyaları: [C4 Container](diagrams/sprint-2-ozgur/c4-container.md),
-[önerilen API Component](diagrams/sprint-2-ozgur/api-components.md),
-[UML Sequence](diagrams/sprint-2-ozgur/assignment-sequence.md),
-[UML State Machine](diagrams/sprint-2-ozgur/lifecycle.md),
-[UML Domain Class](diagrams/sprint-2-ozgur/domain.md).
+Yeni, ayrı FI katkı dosyaları: [C4 Container](diagrams/sprint-2/c4-container.md),
+[önerilen API Component](diagrams/sprint-2/api-components.md),
+[UML Sequence](diagrams/sprint-2/assignment-sequence.md),
+[UML State Machine](diagrams/sprint-2/lifecycle.md),
+[UML Domain Class](diagrams/sprint-2/domain.md).
 Emmanuel'in mimari hesap verebilirliği ve Emir'in dağıtım sorumluluğu korunur.
 Mevcut sistem bağlamı, ADR'ler, API, RACI ve takım arkadaşlarının dosyaları
 değiştirilmedi. Bu taslakların kabulü ve gelecek üretim uygulamasına aktarılması

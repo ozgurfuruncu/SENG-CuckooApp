@@ -75,5 +75,5 @@ try the employer and task-taker journeys in one session. The [Sprint 2 submissio
 candidate](docs/submissions/sprint-2.md) links the SRS, refined backlog, quality
 specification, flows, architecture, and review status. See the [frontend
 integration record](docs/sprint-2-lovable-integration.md) for native setup and
-checks. The [19 November evidence index](docs/submissions/sprint-2-ozgur.md)
+checks. The [19 November evidence index](docs/archive/sprint-2/design-snapshot.md)
 links the earlier prototype snapshot.

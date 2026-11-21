@@ -1,9 +1,9 @@
 # Sprint 2 · Özgür tasarım izlenebilirliği
 
-Hikâye kimlikleri ve [GitHub eşlemesi](issue-index.md) değiştirilmedi.
+Hikâye kimlikleri ve [GitHub eşlemesi](../../issue-index.md) değiştirilmedi.
 Bu tablo **tasarım prototipi** kapsamıdır, üretim hikâye kabulü değildir.
-Elif'in [SRS taslağı](sprint-2-srs.md)
-ve [backlog taslağı](sprint-2-backlog.md)
+Elif'in [SRS taslağı](../../sprint-2-srs.md)
+ve [backlog taslağı](../../sprint-2-backlog.md)
 incelendi; PR #38 ile develop'a alınan içerik değiştirilmeden korunur.
 
 | Hikâye / mevcut issue | Ekran / yerel davranış | Taslak operasyonlar | Gerçek kontrol kaynağı |
@@ -26,9 +26,9 @@ incelendi; PR #38 ile develop'a alınan içerik değiştirilmeden korunur.
 Kod: [model testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/model.test.ts),
 [tarayıcı testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/browser/journeys.spec.ts),
 [doküman/sözleşme testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/docs.test.ts).
-[Gerçek çalıştırmalar ve sınırları](sprint-2-ozgur-verification.md).
+[Gerçek çalıştırmalar ve sınırları](verification.md).
 
 Mimari eşleme: US-06–10 → UML sequence; US-03/06–11 → iki UML durum makinesi;
 US-01–13 → alan sınıfları ve beş modül; US-13 → her akışın katılımcı denetimi.
-[Mimari anlatı ve diyagram bağlantıları](sprint-2-frontend-api-boundary.md).
+[Mimari anlatı ve diyagram bağlantıları](../../sprint-2-frontend-api-boundary.md).
 Figma'daki gerçek frame/node URL'leri import sonrası bu tabloya eklenmelidir.

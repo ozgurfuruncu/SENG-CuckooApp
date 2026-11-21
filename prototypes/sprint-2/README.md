@@ -1,4 +1,4 @@
-# Sprint 2 Figma handoff evidence
+# Sprint 2 prototypes
 
 21 November 2026 · SENG 321 · Team 5
 
@@ -17,8 +17,8 @@ from sign-in with its images, styles and navigation embedded.
 
 | Journey | Desktop | Mobile | Flow diagram |
 | --- | --- | --- | --- |
-| İşveren | [HTML preview](preview/ED.html) | [HTML preview](preview/EM.html) | [Employer SVG](Isveren-Flow.svg) |
-| Görev Alan | [HTML preview](preview/TD.html) | [HTML preview](preview/TM.html) | [Task-taker SVG](Gorev-Alan-Flow.svg) |
+| İşveren | [HTML preview](preview/employer-desktop.html) | [HTML preview](preview/employer-mobile.html) | [Employer SVG](../../docs/diagrams/sprint-2/employer-flow.svg) |
+| Görev Alan | [HTML preview](preview/task-taker-desktop.html) | [HTML preview](preview/task-taker-mobile.html) | [Task-taker SVG](../../docs/diagrams/sprint-2/task-taker-flow.svg) |
 
 - **Employer prototype.** Playback reached the dashboard after sign-in.
   [İşveren · Masaüstü](https://www.figma.com/proto/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=20-4&starting-point-node-id=24%3A332&scaling=min-zoom&content-scaling=fixed).
@@ -27,9 +27,10 @@ from sign-in with its images, styles and navigation embedded.
   · [Görev Alan · Mobil](https://www.figma.com/proto/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=20-5&starting-point-node-id=33%3A2283&scaling=min-zoom&content-scaling=fixed).
 - **Native Figma exports.** The employer and shared account set contains 30
   frames per width. The task-taker set contains 34 per width, including its
-  starting and recovery states. [Employer and shared exports](../../../prototypes/sprint-2/Cuckoo%20figma%20exports)
-  · [Task-taker exports](../../../prototypes/sprint-2/Cuckoo%20figma%20exports/Task%20Taker).
-- **Design mapping.** [Frame and draft API map](../../sprint-2-figma-handoff.md#screen-and-draft-endpoint-map).
+  starting and recovery states. Export filenames match the Turkish Figma frame
+  titles. [Employer and shared exports](figma/employer)
+  · [Task-taker exports](figma/task-taker).
+- **Design mapping.** [Frame and draft API map](../../docs/sprint-2-figma-handoff.md#screen-and-draft-endpoint-map).
 
 The two role journeys use the same fictional vehicle-photo task in Ankara.
 In the previews, the refresh actions advance simulated handoffs between

@@ -6,7 +6,7 @@ The web demo in `frontend/` uses the Cuckoo team's [Lovable source](https://gith
 at `51ba75fd7a6d3b82ba2f5aab645a1ee02cf8bc61`. The port carries over the
 Cuckoo screen components, design tokens, mascot and synthetic vehicle photo
 fixtures. The source plan identifies the mascot and photos as generated demo
-assets. [Prior prototype and dated verification](submissions/sprint-2-ozgur.md)
+assets. [Prior prototype and dated verification](archive/sprint-2/design-snapshot.md)
 
 On 21 November the evidence updates from Lovable `c2b87cd` were brought into
 the project frontend. The standalone Lovable repository is available for
@@ -89,4 +89,4 @@ URLs and reviewer access in the
 [Desktop evidence review](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/57a9b73a7e0deb1106512e7d68142fc0f3b72118/docs/sprint-2-evidence/lovable/evidence-review-desktop.png) ·
 [Mobile evidence review](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/57a9b73a7e0deb1106512e7d68142fc0f3b72118/docs/sprint-2-evidence/lovable/evidence-review-mobile.png) ·
 [Figma handoff guide](sprint-2-figma-handoff.md) ·
-[21 November Figma handoff evidence](sprint-2-evidence/figma/README.md)
+[21 November Figma handoff evidence](../prototypes/sprint-2/README.md)

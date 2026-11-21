@@ -1,7 +1,7 @@
 # Sprint 2 · Özgür doğrulama kaydı
 
 19 Kasım 2026 · Windows / PowerShell · Node 24.19.0 · Python 3.14.7 · Edge.
-Makine sonuçları ve tam çıktılar [verification.json](sprint-2-evidence/ozgur/verification.json)
+Makine sonuçları ve tam çıktılar [verification.json](../../logs/sprint-2/verification.json)
 ve onun bağladığı loglardadır. Üretim kaynakları değiştirilmedi.
 
 ## Tekrarlanabilir komutlar ve sonuçlar
@@ -55,7 +55,7 @@ Docker gibi kaydedilmiş çevre engeli BLOCKED olarak ayrılır.
   istekler sıfır. Kaynaklarda iş ağı/kalıcı depolama/dosya input'u yok;
   SVG XML namespace'i bir ağ çağrısı değildir.
 
-[Tarayıcı özeti](sprint-2-evidence/ozgur/browser-summary.json),
+[Tarayıcı özeti](../../logs/sprint-2/browser-summary.json),
 [model testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/model.test.ts),
 [UI testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/browser/journeys.spec.ts),
 [doküman testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/docs.test.ts).
@@ -85,7 +85,7 @@ Stack A backend, Stack A frontend, OpenAPI 3.1 validation, Stack A Compose smoke
 PostgreSQL ve Compose doğrulaması bu CI ortamında başarılıdır; yerel çevre
 engelleri aşağıdaki gibi korunur. Bu mevcut workflow bağımsız prototip paketinin
 testlerini çalıştırmaz; o paketin 41 + 10 test sonucu yerel loglardadır.
-[Commit ve job URL'leri](sprint-2-evidence/ozgur/git-delivery.json).
+[Commit ve job URL'leri](../../logs/sprint-2/git-delivery.json).
 
 PostgreSQL testi izole `BOOTSTRAP_TEST_DATABASE_URL` sağlanmadığı için atlandı;
 SQLite tabanlı 13 test gerçek PostgreSQL veya yarışan atama kanıtı değildir.

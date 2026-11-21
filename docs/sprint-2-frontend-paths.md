@@ -39,7 +39,7 @@ For the evidence review import trial, complete the application, assignment,
 hold and evidence steps on the same task. Switch back to the owning employer
 and open **Kanıtları incele**. Use the editable Figma review frames and the
 native desktop and mobile exports for the current visual reference.
-[Figma evidence](sprint-2-evidence/figma/README.md)
+[Figma evidence](../prototypes/sprint-2/README.md)
 
 The browser tests cover the integrated candidate’s interactive success and
 recovery paths at desktop and mobile widths. Model tests cover additional
