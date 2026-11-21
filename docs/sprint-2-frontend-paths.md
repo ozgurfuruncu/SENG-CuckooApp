@@ -37,9 +37,9 @@ flows. Keep the simulated-payment notices on the relevant screens.
 
 For the evidence review import trial, complete the application, assignment,
 hold and evidence steps on the same task. Switch back to the owning employer
-and open **Kanıtları incele**. Use the [desktop capture](sprint-2-evidence/lovable-final/desktop-review-start.png)
-and [mobile capture](sprint-2-evidence/lovable-final/mobile-review-start.png) as
-references while making the text, controls and photos editable in Figma.
+and open **Kanıtları incele**. Use the editable Figma review frames and the
+native desktop and mobile exports for the current visual reference.
+[Figma evidence](sprint-2-evidence/figma/README.md)
 
 The browser tests cover the integrated candidate’s interactive success and
 recovery paths at desktop and mobile widths. Model tests cover additional
@@ -62,4 +62,4 @@ Use a consistent set of fictional vehicle photos for the same task in the
 final frames. Use the entry screens and earlier task steps from the corresponding
 role flows. Record the editable file and working flow URLs when they are available.
 The bundled captures come from the runnable demo and include its reviewer header.
-[Bundled captures](sprint-2-evidence/lovable-final)
+[Bundled captures](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/57a9b73a7e0deb1106512e7d68142fc0f3b72118/docs/sprint-2-evidence/lovable-final)

@@ -23,9 +23,9 @@ incelendi; PR #38 ile develop'a alınan içerik değiştirilmeden korunur.
 | US-13 / [#13](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/13) | O05 ve tüm kanıt/geçmiş görünümleri | listTaskEvidence ve nesne kontrolleri | İlgisiz/aday/başka işveren reddi; DOM'da fotoğraf/not yokluğu |
 | US-14/15 | Ertelendi; ekran ve operasyon eklenmedi | Yok | Katalog testi bu kimliklerin bulunmadığını kontrol eder |
 
-Kod: [model testleri](../prototypes/sprint-2/tests/model.test.ts),
-[tarayıcı testleri](../prototypes/sprint-2/tests/browser/journeys.spec.ts),
-[doküman/sözleşme testleri](../prototypes/sprint-2/tests/docs.test.ts).
+Kod: [model testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/model.test.ts),
+[tarayıcı testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/browser/journeys.spec.ts),
+[doküman/sözleşme testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/docs.test.ts).
 [Gerçek çalıştırmalar ve sınırları](sprint-2-ozgur-verification.md).
 
 Mimari eşleme: US-06–10 → UML sequence; US-03/06–11 → iki UML durum makinesi;

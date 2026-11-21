@@ -29,7 +29,7 @@ annotations in English. Keep the app copy and role names in Turkish.
   for revision, private evidence, media limits and retention copy.
 - Use [OpenAPI](../api/openapi.yaml) for the methods, paths and operation IDs.
   The business endpoints are draft contract references for annotations.
-  [Desktop and mobile evidence captures](sprint-2-evidence/lovable-final)
+  [Current Figma exports and playback evidence](sprint-2-evidence/figma/README.md)
 
 ### Figma pages and frames
 
@@ -107,11 +107,11 @@ branch to their expected success or recovery state.
 
 ## Reference evidence
 
-The [19 November prototype](../prototypes/sprint-2/README.md) preserves the
-original [screen catalog](../prototypes/sprint-2/handoff/screens.json),
-[connection matrix](../prototypes/sprint-2/handoff/connections.csv),
-[desktop and mobile captures](sprint-2-evidence/ozgur/index.html) and
-[capture manifest](sprint-2-evidence/ozgur/capture-manifest.json).
+The [19 November prototype](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/README.md) preserves the
+original [screen catalog](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/handoff/screens.json),
+[connection matrix](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/handoff/connections.csv),
+[desktop and mobile captures](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/sprint-2-evidence/ozgur/index.html) and
+[capture manifest](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/sprint-2-evidence/ozgur/capture-manifest.json).
 Use the current route map above for the cloned design. Historical captures
 are reference material for the [employer](diagrams/sprint-2-ozgur/employer-flow.md)
 and [task taker](diagrams/sprint-2-ozgur/task-taker-flow.md) flows.

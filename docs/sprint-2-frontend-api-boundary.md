@@ -9,6 +9,9 @@ son feature tabanı: `d0abe1745f685333ff3073ecd112ea829cdcccfe` (PR #38 sonrası
 
 ## Mevcut durum ve öneri
 
+Bu bölüm 19 Kasım tasarım anlık görüntüsünü açıklar. Güncel web demosu ve
+API sınırı için [Lovable entegrasyon kaydına](sprint-2-lovable-integration.md) bakın.
+
 `frontend/src/main.tsx` statik React/TypeScript kabuğudur; iş API'sine bağlanmaz.
 `backend/app/main.py`, `/api/v1` altında yalnızca `GET /health` ve API belge
 rotalarını sunar. Sağlık denetimi SQLAlchemy üzerinden `SELECT 1` çalıştırır;

@@ -21,9 +21,9 @@ Jumanah'nın kabul/kanıt incelemesini tamamlanmış göstermez.
 
 | Çıktı | Gerçek kaynak / durum |
 | --- | --- |
-| Etkileşimli Türkçe prototip | [Kurulum ve tam iki rol gösterimi](../../prototypes/sprint-2/README.md); ayrı `prototypes/sprint-2` paketi |
-| Ekranlar ve navigasyon | [30 durum](../../prototypes/sprint-2/handoff/screens.json), [bağlantılar](../../prototypes/sprint-2/handoff/connections.csv) |
-| Görsel kanıt | [60 ekran kataloğu](../sprint-2-evidence/ozgur/index.html), [manifest](../sprint-2-evidence/ozgur/capture-manifest.json) |
+| Etkileşimli Türkçe prototip | [Kurulum ve tam iki rol gösterimi](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/README.md); ayrı `prototypes/sprint-2` paketi |
+| Ekranlar ve navigasyon | [30 durum](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/handoff/screens.json), [bağlantılar](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/handoff/connections.csv) |
+| Görsel kanıt | [60 ekran kataloğu](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/sprint-2-evidence/ozgur/index.html), [manifest](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/sprint-2-evidence/ozgur/capture-manifest.json) |
 | Türkçe kullanıcı akışları | [İşveren](../diagrams/sprint-2-ozgur/employer-flow.md), [görev alan](../diagrams/sprint-2-ozgur/task-taker-flow.md) |
 | Web/API anlatısı ve açık kararlar | [FI sınır belgesi](../sprint-2-frontend-api-boundary.md) |
 | C4 Container / Component | [Container](../diagrams/sprint-2-ozgur/c4-container.md), [önerilen API Component](../diagrams/sprint-2-ozgur/api-components.md) |

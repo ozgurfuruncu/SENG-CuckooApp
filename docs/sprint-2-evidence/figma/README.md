@@ -25,10 +25,6 @@ from sign-in with its images, styles and navigation embedded.
   frames per width. The task-taker set contains 34 per width, including its
   starting and recovery states. [Employer and shared exports](../../../prototypes/sprint-2/Cuckoo%20figma%20exports)
   · [Task-taker exports](../../../prototypes/sprint-2/Cuckoo%20figma%20exports/Task%20Taker).
-- **Browser preview samples.** [Desktop evidence review](Preview-PNG/Desktop/ED_review.png),
-  [mobile completion](Preview-PNG/Mobile/EM_complete.png),
-  [desktop evidence revision](Preview-PNG/Desktop/TD_revise.png) and
-  [mobile evidence revision](Preview-PNG/Mobile/TM_revise.png).
 - **Design mapping.** [Frame and draft API map](../../sprint-2-figma-handoff.md#screen-and-draft-endpoint-map).
 
 The two role journeys use the same fictional vehicle-photo task in Ankara.

@@ -101,7 +101,8 @@ specification. A runtime result requires the corresponding implemented feature.
 
 ## Prototype scope and handoff
 
-![Cuckoo storyboard showing welcome, registration, task creation, task details, evidence review and completion screens](diagrams/sprint-2-cuckoo-mockup.jpg)
+[Original Cuckoo storyboard](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/diagrams/sprint-2-cuckoo-mockup.jpg) ·
+[Current Figma evidence](sprint-2-evidence/figma/README.md)
 
 Özgür builds and iterates on the clickable UI in Lovable, then brings the
 approved screens into Figma. Turkish is the first product language. Use it

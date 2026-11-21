@@ -27,7 +27,7 @@ reviews are recorded against their own artifact or GitHub revision.
 | 1. SRS and refined backlog | [Elif’s SRS](../sprint-2-srs.md), [refined backlog](../sprint-2-backlog.md), [PO acceptance criteria](../sprint-2-po-acceptance-criteria.md) and [story/issue index](../issue-index.md). The drafts merged in [PR #38](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/38). The [evidence and revision design baseline](../sprint-2-evidence-decisions.md) gives the final demo rules for the Figma drafts and identifies the later live contract review. |
 | 2. Non-functional requirements and quality measures | The [quality specification and verification matrix](../sprint-2-quality.md) gives measurable targets and separates observed results from proposed verification. Jumanah’s target and evidence review is pending. |
 | 3. Turkish UI, interactive flows and Figma | [Figma Design](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=0-1) contains the shared, employer and task-taker frames. The [native export folder](../../prototypes/sprint-2/Cuckoo%20figma%20exports) contains 60 employer and shared PNGs and 68 task-taker PNGs across both widths. The [Figma handoff evidence](../sprint-2-evidence/figma/README.md) contains the prototype starts, both flow diagrams, playback findings and tested offline previews. The [Lovable integration record](../sprint-2-lovable-integration.md) documents the runnable web demo. |
-| 4. Architecture, C4 and UML | [System context](../diagrams/system-context.svg), [container view](../diagrams/sprint-2-ozgur/c4-container.md), [API component view](../diagrams/sprint-2-ozgur/api-components.md), [assignment sequence](../diagrams/sprint-2-ozgur/assignment-sequence.md), [lifecycle state models](../diagrams/sprint-2-ozgur/lifecycle.md), [domain model](../diagrams/sprint-2-ozgur/domain.md), and [React/FastAPI boundary](../sprint-2-frontend-api-boundary.md). The 19 November diagrams model the proposed modular monolith and business workflows. Read their description of the source tree as a snapshot and use the integration record for the current frontend. |
+| 4. Architecture, C4 and UML | [System context](../diagrams/system-context.svg), [container view](../diagrams/sprint-2-ozgur/c4-container.md), [API component view](../diagrams/sprint-2-ozgur/api-components.md), [assignment sequence](../diagrams/sprint-2-ozgur/assignment-sequence.md), [lifecycle state models](../diagrams/sprint-2-ozgur/lifecycle.md), [domain model](../diagrams/sprint-2-ozgur/domain.md), and [React/FastAPI boundary](../sprint-2-frontend-api-boundary.md). The 19 November diagrams model the proposed modular monolith and business workflows. Use the integration record for the current frontend. [Rendered diagram set](../sprint-2-evidence/ozgur/diagrams) |
 
 ## Current demo and prior evidence
 
@@ -37,20 +37,46 @@ The [draft contract](../../api/openapi.yaml) and [architecture decision](../deci
 describe the planned application. Business behavior, private evidence storage
 and simulated payments shown in the web demo are prototype interactions.
 
-The [19 November Özgür package](sprint-2-ozgur.md) retains a separately runnable
-prototype, screenshots, editable source diagrams, and local browser/diagram
-logs for the earlier design. [PR #39](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/39)
+The [19 November Özgür package](sprint-2-ozgur.md) links the reviewed snapshot
+of the earlier standalone prototype and screenshots. This submission uses
+the native Figma exports and the integrated web demo for current UI evidence.
+[PR #39](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/39)
 records Emmanuel’s review. Its [CI run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44579688301)
 and [verification record](../sprint-2-ozgur-verification.md) identify the tested
 head and scopes. Those records date to the earlier implementation. New code
 checks, final-head CI and teammate review belong to the current candidate.
+
+## Employer Figma closeout
+
+Use the existing Turkish employer frames in the linked Figma file. The runnable
+web demo already exercises the steps below. Wire the existing desktop and
+mobile frames, then run both starts in Figma through the revision loop and
+completion. Check cancellation, the missing-reason state and completed review
+along the way. Read the paths relative to `/api/v1`.
+[Draft OpenAPI contract](../../api/openapi.yaml) · [Web walkthrough](../../frontend/tests/browser/journey.spec.ts)
+
+| Figma step | Draft contract operation |
+| --- | --- |
+| Sign in and open the dashboard | `POST /auth/login` · `createSession`, `GET /tasks` · `listTasks` |
+| Acknowledge permission and publish | `POST /tasks` · `createTask` |
+| Inspect the task and applicants, assign a task taker | `GET /tasks/{taskId}` · `getTask`, `GET /tasks/{taskId}/applications` · `listTaskApplications`, `POST /tasks/{taskId}/assignment` · `assignTask` |
+| Record a simulated hold | `POST /tasks/{taskId}/payment-simulation/hold` · `simulatePaymentHold` |
+| View evidence metadata, request revision, then approve after resubmission | `GET /tasks/{taskId}/evidence` · `listTaskEvidence` and `POST /tasks/{taskId}/review` · `reviewTaskEvidence`. The task taker resubmits with `submitTaskEvidence`. Approval records completion and simulated release together. |
+| View task history or cancel an eligible task | `GET /tasks/{taskId}/history` · `getTaskHistory`, `POST /tasks/{taskId}/cancel` · `cancelTask` |
+
+The Figma journey uses bundled fictional photos and preset interactions. Its
+required revision reason and retention copy follow the prototype evidence
+baseline. Draft contract changes for live media or validation follow their
+reviewed stories. Use Lovable for a specific, contract-aligned screen change
+if one is needed, then bring that screen into the integrated frontend and
+Figma. [Evidence baseline](../sprint-2-evidence-decisions.md)
 
 ## Submission status
 
 | Item | Status |
 | --- | --- |
 | Planning branch synchronization | [PR #37](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/37) merged the Sprint 2 plan into `develop`. |
-| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`69f1269` run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44896786552). Check required CI and record a teammate review on the final head. |
+| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`9ab6843` run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44900652470). Check required CI and record a teammate review on the final head. |
 | Editable Figma file and prototype starting points | The [task-taker desktop and mobile starts](../sprint-2-evidence/figma/README.md#reviewer-materials) played from sign-in through revision, resubmission and completion. The employer desktop flow played through sign-in to the dashboard. The remaining employer transitions, employer mobile start and signed-in reviewer access need verification. [Verification record](../sprint-2-evidence/figma/README.md#verification-record) |
 | Release and tag | The reviewed `sprint-1` tag covers the first sprint. The planned `sprint-2` tag and exact assessed commit are pending teammate review, required checks and protected integration. [Sprint publication process](../release/README.md) |
 | Team sign-off and submission logistics | Aslı and Jumanah assemble and verify the final packet. Deadline and format beyond the supplied Sprint 2 plan remain to be confirmed. |

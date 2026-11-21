@@ -10,8 +10,8 @@ assets. [Prior prototype and dated verification](submissions/sprint-2-ozgur.md)
 
 On 21 November the evidence updates from Lovable `c2b87cd` were brought into
 the project frontend. The standalone Lovable repository is available for
-future design iteration. The [current submission captures](sprint-2-evidence/lovable-final)
-are the 16 desktop and mobile screenshots supplied for the final Figma handoff.
+future design iteration. The [original browser captures](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/57a9b73a7e0deb1106512e7d68142fc0f3b72118/docs/sprint-2-evidence/lovable-final)
+record the 16 desktop and mobile screenshots supplied for the Figma handoff.
 [Lovable evidence update](https://github.com/anyx05/cuckoo-photo-tasks/commit/c2b87cd40065ac0443da574db02944b284110627)
 
 ## Structure and language
@@ -82,11 +82,11 @@ Use the current preview or the supplied Lovable project for editable import.
 The runnable frontend demonstrates the same journeys with an account picker
 and reset for reviewers. The Figma frames and fresh exports use the product
 layout with the entire demo header removed. The bundled desktop and mobile
-captures are references from the runnable demo. Özgür owns the editable Figma
+captures document the earlier runnable demo. Özgür owns the editable Figma
 file and the two Turkish prototype flows. The team can record the file, flow
 URLs and reviewer access in the
 [Sprint 2 submission bundle](submissions/sprint-2.md) once verified.
-[Desktop evidence review](sprint-2-evidence/lovable/evidence-review-desktop.png) ·
-[Mobile evidence review](sprint-2-evidence/lovable/evidence-review-mobile.png) ·
+[Desktop evidence review](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/57a9b73a7e0deb1106512e7d68142fc0f3b72118/docs/sprint-2-evidence/lovable/evidence-review-desktop.png) ·
+[Mobile evidence review](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/57a9b73a7e0deb1106512e7d68142fc0f3b72118/docs/sprint-2-evidence/lovable/evidence-review-mobile.png) ·
 [Figma handoff guide](sprint-2-figma-handoff.md) ·
 [21 November Figma handoff evidence](sprint-2-evidence/figma/README.md)
