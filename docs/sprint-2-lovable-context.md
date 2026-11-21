@@ -86,7 +86,8 @@ Preserve the existing layout, pages, Turkish language, and role-switchable mock
 workflow. In the demo bar, show **Sprint 2 prototipi · Örnek veriler** in place
 of the **Açık kararlar** panel. Apply the rules and copy on the screens listed
 below. Keep the work in the browser with bundled fixtures and in-memory state.
-Retain this demo header on the Lovable-derived Figma frames.
+Use the demo header in the runnable frontend. Remove it from the product-facing
+Figma frames and exports. [Figma handoff](sprint-2-figma-handoff.md)
 
 | Screen or action | Behavior and exact Turkish copy |
 | --- | --- |

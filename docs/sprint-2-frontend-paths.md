@@ -16,9 +16,11 @@ selects a different fictional account for the walkthrough. A future shared
 account with both actions is in the [product backlog](product-backlog.md#one-account-for-posting-and-taking-tasks).
 
 Keep **Sprint 2 prototipi · Örnek veriler** visible in the interactive demo.
-Keep the same demo header on the Lovable-derived Figma frames. The account
-picker and reset identify the interactive walkthrough controls and help
-reviewers follow both sides of the same task.
+The account picker and reset help reviewers follow both sides of the same
+task. Remove the entire demo header from the Figma frames and exports. Close
+the space it occupied and preserve the regular app navigation. Use the two
+Figma starting points and annotated handoffs to connect the expected product
+flows. Keep the simulated-payment notices on the relevant screens.
 
 ## Routes and states
 
@@ -59,4 +61,5 @@ two Figma journeys. The front and rear evidence photos depict different cars.
 Use a consistent set of fictional vehicle photos for the same task in the
 final frames. Use the entry screens and earlier task steps from the corresponding
 role flows. Record the editable file and working flow URLs when they are available.
+The bundled captures come from the runnable demo and include its reviewer header.
 [Bundled captures](sprint-2-evidence/lovable-final)

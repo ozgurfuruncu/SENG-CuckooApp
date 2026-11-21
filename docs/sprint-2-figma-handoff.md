@@ -12,9 +12,27 @@ Figma dosyası ve iki akış bağlantısı ekip teslimine eklenecek.
 [Güncel entegrasyon ve ekranlar](sprint-2-lovable-integration.md) ·
 [Güncel rota ve durum listesi](sprint-2-frontend-paths.md)
 
-Güncel Lovable kaynaklı Figma çerçevelerinde **Sprint 2 prototipi · Örnek
-veriler** demo üst çubuğunu koru. İnceleme ve kanıt akışının masaüstü ve mobil
-referansları teslim paketine eklendi. [16 ekran görüntüsü](sprint-2-evidence/lovable-final)
+Çalışan web demosu, hesap seçimi ve sıfırlama ile iki rolü aynı görevde
+denemeyi sağlar. Teslim edilecek Figma çerçeveleri beklenen ürün ekranlarını
+gösterir. **Sprint 2 prototipi · Örnek veriler** demo üst çubuğunu ve kapladığı
+boşluğu bu çerçevelerden kaldır. İnceleme ve kanıt akışının masaüstü ve mobil
+referansları demo üst çubuğuyla kaydedilmiştir. [16 ekran görüntüsü](sprint-2-evidence/lovable-final)
+
+## Klonlanan Figma dosyası için son düzenleme
+
+1. Masaüstü ve mobil çerçevelerden sarı demo üst çubuğunu, **DEMO** etiketini,
+   **Görüntüleyen hesap** seçicisini ve **Demoyu sıfırla** düğmesini kaldır.
+   İçeriği yukarı al. Uygulama gezinmesini, Türkçe metinleri ve simüle ödeme
+   açıklamalarını koru.
+2. **İşveren yolculuğu** ve **Görev Alan yolculuğu** için iki ayrı başlangıç
+   noktası bağla. Ekran ve geçişleri [güncel rota listesi](sprint-2-frontend-paths.md)
+   ile karşılaştır. Gerekçe hatası, düzeltme ve yeniden gönderim, fotoğraf sınırı,
+   yetkisiz kanıt erişimi ve tamamlanma durumlarını koru. Rol değişimi yerine
+   iki akış arasındaki devir noktalarını kullanıcı akışı diyagramında göster.
+3. Başlangıçlardan iki akışı da oynat. Düzenlenebilir Figma dosyası ve iki akış
+   bağlantısını kaydet, ekip erişimini doğrula ve güncel masaüstü ve mobil
+   ekranları PNG olarak dışa aktar. Bağlantıları [teslim paketine](submissions/sprint-2.md)
+   ekle.
 
 ## 19 Kasım erişim kaydı
 
@@ -88,7 +106,7 @@ Kataloğun `id` alanını koru; `<id> · <Türkçe ad> · <genişlik> · <US kim
 | Paylaşılan bileşen | Katman yapısı / varyantlar |
 | --- | --- |
 | Gezinme | Logo/kuş, rol, nav öğeleri, çıkış; masaüstü sidebar / mobil yatay gezinme |
-| Üst çubuk | Kırıntı, örnek kullanıcı seçici, avatar; demo denetimi ayrı adlandırılır |
+| Uygulama üst çubuğu | Kırıntı ve avatar. Örnek hesap kontrolleri çalışan web demosunda yer alır. |
 | Düğme | Ana, ikincil, tehlike, devre dışı; varsayılan/odak durumu |
 | Form alanı | Etiket, isteğe bağlı/zorunlu notu, kontrol, yardımcı metin; hata varyantı |
 | Görev kartı | Yerel çizim, kategori, durum etiketi, başlık, açıklama, şehir, örnek tutar, ayrıntı |

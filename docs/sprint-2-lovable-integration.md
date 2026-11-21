@@ -79,10 +79,12 @@ set `CUCKOO_CHROME_PATH` to its executable before running the browser tests.
 ## Figma handoff
 
 Use the current preview or the supplied Lovable project for editable import.
-Keep the demo header on the Lovable-derived frames. The latest desktop and
-mobile evidence screenshots give reviewers reference images. Özgür owns the
-editable Figma file and the two Turkish prototype
-flows. The team can record the file, flow URLs and reviewer access in the
+The runnable frontend demonstrates the same journeys with an account picker
+and reset for reviewers. The Figma frames and fresh exports use the product
+layout with the entire demo header removed. The bundled desktop and mobile
+captures are references from the runnable demo. Özgür owns the editable Figma
+file and the two Turkish prototype flows. The team can record the file, flow
+URLs and reviewer access in the
 [Sprint 2 submission bundle](submissions/sprint-2.md) once verified.
 [Desktop evidence review](sprint-2-evidence/lovable/evidence-review-desktop.png) ·
 [Mobile evidence review](sprint-2-evidence/lovable/evidence-review-mobile.png) ·

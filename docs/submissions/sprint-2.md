@@ -26,7 +26,7 @@ reviews are recorded against their own artifact or GitHub revision.
 | --- | --- |
 | 1. SRS and refined backlog | [Elif’s SRS](../sprint-2-srs.md), [refined backlog](../sprint-2-backlog.md), [PO acceptance criteria](../sprint-2-po-acceptance-criteria.md) and [story/issue index](../issue-index.md). The drafts merged in [PR #38](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/38). The [evidence and revision design baseline](../sprint-2-evidence-decisions.md) gives the final demo rules for the Figma drafts and identifies the later live contract review. |
 | 2. Non-functional requirements and quality measures | The [quality specification and verification matrix](../sprint-2-quality.md) gives measurable targets and separates observed results from proposed verification. Jumanah’s target and evidence review is pending. |
-| 3. Turkish UI, interactive flows and Figma | The [Lovable integration record](../sprint-2-lovable-integration.md), [current path checklist](../sprint-2-frontend-paths.md) and [16 updated captures](../sprint-2-evidence/lovable-final) document the Turkish demo. The [employer flow](../diagrams/sprint-2-ozgur/employer-flow.md) and [task taker flow](../diagrams/sprint-2-ozgur/task-taker-flow.md) describe the journeys. The editable Figma file, both prototype links and reviewer access are pending in the submission index. |
+| 3. Turkish UI, interactive flows and Figma | The [Lovable integration record](../sprint-2-lovable-integration.md), [current path checklist](../sprint-2-frontend-paths.md) and [16 demo captures](../sprint-2-evidence/lovable-final) document the runnable Turkish prototype. The [employer flow](../diagrams/sprint-2-ozgur/employer-flow.md) and [task taker flow](../diagrams/sprint-2-ozgur/task-taker-flow.md) describe the product journeys. The final editable Figma frames show those journeys without the demo header. The file, both prototype links and reviewer access are pending in the submission index. |
 | 4. Architecture, C4 and UML | [System context](../diagrams/system-context.svg), [container view](../diagrams/sprint-2-ozgur/c4-container.md), [API component view](../diagrams/sprint-2-ozgur/api-components.md), [assignment sequence](../diagrams/sprint-2-ozgur/assignment-sequence.md), [lifecycle state models](../diagrams/sprint-2-ozgur/lifecycle.md), [domain model](../diagrams/sprint-2-ozgur/domain.md), and [React/FastAPI boundary](../sprint-2-frontend-api-boundary.md). The 19 November diagrams model the proposed modular monolith and business workflows. Read their description of the source tree as a snapshot and use the integration record for the current frontend. |
 
 ## Current demo and prior evidence
@@ -57,12 +57,12 @@ checks, final-head CI and teammate review belong to the current candidate.
 
 ## Remaining work
 
-1. **Özgür and Elif · Finish and accept the Figma deliverable.** Use the final
-   Lovable evidence screens and retain the demo header in those Figma frames.
-   Connect the employer and task-taker starting points and the annotated
-   recovery paths. Run both flows, verify reviewer access and record the design
-   file and both flow URLs.
-   [Current paths](../sprint-2-frontend-paths.md)
+1. **Özgür and Elif · Finish and accept the Figma deliverable.** Edit the
+   cloned Figma frames to remove the demo header. Preserve the Turkish app
+   UI and connect the employer and task-taker starting points and recovery
+   paths. Run both flows, verify reviewer access, export the edited desktop
+   and mobile frames, and record the design file and both flow URLs.
+   [Figma editing instructions](../sprint-2-figma-handoff.md#klonlanan-figma-dosyası-için-son-düzenleme)
 2. **Elif, Jumanah and Emmanuel · Review the written deliverables.** Elif checks
    the SRS and refined backlog against the final journeys. Jumanah reviews the
    proposed quality targets and records actual prototype observations. Emmanuel
