@@ -1,7 +1,7 @@
 # Development and verification
 
 The repository root is the project root. `frontend/` is the active web demo.
-The [19 November evidence index](submissions/sprint-2-ozgur.md) links
+The [19 November evidence index](archive/sprint-2/design-snapshot.md) links
 the archived design prototype.
 Use Docker Desktop's Linux engine, or Python 3.12 and Node 24 for native development.
 

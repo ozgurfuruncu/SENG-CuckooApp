@@ -7,7 +7,7 @@ role flows, annotated user-flow diagrams and verified reviewer access. The
 [runnable frontend](sprint-2-lovable-integration.md) demonstrates the same
 journeys with fictional data and reviewer controls.
 
-The [21 November handoff evidence](sprint-2-evidence/figma/README.md) records
+The [21 November handoff evidence](../prototypes/sprint-2/README.md) records
 the current Figma design link, offline walkthroughs, diagrams and export
 status. The brief below describes the frame and interaction requirements.
 
@@ -29,7 +29,7 @@ annotations in English. Keep the app copy and role names in Turkish.
   for revision, private evidence, media limits and retention copy.
 - Use [OpenAPI](../api/openapi.yaml) for the methods, paths and operation IDs.
   The business endpoints are draft contract references for annotations.
-  [Current Figma exports and playback evidence](sprint-2-evidence/figma/README.md)
+  [Current Figma exports and playback evidence](../prototypes/sprint-2/README.md)
 
 ### Figma pages and frames
 
@@ -113,5 +113,5 @@ original [screen catalog](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76
 [desktop and mobile captures](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/sprint-2-evidence/ozgur/index.html) and
 [capture manifest](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/sprint-2-evidence/ozgur/capture-manifest.json).
 Use the current route map above for the cloned design. Historical captures
-are reference material for the [employer](diagrams/sprint-2-ozgur/employer-flow.md)
-and [task taker](diagrams/sprint-2-ozgur/task-taker-flow.md) flows.
+are reference material for the [employer](diagrams/sprint-2/employer-flow.md)
+and [task taker](diagrams/sprint-2/task-taker-flow.md) flows.

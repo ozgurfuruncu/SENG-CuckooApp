@@ -1,4 +1,6 @@
-# Historical Sprint 1 records
+# Historical sprint records
+
+## Sprint 1
 
 These files preserve the project's earlier proposal, stack evaluation, starter
 contract/backlog and agent inspection reports. They describe their original dates
@@ -24,3 +26,10 @@ The closed, unmerged PR #22 also has historical proposed ADR/process and contrac
 work. Its [source revision 524d6ed](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/524d6edf9b2563a2bc3d8dd024e509b3b90d9ac5)
 is retained in cleanup ancestry without adopting those superseded proposals as
 current source. The accepted ADR and canonical health-aware contract take precedence.
+
+## Sprint 2
+
+The 19 November [design snapshot](sprint-2/design-snapshot.md) links the
+earlier prototype, requirements audit, traceability, and verification notes.
+The [Sprint 2 submission index](../submissions/sprint-2.md) links the final
+deliverables and publication status.

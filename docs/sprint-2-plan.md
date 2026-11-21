@@ -102,7 +102,7 @@ specification. A runtime result requires the corresponding implemented feature.
 ## Prototype scope and handoff
 
 [Original Cuckoo storyboard](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/docs/diagrams/sprint-2-cuckoo-mockup.jpg) ·
-[Current Figma evidence](sprint-2-evidence/figma/README.md)
+[Current Figma evidence](../prototypes/sprint-2/README.md)
 
 Özgür builds and iterates on the clickable UI in Lovable, then brings the
 approved screens into Figma. Turkish is the first product language. Use it
@@ -146,7 +146,7 @@ the application frontend and live API follows the reviewed story workflow.
 
 ## Sequence and decisions to record
 
-![Draft Sprint 2 Gantt chart showing tasks, owners and durations across ten working days](diagrams/sprint-2-gantt.png)
+![Draft Sprint 2 Gantt chart showing tasks, owners and durations across ten working days](diagrams/sprint-2/gantt.png)
 
 1. **Agree scope and owners.** Aslı records capacity, owners, reviewers and
    the course deadline in the [sprint decision record](templates/02-sprint-decision-log.md).
