@@ -1,6 +1,6 @@
 # Cuckoo Sprint 2 submission bundle
 
-SENG 321 · Team 5 · 21 November 2026 · **Candidate for team review**
+SENG 321 · Team 5 · 21 November 2026 · **Submission candidate for teammate review**
 
 [Project repository](https://github.com/ozgurfuruncu/SENG-CuckooApp) ·
 [Sprint 2 plan](../sprint-2-plan.md) · [Team RACI](../team-raci.md) ·
@@ -48,11 +48,12 @@ checks, final-head CI and teammate review belong to the current candidate.
 
 ## Employer Figma closeout
 
-Use the existing Turkish employer frames in the linked Figma file. The runnable
-web demo already exercises the steps below. Wire the existing desktop and
-mobile frames, then run both starts in Figma through the revision loop and
-completion. Check cancellation, the missing-reason state and completed review
-along the way. Read the paths relative to `/api/v1`.
+The 21 November closeout decision uses the existing Turkish employer frames
+for Sprint 2, including **Görev oluştur**. The desktop Figma walkthrough
+was verified through the dashboard. The tested desktop and mobile offline
+previews and the web demo cover the full employer journey. The table traces
+the screens to the draft operations relative to `/api/v1`.
+[Figma evidence and offline previews](../sprint-2-evidence/figma/README.md)
 [Draft OpenAPI contract](../../api/openapi.yaml) · [Web walkthrough](../../frontend/tests/browser/journey.spec.ts)
 
 | Figma step | Draft contract operation |
@@ -66,27 +67,24 @@ along the way. Read the paths relative to `/api/v1`.
 
 The Figma journey uses bundled fictional photos and preset interactions. Its
 required revision reason and retention copy follow the prototype evidence
-baseline. Draft contract changes for live media or validation follow their
-reviewed stories. Use Lovable for a specific, contract-aligned screen change
-if one is needed, then bring that screen into the integrated frontend and
-Figma. [Evidence baseline](../sprint-2-evidence-decisions.md)
+baseline. Future live media and validation work follows its reviewed contract
+stories. [Evidence baseline](../sprint-2-evidence-decisions.md)
 
 ## Submission status
 
 | Item | Status |
 | --- | --- |
 | Planning branch synchronization | [PR #37](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/37) merged the Sprint 2 plan into `develop`. |
-| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`9ab6843` run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44900652470). Check required CI and record a teammate review on the final head. |
-| Editable Figma file and prototype starting points | The [task-taker desktop and mobile starts](../sprint-2-evidence/figma/README.md#reviewer-materials) played from sign-in through revision, resubmission and completion. The employer desktop flow played through sign-in to the dashboard. The remaining employer transitions, employer mobile start and signed-in reviewer access need verification. [Verification record](../sprint-2-evidence/figma/README.md#verification-record) |
+| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`aa4aa46` cleanup run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44903244437). Check required CI and record a teammate review on the final head. |
+| Editable Figma file and prototype evidence | The [task-taker desktop and mobile starts](../sprint-2-evidence/figma/README.md#reviewer-materials) played through revision, resubmission and completion. The live employer desktop walkthrough reached the dashboard. The accepted visual employer frames, flow diagram and tested offline previews document the rest of its journey. Confirm access with an intended Figma reviewer. [Verification record](../sprint-2-evidence/figma/README.md#verification-record) |
 | Release and tag | The reviewed `sprint-1` tag covers the first sprint. The planned `sprint-2` tag and exact assessed commit are pending teammate review, required checks and protected integration. [Sprint publication process](../release/README.md) |
 | Team sign-off and submission logistics | Aslı and Jumanah assemble and verify the final packet. Deadline and format beyond the supplied Sprint 2 plan remain to be confirmed. |
 
 ## Remaining work
 
-1. **Özgür and Elif · Complete and verify Figma playback.** Check the remaining
-   employer transitions after sign-in and provide the employer mobile start.
-   Play both role journeys as a reviewer, including the task-taker evidence
-   revision loop, and verify access for the team and assessor.
+1. **Özgür and Elif · Confirm Figma reviewer access.** Verify that an intended
+   reviewer can open the design and both role evidence sets. Use the employer
+   offline previews for end-to-end playback at both widths.
    [Figma handoff evidence](../sprint-2-evidence/figma/README.md)
 2. **Elif, Jumanah and Emmanuel · Review the written deliverables.** Elif checks
    the SRS and refined backlog against the final journeys. Jumanah reviews the

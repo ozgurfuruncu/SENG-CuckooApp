@@ -6,6 +6,10 @@ The handoff includes a live Figma design, native desktop and mobile exports,
 offline previews and flow diagrams for both roles.
 [Figma design](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=0-1)
 
+The 21 November closeout decision uses the existing employer visual frames,
+including **Görev oluştur**, for Sprint 2. Use the offline employer previews
+below to play the complete journey at either width.
+
 ## Reviewer materials
 
 Download the HTML files and open them locally in a browser. Each file renders
