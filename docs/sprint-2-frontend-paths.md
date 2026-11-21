@@ -3,9 +3,9 @@
 Use the Turkish frontend from `frontend/` for the routes and demo behavior.
 The evidence screen updates came from the standalone Lovable source.
 The two Figma starting points are **İşveren yolculuğu** and **Görev Alan
-yolculuğu**. Start each path from the matching demo button on `/`. The demo
-account selector switches fictional accounts so you can view both sides of
-the same task while keeping its state in the current tab.
+yolculuğu**. Use product-facing entry and sign-in screens for both. In the
+runnable frontend, the demo buttons on `/` and the account picker let reviewers
+see both sides of the same task while keeping its state in the current tab.
 
 ## Entry points and demo controls
 
@@ -26,7 +26,7 @@ flows. Keep the simulated-payment notices on the relevant screens.
 
 | Stories | Routes and screens | States to capture and connect |
 | --- | --- | --- |
-| US-01 | `/`, `/signup`, `/signin` | Welcome with two demo entry points, registration, successful sign-in, unknown-account feedback, signed-out gate and wrong-role gate. |
+| US-01 | `/`, `/signup`, `/signin` | Shared welcome, registration, successful sign-in, unknown-account feedback, signed-out gate and wrong-role gate. Figma uses two prototype starting points. |
 | US-02 | `/taker/profile`, `/taker/tasks/:taskId` | City, occupation and skills labelled as self-declared. A missing city blocks applying and links to the profile. Return to the task after saving the city. |
 | US-03 | `/employer`, `/employer/tasks/new` | Employer dashboard, valid task creation, permission acknowledgement, and form error before creation. Show the posted open task. |
 | US-04/05 | `/taker/find`, `/taker/tasks/:taskId` | Open listings for the single supported category, city filter, empty result and filter reset, task details, application, duplicate feedback and closed applications. |

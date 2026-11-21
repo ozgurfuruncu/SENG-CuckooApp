@@ -62,7 +62,7 @@ checks, final-head CI and teammate review belong to the current candidate.
    UI and connect the employer and task-taker starting points and recovery
    paths. Run both flows, verify reviewer access, export the edited desktop
    and mobile frames, and record the design file and both flow URLs.
-   [Figma editing instructions](../sprint-2-figma-handoff.md#klonlanan-figma-dosyası-için-son-düzenleme)
+   [Figma agent instructions](../sprint-2-figma-handoff.md#figma-agent-instructions)
 2. **Elif, Jumanah and Emmanuel · Review the written deliverables.** Elif checks
    the SRS and refined backlog against the final journeys. Jumanah reviews the
    proposed quality targets and records actual prototype observations. Emmanuel
