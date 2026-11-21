@@ -88,4 +88,5 @@ URLs and reviewer access in the
 [Sprint 2 submission bundle](submissions/sprint-2.md) once verified.
 [Desktop evidence review](sprint-2-evidence/lovable/evidence-review-desktop.png) ·
 [Mobile evidence review](sprint-2-evidence/lovable/evidence-review-mobile.png) ·
-[Figma handoff guide](sprint-2-figma-handoff.md)
+[Figma handoff guide](sprint-2-figma-handoff.md) ·
+[21 November Figma handoff evidence](sprint-2-evidence/figma/README.md)

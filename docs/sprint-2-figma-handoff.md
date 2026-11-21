@@ -7,6 +7,10 @@ role flows, annotated user-flow diagrams and verified reviewer access. The
 [runnable frontend](sprint-2-lovable-integration.md) demonstrates the same
 journeys with fictional data and reviewer controls.
 
+The [21 November handoff evidence](sprint-2-evidence/figma/README.md) records
+the current Figma design link, offline walkthroughs, diagrams and export
+status. The brief below describes the frame and interaction requirements.
+
 ## Figma agent instructions
 
 Work in the existing cloned Cuckoo Figma Design file. Build editable desktop

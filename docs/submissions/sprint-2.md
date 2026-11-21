@@ -1,6 +1,6 @@
 # Cuckoo Sprint 2 submission bundle
 
-SENG 321 · Team 5 · 20 November 2026 · **Candidate for team review**
+SENG 321 · Team 5 · 21 November 2026 · **Candidate for team review**
 
 [Project repository](https://github.com/ozgurfuruncu/SENG-CuckooApp) ·
 [Sprint 2 plan](../sprint-2-plan.md) · [Team RACI](../team-raci.md) ·
@@ -26,7 +26,7 @@ reviews are recorded against their own artifact or GitHub revision.
 | --- | --- |
 | 1. SRS and refined backlog | [Elif’s SRS](../sprint-2-srs.md), [refined backlog](../sprint-2-backlog.md), [PO acceptance criteria](../sprint-2-po-acceptance-criteria.md) and [story/issue index](../issue-index.md). The drafts merged in [PR #38](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/38). The [evidence and revision design baseline](../sprint-2-evidence-decisions.md) gives the final demo rules for the Figma drafts and identifies the later live contract review. |
 | 2. Non-functional requirements and quality measures | The [quality specification and verification matrix](../sprint-2-quality.md) gives measurable targets and separates observed results from proposed verification. Jumanah’s target and evidence review is pending. |
-| 3. Turkish UI, interactive flows and Figma | The [Lovable integration record](../sprint-2-lovable-integration.md), [current path checklist](../sprint-2-frontend-paths.md) and [16 demo captures](../sprint-2-evidence/lovable-final) document the runnable Turkish prototype. The [employer flow](../diagrams/sprint-2-ozgur/employer-flow.md) and [task taker flow](../diagrams/sprint-2-ozgur/task-taker-flow.md) describe the product journeys. The final editable Figma frames show those journeys without the demo header. The file, both prototype links and reviewer access are pending in the submission index. |
+| 3. Turkish UI, interactive flows and Figma | Özgür reported both flows ready in [Figma Design](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo). The [Figma handoff evidence](../sprint-2-evidence/figma/README.md) includes the two flow diagrams, an export from Figma, representative browser renders and tested desktop/mobile previews for both roles. The [Lovable integration record](../sprint-2-lovable-integration.md) and [16 demo captures](../sprint-2-evidence/lovable-final) document the separately runnable web demo. |
 | 4. Architecture, C4 and UML | [System context](../diagrams/system-context.svg), [container view](../diagrams/sprint-2-ozgur/c4-container.md), [API component view](../diagrams/sprint-2-ozgur/api-components.md), [assignment sequence](../diagrams/sprint-2-ozgur/assignment-sequence.md), [lifecycle state models](../diagrams/sprint-2-ozgur/lifecycle.md), [domain model](../diagrams/sprint-2-ozgur/domain.md), and [React/FastAPI boundary](../sprint-2-frontend-api-boundary.md). The 19 November diagrams model the proposed modular monolith and business workflows. Read their description of the source tree as a snapshot and use the integration record for the current frontend. |
 
 ## Current demo and prior evidence
@@ -50,19 +50,18 @@ checks, final-head CI and teammate review belong to the current candidate.
 | Item | Status |
 | --- | --- |
 | Planning branch synchronization | [PR #37](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/37) merged the Sprint 2 plan into `develop`. |
-| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. Check the final head’s CI and teammate review in the PR. The [20 November CI run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44815912094) verifies the earlier `f908091` head. |
-| Editable Figma file and both prototype starting points | Pending. Record the file, employer flow and task taker flow URLs after access and interactions are verified. |
-| Release and tag | The reviewed `sprint-1` tag covers the first sprint. The Sprint 2 submission tag and exact final commit are pending the final reviewed candidate and required checks. |
+| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`e1d9f36` run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44891159742) before the Figma evidence update. Check required CI on the final head and record the teammate review there. |
+| Editable Figma file and both prototype starting points | [Design file](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo) recorded. The [offline journeys](../sprint-2-evidence/figma/README.md#reviewer-materials) are available for desktop and mobile. The two Figma starting-point links, reviewer access and evidence of native playback and batch exports are pending. |
+| Release and tag | The reviewed `sprint-1` tag covers the first sprint. The planned `sprint-2` tag and exact assessed commit are pending teammate review, required checks and protected integration. [Sprint publication process](../release/README.md) |
 | Team sign-off and submission logistics | Aslı and Jumanah assemble and verify the final packet. Deadline and format beyond the supplied Sprint 2 plan remain to be confirmed. |
 
 ## Remaining work
 
-1. **Özgür and Elif · Finish and accept the Figma deliverable.** Edit the
-   cloned Figma frames to remove the demo header. Preserve the Turkish app
-   UI and connect the employer and task-taker starting points and recovery
-   paths. Run both flows, verify reviewer access, export the edited desktop
-   and mobile frames, and record the design file and both flow URLs.
-   [Figma agent instructions](../sprint-2-figma-handoff.md#figma-agent-instructions)
+1. **Özgür and Elif · Verify the finished Figma handoff for submission.**
+   Record both prototype starting-point URLs, check reviewer access and
+   play through both workflows from those links. Add the native desktop and
+   mobile exports or their shared location. Review the final design against
+   the planned journeys. [Figma handoff evidence](../sprint-2-evidence/figma/README.md)
 2. **Elif, Jumanah and Emmanuel · Review the written deliverables.** Elif checks
    the SRS and refined backlog against the final journeys. Jumanah reviews the
    proposed quality targets and records actual prototype observations. Emmanuel
