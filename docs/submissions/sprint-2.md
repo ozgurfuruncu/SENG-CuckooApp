@@ -26,7 +26,7 @@ reviews are recorded against their own artifact or GitHub revision.
 | --- | --- |
 | 1. SRS and refined backlog | [Elif’s SRS](../sprint-2-srs.md), [refined backlog](../sprint-2-backlog.md), [PO acceptance criteria](../sprint-2-po-acceptance-criteria.md) and [story/issue index](../issue-index.md). The drafts merged in [PR #38](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/38). The [evidence and revision design baseline](../sprint-2-evidence-decisions.md) gives the final demo rules for the Figma drafts and identifies the later live contract review. |
 | 2. Non-functional requirements and quality measures | The [quality specification and verification matrix](../sprint-2-quality.md) gives measurable targets and separates observed results from proposed verification. Jumanah’s target and evidence review is pending. |
-| 3. Turkish UI, interactive flows and Figma | [Figma Design](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=0-1) contains the shared account and employer frames. The [native export folder](../../prototypes/sprint-2/Cuckoo%20figma%20exports) contains 60 PNGs at both widths. The [Figma handoff evidence](../sprint-2-evidence/figma/README.md) contains both flow diagrams, live Figma verification findings and tested desktop/mobile offline previews for both roles. The [Lovable integration record](../sprint-2-lovable-integration.md) documents the runnable web demo. |
+| 3. Turkish UI, interactive flows and Figma | [Figma Design](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=0-1) contains the shared, employer and task-taker frames. The [native export folder](../../prototypes/sprint-2/Cuckoo%20figma%20exports) contains 60 employer and shared PNGs and 68 task-taker PNGs across both widths. The [Figma handoff evidence](../sprint-2-evidence/figma/README.md) contains the prototype starts, both flow diagrams, playback findings and tested offline previews. The [Lovable integration record](../sprint-2-lovable-integration.md) documents the runnable web demo. |
 | 4. Architecture, C4 and UML | [System context](../diagrams/system-context.svg), [container view](../diagrams/sprint-2-ozgur/c4-container.md), [API component view](../diagrams/sprint-2-ozgur/api-components.md), [assignment sequence](../diagrams/sprint-2-ozgur/assignment-sequence.md), [lifecycle state models](../diagrams/sprint-2-ozgur/lifecycle.md), [domain model](../diagrams/sprint-2-ozgur/domain.md), and [React/FastAPI boundary](../sprint-2-frontend-api-boundary.md). The 19 November diagrams model the proposed modular monolith and business workflows. Read their description of the source tree as a snapshot and use the integration record for the current frontend. |
 
 ## Current demo and prior evidence
@@ -50,18 +50,18 @@ checks, final-head CI and teammate review belong to the current candidate.
 | Item | Status |
 | --- | --- |
 | Planning branch synchronization | [PR #37](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/37) merged the Sprint 2 plan into `develop`. |
-| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`64cf0bf` run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44895747366). Check required CI and record a teammate review on the final head. |
-| Editable Figma file and prototype starting points | The [employer desktop flow](https://www.figma.com/proto/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=20-4&starting-point-node-id=24%3A332&scaling=min-zoom&content-scaling=fixed) played through sign-in to the dashboard. The native employer prototype needs the remainder of its workflow checked. The linked design's task-taker sections are empty. Task-taker frames and playback, both mobile starting points, and reviewer access remain open. [Verification record](../sprint-2-evidence/figma/README.md#verification-record) |
+| Final candidate PR, independent review and required CI | [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) targets `develop`. All five jobs passed on the [`69f1269` run](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44896786552). Check required CI and record a teammate review on the final head. |
+| Editable Figma file and prototype starting points | The [task-taker desktop and mobile starts](../sprint-2-evidence/figma/README.md#reviewer-materials) played from sign-in through revision, resubmission and completion. The employer desktop flow played through sign-in to the dashboard. The remaining employer transitions, employer mobile start and signed-in reviewer access need verification. [Verification record](../sprint-2-evidence/figma/README.md#verification-record) |
 | Release and tag | The reviewed `sprint-1` tag covers the first sprint. The planned `sprint-2` tag and exact assessed commit are pending teammate review, required checks and protected integration. [Sprint publication process](../release/README.md) |
 | Team sign-off and submission logistics | Aslı and Jumanah assemble and verify the final packet. Deadline and format beyond the supplied Sprint 2 plan remain to be confirmed. |
 
 ## Remaining work
 
-1. **Özgür and Elif · Complete and verify Figma playback.** Bring the task-taker
-   desktop and mobile frames into the design and wire the journey. Check the
-   employer transitions after sign-in and provide both mobile starts. Play both
-   journeys, verify reviewer access and record the starting-point links and
-   task-taker exports. [Figma handoff evidence](../sprint-2-evidence/figma/README.md)
+1. **Özgür and Elif · Complete and verify Figma playback.** Check the remaining
+   employer transitions after sign-in and provide the employer mobile start.
+   Play both role journeys as a reviewer, including the task-taker evidence
+   revision loop, and verify access for the team and assessor.
+   [Figma handoff evidence](../sprint-2-evidence/figma/README.md)
 2. **Elif, Jumanah and Emmanuel · Review the written deliverables.** Elif checks
    the SRS and refined backlog against the final journeys. Jumanah reviews the
    proposed quality targets and records actual prototype observations. Emmanuel
