@@ -56,9 +56,9 @@ Docker gibi kaydedilmiş çevre engeli BLOCKED olarak ayrılır.
   SVG XML namespace'i bir ağ çağrısı değildir.
 
 [Tarayıcı özeti](sprint-2-evidence/ozgur/browser-summary.json),
-[model testleri](../prototypes/sprint-2/tests/model.test.ts),
-[UI testleri](../prototypes/sprint-2/tests/browser/journeys.spec.ts),
-[doküman testleri](../prototypes/sprint-2/tests/docs.test.ts).
+[model testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/model.test.ts),
+[UI testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/browser/journeys.spec.ts),
+[doküman testleri](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/76956d71e7eb13d95ef2c5aee558fbd17042b197/prototypes/sprint-2/tests/docs.test.ts).
 
 ## Düzeltilip yeniden doğrulanan bulgular
 
