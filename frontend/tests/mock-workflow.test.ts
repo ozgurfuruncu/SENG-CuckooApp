@@ -3,6 +3,7 @@ import test from "node:test";
 
 import * as api from "../src/mock/api.ts";
 import { formatDateTime, formatMoney } from "../src/mock/format.ts";
+import { MIB, validatePhotoSelection } from "../src/mock/photo-fixtures.ts";
 import { createSeed } from "../src/mock/seed.ts";
 import type { ApiErrorCode, DemoState, Result } from "../src/mock/types.ts";
 
@@ -275,7 +276,7 @@ test("exposes evidence, history and revision notes only to demo participants", (
   );
 });
 
-test("applies existing review limits and keeps notes optional in the demo", () => {
+test("requires a trimmed revision reason and active hold, with approval notes optional", () => {
   const state = submitted();
   reject(state, "FORBIDDEN", () =>
     api.reviewTaskEvidence(state, taker, taskId, { decision: "APPROVE" }),
@@ -288,13 +289,80 @@ test("applies existing review limits and keeps notes optional in the demo", () =
       }),
     );
   }
+  for (const note of [undefined, "", "  \n  "]) {
+    const error = reject(state, "VALIDATION_ERROR", () =>
+      api.reviewTaskEvidence(state, owner, taskId, {
+        decision: "REQUEST_REVISION",
+        note,
+      }),
+    );
+    assert.equal(error.fields?.note, "Düzeltme gerekçesini yazın.");
+  }
+  const noHold = {
+    ...state,
+    tasks: state.tasks.map((task) =>
+      task.id === taskId
+        ? { ...task, paymentSimulationStatus: "NOT_HELD" as const }
+        : task,
+    ),
+  };
+  reject(noHold, "HOLD_REQUIRED", () =>
+    api.reviewTaskEvidence(noHold, owner, taskId, {
+      decision: "REQUEST_REVISION",
+      note: "Tamponu tekrar çekin.",
+    }),
+  );
   const revised = success(
     api.reviewTaskEvidence(state, owner, taskId, {
       decision: "REQUEST_REVISION",
+      note: "  Tamponu tekrar çekin.  ",
     }),
   );
-  assert.equal(revised.data.lastReviewNote, null);
+  assert.equal(revised.data.lastReviewNote, "Tamponu tekrar çekin.");
   assert.equal(revised.data.paymentSimulationStatus, "HELD_SIMULATED");
+  assert.equal(
+    success(
+      api.reviewTaskEvidence(state, owner, taskId, { decision: "APPROVE" }),
+    ).data.status,
+    "COMPLETED",
+  );
+});
+
+test("checks bundled photo metadata before adding private evidence to the demo", () => {
+  const state = held();
+  const sizeError = reject(state, "VALIDATION_ERROR", () =>
+    api.submitTaskEvidence(state, taker, taskId, {
+      ...evidence,
+      photoRefs: ["front", "bumper-raw"],
+    }),
+  );
+  assert.match(sizeError.fields?.photos ?? "", /10 MiB/);
+  reject(state, "VALIDATION_ERROR", () =>
+    api.submitTaskEvidence(state, taker, taskId, {
+      ...evidence,
+      photoRefs: ["missing-photo"],
+    }),
+  );
+  const fixtures = Array.from({ length: 5 }, (_, index) => ({
+    ref: String(index),
+    label: String(index),
+    mimeType: "image/jpeg",
+    sizeBytes: 10 * MIB,
+  }));
+  assert.equal(
+    validatePhotoSelection(
+      fixtures.map((fixture) => fixture.ref),
+      fixtures,
+    ),
+    null,
+  );
+  assert.match(
+    validatePhotoSelection(
+      ["0"],
+      [{ ...fixtures[0], mimeType: "image/heic" }],
+    ) ?? "",
+    /JPEG veya PNG/,
+  );
 });
 
 test("runs the new-task journey through application, revision and atomic demo completion", () => {

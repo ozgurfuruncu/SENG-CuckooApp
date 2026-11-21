@@ -10,7 +10,11 @@ export function useFeedback() {
     setSuccess(result.ok ? message : "");
     return result.ok;
   }
-  return { error, success, accept };
+  function clear() {
+    setError(null);
+    setSuccess("");
+  }
+  return { error, success, accept, clear };
 }
 export function Feedback({
   error,

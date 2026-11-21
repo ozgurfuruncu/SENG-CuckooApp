@@ -12,6 +12,7 @@ import type {
   TaskStatus,
   User,
 } from "./types";
+import { validatePhotoSelection } from "./photo-fixtures.ts";
 
 const ok = <T>(state: DemoState, data: T): Result<T> => ({
   ok: true,
@@ -446,8 +447,8 @@ export function submitTaskEvidence(
       "İşveren simüle ödemeyi henüz bekletmeye almadı. Daha sonra tekrar kontrol edin.",
     );
   const fields: Record<string, string> = {};
-  if (input.photoRefs.length < 1 || input.photoRefs.length > 5)
-    fields["photos"] = "1–5 örnek fotoğraf seçin.";
+  const photoError = validatePhotoSelection(input.photoRefs);
+  if (photoError) fields["photos"] = photoError;
   const notes = input.notes.trim();
   if (notes.length < 10 || notes.length > 2000)
     fields["notes"] = "Gözlem notu 10–2.000 karakter olmalı.";
@@ -519,20 +520,25 @@ export function reviewTaskEvidence(
     );
   const note = input.note?.trim() || null;
   if (note && note.length > 500)
+    return fail("VALIDATION_ERROR", fixFields, {
+      note: "İnceleme notu en fazla 500 karakter olmalı.",
+    });
+  if (t.paymentSimulationStatus !== "HELD_SIMULATED")
     return fail(
-      "VALIDATION_ERROR",
-      "İnceleme notu en fazla 500 karakter olmalı.",
+      "HOLD_REQUIRED",
+      input.decision === "APPROVE"
+        ? "Onaydan önce simüle ödemeyi bekletmeye alın."
+        : "Düzeltme istemek için simüle ödeme bekletmesi etkin olmalı.",
     );
+  if (input.decision === "REQUEST_REVISION" && !note)
+    return fail("VALIDATION_ERROR", fixFields, {
+      note: "Düzeltme gerekçesini yazın.",
+    });
   if (input.decision === "APPROVE") {
-    if (t.paymentSimulationStatus !== "HELD_SIMULATED")
-      return fail(
-        "HOLD_REQUIRED",
-        "Onaydan önce simüle ödemeyi bekletmeye alın.",
-      );
     let s2 = patchTask(s, taskId, {
       status: "COMPLETED",
       paymentSimulationStatus: "RELEASED_SIMULATED",
-      lastReviewNote: null,
+      lastReviewNote: note,
     });
     s2 = addHistory(
       s2,

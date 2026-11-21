@@ -3,7 +3,8 @@ import { ArrowLeft, Check, CheckCircle2, RotateCcw, Send } from "lucide-react";
 import { useState } from "react";
 import * as api from "@/mock/api";
 import { formatMoney } from "@/mock/format";
-import { SAMPLE_PHOTOS } from "@/mock/photos";
+import { MAX_PHOTO_BYTES, formatMiB, typeLabel } from "@/mock/photo-fixtures";
+import { SAMPLE_PHOTOS, photoByRef } from "@/mock/photos";
 import { useDemo } from "@/mock/store";
 import { Feedback, useFeedback } from "./form-feedback";
 import { AppShell, PageHeader, backLinkClass } from "./shell";
@@ -56,6 +57,7 @@ function ReviewContent({ taskId }: { taskId: string }) {
   const latest = evidence.data[0];
   if (!latest) return <Notice title="Henüz kanıt gönderilmedi" />;
   const owner = actor?.id === task.ownerId;
+  const noteError = feedback.error?.fields?.["note"];
   function review(decision: "APPROVE" | "REQUEST_REVISION") {
     if (!actor) return;
     const r = run((s) =>
@@ -67,6 +69,7 @@ function ReviewContent({ taskId }: { taskId: string }) {
         ? "Düzeltme istendi."
         : "Görev tamamlandı.",
     );
+    if (r.ok) setNote("");
     if (r.ok && decision === "APPROVE")
       navigate({ to: "/employer/tasks/$taskId/completed", params: { taskId } });
   }
@@ -129,7 +132,7 @@ function ReviewContent({ taskId }: { taskId: string }) {
           <Feedback {...feedback} />
           {task.status === "REVISION_REQUESTED" && (
             <Notice tone="warning" title="Düzeltilmiş kanıt bekleniyor">
-              {task.lastReviewNote ?? "İnceleme notu eklenmedi."}
+              Gerekçe: {task.lastReviewNote ?? "Gerekçe eklenmedi."}
             </Notice>
           )}
           {task.status === "COMPLETED" && (
@@ -137,30 +140,60 @@ function ReviewContent({ taskId }: { taskId: string }) {
               Onaylanan kanıtları ve görev geçmişini görüntüleyebilirsiniz.
             </Notice>
           )}
-          {owner && task.status === "EVIDENCE_SUBMITTED" && (
-            <>
-              <Field id="review-note" label="İnceleme notu" optional>
-                <textarea
+          {owner &&
+            task.status === "EVIDENCE_SUBMITTED" &&
+            task.paymentSimulationStatus !== "HELD_SIMULATED" && (
+              <Notice tone="warning" title="Simüle ödeme bekletmesi etkin değil">
+                Düzeltme istemek veya onaylamak için simüle ödeme bekletmesi
+                etkin olmalı.
+              </Notice>
+            )}
+          {owner &&
+            task.status === "EVIDENCE_SUBMITTED" &&
+            task.paymentSimulationStatus === "HELD_SIMULATED" && (
+              <>
+                <Field
                   id="review-note"
-                  rows={4}
-                  maxLength={500}
-                  className={inputClass}
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
-                />
-              </Field>
-              <Button className="w-full" onClick={() => review("APPROVE")}>
-                <Check /> Onayla ve tamamla
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => review("REQUEST_REVISION")}
-              >
-                <RotateCcw /> Düzeltme iste
-              </Button>
-            </>
-          )}
+                  label="İnceleme notu"
+                  hint="Düzeltme için gerekçe zorunludur. Onay için not isteğe bağlıdır."
+                  error={noteError}
+                >
+                  <textarea
+                    id="review-note"
+                    rows={4}
+                    maxLength={500}
+                    className={inputClass}
+                    value={note}
+                    onChange={(e) => {
+                      if (noteError) feedback.clear();
+                      setNote(e.target.value);
+                    }}
+                    aria-invalid={!!noteError}
+                    aria-describedby={
+                      noteError
+                        ? "review-note-error review-note-count"
+                        : "review-note-hint review-note-count"
+                    }
+                  />
+                </Field>
+                <p
+                  id="review-note-count"
+                  className="-mt-2 text-right text-xs text-muted-foreground"
+                >
+                  {note.trim().length}/500 karakter
+                </p>
+                <Button className="w-full" onClick={() => review("APPROVE")}>
+                  <Check /> Onayla ve tamamla
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => review("REQUEST_REVISION")}
+                >
+                  <RotateCcw /> Düzeltme iste
+                </Button>
+              </>
+            )}
         </section>
       </div>
       {(() => {
@@ -239,15 +272,23 @@ function SubmitContent({ taskId }: { taskId: string }) {
       )}
       {task.status === "REVISION_REQUESTED" && (
         <Notice tone="warning" title="Düzeltme istendi">
-          {task.lastReviewNote ?? "İnceleme notu eklenmedi."}
+          Gerekçe: {task.lastReviewNote ?? "Gerekçe eklenmedi."}
         </Notice>
       )}
       <fieldset
         aria-describedby={fields?.["photos"] ? "photos-error" : "photos-hint"}
       >
         <legend className="mb-1 font-semibold">Örnek fotoğraflar</legend>
-        <p id="photos-hint" className="mb-3 text-xs text-muted-foreground">
-          {photos.length}/5 seçildi · Kurgusal araç fotoğrafları
+        <p id="photos-hint" className="mb-1 text-xs text-muted-foreground">
+          JPEG veya PNG · 1–5 fotoğraf · Fotoğraf başına en fazla 10 MiB ·
+          Gönderim başına en fazla 50 MiB.
+        </p>
+        <p className="mb-3 text-xs font-medium" aria-live="polite">
+          {photos.length}/5 seçildi · Toplam{" "}
+          {formatMiB(
+            photos.reduce((sum, r) => sum + (photoByRef(r)?.sizeBytes ?? 0), 0),
+          )}{" "}
+          · Kurgusal örnek fotoğraflar
         </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {SAMPLE_PHOTOS.map((p) => (
@@ -260,26 +301,38 @@ function SubmitContent({ taskId }: { taskId: string }) {
                 alt={p.label}
                 className="aspect-[4/3] w-full object-cover"
               />
-              <span className="flex items-center gap-2 p-2 text-xs font-medium">
+              <span className="flex items-start gap-2 p-2 text-xs font-medium">
                 <input
                   type="checkbox"
                   className="size-4 shrink-0 accent-primary"
                   checked={photos.includes(p.ref)}
-                  onChange={(e) =>
+                  onChange={(e) => {
+                    if (fields?.["photos"]) feedback.clear();
                     setPhotos((old) =>
                       e.target.checked
                         ? [...old, p.ref]
                         : old.filter((r) => r !== p.ref),
-                    )
-                  }
+                    );
+                  }}
                 />
-                {p.label}
+                <span className="min-w-0">
+                  <span className="block">{p.label}</span>
+                  <span
+                    className={`block font-normal ${p.sizeBytes > MAX_PHOTO_BYTES ? "text-destructive" : "text-muted-foreground"}`}
+                  >
+                    {typeLabel(p.mimeType)} · {formatMiB(p.sizeBytes)}
+                  </span>
+                </span>
               </span>
             </label>
           ))}
         </div>
         {fields?.["photos"] && (
-          <p id="photos-error" className="mt-2 text-sm text-destructive">
+          <p
+            id="photos-error"
+            role="alert"
+            className="mt-2 text-sm font-medium text-destructive"
+          >
             {fields["photos"]}
           </p>
         )}

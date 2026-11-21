@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, CalendarClock, MapPin } from "lucide-react";
+import { ArrowLeft, CalendarClock, Clock3, Lock, MapPin } from "lucide-react";
 import type { ReactNode } from "react";
 import {
   CATEGORY_LABEL,
@@ -173,6 +173,7 @@ export function EvidenceBlock({
           Sürüm {evidence.version} · {formatDateTime(evidence.submittedAt)}
         </span>
       </div>
+      <EvidencePolicy />
       <PhotoGrid refs={evidence.photoRefs} />
       <div className="rounded-xl border p-4">
         <p className="text-sm font-semibold">Görev alanın notları</p>
@@ -216,16 +217,28 @@ export function HistoryList({
   );
 }
 
-export function UnavailablePrivate({
-  what = "Kanıtlar ve görev geçmişi",
-}: {
-  what?: string;
-}) {
+/** Demo policy copy shown next to the private gallery. */
+export function EvidencePolicy() {
   return (
-    <Notice tone="locked" title={`${what} görüntülenemiyor`}>
-      Bu içeriği yalnızca görevi yayınlayan işveren ve göreve atanan kişi
-      görebilir. Açık görevlere göz atabilir veya üstteki listeden demo
-      hesabınızı değiştirebilirsiniz.
+    <ul className="space-y-1.5 rounded-xl bg-muted p-3 text-xs text-muted-foreground">
+      <li className="flex items-start gap-2">
+        <Lock className="mt-0.5 size-3.5 shrink-0" aria-hidden />
+        Kanıtlar yalnızca uygulama içinde görüntülenir.
+      </li>
+      <li className="flex items-start gap-2">
+        <Clock3 className="mt-0.5 size-3.5 shrink-0" aria-hidden />
+        Kanıtlar ve gözlem notları, görev tamamlandıktan veya iptal edildikten
+        30 gün sonra silinir.
+      </li>
+    </ul>
+  );
+}
+
+export function UnavailablePrivate() {
+  return (
+    <Notice tone="locked" title="Bu görevin kanıtlarına erişiminiz yok.">
+      Fotoğrafları ve gözlem notlarını yalnızca görevi yayınlayan işveren ve
+      göreve atanan kişi görebilir.
     </Notice>
   );
 }

@@ -34,6 +34,9 @@ test("both demo roles complete a private evidence revision without business netw
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("lang", "tr");
   await expect(
+    page.getByText("Sprint 2 prototipi · Örnek veriler"),
+  ).toBeVisible();
+  await expect(
     page.getByRole("heading", { name: /Cuckoo’ya hoş geldiniz/i }),
   ).toBeVisible();
   await switchAccount(page, "u-deniz");
@@ -81,6 +84,8 @@ test("both demo roles complete a private evidence revision without business netw
   await openReview(page);
   await expect(page.getByText(evidence)).toBeVisible();
   await expect(page.getByRole("main").getByRole("img")).toHaveCount(2);
+  await expect(page.getByText(/30 gün sonra silinir/)).toBeVisible();
+  await expect(page.getByRole("link", { name: /indir/i })).toHaveCount(0);
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth),
   ).toBeLessThanOrEqual(page.viewportSize()!.width);
@@ -96,8 +101,14 @@ test("both demo roles complete a private evidence revision without business netw
   ).toBeVisible();
   await expect(page.getByText(evidence)).toHaveCount(0);
   await expect(page.getByLabel("Görev geçmişi")).toHaveCount(0);
+  await expect(
+    page.getByText("Bu görevin kanıtlarına erişiminiz yok."),
+  ).toBeVisible();
   await switchAccount(page, "u-deniz");
   await openReview(page);
+  await page.getByRole("button", { name: "Düzeltme iste" }).click();
+  await expect(page.getByText("Düzeltme gerekçesini yazın.")).toBeVisible();
+  await expect(page.getByText("Düzeltilmiş kanıt bekleniyor")).toHaveCount(0);
   await page.getByLabel("İnceleme notu").fill(revision);
   await page.getByRole("button", { name: "Düzeltme iste" }).click();
   await expect(page.getByText("Düzeltilmiş kanıt bekleniyor")).toBeVisible();
@@ -105,7 +116,9 @@ test("both demo roles complete a private evidence revision without business netw
     page.getByRole("button", { name: "Onayla ve tamamla" }),
   ).toHaveCount(0);
   await switchAccount(page, "u-sarah");
-  await expect(page.getByText(revision, { exact: true })).toBeVisible();
+  await expect(
+    page.getByText(`Gerekçe: ${revision}`, { exact: true }),
+  ).toBeVisible();
   await page.getByRole("link", { name: "Kanıtı düzelt" }).click();
   await page
     .getByLabel("Gözle görülen ayrıntılar")

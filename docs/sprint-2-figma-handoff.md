@@ -12,6 +12,10 @@ Figma dosyası ve iki akış bağlantısı ekip teslimine eklenecek.
 [Güncel entegrasyon ve ekranlar](sprint-2-lovable-integration.md) ·
 [Güncel rota ve durum listesi](sprint-2-frontend-paths.md)
 
+Güncel Lovable kaynaklı Figma çerçevelerinde **Sprint 2 prototipi · Örnek
+veriler** demo üst çubuğunu koru. İnceleme ve kanıt akışının masaüstü ve mobil
+referansları teslim paketine eklendi. [16 ekran görüntüsü](sprint-2-evidence/lovable-final)
+
 ## 19 Kasım erişim kaydı
 
 Entegrasyon aramasında Figma ve Lovable bulundu ancak bu oturumda bağlı değiller.

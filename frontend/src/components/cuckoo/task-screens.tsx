@@ -170,7 +170,7 @@ function TaskContent({ taskId, role }: { taskId: string; role: Role }) {
           )}
           {task.status === "REVISION_REQUESTED" && (
             <Notice tone="warning" title="Düzeltme istendi">
-              {task.lastReviewNote ?? "İnceleme notu eklenmedi."}
+              Gerekçe: {task.lastReviewNote ?? "Gerekçe eklenmedi."}
             </Notice>
           )}
           {task.status === "COMPLETED" && (
@@ -298,7 +298,7 @@ function TaskContent({ taskId, role }: { taskId: string; role: Role }) {
               <>
                 {task.status === "REVISION_REQUESTED" && (
                   <Notice tone="warning" title="Düzeltme istendi">
-                    {task.lastReviewNote ?? "İnceleme notu eklenmedi."}
+                    Gerekçe: {task.lastReviewNote ?? "Gerekçe eklenmedi."}
                   </Notice>
                 )}
                 <Button
@@ -325,6 +325,11 @@ function TaskContent({ taskId, role }: { taskId: string; role: Role }) {
           {assigned && task.status === "COMPLETED" && (
             <Notice tone="success" title="Görev tamamlandı">
               Simüle ödeme serbest bırakıldı. Gerçek para transferi yapılmaz.
+              {task.lastReviewNote && (
+                <span className="mt-1 block">
+                  İnceleme notu: {task.lastReviewNote}
+                </span>
+              )}
             </Notice>
           )}
         </>

@@ -171,11 +171,17 @@ test("keeps the evidence form open for invalid photo and note input, then accept
   );
   await expect(notes).toHaveValue("Kısa");
 
-  await page
-    .getByRole("group", { name: "Örnek fotoğraflar" })
-    .getByRole("checkbox", { name: "Arka görünüm" })
-    .check();
+  const gallery = page.getByRole("group", { name: "Örnek fotoğraflar" });
+  const oversized = gallery.getByRole("checkbox", {
+    name: /yüksek çözünürlük/i,
+  });
+  await gallery.getByRole("checkbox", { name: "Arka görünüm" }).check();
+  await oversized.check();
   await notes.fill("Arka tamponun görünümü kaydedildi.");
+  await submit.click();
+  await expect(page.locator("#photos-error")).toContainText("10 MiB");
+  await expect(page).toHaveURL(/\/taker\/tasks\/t-cankaya\/evidence$/);
+  await oversized.uncheck();
   await submit.click();
   await expect(page).toHaveURL(/\/taker\/tasks\/t-cankaya$/);
   await expect(

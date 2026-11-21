@@ -115,23 +115,9 @@ export function DemoBar() {
         <Button variant="ghost" size="sm" onClick={reset}>
           <RotateCcw /> Demoyu sıfırla
         </Button>
-        <details className="relative ml-auto">
-          <summary className="cursor-pointer rounded-md px-2 py-1 font-medium text-warning">
-            Ekip incelemesi bekleniyor
-          </summary>
-          <div className="absolute right-0 z-30 mt-2 w-72 rounded-xl border bg-card p-4 text-foreground shadow-card">
-            <p className="mb-2 text-xs font-semibold uppercase text-muted-foreground">
-              Açık kararlar
-            </p>
-            <ul className="list-disc space-y-1 pl-4 text-sm">
-              <li>Düzeltme koşulları ve inceleme notu</li>
-              <li>Kanıt indirme</li>
-              <li>Fotoğraf sayısı dışındaki dosya sınırları</li>
-              <li>Kanıtların saklama süresi</li>
-              <li>Kanıtlara erişim ve görünürlük kuralları</li>
-            </ul>
-          </div>
-        </details>
+        <span className="ml-auto text-xs font-semibold text-warning">
+          Sprint 2 prototipi · Örnek veriler
+        </span>
       </div>
     </div>
   );

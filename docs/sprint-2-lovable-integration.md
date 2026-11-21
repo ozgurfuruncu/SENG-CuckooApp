@@ -8,6 +8,12 @@ Cuckoo screen components, design tokens, mascot and synthetic vehicle photo
 fixtures. The source plan identifies the mascot and photos as generated demo
 assets. [Prior prototype and dated verification](submissions/sprint-2-ozgur.md)
 
+On 21 November the evidence updates from Lovable `c2b87cd` were brought into
+the project frontend. The standalone Lovable repository is available for
+future design iteration. The [current submission captures](sprint-2-evidence/lovable-final)
+are the 16 desktop and mobile screenshots supplied for the final Figma handoff.
+[Lovable evidence update](https://github.com/anyx05/cuckoo-photo-tasks/commit/c2b87cd40065ac0443da574db02944b284110627)
+
 ## Structure and language
 
 The existing React 18, TypeScript and Vite entry point serves the port.
@@ -57,11 +63,25 @@ set `CUCKOO_CHROME_PATH` to its executable before running the browser tests.
 | `python -m pytest -q --basetemp ../.tools/lovable-backend-pytest` in `backend/` | 13 passed, 1 PostgreSQL integration test skipped without the test database URL. |
 | `docker compose config --quiet` and `python scripts/compose_smoke.py` | Compose configuration parsed. The smoke run was blocked by the unavailable local Docker engine. Hosted CI can exercise the runtime deployment after publication. |
 
+### Final evidence update verification on 21 November 2026
+
+- Standalone Lovable `c2b87cd` passed all 36 tests and its build.
+- In `frontend/` on Windows with Node 24 and Chrome, `npm test` passed all 12
+  mock tests and `npm run build` passed. The required revision reason, active
+  hold, media limits and participant access are covered by rejection tests.
+- `npm run test:browser` passed all 12 checks at desktop and mobile widths.
+  The walkthrough verifies the demo header, blank-reason and oversized-photo
+  recovery, private visibility, resubmission, approval and simulated release.
+  Photo checks use synthetic metadata. Retention is represented as screen copy.
+- See [PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40) for the
+  exact published head, hosted checks and teammate review.
+
 ## Figma handoff
 
 Use the current preview or the supplied Lovable project for editable import.
-The desktop and mobile evidence-review captures give reviewers reference
-images. Özgür owns the editable Figma file and the two Turkish prototype
+Keep the demo header on the Lovable-derived frames. The latest desktop and
+mobile evidence screenshots give reviewers reference images. Özgür owns the
+editable Figma file and the two Turkish prototype
 flows. The team can record the file, flow URLs and reviewer access in the
 [Sprint 2 submission bundle](submissions/sprint-2.md) once verified.
 [Desktop evidence review](sprint-2-evidence/lovable/evidence-review-desktop.png) ·

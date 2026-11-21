@@ -52,3 +52,71 @@ submission. Dependencies are copied from its section 13.
 | [US-13](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/13) | E-04 | P1 | 5 | Private task data is access controlled | evidence/file forbidden tests | US-01, US-08 | elfn0909 |
 | [US-14](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/14) | Deferred | P2 | 3 | Participant rates other party after completion | completed parties only; one rating each | US-10 | elfn0909 |
 | [US-15](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/15) | Deferred | P2 | 5 | Worker sees skill-tag-informed suggestions | deterministic rules; no competence claim | US-02, US-04 | elfn0909 |
+
+## Future product proposals
+
+These ideas are candidates for later prioritization. Refine the acceptance
+criteria and record a reviewed scope decision before scheduling them.
+
+### AI-assisted task safety review
+
+Proposed path before a task enters discovery:
+
+1. The employer submits a task or edits a previously cleared listing. Screen
+   the title, description, requested evidence, and permission acknowledgement
+   against the vehicle-photo scope. A listing that passes the screening and
+   required task checks follows the usual publication path.
+2. Hold a flagged listing from discovery and applications. Send the flagged
+   text and reason to an authorized human reviewer. Example reasons include
+   apparent requests to drive the vehicle, perform a mechanical inspection, or
+   photograph it without the required permission. Give the employer a clear
+   waiting status and a way to revise and resubmit.
+3. The human reviewer clears the listing, requests changes, or declines it.
+   Record the task revision, reviewer, decision and reason. Rescreen substantive
+   edits. Route screening failures to manual review.
+
+Agree on review permissions, flag criteria, data handling and turnaround before
+designing the queue. Use task text and the permission acknowledgement for
+screening. Redact contact details from free text and exclude private evidence
+and payment records from the screening input. Check missed risks and false
+flags against permitted and out-of-scope examples in Turkish and English.
+
+### Turkish and English page content
+
+Keep Turkish as the default and propose a visible **Türkçe / English** selector.
+Translate the welcome and account pages, navigation, profiles, task forms,
+listing and assignment states, evidence and review screens, confirmations,
+privacy notices, and validation, empty and access-denied states. Use the selected
+locale for dates, numbers and currency display. Keep API operation names, enum
+values and story IDs stable. Preserve the employer's original wording for task
+descriptions. Any later translation of user-written content should be labelled
+and link to the original.
+
+| Example | Türkçe | English |
+| --- | --- | --- |
+| Employer action | Görev oluştur | Create a task |
+| Task taker action | Göreve başvur | Apply for this task |
+| Safety review status | Göreviniz güvenlik incelemesi bekliyor. | Your task is waiting for a safety review. |
+| Evidence review action | Düzeltme iste | Request a revision |
+| Payment notice | Gerçek para transferi yapılmaz. | No real money is moved. |
+
+Verify both role journeys, recovery states and mobile layouts in each language,
+including Turkish characters, longer strings and the selected language when
+navigating between pages.
+
+### One account for posting and taking tasks
+
+Let an account use both **Görev oluştur** and **Görev bul** from a shared home
+once both capabilities are enabled. The employer still manages tasks they own,
+and the assigned task taker manages their work and evidence. Preserve the rule
+against applying to your own task. Review account capability changes and the
+authorization and ownership matrix before scheduling this expansion.
+
+### In-app suggestions for new task categories
+
+Add **Kategori öner** from task discovery or the profile. Ask for a category
+name and one example of a task the user would post or take. Make city optional
+when it helps the team understand demand. Confirm receipt and send suggestions
+to the product team, which can group duplicates and review demand, safety and
+fit with the platform. A category enters discovery after the team approves its
+scope, rules and API changes.
