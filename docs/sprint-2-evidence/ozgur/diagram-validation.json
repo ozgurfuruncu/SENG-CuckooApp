@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-19",
+  "engine": "Mermaid 11.12.1 / Edge",
+  "results": [
+    {
+      "file": "api-components.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "api-components-1.svg"
+    },
+    {
+      "file": "assignment-sequence.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "assignment-sequence-1.svg"
+    },
+    {
+      "file": "c4-container.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "c4-container-1.svg"
+    },
+    {
+      "file": "domain.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "domain-1.svg"
+    },
+    {
+      "file": "employer-flow.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "employer-flow-1.svg"
+    },
+    {
+      "file": "lifecycle.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "lifecycle-1.svg"
+    },
+    {
+      "file": "lifecycle.md",
+      "block": 2,
+      "status": "PASS",
+      "svg": "lifecycle-2.svg"
+    },
+    {
+      "file": "task-taker-flow.md",
+      "block": 1,
+      "status": "PASS",
+      "svg": "task-taker-flow-1.svg"
+    }
+  ]
+}

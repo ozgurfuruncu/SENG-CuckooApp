@@ -1,0 +1,5 @@
+cwd: prototypes\sprint-2
+command: ..\..\..\..\Program Files\nodejs\node.exe scripts/capture.mjs
+exit: 0
+
+60 ekran: PNG, bağımsız HTML, manifest ve aktarım kataloğu kaydedildi.

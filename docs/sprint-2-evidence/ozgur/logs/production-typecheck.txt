@@ -1,0 +1,3 @@
+cwd: frontend
+command: ..\..\..\..\Program Files\nodejs\node.exe node_modules/typescript/bin/tsc --noEmit
+exit: 0

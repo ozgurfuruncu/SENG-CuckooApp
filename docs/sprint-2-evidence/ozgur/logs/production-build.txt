@@ -1,0 +1,13 @@
+cwd: frontend
+command: ..\..\..\..\Program Files\nodejs\node.exe node_modules/vite/bin/vite.js build
+exit: 0
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.32 kB │ gzip:  0.23 kB
+dist/assets/index-C3MrAYn_.js  141.57 kB │ gzip: 46.18 kB
+
+✓ built in 147ms

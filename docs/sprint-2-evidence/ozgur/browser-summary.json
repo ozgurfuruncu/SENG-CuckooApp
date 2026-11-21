@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-19",
+  "engine": "Playwright 1.56.1 / Microsoft Edge",
+  "stats": {
+    "startTime": "2026-11-19T17:30:35.643Z",
+    "duration": 37972.049,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": [
+    {
+      "name": "masaustu"
+    },
+    {
+      "name": "mobil"
+    }
+  ],
+  "note": "WCAG 2 A/AA + WCAG 2.1 AA axe kontrolleri; gerçek Figma veya üretim güvenliği denetimi değildir."
+}
