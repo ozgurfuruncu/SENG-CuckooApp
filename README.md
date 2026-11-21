@@ -1,4 +1,4 @@
-# Cuckoo — Sprint 1 submission
+# Cuckoo
 
 SENG 321 · Team 5 · MIT
 
@@ -8,10 +8,10 @@ workers apply, the employer selects one, reviews photos/notes and records a
 Real payments, custody/driving, professional verification and legal representation
 are outside the MVP. Ratings, full messaging and recommendations are deferred.
 
-Sprint 1 delivers the proposal, system boundary, roles/RACI, approved architecture,
-draft API contract, backlog and a tested application foundation. The application
-currently implements database readiness and a TypeScript web shell; business
-endpoints are later reviewed stories.
+Sprint 1 delivered the proposal, system boundary, roles/RACI, approved
+architecture, draft API contract, backlog and a tested application foundation.
+Sprint 2 adds a Turkish web demo with fictional data in the browser. The API
+serves the health slice. Business endpoints follow their reviewed stories.
 
 ## Run
 
@@ -46,7 +46,7 @@ local data is not deleted by this cleanup. Optional overrides are in `.env.examp
 Stack: React/TypeScript/Vite, FastAPI/Pydantic, PostgreSQL/SQLAlchemy/Alembic,
 Docker Compose, GitHub Actions and pytest. See [development/testing](docs/development.md).
 
-Submission: [Markdown document](docs/submissions/Cuckoo_Sprint1_Submission.md),
+Sprint 1 submission: [Markdown document](docs/submissions/Cuckoo_Sprint1_Submission.md),
 [evidence index](docs/submissions/README.md),
 [roles/RACI](docs/team-raci.md), [system context](docs/diagrams/system-context.png),
 [accepted ADR-001](docs/decisions/ADR-001-architecture.md),
@@ -70,8 +70,10 @@ and publication records. Historical planning and preparation files are kept in
 
 ## Sprint 2 design prototype
 
-[Özgür's local Turkish prototype](prototypes/sprint-2/README.md) runs separately
-with fictional in-memory data. [Design evidence](docs/submissions/sprint-2-ozgur.md)
-links the user flows, frontend/API boundary, C4/UML contributions, screenshots,
-checks and outstanding Figma/Lovable handoff. The production application remains
-the health slice and web shell described above.
+The demo at `http://localhost:5173` uses the Lovable UI. Switch demo accounts to
+try the employer and task-taker journeys in one session. The [Sprint 2 submission
+candidate](docs/submissions/sprint-2.md) links the SRS, refined backlog, quality
+specification, flows, architecture, and review status. See the [frontend
+integration record](docs/sprint-2-lovable-integration.md) for native setup and
+checks. The [19 November prototype](prototypes/sprint-2/README.md) runs separately
+with its [dated design evidence](docs/submissions/sprint-2-ozgur.md).

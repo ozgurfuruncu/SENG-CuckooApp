@@ -10,8 +10,9 @@ deliverable is a clickable web prototype for a Figma handoff.
 
 Use the attached storyboard for visual design. Use the rules and operation map
 below for workflow, form fields and state. They summarize Cuckoo's OpenAPI
-0.2.1-draft and stories US-01 through US-13. Keep unanswered product questions
-visible for team review. US-14 ratings and US-15 suggestions are deferred.
+0.2.1-draft and stories US-01 through US-13. Use the final pass instructions for
+the evidence design agreed for the demo. US-14 ratings and US-15 suggestions
+are deferred.
 
 ## Turkish-first interface
 
@@ -25,9 +26,10 @@ traceability notes.
 
 ## Build boundary
 
-- Build in a standalone Lovable project with React, TypeScript and Vite.
+- Continue in the existing standalone Lovable project with React, TypeScript
+  and Vite.
   Output responsive screens, reusable components, client-side navigation and
-  mock interactions. Keep the GitHub repository disconnected.
+  mock interactions. Keep the canonical CuckooApp repository disconnected.
 - Feed components from one small typed mock adapter with in-memory fixtures.
   Use the draft operation names and response fields where applicable. A demo
   role switcher changes the active fixture and preserves task progress so both
@@ -64,10 +66,11 @@ traceability notes.
   selecting 1–5 sample photos and entering notes of 10–2,000 characters. The
   task moves to `EVIDENCE_SUBMITTED`. For the demo, show the photo gallery to
   the task owner and assigned task taker. Show an unavailable state to others.
-- In the review demo, a revision request sends submitted evidence to
-  `REVISION_REQUESTED` and lets the assigned task taker resubmit. Show an
-  optional review note. Final revision preconditions and note policy are open
-  for team review. Approval in `EVIDENCE_SUBMITTED` with a simulated hold moves
+- In the review demo, the task owner can request revision in
+  `EVIDENCE_SUBMITTED` with `HELD_SIMULATED` and a nonblank revision reason up to
+  500 characters. On revision, the task enters `REVISION_REQUESTED`. Resubmission
+  by the assigned task taker returns it to `EVIDENCE_SUBMITTED`. Approval notes
+  are optional. Approval from submitted evidence with a simulated hold moves
   the task to `COMPLETED` and records the simulated release in the same step.
 - Under the draft cancellation policy, the task owner can cancel in `OPEN`
   or `ASSIGNED` only. Set the task to `CANCELLED` and void an existing hold.
@@ -75,8 +78,30 @@ traceability notes.
 - Keep `paymentSimulationStatus` separate from task `status`. Payment values
   are `NOT_HELD`, `HELD_SIMULATED`, `RELEASED_SIMULATED` and `VOIDED_SIMULATED`.
   Display “Gerçek para transferi yapılmaz.” Capture evidence and task history locally.
-  Evidence download, file limits beyond photo count, retention and broader
-  visibility rules are open decisions. Leave those out of the build.
+
+## Final Lovable pass
+
+Polish the current Cuckoo frontend in place for the Sprint 2 Figma handoff.
+Preserve the existing layout, pages, Turkish language, and role-switchable mock
+workflow. In the demo bar, show **Sprint 2 prototipi · Örnek veriler** in place
+of the **Açık kararlar** panel. Apply the rules and copy on the screens listed
+below. Keep the work in the browser with bundled fixtures and in-memory state.
+Use the demo header in the runnable frontend. Remove it from the product-facing
+Figma frames and exports. [Figma handoff](sprint-2-figma-handoff.md)
+
+| Screen or action | Behavior and exact Turkish copy |
+| --- | --- |
+| Employer review | The owner can choose **Düzeltme iste** only after evidence is submitted and the simulated hold is active. Under **İnceleme notu**, show **Düzeltme için gerekçe zorunludur. Onay için not isteğe bağlıdır.** A blank or whitespace-only revision reason shows **Düzeltme gerekçesini yazın.** Trim the input, limit it to 500 characters, and show the reason to the assigned task taker. A rejected action leaves the original state intact. |
+| Task taker revision | Show **Düzeltme istendi** and the employer’s reason. **Kanıtı düzelt** returns the assigned task taker to the evidence form. A valid resubmission returns the task to review with the hold still active. Keep completed reviews read-only. |
+| Evidence viewing | Keep the private gallery inside the task view, with **Kanıtlar yalnızca uygulama içinde görüntülenir.** Use the viewing flow in Figma. Omit the download control. |
+| Evidence submission | Show **JPEG veya PNG · 1–5 fotoğraf · Fotoğraf başına en fazla 10 MiB · Gönderim başına en fazla 50 MiB.** Reuse bundled sample photos and show any size-limit error using synthetic fixture metadata. Keep the existing 10–2,000-character observation note. |
+| Retention | Near the private gallery, show **Kanıtlar ve gözlem notları, görev tamamlandıktan veya iptal edildikten 30 gün sonra silinir.** Represent this as demo policy copy. |
+| Evidence visibility | The owning employer and assigned task taker can see the gallery and evidence notes. Unselected and unrelated demo accounts get **Bu görevin kanıtlarına erişiminiz yok.** Their view omits private photos, notes and links. Keep the visible lifecycle history free of private note and file content. |
+
+Check blank and valid revision reasons, resubmission, approval with a blank
+optional note, and an unrelated viewer on the same task. Verify the review and
+evidence submission screens at desktop and mobile widths. Capture the successful
+and recovery states for both Figma prototype starting points.
 
 ## Screen-to-contract map
 
@@ -104,5 +129,5 @@ Demonstrate the revision loop, an eligible cancellation, and blocked actions
 for duplicate application, missing hold and unrelated viewers. Show accessible
 form feedback, readable mobile and desktop layouts, and named screens for Figma
 capture. Prioritize Evidence Review at both widths for the import trial. Keep
-the output runnable in the preview with bundled fixtures and identify any
-workflow decisions still awaiting team review.
+the output runnable in the preview with bundled fixtures and record the final
+design file and both working flow URLs once verified.
