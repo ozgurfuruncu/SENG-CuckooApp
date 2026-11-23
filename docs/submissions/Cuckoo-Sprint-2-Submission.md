@@ -44,7 +44,7 @@ The backlog preserves traceability between user stories, GitHub issues and canon
 
 The Sprint 2 quality specification defines measurable targets and verification approaches.
 
-Reference: [Sprint 2 Quality Specification](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/sprint-2-quality.md)
+[Quality specification and updated verification evidence](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/sprint-2-quality.md)
 
 | Requirement | Quality Target / Verification |
 |---|---|
@@ -135,7 +135,7 @@ The previews are self-contained.
 
 Additional details:
 
-- [Prototype README](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/prototypes/sprint-2/README.md)
+- [Prototype README and reviewer-access verification](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/prototypes/sprint-2/README.md)
 - [Figma Handoff](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/sprint-2-figma-handoff.md)
 - [Lovable Integration Record](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/sprint-2-lovable-integration.md)
 
@@ -143,30 +143,31 @@ Additional details:
 
 ## 5. System Architecture and UML Documentation
 
-The Sprint 2 architecture evidence is organized under:
-
-`docs/diagrams/sprint-2/`
+The links below include post-tag documentation clarifications to the
+architecture descriptions. The [assessed diagram set](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-2/docs/diagrams/sprint-2)
+is available at `sprint-2`.
 
 ### Architecture Diagrams
 
 | Diagram | File |
 |---|---|
 | System Context | [system-context.svg](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/system-context.svg) |
-| C4 Container | [c4-container.md](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/c4-container.md) |
-| API Component | [api-components.md](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/api-components.md) |
+| C4 Container | [C4 container view](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/c4-container.md) · [Rendered SVG](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/rendered/c4-container-1.svg) |
+| API Component | [API component view](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/api-components.md) |
 
 ### UML and Domain Models
 
 | Model | File |
 |---|---|
-| Assignment Sequence | [assignment-sequence.md](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/assignment-sequence.md) |
-| Lifecycle / State Models | [lifecycle.md](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/lifecycle.md) |
-| Domain Model | [domain.md](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/domain.md) |
+| Assignment Sequence | [Assignment sequence](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/assignment-sequence.md) |
+| Lifecycle / State Models | [Lifecycle state models](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/lifecycle.md) |
+| Domain Model | [Domain model](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/domain.md) |
 
 ### User Flow and Planning Diagrams
 
 - [Employer Flow](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/employer-flow.svg)
 - [Task Taker Flow](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/task-taker-flow.svg)
+- [Employer flow with revision validation](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/diagrams/sprint-2/employer-flow.md)
 - [Sprint 2 Gantt chart](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/diagrams/sprint-2/gantt.png)
 
 The architecture follows a modular-monolith direction. The documented boundaries include identity/profile, tasks, applications/assignment, evidence/reviews and simulated payment.
@@ -181,7 +182,7 @@ The backend architecture uses FastAPI, PostgreSQL, SQLAlchemy and Alembic.
 
 The current implementation boundary is documented in:
 
-- [Frontend/API Boundary](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/sprint-2-frontend-api-boundary.md)
+- [Frontend/API Boundary](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/64a04ce3dee01e31e42a98e15239b14bab50b728/docs/sprint-2-frontend-api-boundary.md)
 - [OpenAPI Contract](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/api/openapi.yaml)
 - [Architecture Decision Record](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/decisions/ADR-001-architecture.md)
 
@@ -236,7 +237,8 @@ Jumanah also reviewed the standalone submission draft in
 - [Assessed Repository Snapshot](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/cb34a676e083d561ff780bd07840c6f7ac2c093c)
 - [Passing CI on the assessed main commit](https://github.com/ozgurfuruncu/SENG-CuckooApp/actions/runs/44955654870)
 
-Repository artifact links reference the assessed tag.
+Assessed artifacts link to `sprint-2`. The architecture clarifications and
+updated verification notes link to their own documentation revision.
 
 ## 8. Evidence and Verification Records
 
@@ -245,7 +247,7 @@ Additional supporting evidence is available in:
 - [Dated verification logs](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-2/docs/logs/sprint-2)
 - [Earlier design records](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-2/docs/archive/sprint-2)
 - [Offline previews and native Figma exports](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-2/prototypes/sprint-2)
-- [Sprint 2 submission index](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/submissions/sprint-2.md)
+- [Assessed submission index](https://github.com/ozgurfuruncu/SENG-CuckooApp/blob/sprint-2/docs/submissions/sprint-2.md)
 
 Historical evidence is identified separately from verification performed against the final assessed snapshot.
 
@@ -264,12 +266,9 @@ visible focus. The checks cover the offline previews and the exercised paths.
 
 **Figma playback and access.** The task-taker flows played through completion
 in Figma at both widths. Live employer playback reached the dashboard. The
-employer offline previews cover the full journey. The Figma file is set to
-**Anyone can view**. All three presentation links opened in signed-out
-Chromium sessions, and the employer welcome screen advanced to sign-in.
-The design editor URL returned an access error in that test. Reviewers can
-use the presentation links or download the offline previews above without a
-Figma account.
+employer offline previews cover the full journey. Anyone with the link can
+preview the Figma prototypes. All three presentation links were verified in
+signed-out Chromium sessions.
 
 ## 10. Conclusion
 
