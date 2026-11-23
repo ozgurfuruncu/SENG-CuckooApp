@@ -56,3 +56,15 @@ records the original issue import preparation. Original consolidation is recorde
 in [#24](https://github.com/ozgurfuruncu/SENG-CuckooApp/issues/24), final closeout
 in #20 and the reusable SDD workflow in #27. Routine documentation follow-ups
 reuse those references rather than duplicating issues or reopening the sprint.
+
+## Sprint 2 Submission Document
+
+The standalone Sprint 2 submission document was added to the repository through [PR #43](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/43).
+
+- Document: [Cuckoo-Sprint-2-Submission.md](../Cuckoo-Sprint-2-Submission.md)
+- PR status: Merged
+- Reviewer approval: j7766n
+- Merge commit: `ea539f8`
+- Assessed Sprint 2 baseline: `cb34a676e083d561ff780bd07840c6f7ac2c093c`
+
+This documentation update consolidates Sprint 2 evidence and does not indicate that planned business features have been implemented.
