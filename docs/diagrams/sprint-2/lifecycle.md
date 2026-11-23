@@ -1,8 +1,8 @@
 # UML State Machine · görev ve simüle ödeme
 
-**Önerilen iş modeli / yerel prototip.** Çalışan ürün yalnızca sağlık ve web
-kabuğudur. US-03, US-06–US-11. Enum adları değişmedi. Geçiş etiketleri Türkçe.
-Ödeme durumu görev durumundan ayrıdır; onay iki durumu aynı işlemde değiştirir.
+**Önerilen iş modeli.** Türkçe Sprint 2 prototipi geçişleri tarayıcı belleğinde
+canlandırır. FastAPI uygulaması sağlık uç noktasını sunar. US-03, US-06–US-11.
+Ödeme durumu görev durumundan ayrıdır. Onay iki durumu aynı işlemde değiştirir.
 
 ```mermaid
 stateDiagram-v2

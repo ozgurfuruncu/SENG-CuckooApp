@@ -1,9 +1,9 @@
 # Atamadan tamamlamaya UML Sequence · öneri
 
-US-06–US-10 ve US-13. **Üretimde uygulanmamış tasarım.** Yerel prototip tek
-tarayıcı belleğini kullanır, eşzamanlılık veya PostgreSQL işlem kanıtı sağlamaz.
-Sıralama, [API taslağına](../../../api/openapi.yaml) dayanır, revizyon koşulları
-ve medya politikası için gerçek PO/TL/QA kararı beklenir.
+US-06–US-10 ve US-13. Bu görünüm planlanan iş API'si sıralamasını gösterir.
+Mevcut Sprint 2 prototipi örnek görev durumunu tarayıcı belleğinde tutar.
+İşlemler [API taslağına](../../../api/openapi.yaml) dayanır. Prototipin medya
+ve revizyon davranışları [tasarım kurallarında](../../sprint-2-evidence-decisions.md) kayıtlıdır.
 
 ```mermaid
 sequenceDiagram
@@ -12,7 +12,7 @@ sequenceDiagram
     participant W as React istemci
     participant A as FastAPI modüler monolit (öneri)
     participant D as PostgreSQL (önerilen iş tabloları)
-    Note over W,D: Mevcut ürün: yalnızca sağlık ve web kabuğu, aşağıdaki iş akışı öneridir
+    Note over W,D: Mevcut kapsam: tarayıcı içi Türkçe prototip ve sağlık uç noktası
     I->>W: Başvuruyu seç
     W->>A: assignTask(taskId, applicationId) + Bearer
     A->>A: Principal, görev sahibi, OPEN ve başvuru aidiyeti
@@ -37,8 +37,9 @@ sequenceDiagram
     W->>A: listTaskEvidence(taskId)
     A->>A: Yalnızca görev sahibi / atanmış kişi (demo varsayımı)
     A-->>W: İzin verilen kanıt metaverisi
-    opt Düzeltme döngüsü (koşulları inceleme bekliyor)
-        I->>W: Düzeltme iste ve isteğe bağlı not
+    opt Planlanan düzeltme döngüsü
+        I->>W: Düzeltme iste
+        Note over I,W: Prototipte düzeltme gerekçesi zorunludur
         W->>A: reviewTaskEvidence(REQUEST_REVISION)
         A->>D: REVISION_REQUESTED ve işlem kaydı
         G->>W: Düzelt ve yeniden gönder

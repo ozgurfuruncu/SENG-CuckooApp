@@ -28,7 +28,7 @@ Jumanah'nın kabul/kanıt incelemesini tamamlanmış göstermez.
 | Web/API anlatısı ve açık kararlar | [FI sınır belgesi](../../sprint-2-frontend-api-boundary.md) |
 | C4 Container / Component | [Container](../../diagrams/sprint-2/c4-container.md), [önerilen API Component](../../diagrams/sprint-2/api-components.md) |
 | UML | [Sequence](../../diagrams/sprint-2/assignment-sequence.md), [görev/ödeme durumları](../../diagrams/sprint-2/lifecycle.md), [Domain Class](../../diagrams/sprint-2/domain.md) |
-| Diyagram render kanıtı | [8 Mermaid sonucu](../../logs/sprint-2/diagram-validation.json), [SVG'ler](../../diagrams/sprint-2/rendered) |
+| Diyagram render kanıtı | [8 Mermaid sonucu](../../logs/sprint-2/diagram-validation.json), [19 Kasım SVG'leri](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/sprint-2/docs/diagrams/sprint-2/rendered) |
 | Hikâye ve test eşlemesi | [US-01–13 izlenebilirlik](traceability.md); US-14/15 ertelendi |
 | Gerçek yerel doğrulama | [Komutlar ve sonuçlar](verification.md), [makine raporu](../../logs/sprint-2/verification.json) |
 | Lovable / Figma | [Aktarım adımları ve gerçek erişim durumu](../../sprint-2-figma-handoff.md); gerçek proje/dosya/flow URL'si yok |

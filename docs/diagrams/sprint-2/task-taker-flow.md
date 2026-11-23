@@ -1,8 +1,10 @@
-# Görev alan kullanıcı akışı · Özgür katkısı
+# Görev alan kullanıcı akışı
 
-US-01/02, US-04–US-09, US-12/13. Yerel tasarım demosudur; çalışan üretim
-ürünü yalnızca sağlık uç noktası ve web kabuğudur. Aynı görev iki örnek rol
-arasında korunur. Şehir eşitliği zorunlu tutulmaz; bu bir ürün kararı değildir.
+**Frontend ve entegrasyon:** Özgür Furuncuoğlu
+
+US-01/02, US-04–US-09, US-12/13. Türkçe Sprint 2 demosunda aynı örnek görev
+iki rol arasında korunur. Şehir beyanı başvuru için gereklidir. Şehir filtresi
+keşif ekranındaki açık görevleri daraltır.
 
 ```mermaid
 flowchart TD
@@ -44,5 +46,4 @@ flowchart TD
     Detay --> Yasak["İlgisiz kullanıcı: özel fotoğraflar, notlar ve geçmiş görünmez · US-13"]
 ```
 
-Figma düğümleri: `O01`, `G01`–`G11`, `O03`, `O04`.
-[Ekran kataloğu](../../sprint-2-figma-handoff.md).
+[Güncel Figma ve çevrimdışı önizlemeler](../../../prototypes/sprint-2/README.md)

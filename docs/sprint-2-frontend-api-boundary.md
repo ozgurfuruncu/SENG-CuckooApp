@@ -1,6 +1,9 @@
-# Sprint 2 · React / FastAPI sınırı · Özgür katkısı
+# Sprint 2 · React / FastAPI sınırı
 
-19 Kasım 2026 · SENG 321 · Takım 5 · **İnceleme taslağı**.
+SENG 321 · Takım 5
+
+**Frontend ve entegrasyon:** Özgür Furuncuoğlu
+
 Kaynak: [Sprint 2 planı](sprint-2-plan.md), [prototip bağlamı](sprint-2-lovable-context.md),
 [ADR-001](decisions/ADR-001-architecture.md), [ADR-002](decisions/ADR-002-mvp-boundary.md),
 [OpenAPI 0.2.1-draft](../api/openapi.yaml), [sözleşme açıkları](contract-reconciliation.md),
@@ -9,23 +12,18 @@ son feature tabanı: `d0abe1745f685333ff3073ecd112ea829cdcccfe` (PR #38 sonrası
 
 ## Mevcut durum ve öneri
 
-Bu bölüm 19 Kasım tasarım anlık görüntüsünü açıklar. Güncel web demosu ve
-API sınırı için [Lovable entegrasyon kaydına](sprint-2-lovable-integration.md) bakın.
+`frontend/` React, TypeScript ve Vite ile Türkçe Sprint 2 web demosunu sunar.
+Görev işlemleri ve rol değişimi kurgusal verilerle tarayıcı belleğinde çalışır.
+[Lovable entegrasyon kaydı](sprint-2-lovable-integration.md)
 
-`frontend/src/main.tsx` statik React/TypeScript kabuğudur; iş API'sine bağlanmaz.
 `backend/app/main.py`, `/api/v1` altında yalnızca `GET /health` ve API belge
 rotalarını sunar. Sağlık denetimi SQLAlchemy üzerinden `SELECT 1` çalıştırır;
 veritabanı erişilemezse sabit 503 gövdesi döner. Alembic yalnızca sürüm geçmişini
 kurar; iş tabloları, kimlik doğrulama, dosya servisi veya ödeme altyapısı yoktur.
 
-`prototypes/sprint-2` ayrı bir **tasarım demosudur**. Kendi package/lock, React
-giriş noktası ve portu vardır; üretim frontend/backend/Docker dosyalarını kullanmaz.
-`MockAdapter` tek tarayıcı sekmesinin belleğinde çalışır. Ağ, kalıcı depolama,
-gerçek hesap, şifre saklama, gerçek fotoğraf yükleme veya ödeme sağlayıcısı yoktur.
-Demo parola kısıtı gerçek kimlik doğrulama sözleşmesi değildir. Rol seçicisi QA
-içindir; bir güvenlik mekanizması değildir. Paket ve yerel SVG/CSS dosyalarını
-sunmak için yapılan statik HTTP istekleri iş API çağrısı sayılmaz. Geliştirmede
-Vite'ın yerel HMR soketi vardır; ağsız iş akışı testi derlenmiş preview'da yapılır.
+`prototypes/sprint-2/` Figma dışa aktarımlarını ve bağımsız HTML önizlemelerini
+içerir. Web demosundaki hesap seçici, iki kurgusal rolden aynı görevi
+incelemeyi sağlar. [Prototipler](../prototypes/sprint-2/README.md)
 
 ## Sorumluluklar
 
@@ -60,31 +58,26 @@ yalnızca demo yardımcılarıdır; yeni API operasyonu değildir.
 | US-11 | İptal | `cancelTask` | POST `/tasks/{taskId}/cancel` |
 | US-12/13 | İşlem geçmişi | `getTaskHistory` | GET `/tasks/{taskId}/history` |
 
-Task, Profile, TaskApplication, EvidenceSubmission ve TaskEvent alanları taslakla
-aynı adları taşır. Demo kullanıcısının adı/e-postası ve yerel SVG anahtarları
-ayrı demo uzantılarıdır; `EvidenceSubmission` içine fotoğraf URL'si eklenmez.
-`evidencePreviews` erişimi yeniden denetleyen yerel yardımcıdır. Başvuruların
-ekrandaki durumu görev/atama durumundan türetilir; API'ye yeni status enum'u eklenmez.
+Demo modelleri taslak API'nin görev, profil, başvuru, kanıt ve geçmiş
+kavramlarını kullanır. Görüntü alanları ve örnek fotoğraf referansları
+tarayıcıdaki demo verisine aittir.
 
 ## İstemci durumu
 
-Tek `MockAdapter` oturum boyunca fixture'ları, görevleri, başvuruları, kanıt
-metaverisini ve işlem olaylarını tutar. React `useSyncExternalStore` değişiklik
-sayacını izler. Formlar yerel `useState`, gezinme hash URL kullanır. Liste ve
-ayrıntı aynı kaynaktan okunur; iki rol arasında geçiş ilerlemeyi korur. Geri
-dönen değerler kopyadır. Her mutasyon önce bütün kontrolleri yapar; başarısız
-kontrolden sonra veri/olay yazılmaz. Onay, tamamlanma ve simüle serbest bırakma
-tek senkron demo işlemi içindedir. Bunun gerçek veritabanı atomikliği veya
-çoklu sekme/eşzamanlı kullanıcı kanıtı olduğu iddia edilmez. Yenileme veya
-“Demoyu sıfırla” fixture'lara döner; localStorage/sessionStorage kullanılmaz.
+React bağlamı ve bellek içi demo durumu görevleri, başvuruları, kanıt
+metaverisini ve işlem olaylarını tutar. TanStack Router ekranlar arası
+gezinmeyi sağlar. Rol değişimi aynı sekmedeki görev durumunu korur.
+Yenileme ve **Demoyu sıfırla** işlemi örnek başlangıç verilerini geri yükler.
+Onay, tamamlanma ve simüle serbest bırakma tek demo işleminde gösterilir.
+Veritabanı işlemleri ve eşzamanlılık kontrolleri iş API'si tasarımına aittir.
+[Demo durum sağlayıcısı](../frontend/src/mock/store.tsx)
 
-## Prototip varsayımları ve karar sahipleri
+## 19 Kasım prototip varsayımları ve karar sahipleri
 
-Plan, bu sınırlarla demo üretimini açıkça ister. Aşağıdaki seçimler yalnızca
-tasarım keşfini sağlar; iş API'si uygulamasına veya PO kararına dönüşmez.
-Elif'in [karar taslağı](sprint-2-po-decisions.md)
-`DEC-01`–`DEC-14` adlarını kullanır. PR #38'in develop'a alınması taslaktaki
-bekleyen ürün kararlarını onaylanmış yapmaz. Bu katkı o dosyayı değiştirmez.
+Aşağıdaki tablo 19 Kasım'daki tasarım keşfini ve
+[karar taslağındaki](sprint-2-po-decisions.md) DEC kimliklerini kaydeder.
+Güncel Sprint 2 demo kuralları için
+[kanıt ve düzeltme kurallarına](sprint-2-evidence-decisions.md) bakın.
 
 | Açık konu | Bu demodaki seçim | Sonraki karar / sahip |
 | --- | --- | --- |
@@ -97,14 +90,11 @@ bekleyen ürün kararlarını onaylanmış yapmaz. Bu katkı o dosyayı değişt
 | DEC-09 · doğrulama | Metin trim; şehir/kanıt boş olamaz; yeni görev NOT_HELD/atanmamış; tutar ≥0; geçmiş tarih ayrıca yasaklanmaz | PO/TL/QA kesin boş/değer/precision/tarih politikasını uzlaştırır |
 | DEC-10/12 · hesap / etiket | Demo şifresi ve `.test` adresi; oturum bellek içi; Türkçe simülasyon etiketi her ekranda | Gerçek token saklama/yenileme politikası ayrı güvenlik tasarımıdır |
 
-## Mimari katkılar
+## Mimari görünümler
 
-Yeni, ayrı FI katkı dosyaları: [C4 Container](diagrams/sprint-2/c4-container.md),
+[C4 Container](diagrams/sprint-2/c4-container.md),
 [önerilen API Component](diagrams/sprint-2/api-components.md),
 [UML Sequence](diagrams/sprint-2/assignment-sequence.md),
 [UML State Machine](diagrams/sprint-2/lifecycle.md),
 [UML Domain Class](diagrams/sprint-2/domain.md).
-Emmanuel'in mimari hesap verebilirliği ve Emir'in dağıtım sorumluluğu korunur.
-Mevcut sistem bağlamı, ADR'ler, API, RACI ve takım arkadaşlarının dosyaları
-değiştirilmedi. Bu taslakların kabulü ve gelecek üretim uygulamasına aktarılması
-gerçek ekip incelemesi gerektirir; bu inceleme henüz yapılmış sayılmaz.
+Mimari ve çalışma ortamı sorumlulukları [takım RACI'sinde](team-raci.md) kayıtlıdır.
