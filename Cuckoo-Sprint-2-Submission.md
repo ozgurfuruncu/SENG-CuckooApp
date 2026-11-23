@@ -28,11 +28,11 @@ Team responsibilities are based on the team RACI and Sprint 2 submission records
 
 Sprint 2 requirements and product planning evidence are available in:
 
-- [Sprint 2 SRS](../docs/sprint-2-srs.md)
-- [Sprint 2 Backlog](../docs/sprint-2-backlog.md)
-- [PO Acceptance Criteria](../docs/sprint-2-po-acceptance-criteria.md)
-- [Issue Traceability Index](../docs/issue-index.md)
-- [Evidence Decisions](../docs/sprint-2-evidence-decisions.md)
+- [Sprint 2 SRS](docs/sprint-2-srs.md)
+- [Sprint 2 Backlog](docs/sprint-2-backlog.md)
+- [PO Acceptance Criteria](docs/sprint-2-po-acceptance-criteria.md)
+- [Issue Traceability Index](docs/issue-index.md)
+- [Evidence Decisions](docs/sprint-2-evidence-decisions.md)
 
 The requirements describe the planned user journeys, task lifecycle, user roles, applications, assignment, evidence submission and review processes.
 
@@ -44,7 +44,7 @@ The backlog preserves traceability between user stories, GitHub issues and canon
 
 The Sprint 2 quality specification defines measurable targets and verification approaches.
 
-Reference: [Sprint 2 Quality Specification](../docs/sprint-2-quality.md)
+Reference: [Sprint 2 Quality Specification](docs/sprint-2-quality.md)
 
 | Requirement | Quality Target / Verification |
 |---|---|
@@ -124,9 +124,9 @@ The verification record includes 16 scenarios across the four relocated offline 
 
 Additional details:
 
-- [Prototype README](../prototypes/sprint-2/README.md)
-- [Figma Handoff](../docs/sprint-2-figma-handoff.md)
-- [Lovable Integration Record](../docs/sprint-2-lovable-integration.md)
+- [Prototype README](prototypes/sprint-2/README.md)
+- [Figma Handoff](docs/sprint-2-figma-handoff.md)
+- [Lovable Integration Record](docs/sprint-2-lovable-integration.md)
 
 **Prototype limitation:** The web demo uses fictional task data and in-memory interactions. Simulated payment, evidence and task actions are not production business services.
 
@@ -140,22 +140,22 @@ The Sprint 2 architecture evidence is organized under:
 
 | Diagram | File |
 |---|---|
-| System Context | [system-context.svg](../docs/diagrams/system-context.svg) |
-| C4 Container | [c4-container.md](../docs/diagrams/sprint-2/c4-container.md) |
-| API Component | [api-components.md](../docs/diagrams/sprint-2/api-components.md) |
+| System Context | [system-context.svg](docs/diagrams/system-context.svg) |
+| C4 Container | [c4-container.md](docs/diagrams/sprint-2/c4-container.md) |
+| API Component | [api-components.md](docs/diagrams/sprint-2/api-components.md) |
 
 ### UML and Domain Models
 
 | Model | File |
 |---|---|
-| Assignment Sequence | [assignment-sequence.md](../docs/diagrams/sprint-2/assignment-sequence.md) |
-| Lifecycle / State Models | [lifecycle.md](../docs/diagrams/sprint-2/lifecycle.md) |
-| Domain Model | [domain.md](../docs/diagrams/sprint-2/domain.md) |
+| Assignment Sequence | [assignment-sequence.md](docs/diagrams/sprint-2/assignment-sequence.md) |
+| Lifecycle / State Models | [lifecycle.md](docs/diagrams/sprint-2/lifecycle.md) |
+| Domain Model | [domain.md](docs/diagrams/sprint-2/domain.md) |
 
 ### User Flow and Planning Diagrams
 
-- [Employer Flow](../docs/diagrams/sprint-2/employer-flow.svg)
-- [Task Taker Flow](../docs/diagrams/sprint-2/task-taker-flow.svg)
+- [Employer Flow](docs/diagrams/sprint-2/employer-flow.svg)
+- [Task Taker Flow](docs/diagrams/sprint-2/task-taker-flow.svg)
 - Gantt chart: `docs/diagrams/sprint-2/gantt.png`
 
 The architecture follows a modular-monolith direction. The documented boundaries include identity/profile, tasks, applications/assignment, evidence/reviews and simulated payment.
@@ -170,9 +170,9 @@ The backend architecture uses FastAPI, PostgreSQL, SQLAlchemy and Alembic.
 
 The current implementation boundary is documented in:
 
-- [Frontend/API Boundary](../docs/sprint-2-frontend-api-boundary.md)
-- [OpenAPI Contract](../api/openapi.yaml)
-- [Architecture Decision Record](../docs/decisions/ADR-001-architecture.md)
+- [Frontend/API Boundary](docs/sprint-2-frontend-api-boundary.md)
+- [OpenAPI Contract](api/openapi.yaml)
+- [Architecture Decision Record](docs/decisions/ADR-001-architecture.md)
 
 The prototype uses fictional data and browser-side interactions. Business operations such as task creation, assignment, evidence storage and payment simulation are not yet implemented as production backend services.
 
