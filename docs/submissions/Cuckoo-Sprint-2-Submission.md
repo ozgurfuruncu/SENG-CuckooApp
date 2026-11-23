@@ -264,9 +264,12 @@ visible focus. The checks cover the offline previews and the exercised paths.
 
 **Figma playback and access.** The task-taker flows played through completion
 in Figma at both widths. Live employer playback reached the dashboard. The
-employer offline previews cover the full journey. The Figma file currently
-uses team link permissions. Reviewers can use the offline previews above
-without a Figma account.
+employer offline previews cover the full journey. The Figma file is set to
+**Anyone can view**. All three presentation links opened in signed-out
+Chromium sessions, and the employer welcome screen advanced to sign-in.
+The design editor URL returned an access error in that test. Reviewers can
+use the presentation links or download the offline previews above without a
+Figma account.
 
 ## 10. Conclusion
 
