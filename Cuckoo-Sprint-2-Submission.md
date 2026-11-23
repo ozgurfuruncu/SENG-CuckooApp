@@ -1,0 +1,258 @@
+# Cuckoo — Sprint 2 Submission
+
+**Course:** SENG 321 — Software Engineering  
+**Team:** Team 5  
+**Project:** Cuckoo  
+**Repository:** [SENG-CuckooApp](https://github.com/ozgurfuruncu/SENG-CuckooApp)  
+**Submission Date:** 22 November 2026  
+**Assessed Sprint:** Sprint 2
+
+## 1. Project and Team
+
+Cuckoo is a platform concept designed to connect task owners with people who can perform tasks. Sprint 2 focused on refining requirements, developing the Turkish user-interface prototype, documenting the system architecture, defining quality requirements, and consolidating the evidence for review.
+
+### Team Members and Responsibilities
+
+| Team Member | Role | Responsibilities |
+|---|---|---|
+| Elif Nur Akbaş | Product Owner | SRS, backlog priorities, acceptance criteria, product scope and prototype acceptance |
+| Aslı Arıkoğlu | Scrum Master | Sprint coordination, planning, review coordination and submission assembly |
+| Emmanuel Alabi | Technical Lead | Architecture, API contract review, integration and technical feasibility |
+| Jumanah Almodaen | QA Engineer | Quality specification, test design, verification matrix and QA evidence review |
+| Emir Dizman | DevOps Engineer | CI/CD, deployment and architecture/quality verification |
+| Özgür Furuncuoğlu | Frontend & Integration Engineer | Turkish UI, Figma handoff, user flows and frontend/API boundary evidence |
+
+Team responsibilities are based on the team RACI and Sprint 2 submission records.
+
+## 2. Requirements and Refined Backlog
+
+Sprint 2 requirements and product planning evidence are available in:
+
+- [Sprint 2 SRS](docs/sprint-2-srs.md)
+- [Sprint 2 Backlog](docs/sprint-2-backlog.md)
+- [PO Acceptance Criteria](docs/sprint-2-po-acceptance-criteria.md)
+- [Issue Traceability Index](docs/issue-index.md)
+- [Evidence Decisions](docs/sprint-2-evidence-decisions.md)
+
+The requirements describe the planned user journeys, task lifecycle, user roles, applications, assignment, evidence submission and review processes.
+
+The backlog preserves traceability between user stories, GitHub issues and canonical API operation IDs.
+
+**Important implementation distinction:** Closing a GitHub issue does not mean its business feature has been implemented. The current backend implements the health endpoint; the business operations remain planned or represented through prototype interactions.
+
+## 3. Non-Functional Requirements and Quality Assurance
+
+The Sprint 2 quality specification defines measurable targets and verification approaches.
+
+Reference: [Sprint 2 Quality Specification](docs/sprint-2-quality.md)
+
+| Requirement | Quality Target / Verification |
+|---|---|
+| Privacy | Only the task owner and assigned task taker should access private evidence |
+| State Integrity | Prevent conflicting assignments and ensure consistent approval/release transitions |
+| Accessibility | Normal text contrast of at least 4.5:1, accessible control names, keyboard navigation and visible focus |
+| Usability | Users should complete the defined journeys and recovery scenarios without moderator assistance |
+| Performance | Illustrative target: p95 response time of 500 ms or less under the specified synthetic workload |
+| Reliability | Health endpoint should return 200 when the database is available and a safe 503 response when unavailable |
+
+### Verification Status
+
+- Offline prototype walkthroughs were tested at desktop and mobile sizes.
+- Task-taker flows were played through revision, resubmission and completion.
+- Employer offline previews cover the full intended journey.
+- Live employer Figma playback was verified through the dashboard; the full journey is supported by offline previews and flow evidence.
+- Some backend, database concurrency, privacy and performance tests remain planned because the corresponding business implementation is not yet available.
+- Current final-head verification should not be confused with historical prototype test records.
+
+### QA Approval
+
+Jumanah Almodaen reviewed the Sprint 2 submission and QA evidence and approved PR #41.
+
+[PR #41 — Jumanah's QA approval](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/41#pullrequestreview-6008414415)
+
+## 4. UI Design, Figma and User Flows
+
+### Figma Design
+
+[Open Cuckoo Figma Design](https://www.figma.com/design/k8O7yMMpxToQkBMlJOF2gl/Cuckoo?node-id=0-1)
+
+The design contains Turkish-language interfaces for the employer and task-taker roles.
+
+Native Figma exports are organized by role and viewport under:
+
+`prototypes/sprint-2/figma/`
+
+The evidence includes:
+
+- 60 employer/shared PNG exports.
+- 68 task-taker PNG exports.
+- Desktop and mobile layouts.
+- Two role-based user journeys.
+- Offline HTML previews and SVG flow diagrams.
+
+### User Flow 1 — Employer
+
+The employer journey covers:
+
+1. Sign in and access the dashboard.
+2. Review task information and permissions.
+3. Create and publish a task.
+4. Review applicants and select a task taker.
+5. Use the simulated payment-hold interaction.
+6. Review submitted evidence.
+7. Request a revision or approve the evidence.
+8. Complete the task or follow the cancellation flow.
+
+### User Flow 2 — Task Taker
+
+The task-taker journey covers:
+
+1. Sign in and discover available tasks.
+2. Recover from missing profile or city information.
+3. Apply for a task.
+4. Follow the simulated payment-hold flow.
+5. Submit evidence.
+6. Receive revision feedback when required.
+7. Resubmit evidence.
+8. Reach the completed task state.
+
+### Prototype Verification
+
+The offline previews were tested at desktop and mobile sizes using Chromium.
+
+The verification record includes 16 scenarios across the four relocated offline previews, along with link checks and native Figma export verification.
+
+Additional details:
+
+- [Prototype README](prototypes/sprint-2/README.md)
+- [Figma Handoff](docs/sprint-2-figma-handoff.md)
+- [Lovable Integration Record](docs/sprint-2-lovable-integration.md)
+
+**Prototype limitation:** The web demo uses fictional task data and in-memory interactions. Simulated payment, evidence and task actions are not production business services.
+
+## 5. System Architecture and UML Documentation
+
+The Sprint 2 architecture evidence is organized under:
+
+`docs/diagrams/sprint-2/`
+
+### Architecture Diagrams
+
+| Diagram | File |
+|---|---|
+| System Context | [system-context.svg](docs/diagrams/system-context.svg) |
+| C4 Container | [c4-container.md](docs/diagrams/sprint-2/c4-container.md) |
+| API Component | [api-components.md](docs/diagrams/sprint-2/api-components.md) |
+
+### UML and Domain Models
+
+| Model | File |
+|---|---|
+| Assignment Sequence | [assignment-sequence.md](docs/diagrams/sprint-2/assignment-sequence.md) |
+| Lifecycle / State Models | [lifecycle.md](docs/diagrams/sprint-2/lifecycle.md) |
+| Domain Model | [domain.md](docs/diagrams/sprint-2/domain.md) |
+
+### User Flow and Planning Diagrams
+
+- [Employer Flow](docs/diagrams/sprint-2/employer-flow.svg)
+- [Task Taker Flow](docs/diagrams/sprint-2/task-taker-flow.svg)
+- Gantt chart: `docs/diagrams/sprint-2/gantt.png`
+
+The architecture follows a modular-monolith direction. The documented boundaries include identity/profile, tasks, applications/assignment, evidence/reviews and simulated payment.
+
+The diagrams represent the reviewed architectural direction and planned business behavior; they should not be interpreted as proof that every business service has been implemented.
+
+## 6. Frontend, Backend and API Boundary
+
+The Sprint 2 web demo provides a Turkish user interface built with React, TypeScript and Vite.
+
+The backend architecture uses FastAPI, PostgreSQL, SQLAlchemy and Alembic.
+
+The current implementation boundary is documented in:
+
+- [Frontend/API Boundary](docs/sprint-2-frontend-api-boundary.md)
+- [OpenAPI Contract](api/openapi.yaml)
+- [Architecture Decision Record](docs/decisions/ADR-001-architecture.md)
+
+The prototype uses fictional data and browser-side interactions. Business operations such as task creation, assignment, evidence storage and payment simulation are not yet implemented as production backend services.
+
+The API health slice is the implemented backend functionality documented for this stage.
+
+## 7. Sprint 2 Review, Integration and Release Evidence
+
+### Pull Request #40 — Sprint 2 Integration
+
+[PR #40](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/40)
+
+- Integrated the Turkish web demo, quality documentation, architecture index and Figma evidence into `develop`.
+- Teammate review was recorded.
+- Five candidate checks passed.
+- Reviewed candidate head: `a1040e3`.
+
+### Pull Request #41 — Promotion to Main
+
+[PR #41](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/41)
+
+- Merged 20 commits from `develop` into `main`.
+- Jumanah Almodaen approved the submission and QA evidence.
+- Ten checks passed.
+- Merge commit: `76e10937755586c298cfcd95feae10c13844b209`.
+
+### Pull Request #42 — Submission Artifact Organization
+
+[PR #42](https://github.com/ozgurfuruncu/SENG-CuckooApp/pull/42)
+
+- Organized diagrams, previews, Figma exports, verification logs and archived design records.
+- Updated the submission index and recorded PR #41 QA approval.
+- Emir Dizman reviewed and approved the changes.
+- Five checks passed.
+- Merge commit: `cb34a676e083d561ff780bd07840c6f7ac2c093c`.
+
+The PR records report 220 local links checked, 163 moved non-Markdown assets and logs preserved byte-for-byte, eight Mermaid source blocks checked, 128 native Figma exports grouped, and 16 offline-preview scenarios replayed.
+
+### Assessed Sprint 2 Snapshot
+
+**Tag:** `sprint-2`
+
+**Full commit SHA:**
+
+`cb34a676e083d561ff780bd07840c6f7ac2c093c`
+
+- [Sprint 2 Tag](https://github.com/ozgurfuruncu/SENG-CuckooApp/releases/tag/sprint-2)
+- [Assessed Repository Snapshot](https://github.com/ozgurfuruncu/SENG-CuckooApp/tree/cb34a676e083d561ff780bd07840c6f7ac2c093c)
+
+All submission links should be interpreted against this assessed snapshot.
+
+## 8. Evidence and Verification Records
+
+Additional supporting evidence is available in:
+
+- `docs/logs/sprint-2/` — dated verification logs.
+- `docs/archive/sprint-2/` — earlier design records and historical evidence.
+- `prototypes/sprint-2/` — offline previews and native Figma exports.
+- `docs/submissions/sprint-2.md` — Sprint 2 submission index.
+
+Historical evidence is identified separately from verification performed against the final assessed snapshot.
+
+## 9. Remaining Limitations and Follow-Up
+
+The following limitations should remain visible to reviewers:
+
+1. Business backend operations are not yet implemented; the current backend provides the health slice.
+2. Database concurrency and production privacy enforcement require future implementation and tests.
+3. The performance target is specified but has not been demonstrated by a live business API workload.
+4. Accessibility audit evidence remains pending.
+5. Live employer Figma playback was only verified through the dashboard; the complete employer journey is supported by offline previews and flow evidence.
+6. Figma reviewer access for intended reviewers still requires confirmation.
+
+These limitations do not change the recorded PR approvals or publication snapshot. They distinguish the Sprint 2 design and prototype evidence from future production implementation.
+
+## 10. Conclusion
+
+Sprint 2 consolidated the refined requirements, Turkish UI prototype, employer and task-taker user flows, architecture and UML documentation, quality specification, and verification evidence.
+
+The submission was integrated into `main` through reviewed pull requests. Jumanah Almodaen approved the QA evidence on PR #41, and PR #42 completed the organization of the submission artifacts.
+
+The assessed Sprint 2 snapshot is identified by the `sprint-2` tag and the full commit SHA recorded above.
+
+**End of Sprint 2 Submission**
