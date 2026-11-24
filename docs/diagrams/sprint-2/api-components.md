@@ -1,12 +1,12 @@
 # Önerilen API Component görünümü
 
-Beş sınır, **tek FastAPI uygulamasının modülleridir**; mikroservis değildir.
-Paketler mevcut, iş davranışları henüz uygulanmamıştır. FI katkısı; TL/DO
-incelemesine sunulur. Dışarıya açık medya rotası veya yeni altyapı kararı verilmez.
+Beş iş sınırı tek FastAPI uygulamasında önerilen modüllerdir. Mevcut sağlık
+denetimi `foundation` paketini kullanır. Kesikli bağlantılar planlanan iş
+etkileşimlerini gösterir. [C4 Container görünümü](c4-container.md)
 
 ```mermaid
 flowchart TD
-    Web["React web istemcisi · önerilen iş akışı"]
+    Web["React web istemcisi · Sprint 2 Türkçe prototipi"]
     subgraph API["FastAPI container · önerilen bileşenler"]
         Auth["identity/profile<br/>registerUser, createSession<br/>getMyProfile, updateMyProfile<br/>Öneri: kimlik ve rol bağımlılığı"]
         Tasks["tasks<br/>createTask, listTasks, getTask<br/>cancelTask, getTaskHistory<br/>Sahiplik ve görev yaşam döngüsü"]

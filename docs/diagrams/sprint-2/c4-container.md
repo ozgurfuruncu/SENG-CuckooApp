@@ -1,24 +1,23 @@
-# C4 Container görünümü · inceleme taslağı
+# C4 Container görünümü
 
-Özgür'ün web/API sınırı katkısıdır. Emmanuel mimari kararlardan, Emir çalışma
-ortamı ve dağıtım ayrıntılarından sorumludur. Bu görünüm mevcut kararlarını
-değiştirmez. [Sprint 1 bağlam diyagramı](../system-context.svg) korunur.
-Kesikli çizgiler **önerilen** iş etkileşimidir; düz çizgiler mevcut altyapıdır.
+**Web/API sınırı katkısı:** Özgür Furuncuoğlu
+
+Sprint 2'nin Türkçe demosu `frontend/` içinde çalışır ve örnek görev
+durumunu tarayıcı belleğinde tutar. Düz çizgiler mevcut etkileşimleri,
+kesikli çizgiler planlanan iş API'si çağrılarını ve veri erişimini gösterir.
+[Sistem bağlamı](../system-context.svg) ·
+[Web/API sınırı](../../sprint-2-frontend-api-boundary.md)
 
 ```mermaid
 flowchart LR
     Kullanici["Kişi: İşveren / Görev alan"]
     subgraph Sistem["Cuckoo sistem sınırı · ADR-001 / ADR-002"]
-        Web["Container: React / TypeScript / Vite web istemcisi<br/>Mevcut: statik web kabuğu<br/>Öneri: Türkçe görev ekranları ve istemci durumu"]
-        API["Container: FastAPI / Pydantic uygulaması<br/>Mevcut: GET /api/v1/health<br/>Öneri: beş modüllü iş API'si"]
-        DB[("Container: PostgreSQL<br/>Mevcut: sağlık SELECT 1 ve Alembic sürüm geçmişi<br/>Öneri: iş tabloları ve işlemler")]
+        Web["React / TypeScript / Vite · frontend/<br/>Türkçe Sprint 2 prototipi<br/>Yerel örnek görevler ve tarayıcı belleği"]
+        API["FastAPI / Pydantic · backend/<br/>Mevcut: GET /api/v1/health<br/>Planlanan: beş modüllü iş API'si"]
+        DB[("PostgreSQL<br/>Mevcut: sağlık denetimi ve Alembic sürüm geçmişi<br/>Planlanan: iş tabloları ve işlemler")]
     end
     Kullanici -->|"HTTP · web arayüzünü yükler"| Web
-    Web -.->|"Öneri: HTTPS JSON /api/v1 · Bearer<br/>Medya sözleşmesi henüz açık"| API
-    API -->|"SQLAlchemy / psycopg · SELECT 1<br/>Alembic: yalnızca sürüm geçmişi"| DB
-    API -.->|"Öneri: yetki kontrollerinden sonra işlemli iş verisi"| DB
-    Demo["Ayrı yerel Sprint 2 prototipi<br/>React + bellekte örnek bağdaştırıcı<br/>Gerçek API / depolama / ödeme bağlantısı yok"]
-    Kullanici -->|"Yalnızca kurgusal demo"| Demo
-    Sinir["Sistem dışında: fiziksel ziyaret ve izin<br/>Gerçek ödeme, sürüş, teslim alma, uzman incelemesi yok"]
-    Kullanici --- Sinir
+    Web -.->|"Planlanan iş çağrıları · HTTPS /api/v1 · Bearer"| API
+    API -->|"Sağlık denetimi · SQLAlchemy / psycopg · SELECT 1"| DB
+    API -.->|"Planlanan iş verisi erişimi ve işlemler"| DB
 ```

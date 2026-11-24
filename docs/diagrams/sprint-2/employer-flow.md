@@ -1,8 +1,10 @@
-# İşveren kullanıcı akışı · Özgür katkısı
+# İşveren kullanıcı akışı
 
-US-01, US-03, US-06–US-13. Türkçe prototip davranışı; üretimde yalnızca sağlık
-uç noktası ve web kabuğu çalışır. Gizlilik, iptal ve düzeltme politikalarının
-ürün/API onayı beklenir. [Varsayımlar](../../sprint-2-frontend-api-boundary.md).
+**Frontend ve entegrasyon:** Özgür Furuncuoğlu
+
+US-01, US-03, US-06–US-13. Türkçe Sprint 2 demosu bu akışı örnek verilerle
+canlandırır. Düzeltme doğrulaması [prototip tasarım kurallarına](../../sprint-2-evidence-decisions.md)
+dayanır. [Web/API sınırı](../../sprint-2-frontend-api-boundary.md)
 
 ```mermaid
 flowchart TD
@@ -31,10 +33,13 @@ flowchart TD
     Tutuldu --> KanitBekle["Atanmış görevliden kanıt bekle · US-08"]
     KanitBekle --> Incele["EVIDENCE_SUBMITTED · Özel örnek fotoğraflar ve notlar · US-09/13"]
     Incele --> Karar{"Görev sahibinin kararı"}
-    Karar -- Düzeltme iste --> Duzelt["REVISION_REQUESTED · İsteğe bağlı not · US-09"]
+    Karar -- Düzeltme iste --> Gerekce{"Simüle bekletme etkin ve gerekçe 1–500 karakter mi?"}
+    Gerekce -- Hayır --> GerekceHata["Hata göster; mevcut durumu koru"]
+    GerekceHata --> Incele
+    Gerekce -- Evet --> Duzelt["REVISION_REQUESTED · Zorunlu düzeltme gerekçesi · US-09"]
     Duzelt --> Yeniden["Atanmış görevli kanıtı düzeltir ve yeniden gönderir · US-08"]
     Yeniden --> Incele
-    Karar -- Onayla ve tamamla --> Onay{"Gönderilmiş kanıt ve simüle bekletme var mı?"}
+    Karar -- "Onayla ve tamamla · Not isteğe bağlı" --> Onay{"Gönderilmiş kanıt ve simüle bekletme var mı?"}
     Onay -- Hayır --> OnayHata["İşlem reddedilir; kısmi değişiklik yok"]
     Onay -- Evet --> Bitti["Tek işlem: COMPLETED ve RELEASED_SIMULATED · US-10"]
     Acik --> Iptal{"Görev sahibi iptali onaylıyor mu? · US-11"}
@@ -48,5 +53,5 @@ flowchart TD
     Panel --> Ozel["Başkasının kanıtı veya geçmişi: erişilemez · US-13"]
 ```
 
-Figma düğümleri: `O01`, `E01`–`E13`, `O03`, `O04`.
+[Güncel Figma ve çevrimdışı önizlemeler](../../../prototypes/sprint-2/README.md)
 [Ekran kataloğu ve bağlantılar](../../sprint-2-figma-handoff.md).

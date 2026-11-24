@@ -15,6 +15,9 @@ below to play the complete journey at either width.
 Download the HTML files and open them locally in a browser. Each file renders
 from sign-in with its images, styles and navigation embedded.
 
+Anyone with the link can preview the Figma prototypes. The three presentation
+links below were verified in signed-out Chromium sessions on 23 November 2026.
+
 | Journey | Desktop | Mobile | Flow diagram |
 | --- | --- | --- | --- |
 | İşveren | [HTML preview](preview/employer-desktop.html) | [HTML preview](preview/employer-mobile.html) | [Employer SVG](../../docs/diagrams/sprint-2/employer-flow.svg) |
@@ -54,7 +57,9 @@ Chromium 157.0.8103.50, network emulation offline.
 | Native Figma exports | Decoded 60 employer and shared-account PNGs. Exported and decoded 68 task-taker PNGs with Figma Desktop. Checked all task-taker file names against the handoff frame list and verified widths of 1280 px and 390 px. |
 | Live Figma Desktop · task taker | The Figma plugin API located all 68 existing task-taker frames. Wired and rechecked 388 transitions across both widths and copied both named starts from the Prototype panel. Desktop and mobile playback advanced from sign-in through discovery, missing-city recovery, application, simulated hold, evidence submission, revision, resubmission, completion and read-only evidence. The read-only frame uses the initial preset sample note. |
 | Live Figma Desktop · employer | Copied the employer desktop link from the Prototype panel and played welcome → sign-in → dashboard. The dashboard's new-task action did not advance in inline playback. The employer page displayed one starting point. |
-| Figma reviewer access | A fresh browser session received Figma's sign-in prompt for the employer prototype. Access for the intended signed-in reviewers still needs confirmation. |
+| Figma link access · 21 November | A fresh browser session received Figma's sign-in prompt for the employer prototype. |
+| Figma link access · 23 November | With **Anyone can view** enabled, all three presentation links rendered in signed-out Chromium sessions. The employer welcome screen advanced to the prototype sign-in screen. |
+| Offline preview accessibility · 23 November | Checked 128 states and eight sampled text/background pairs. The minimum contrast was 6.21:1 against a 4.5:1 target. Verified 68 Tab-and-Enter transitions with visible focus across both roles and widths. |
 
 The full handoff archive remains the source for the other offline preview
 captures and the desktop build plugin.
