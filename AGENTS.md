@@ -1,5 +1,8 @@
 # Cuckoo agent instructions
 
+For work after Sprint 2, start with the [Sprint 3 handoff](docs/sprint-3-handoff.md)
+for the delivered baseline, current repository entry points and story readiness.
+
 1. Treat `api/openapi.yaml` and the linked GitHub issue acceptance criteria as the implementation contract.
 2. Do not expand MVP scope without an explicit architecture decision/issue.
 3. Preserve the modular-monolith boundary: identity/profile, tasks, applications/assignment, evidence/reviews, simulated-payment.

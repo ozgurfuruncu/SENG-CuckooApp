@@ -9,9 +9,10 @@ the [completed checklist](sprint-1-checklist.md) points to actual final evidence
 
 ## Development and later sprints
 
+- [Sprint 3 handoff](sprint-3-handoff.md) for the delivered baseline and where to start the next story.
 - [Sprint 2 submission index](submissions/sprint-2.md) for the team's artifacts, verification and publication status.
 - [Sprint 2 prototypes](../prototypes/sprint-2/README.md), [diagrams](diagrams/sprint-2) and [verification logs](logs/sprint-2).
-- [Lovable frontend integration](sprint-2-lovable-integration.md), [quality specification](sprint-2-quality.md) and [pending evidence decisions](sprint-2-evidence-decisions.md).
+- [Lovable frontend integration](sprint-2-lovable-integration.md), [quality specification](sprint-2-quality.md) and [evidence design decisions](sprint-2-evidence-decisions.md).
 - [Sprint 2 planning brief](sprint-2-plan.md) for deliverables, proposed RACI and the Lovable-to-Figma workflow.
 - [19 November design snapshot](archive/sprint-2/design-snapshot.md) and [requirements audit](archive/sprint-2/requirements-audit.md) preserve the earlier prototype record.
 - [Figma/Lovable handoff](sprint-2-figma-handoff.md) explains the design workflow and draft API mappings.
